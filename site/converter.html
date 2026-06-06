@@ -498,7 +498,7 @@ D. 放任
     document.querySelector("#convert").addEventListener("click", convert);
     document.querySelector("#download").addEventListener("click", () => {
       if (!output.value) convert();
-      if (output.value) downloadText("自测题库.json", output.value);
+      if (output.value) downloadText("question-bank.json", output.value);
     });
     document.querySelector("#copy").addEventListener("click", async () => {
       if (!output.value) convert();

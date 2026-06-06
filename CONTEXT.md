@@ -18,8 +18,7 @@ The main product is a browser-based question-bank self-test site. It supports lo
 
 ## Layout Notes
 
-- The primary source-like site files currently live under `企业管理/`.
-- The deployable static package currently lives under `企业管理自测站-上线包/`.
+- The deployable static site lives under `site/`.
 - Repository-level agent configuration lives under `docs/agents/`.
 - Architectural decisions should be recorded under `docs/adr/`.
 
@@ -27,7 +26,7 @@ The main product is a browser-based question-bank self-test site. It supports lo
 
 ### Main self-test site
 
-`企业管理/index.html` is the main single-file application. It contains:
+`site/index.html` is the main single-file application. It contains:
 
 - The hero and toolbar controls for bank switching, import/export, filters, full submission, missed-question review, and reset.
 - The built-in default question bank.
@@ -36,20 +35,18 @@ The main product is a browser-based question-bank self-test site. It supports lo
 - Per-bank practice state, including answers, scores, visible answers, order, current index, and expanded mode.
 - Text-answer scoring, choice-question scoring, feedback rendering, and progress summaries.
 
-`企业管理/企业管理自测练习网页.html` is a synchronized copy of the main site.
-
 ### Question-bank converter
 
-`企业管理/题库格式转换器.html` is a standalone converter. It turns copied questions, answers, categories, and choice options into the importable JSON schema used by the main site.
+`site/converter.html` is a standalone converter. It turns copied questions, answers, categories, and choice options into the importable JSON schema used by the main site.
 
 ### Upload package
 
-`企业管理自测站-上线包/` is the clean static publishing package. It currently contains:
+`site/` is the clean static publishing package. It currently contains:
 
 - `index.html`
-- `题库格式转换器.html`
-- `题库模板.json`
-- `README-上线说明.md`
+- `converter.html`
+- `template.json`
+- `README.md`
 
 For static hosting, this package is the safest publish root unless the workspace is reorganized into a dedicated website repo.
 
@@ -58,7 +55,7 @@ For static hosting, this package is the safest publish root unless the workspace
 The parent workspace may contain unrelated or sensitive-adjacent materials, including personal documents, course documents, SolidWorks files, temporary files, and generated PDFs. This repository is intentionally kept in `g-memtest/` so only the website project is versioned.
 
 - **Git scope**: version the clean `g-memtest/` repository only.
-- **Netlify scope**: upload the zip generated at the parent workspace root from `g-memtest/企业管理自测站-上线包/`.
+- **Netlify scope**: upload the zip generated at the parent workspace root from `g-memtest/site/`.
 
 Do not push the parent workspace publicly.
 

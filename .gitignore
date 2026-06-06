@@ -1,6 +1,4 @@
-# Ignore everything by default. This workspace contains personal files,
-# course materials, generated archives, and CAD outputs that should not be
-# published accidentally.
+# Ignore everything by default. Keep this repo focused on the static site.
 *
 
 # Keep directories traversable for explicit allow rules.
@@ -14,20 +12,9 @@
 !docs/
 !docs/**
 
-# GitHub Pages deployment.
-!.github/
-!.github/**
-
-# Clean static website package for publishing.
-!企业管理自测站-上线包/
-!企业管理自测站-上线包/**
-
-# Editable source copies for the static site.
-!企业管理/
-!企业管理/index.html
-!企业管理/企业管理自测练习网页.html
-!企业管理/题库格式转换器.html
-!企业管理/题库模板.json
+# Static website package for Netlify.
+!site/
+!site/**
 
 # Always ignore common temporary/generated files even inside allowed folders.
 **/~$*
