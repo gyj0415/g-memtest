@@ -5,12 +5,13 @@
 ## 网站内容
 
 - `site/index.html`：正式发布页面
+- `site/banks/`：内置题库目录和题库 JSON
 - `site/converter.html`：题库格式转换器
 - `site/template.json`：题库 JSON 模板
 
 ## 本地使用
 
-直接打开 `site/index.html` 即可使用。网站会把题库和答题记录保存在当前浏览器的 `localStorage` 中。
+用任意静态服务器打开 `site/`，例如 `npx serve site`。网站会从 `site/banks/manifest.json` 加载内置题库，并把题库和答题记录保存在当前浏览器的 `localStorage` 中。
 
 ## 发布说明
 

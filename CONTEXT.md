@@ -6,12 +6,13 @@ This repository contains a static self-test website for enterprise management an
 
 ## Current Product
 
-The main product is a browser-based question-bank self-test site. It supports local question-bank import/export, switching between multiple banks, answer persistence per bank, scoring feedback, and a question-bank format converter.
+The main product is a browser-based question-bank self-test site. It starts on a home page, loads built-in question banks from standalone JSON files, supports local question-bank import/export, switching between multiple banks from the sidebar, answer persistence per bank, scoring feedback, and a question-bank format converter.
 
 ## Domain Vocabulary
 
 - **Question bank**: A JSON collection of questions imported into the self-test site.
 - **Bank switcher**: The UI control for switching between locally saved question banks.
+- **Built-in bank catalog**: The `site/banks/manifest.json` file that lists built-in question banks available on the home page.
 - **Practice state**: A user's local answers, scoring results, answer visibility, order, and view mode for one question bank.
 - **Converter**: The standalone page that turns copied questions, answers, categories, and choices into importable JSON.
 - **Upload package**: The static files intended for deployment to a permanent hosting service.
@@ -29,7 +30,8 @@ The main product is a browser-based question-bank self-test site. It supports lo
 `site/index.html` is the main single-file application. It contains:
 
 - The hero and toolbar controls for bank switching, import/export, filters, full submission, missed-question review, and reset.
-- The built-in default question bank.
+- The home page and sidebar question-bank selection.
+- The built-in question-bank catalog loader.
 - Question-bank normalization and import parsing.
 - A multi-bank local storage library keyed by `enterprise-management-bank-library-v1`.
 - Per-bank practice state, including answers, scores, visible answers, order, current index, and expanded mode.
@@ -44,6 +46,7 @@ The main product is a browser-based question-bank self-test site. It supports lo
 `site/` is the clean static publishing package. It currently contains:
 
 - `index.html`
+- `banks/`
 - `converter.html`
 - `template.json`
 - `README.md`

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "banks": [
+    {
+      "id": "bank-enterprise-management",
+      "title": "企业管理与技术经济学",
+      "description": "企业管理与技术经济学闭卷自测题库。",
+      "file": "enterprise-management.json"
+    }
+  ]
+}

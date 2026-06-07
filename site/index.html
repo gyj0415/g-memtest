@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>企业管理与技术经济学闭卷自测</title>
+  <title>自测题库中心</title>
   <style>
     :root {
       --bg: #f6f2e8;
@@ -331,7 +331,7 @@
 
     .layout {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 270px;
+      grid-template-columns: 270px minmax(0, 1fr);
       gap: 18px;
       align-items: start;
     }
@@ -339,6 +339,77 @@
     .question-list {
       display: grid;
       gap: 14px;
+    }
+
+    .practice-tools[hidden] {
+      display: none;
+    }
+
+    .practice-action[hidden] {
+      display: none;
+    }
+
+    .home-panel {
+      display: grid;
+      gap: 14px;
+      padding: 22px;
+    }
+
+    .home-panel h2 {
+      font-size: 26px;
+    }
+
+    .home-panel p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .bank-list {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .home-bank-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .bank-card {
+      display: grid;
+      width: 100%;
+      gap: 5px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--ink);
+      text-align: left;
+    }
+
+    .bank-card:hover,
+    .bank-card.active {
+      border-color: var(--brand);
+      background: rgba(14, 124, 116, .07);
+    }
+
+    .bank-card strong {
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .bank-card span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .bank-card.large {
+      min-height: 110px;
+      padding: 16px;
     }
 
     .mode-banner {
@@ -716,6 +787,7 @@
 
       .side-panel {
         position: static;
+        order: -1;
       }
 
       .toolbar {
@@ -771,21 +843,18 @@
     <section class="hero" aria-labelledby="pageTitle">
       <div class="hero-main">
         <div class="eyebrow">闭卷默写自测</div>
-        <h1 id="pageTitle">企业管理与技术经济学</h1>
-        <p>按题默写，提交后按关键词和要点判分。你可以逐题判分，也可以一口气交卷；页面会自动保存输入和结果，方便反复刷薄弱点。</p>
+        <h1 id="pageTitle">自测题库中心</h1>
+        <p>先从侧栏选择一个题库，再进入默写和判分。默认题库已经拆成独立文件，后续可以继续加入更多科目题库。</p>
         <div class="hero-actions">
-          <label class="bank-switch">
-            题库
-            <select id="bankSelect" title="切换本地保存的题库"></select>
-          </label>
-          <button class="primary-btn" id="submitAll" type="button" title="判分全部题目">交卷判分</button>
-          <button class="secondary-btn" id="focusMissed" type="button" title="只显示未掌握题目">错题回看</button>
-          <button class="secondary-btn" id="expandToggle" type="button" title="切换单题/整体展开">整体展开</button>
-          <button class="secondary-btn" id="exportBank" type="button" title="导出当前题库 JSON">导出题库</button>
+          <button class="primary-btn practice-action" id="submitAll" type="button" title="判分全部题目" hidden>交卷判分</button>
+          <button class="secondary-btn practice-action" id="focusMissed" type="button" title="只显示未掌握题目" hidden>错题回看</button>
+          <button class="secondary-btn practice-action" id="expandToggle" type="button" title="切换单题/整体展开" hidden>整体展开</button>
+          <button class="secondary-btn practice-action" id="exportBank" type="button" title="导出当前题库 JSON" hidden>导出题库</button>
+          <button class="secondary-btn practice-action" id="backHome" type="button" title="返回题库首页" hidden>返回首页</button>
           <label class="secondary-btn" for="importBank" title="导入题库 JSON">导入题库</label>
           <input class="hidden" id="importBank" type="file" accept="application/json,.json">
           <a class="secondary-btn" href="./converter.html" title="把普通题目答案转换成可导入格式">题库转换器</a>
-          <button class="secondary-btn" id="resetAll" type="button" title="清空本次练习记录">重新开始</button>
+          <button class="secondary-btn practice-action" id="resetAll" type="button" title="清空本次练习记录" hidden>重新开始</button>
         </div>
       </div>
       <div class="study-board" aria-hidden="true">
@@ -796,14 +865,14 @@
           <div class="note"></div>
         </div>
         <div class="hero-stats">
-          <div class="stat"><strong id="heroTotal">26</strong><span>题目</span></div>
+          <div class="stat"><strong id="heroTotal">0</strong><span>题目</span></div>
           <div class="stat"><strong id="heroDone">0</strong><span>已判</span></div>
           <div class="stat"><strong id="heroScore">0%</strong><span>掌握</span></div>
         </div>
       </div>
     </section>
 
-    <section class="toolbar" aria-label="练习筛选">
+    <section class="toolbar practice-tools" id="practiceTools" aria-label="练习筛选" hidden>
       <div class="search-row">
         <input class="search-input" id="searchInput" type="search" placeholder="搜索题目、分类或答案关键词">
         <button class="secondary-btn" id="shuffleBtn" type="button" title="随机排列题目">随机顺序</button>
@@ -816,18 +885,27 @@
     </section>
 
     <section class="layout">
-      <div class="question-list" id="questionList" aria-live="polite"></div>
-      <aside class="side-panel" aria-label="练习概览">
+      <aside class="side-panel" id="bankPanel" aria-label="题库与练习概览">
+        <h3>题库</h3>
+        <div class="bank-list" id="bankList"></div>
         <h3>本次概览</h3>
         <div>
           <div class="mini-metric"><span>已填写</span><strong id="filledCount">0</strong></div>
           <div class="mini-metric"><span>已判分</span><strong id="checkedCount">0</strong></div>
+          <div class="mini-metric"><span>总分</span><strong id="totalScore">0%</strong></div>
           <div class="mini-metric"><span>掌握</span><strong id="goodCount">0</strong></div>
           <div class="mini-metric"><span>待补</span><strong id="weakCount">0</strong></div>
         </div>
         <h3>待回看</h3>
         <div class="review-list" id="reviewList"></div>
       </aside>
+      <div class="question-list" id="questionList" aria-live="polite">
+        <article class="question-card home-panel" id="homePanel">
+          <h2>选择一个题库开始</h2>
+          <p>题库会从独立文件加载。你也可以导入自己的 JSON 题库，导入后它会出现在左侧和下方题库列表里。</p>
+          <div class="home-bank-grid" id="homeBankGrid"></div>
+        </article>
+      </div>
     </section>
   </main>
 
@@ -872,227 +950,16 @@
     const questionBankStorageKey = "enterprise-management-question-bank-v2";
     const storageKey = "enterprise-management-self-test-v1";
     const bankLibraryStorageKey = "enterprise-management-bank-library-v1";
+    const builtInBankManifestUrl = "./banks/manifest.json";
 
-    const defaultQuestions = [
-      {
-        id: "term-01",
-        category: "term",
-        title: "企业重心两极化",
-        prompt: "请默写概念，尽量写出结构变化和管理重心。",
-        keywords: ["重点部门", "生产", "研究开发", "市场销售", "橄榄型", "哑铃型"],
-        answer: "企业重心两极化是指企业的重点部门由生产部门转向研究开发和市场销售部门，企业结构由中间大的橄榄型转变为两头大的哑铃型。"
-      },
-      {
-        id: "term-02",
-        category: "term",
-        title: "分销渠道",
-        prompt: "请默写概念，注意商品/服务、转移方向和参与主体。",
-        keywords: ["商品", "服务", "生产者", "消费者", "转移", "所有权", "企业", "个人"],
-        answer: "分销渠道是指商品或服务从生产者向消费者转移过程中，取得商品所有权或帮助所有权转移的所有企业和个人。"
-      },
-      {
-        id: "term-03",
-        category: "term",
-        title: "商标",
-        prompt: "请默写概念，重点区分品牌和法律保护。",
-        keywords: ["法律概念", "专用权", "法律保护", "品牌"],
-        answer: "商标是法律概念，是已获得专用权并受法律保护的品牌或品牌的一部分。"
-      },
-      {
-        id: "term-04",
-        category: "term",
-        title: "名义利率",
-        prompt: "请默写概念，注意计息周期和复利影响。",
-        keywords: ["计息周期利率", "计息周期数", "年利率", "未考虑", "复利"],
-        answer: "名义利率是计息周期利率与一年内计息周期数的乘积得到的年利率，未考虑复利影响。"
-      },
-      {
-        id: "term-05",
-        category: "term",
-        title: "现代企业制度",
-        prompt: "请默写概念，基础、特征、主体和形式要完整。",
-        keywords: ["企业法人制度", "有限责任", "公司制", "有限责任公司", "股份有限公司"],
-        answer: "现代企业制度是以企业法人制度为基础、以有限责任为基本特征、以公司制为主体的企业制度，主要形式是有限责任公司和股份有限公司。"
-      },
-      {
-        id: "term-06",
-        category: "term",
-        title: "技术经济学",
-        prompt: "请默写概念，注意技术、经济、资源配置和可持续发展。",
-        keywords: ["技术领域", "经济问题", "经济规律", "技术进步", "经济增长", "资源最佳配置", "最佳结合", "可持续发展"],
-        answer: "技术经济学研究技术领域中的经济问题和经济规律，分析技术进步与经济增长、资源最佳配置、技术与经济最佳结合及可持续发展等问题。"
-      },
-      {
-        id: "term-07",
-        category: "term",
-        title: "市场定位",
-        prompt: "请默写概念，注意竞争者、消费者重视属性、差异形象。",
-        keywords: ["竞争者", "现有产品", "消费者", "特征", "属性", "与众不同", "个性", "形象", "顾客"],
-        answer: "市场定位是根据竞争者现有产品在市场上的位置和消费者重视的特征或属性，为产品塑造与众不同的个性或形象，并传递给顾客。"
-      },
-      {
-        id: "term-08",
-        category: "term",
-        title: "内部收益率",
-        prompt: "请默写概念，注意计算期、现金流量、现值累计为零。",
-        keywords: ["计算期", "净现金流量", "现值", "累计", "零", "折现率"],
-        answer: "内部收益率是项目计算期内各年净现金流量现值累计等于零时的折现率。"
-      },
-      {
-        id: "term-09",
-        category: "term",
-        title: "营业推广",
-        prompt: "请默写概念，注意短期诱因和购买/销售。",
-        keywords: ["短期诱因", "鼓励", "购买", "销售", "产品", "服务", "促销活动"],
-        answer: "营业推广是运用短期诱因鼓励购买或销售产品、服务的一种促销活动。"
-      },
-      {
-        id: "short-01",
-        category: "short",
-        title: "产品线延伸的利益",
-        prompt: "请写出 4 条利益。",
-        keywords: ["满足更多消费者需求", "求异求变", "减少开发新产品风险", "不同价格层次"],
-        answer: "（1）满足更多消费者需求；\n（2）迎合顾客求异求变心理；\n（3）减少开发新产品风险；\n（4）适应不同价格层次需求。"
-      },
-      {
-        id: "short-02",
-        category: "short",
-        title: "扩大产品组合策略的动机",
-        prompt: "请写出 5 条动机。",
-        keywords: ["增量利润", "经销商", "产品线不足", "销售额下降", "剩余的生产能力", "领先", "产品线完整", "填补市场空隙", "防止竞争者侵入"],
-        answer: "（1）获取增量利润；\n（2）满足那些经常抱怨由于产品线不足而使销售额下降的经销商；\n（3）充分利用剩余的生产能力；\n（4）争取成为领先的产品线完整的公司；\n（5）设法填补市场空隙，防止竞争者侵入。"
-      },
-      {
-        id: "short-03",
-        category: "short",
-        title: "法约尔与泰罗管理理论的侧重点不同",
-        prompt: "分别写出泰罗和法约尔的研究侧重点。",
-        keywords: ["泰罗", "车间现场管理", "劳动效率", "科学管理", "法约尔", "企业整体管理", "一般原则", "职能", "一般管理理论"],
-        answer: "泰罗：侧重于车间现场管理，研究如何提高工人的劳动效率，被称为“科学管理”。\n法约尔：侧重于企业整体管理，研究管理的一般原则和职能，被称为“一般管理理论”。"
-      },
-      {
-        id: "short-04",
-        category: "short",
-        title: "成熟期的市场特征及应对策略",
-        prompt: "请分别写出特征和策略。",
-        keywords: ["销售增长缓慢", "停滞", "竞争激烈", "利润", "下降", "市场改良", "新用户", "产品改良", "营销组合改良", "价格", "渠道"],
-        answer: "特征：销售增长缓慢甚至停滞；市场竞争激烈；利润达到顶峰后开始下降。\n策略：市场改良（寻找新用户）；产品改良（改变质量、特性）；营销组合改良（调整价格、渠道）。"
-      },
-      {
-        id: "short-05",
-        category: "short",
-        title: "现代企业管理制度基本特征",
-        prompt: "请写出 4 条基本特征。",
-        keywords: ["面向市场", "生产过程", "流通过程", "外部环境", "内部条件", "整体战略", "具体战术"],
-        answer: "（1）企业面向市场；\n（2）企业是生产过程与流通过程的结合；\n（3）企业是外部环境与内部条件的结合；\n（4）企业是整体战略与具体战术的结合。"
-      },
-      {
-        id: "short-06",
-        category: "short",
-        title: "事业部制组织结构的优缺点",
-        prompt: "请分别写出优点和缺点。",
-        keywords: ["最高管理层", "日常事务", "主动性", "创造性", "全面的管理人才", "机构重叠", "管理人员增多", "本位主义", "总部控制能力"],
-        answer: "优点：有利于最高管理层摆脱日常事务；有利于发挥事业部的主动性和创造性；有利于培养全面的管理人才。\n缺点：机构重叠，管理人员增多；各事业部容易产生本位主义；对总部控制能力要求高。"
-      },
-      {
-        id: "short-07",
-        category: "short",
-        title: "公共关系的作用",
-        prompt: "请写出 4 条作用。",
-        keywords: ["良好信誉", "形象", "双向", "信息沟通", "改变公众误解", "传播正确信息", "凝聚力", "协调", "外界关系"],
-        answer: "（1）公共关系是建立和维护企业良好信誉和形象的有利武器。\n（2）公共关系有利于建立企业与消费者之间双向的信息沟通。\n（3）公共关系有利于企业改变公众误解，传播正确信息。\n（4）公共关系有利于增强企业内在的凝聚力，协调与外界的关系。"
-      },
-      {
-        id: "quick-01",
-        category: "quick",
-        title: "管理的具体职能有哪些？",
-        prompt: "请写出全部职能。",
-        keywords: ["计划", "组织", "领导", "控制"],
-        answer: "计划、组织、领导、控制。"
-      },
-      {
-        id: "quick-02",
-        category: "quick",
-        title: "产品线延伸策略有哪些？",
-        prompt: "请写出全部策略。",
-        keywords: ["向上延伸", "向下延伸", "双向延伸"],
-        answer: "向上延伸、向下延伸、双向延伸。"
-      },
-      {
-        id: "quick-03",
-        category: "quick",
-        title: "影响销售渠道选择的因素有哪些？",
-        prompt: "请写出主要影响因素。",
-        keywords: ["产品因素", "目标市场因素", "竞争特性", "企业自身因素", "政策因素"],
-        answer: "产品因素、目标市场因素、竞争特性、企业自身因素、政策因素。"
-      },
-      {
-        id: "quick-04",
-        category: "quick",
-        title: "品牌和商标的区别是什么？",
-        prompt: "请写出二者本质区别。",
-        keywords: ["品牌", "市场概念", "商标", "法律概念"],
-        answer: "品牌是市场概念；商标是法律概念。"
-      },
-      {
-        id: "quick-05",
-        category: "quick",
-        title: "现代企业制度的基础、特征、主体、形式分别是什么？",
-        prompt: "请按基础、特征、主体、形式作答。",
-        keywords: ["企业法人制度", "有限责任", "公司制", "有限责任公司", "股份有限公司"],
-        answer: "基础是企业法人制度；特征是有限责任；主体是公司制；形式主要是有限责任公司和股份有限公司。"
-      },
-      {
-        id: "formula-01",
-        category: "formula",
-        title: "净现值公式",
-        prompt: "请写出 NPV 公式和判断标准。",
-        keywords: ["NPV", "CI", "CO", "t", "i0", "-t", "NPV>0", "可行", "NPV<0", "不可行"],
-        answer: "NPV = Σ(CI - CO)t × (1 + i0)^(-t)\n判断：NPV > 0 可行；NPV < 0 不可行。"
-      },
-      {
-        id: "formula-02",
-        category: "formula",
-        title: "实际年利率公式",
-        prompt: "请写出实际年利率公式。",
-        keywords: ["i", "1+r/m", "m", "-1"],
-        answer: "i = (1 + r/m)^m - 1"
-      },
-      {
-        id: "formula-03",
-        category: "formula",
-        title: "内部收益率本质",
-        prompt: "请写出内部收益率使净现值为零的本质公式。",
-        keywords: ["CI", "CO", "IRR", "-t", "0"],
-        answer: "Σ(CI - CO)t × (1 + IRR)^(-t) = 0"
-      },
-      {
-        id: "case-01",
-        category: "case",
-        title: "郭宁案例至少写出 5 个关键词",
-        prompt: "请至少写出 5 个关键词。",
-        minRequired: 5,
-        keywords: ["管理范围扩大", "管理层次提高", "技术管理", "战略管理", "概念技能", "人际技能", "授权", "综合决策能力"],
-        answer: "管理范围扩大；管理层次提高；从技术管理转向战略管理；需要概念技能；需要人际技能；需要授权；需要综合决策能力。"
-      },
-      {
-        id: "case-02",
-        category: "case",
-        title: "UPS 案例至少写出 5 个关键词",
-        prompt: "请至少写出 5 个关键词。",
-        minRequired: 5,
-        keywords: ["泰罗科学管理", "时间研究", "动作研究", "标准化", "提高效率", "机械化", "忽视主动性"],
-        answer: "泰罗科学管理；时间研究；动作研究；标准化；提高效率；局限是机械化、忽视主动性。"
-      }
-    ];
-
-    const defaultBankTitle = "企业管理与技术经济学";
+    const defaultBankTitle = "自测题库";
     const defaultBankId = "bank-default";
     let bankLibrary = loadBankLibrary();
-    let activeBankId = bankLibrary.activeId;
+    let activeBankId = "";
     let activeBank = getActiveBank();
-    let bankTitle = activeBank.title;
-    let questions = activeBank.questions;
+    let bankTitle = "";
+    let questions = [];
+    let currentView = "home";
 
     const state = createEmptyPracticeState(questions);
 
@@ -1100,7 +967,9 @@
       list: document.querySelector("#questionList"),
       filterRow: document.querySelector("#filterRow"),
       search: document.querySelector("#searchInput"),
-      bankSelect: document.querySelector("#bankSelect"),
+      bankList: document.querySelector("#bankList"),
+      homeBankGrid: document.querySelector("#homeBankGrid"),
+      practiceTools: document.querySelector("#practiceTools"),
       pageTitle: document.querySelector("#pageTitle"),
       progress: document.querySelector("#progressFill"),
       heroTotal: document.querySelector("#heroTotal"),
@@ -1108,9 +977,11 @@
       heroScore: document.querySelector("#heroScore"),
       filledCount: document.querySelector("#filledCount"),
       checkedCount: document.querySelector("#checkedCount"),
+      totalScore: document.querySelector("#totalScore"),
       goodCount: document.querySelector("#goodCount"),
       weakCount: document.querySelector("#weakCount"),
-      reviewList: document.querySelector("#reviewList")
+      reviewList: document.querySelector("#reviewList"),
+      practiceActions: document.querySelectorAll(".practice-action")
     };
 
     function deriveKeywords(answer) {
@@ -1242,11 +1113,13 @@
       return `bank-${Date.now().toString(36)}-${slug}`;
     }
 
-    function createBankRecord(id, title, bankQuestions, practice = {}) {
+    function createBankRecord(id, title, bankQuestions, practice = {}, meta = {}) {
       const parsedQuestions = parseQuestionBankPayload({ questions: bankQuestions });
       return {
         id,
         title: String(title || defaultBankTitle).trim() || defaultBankTitle,
+        description: String(meta.description || "").trim(),
+        source: meta.source || "local",
         questions: parsedQuestions,
         practice: normalizeSavedPracticeState(practice, parsedQuestions)
       };
@@ -1281,12 +1154,9 @@
         if (raw) {
           const parsed = JSON.parse(raw);
           const banks = Array.isArray(parsed.banks)
-            ? parsed.banks.map((bank) => createBankRecord(bank.id, bank.title, bank.questions, bank.practice)).filter(Boolean)
+            ? parsed.banks.map((bank) => createBankRecord(bank.id, bank.title, bank.questions, bank.practice, bank)).filter(Boolean)
             : [];
-          if (banks.length) {
-            const activeId = banks.some((bank) => bank.id === parsed.activeId) ? parsed.activeId : banks[0].id;
-            return { version: 1, activeId, banks };
-          }
+          return { version: 1, activeId: "", banks };
         }
       } catch {
         localStorage.removeItem(bankLibraryStorageKey);
@@ -1294,20 +1164,24 @@
 
       const legacyBank = readLegacyQuestionBank();
       const legacyPractice = readLegacyPracticeState();
-      const firstBank = legacyBank
-        ? createBankRecord(defaultBankId, legacyBank.title, legacyBank.questions, legacyPractice)
-        : createBankRecord(defaultBankId, defaultBankTitle, defaultQuestions, legacyPractice);
-      const library = { version: 1, activeId: firstBank.id, banks: [firstBank] };
+      const banks = legacyBank
+        ? [createBankRecord(defaultBankId, legacyBank.title, legacyBank.questions, legacyPractice, { description: "从旧版本地题库迁移。", source: "local" })]
+        : [];
+      const library = { version: 1, activeId: "", banks };
       persistBankLibrary(library);
       return library;
     }
 
     function persistBankLibrary(library = bankLibrary) {
-      localStorage.setItem(bankLibraryStorageKey, JSON.stringify(library));
+      localStorage.setItem(bankLibraryStorageKey, JSON.stringify({
+        version: 1,
+        activeId: "",
+        banks: library.banks
+      }));
     }
 
     function getActiveBank() {
-      return bankLibrary.banks.find((bank) => bank.id === activeBankId) || bankLibrary.banks[0];
+      return bankLibrary.banks.find((bank) => bank.id === activeBankId) || null;
     }
 
     function capturePracticeState() {
@@ -1345,27 +1219,102 @@
 
     function refreshActiveBankFromLibrary() {
       activeBank = getActiveBank();
+      if (!activeBank) {
+        renderHome();
+        return;
+      }
       activeBankId = activeBank.id;
       bankTitle = activeBank.title;
       questions = activeBank.questions;
+      currentView = "practice";
       applyPracticeState(activeBank.practice);
       updateBankTitle();
-      renderBankSelect();
+      renderBankList();
       renderFilters();
       renderQuestions();
     }
 
-    function renderBankSelect() {
-      els.bankSelect.innerHTML = bankLibrary.banks.map((bank) => (
-        `<option value="${escapeHtml(bank.id)}" ${bank.id === activeBankId ? "selected" : ""}>${escapeHtml(bank.title)} (${bank.questions.length}题)</option>`
+    async function loadBuiltInBankCatalog() {
+      const response = await fetch(builtInBankManifestUrl);
+      if (!response.ok) throw new Error("题库目录加载失败");
+      const manifest = await response.json();
+      const entries = Array.isArray(manifest.banks) ? manifest.banks : [];
+      const records = await Promise.all(entries.map(async (entry) => {
+        const bankResponse = await fetch(`./banks/${entry.file}`);
+        if (!bankResponse.ok) throw new Error(`题库加载失败：${entry.title || entry.file}`);
+        const payload = await bankResponse.json();
+        const id = payload.id || entry.id || createBankId(payload.title || entry.title);
+        const existing = bankLibrary.banks.find((bank) => bank.id === id);
+        return createBankRecord(
+          id,
+          payload.title || entry.title,
+          payload.questions,
+          existing?.practice || {},
+          {
+            description: payload.description || entry.description || "",
+            source: "built-in"
+          }
+        );
+      }));
+
+      records.forEach((record) => {
+        const existingIndex = bankLibrary.banks.findIndex((bank) => bank.id === record.id);
+        if (existingIndex >= 0) {
+          bankLibrary.banks[existingIndex] = record;
+        } else {
+          bankLibrary.banks.push(record);
+        }
+      });
+      persistBankLibrary();
+    }
+
+    function renderBankCards(size = "compact") {
+      if (!bankLibrary.banks.length) {
+        return `<div class="empty">还没有可用题库。你可以导入 JSON 题库。</div>`;
+      }
+      return bankLibrary.banks.map((bank) => (
+        `<button class="bank-card ${size === "large" ? "large" : ""} ${bank.id === activeBankId ? "active" : ""}" type="button" data-bank-start="${escapeHtml(bank.id)}">
+          <strong>${escapeHtml(bank.title)}</strong>
+          <span>${bank.questions.length} 题 · ${bank.source === "built-in" ? "内置题库" : "本地题库"}</span>
+          ${bank.description ? `<span>${escapeHtml(bank.description)}</span>` : ""}
+        </button>`
       )).join("");
+    }
+
+    function renderBankList() {
+      els.bankList.innerHTML = renderBankCards();
+      const homeBankGrid = document.querySelector("#homeBankGrid");
+      if (homeBankGrid) {
+        homeBankGrid.innerHTML = renderBankCards("large");
+      }
+    }
+
+    function renderHome() {
+      currentView = "home";
+      activeBankId = "";
+      activeBank = null;
+      bankTitle = "";
+      questions = [];
+      document.title = "自测题库中心";
+      els.pageTitle.textContent = "自测题库中心";
+      els.practiceTools.hidden = true;
+      els.practiceActions.forEach((item) => item.hidden = true);
+      els.list.innerHTML = `
+        <article class="question-card home-panel" id="homePanel">
+          <h2>选择一个题库开始</h2>
+          <p>默认题库已经拆到 <strong>site/banks/</strong>。以后新增科目时，把题库 JSON 放进去，再在 manifest 里登记即可。</p>
+          <p>左侧和下方都可以选择内置题库，也可以导入自己的 JSON 题库。</p>
+          <div class="home-bank-grid" id="homeBankGrid"></div>
+        </article>
+      `;
+      renderBankList();
+      renderSummary();
     }
 
     function addQuestionBank(nextQuestions, nextTitle = bankTitle) {
       saveActiveBankPractice();
       const newBank = createBankRecord(createBankId(nextTitle), nextTitle, nextQuestions);
       bankLibrary.banks.push(newBank);
-      bankLibrary.activeId = newBank.id;
       activeBankId = newBank.id;
       persistBankLibrary();
       refreshActiveBankFromLibrary();
@@ -1376,7 +1325,6 @@
       if (!nextBankId || nextBankId === activeBankId) return;
       saveActiveBankPractice();
       if (!bankLibrary.banks.some((bank) => bank.id === nextBankId)) return;
-      bankLibrary.activeId = nextBankId;
       activeBankId = nextBankId;
       persistBankLibrary();
       refreshActiveBankFromLibrary();
@@ -1385,6 +1333,8 @@
     function updateBankTitle() {
       els.pageTitle.textContent = bankTitle;
       document.title = `${bankTitle}闭卷自测`;
+      els.practiceTools.hidden = false;
+      els.practiceActions.forEach((item) => item.hidden = false);
     }
 
     function resetPracticeState() {
@@ -1684,10 +1634,37 @@
       };
     }
 
+    function exactAnswerMatch(question, answer) {
+      return normalize(answer) && normalize(answer) === normalize(question.answer);
+    }
+
     function evaluateQuestion(question) {
       if (isChoiceQuestion(question)) return evaluateChoiceQuestion(question);
       const answer = state.answers[question.id] || "";
       const trimmedAnswer = answer.trim();
+      if (exactAnswerMatch(question, trimmedAnswer)) {
+        const hits = question.keywords.map((keyword) => ({ keyword, hit: true }));
+        const units = answerUnits(question).map((unit) => ({ unit, score: 1, hit: true }));
+        return {
+          hitCount: hits.length,
+          required: question.minRequired || question.keywords.length,
+          denominator: question.keywords.length,
+          ratio: 1,
+          mastered: true,
+          almost: false,
+          hits,
+          metrics: {
+            keywordCoverage: 1,
+            unitCoverage: 1,
+            similarity: 1,
+            structure: 1,
+            formula: 1,
+            lengthRatio: 1
+          },
+          units,
+          structure: { score: 1, expectedCount: question.minRequired || 0, itemCount: question.minRequired || units.length, message: "答案完全一致" }
+        };
+      }
       const hits = question.keywords.map((keyword) => ({
         keyword,
         hit: keywordHit(answer, keyword)
@@ -1743,6 +1720,7 @@
     }
 
     function loadState() {
+      if (!activeBank) return;
       applyPracticeState(activeBank.practice);
     }
 
@@ -1871,6 +1849,10 @@
     }
 
     function renderQuestions() {
+      if (currentView === "home" || !activeBank) {
+        renderHome();
+        return;
+      }
       const visible = getFilteredQuestions();
       if (!visible.length) {
         els.list.innerHTML = `<div class="question-card empty">当前筛选下没有题目。换个分类、清空搜索，或者先交卷生成错题。</div>`;
@@ -2017,11 +1999,24 @@
     }
 
     function renderSummary() {
+      if (!questions.length) {
+        els.heroTotal.textContent = 0;
+        els.heroDone.textContent = 0;
+        els.heroScore.textContent = "0%";
+        els.filledCount.textContent = "0/0";
+        els.checkedCount.textContent = "0/0";
+        els.totalScore.textContent = "0%";
+        els.goodCount.textContent = 0;
+        els.weakCount.textContent = 0;
+        els.progress.style.width = "0%";
+        els.reviewList.innerHTML = `<div class="empty">选择题库后，这里会显示本次练习概览。</div>`;
+        return;
+      }
       const filled = questions.filter((item) => (state.answers[item.id] || "").trim()).length;
       const checked = Object.keys(state.results).length;
       const good = questions.filter((item) => state.results[item.id]?.mastered).length;
       const weak = questions.filter((item) => state.results[item.id] && !state.results[item.id].mastered).length;
-      const score = checked ? Math.round(good / checked * 100) : 0;
+      const score = checked ? Math.round(questions.reduce((sum, item) => sum + (state.results[item.id]?.ratio || 0), 0) / checked * 100) : 0;
       const expandToggle = document.querySelector("#expandToggle");
 
       els.heroTotal.textContent = questions.length;
@@ -2029,6 +2024,7 @@
       els.heroScore.textContent = `${score}%`;
       els.filledCount.textContent = `${filled}/${questions.length}`;
       els.checkedCount.textContent = `${checked}/${questions.length}`;
+      els.totalScore.textContent = `${score}%`;
       els.goodCount.textContent = good;
       els.weakCount.textContent = weak;
       els.progress.style.width = `${Math.round(checked / questions.length * 100)}%`;
@@ -2142,7 +2138,14 @@
       const clearId = event.target.dataset.clear;
       const category = event.target.dataset.category;
       const jumpId = event.target.dataset.jump;
+      const bankStartId = event.target.closest("[data-bank-start]")?.dataset.bankStart;
       const choiceButton = event.target.closest("[data-choice-question]");
+
+      if (bankStartId) {
+        switchQuestionBank(bankStartId);
+        els.list.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
 
       if (checkId) checkOne(checkId);
       if (checkNextId) checkOneAndNext(checkNextId);
@@ -2206,11 +2209,13 @@
     document.querySelector("#submitAll").addEventListener("click", submitAll);
     document.querySelector("#shuffleBtn").addEventListener("click", shuffleQuestions);
     document.querySelector("#resetAll").addEventListener("click", resetAll);
+    document.querySelector("#backHome").addEventListener("click", () => {
+      saveActiveBankPractice();
+      renderHome();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
     document.querySelector("#exportBank").addEventListener("click", () => {
       downloadText(`${safeDownloadName(bankTitle)}.json`, JSON.stringify(buildQuestionBankExport(), null, 2));
-    });
-    els.bankSelect.addEventListener("change", (event) => {
-      switchQuestionBank(event.target.value);
     });
     document.querySelector("#importBank").addEventListener("change", async (event) => {
       const file = event.target.files?.[0];
@@ -2254,12 +2259,18 @@
       renderQuestions();
     });
 
-    loadState();
-    updateBankTitle();
-    renderBankSelect();
-    document.querySelector("#expandToggle").textContent = state.expanded ? "单题作答" : "整体展开";
-    renderFilters();
-    renderQuestions();
+    async function initializeApp() {
+      renderHome();
+      try {
+        await loadBuiltInBankCatalog();
+      } catch (error) {
+        els.bankList.innerHTML = `<div class="empty">内置题库加载失败。请检查 site/banks/manifest.json。</div>`;
+        return;
+      }
+      renderHome();
+    }
+
+    initializeApp();
   </script>
 </body>
 </html>

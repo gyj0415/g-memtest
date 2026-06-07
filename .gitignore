@@ -9,6 +9,11 @@
 !README.md
 !AGENTS.md
 !CONTEXT.md
+!package.json
+!scripts/
+!scripts/**
+!tests/
+!tests/**
 !docs/
 !docs/**
 

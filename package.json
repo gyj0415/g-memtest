@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "typecheck": "node scripts/check-site.mjs typecheck",
+    "lint": "node scripts/check-site.mjs lint",
+    "test": "node --test"
+  }
+}
