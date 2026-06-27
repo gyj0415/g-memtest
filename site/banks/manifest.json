@@ -6,6 +6,12 @@
       "title": "企业管理与技术经济学",
       "description": "企业管理与技术经济学闭卷自测题库。",
       "file": "enterprise-management.json"
+    },
+    {
+      "id": "bank-mao-gai-2026",
+      "title": "毛概26题库",
+      "description": "毛概26题库，按章节和题型练习。",
+      "file": "mao-gai-2026.json"
     }
   ]
 }
