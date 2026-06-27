@@ -1872,7 +1872,6 @@
       state.currentIndex = Math.min(Math.max(state.currentIndex + step, 0), Math.max(visible.length - 1, 0));
       saveState();
       renderQuestions();
-      els.list.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     function renderFilters() {
@@ -2199,7 +2198,6 @@
       }
       saveState();
       renderQuestions();
-      els.list.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     function submitAll() {
@@ -2321,7 +2319,6 @@
           delete state.results[question.id];
           saveState();
           renderQuestions();
-          document.querySelector(`#${CSS.escape(question.id)}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
       if (event.target.dataset.prev !== undefined) moveQuestion(-1);
