@@ -765,6 +765,81 @@
       overflow: auto;
     }
 
+    .question-mini-list {
+      display: grid;
+      gap: 7px;
+      max-height: 280px;
+      overflow: auto;
+    }
+
+    .question-mini-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 7px;
+      width: 100%;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--ink);
+      text-align: left;
+    }
+
+    .question-mini-item.active,
+    .question-mini-item:hover {
+      border-color: var(--brand);
+      background: rgba(14, 124, 116, .07);
+    }
+
+    .question-mini-item.good {
+      border-left: 4px solid #39845d;
+    }
+
+    .question-mini-item.bad,
+    .question-mini-item.almost {
+      border-left: 4px solid var(--danger);
+    }
+
+    .question-mini-index {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .question-mini-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .mini-status {
+      min-width: 42px;
+      min-height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 7px;
+      border-radius: 999px;
+      background: #f1eadc;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .mini-status.good {
+      background: rgba(57, 132, 93, .13);
+      color: #2f7a54;
+    }
+
+    .mini-status.bad,
+    .mini-status.almost {
+      background: rgba(191, 63, 57, .13);
+      color: var(--danger);
+    }
+
     .review-item {
       display: grid;
       gap: 4px;
@@ -924,6 +999,8 @@
           <div class="mini-metric"><span>掌握</span><strong id="goodCount">0</strong></div>
           <div class="mini-metric"><span>待补</span><strong id="weakCount">0</strong></div>
         </div>
+        <h3>当前题目</h3>
+        <div class="question-mini-list" id="questionMiniList"></div>
         <h3>待回看</h3>
         <div class="review-list" id="reviewList"></div>
       </aside>
@@ -1009,6 +1086,7 @@
       totalScore: document.querySelector("#totalScore"),
       goodCount: document.querySelector("#goodCount"),
       weakCount: document.querySelector("#weakCount"),
+      questionMiniList: document.querySelector("#questionMiniList"),
       reviewList: document.querySelector("#reviewList"),
       practiceActions: document.querySelectorAll(".practice-action")
     };
@@ -2067,6 +2145,7 @@
         els.goodCount.textContent = 0;
         els.weakCount.textContent = 0;
         els.progress.style.width = "0%";
+        els.questionMiniList.innerHTML = `<div class="empty">选择题库后，这里会显示当前章节题目。</div>`;
         els.reviewList.innerHTML = `<div class="empty">选择题库后，这里会显示本次练习概览。</div>`;
         return;
       }
@@ -2089,6 +2168,27 @@
       if (expandToggle) {
         expandToggle.textContent = state.expanded ? "单题作答" : "整体展开";
       }
+
+      const visible = getFilteredQuestions();
+      const miniItems = visible.map((item, index) => {
+        const result = state.results[item.id];
+        const status = result
+          ? result.mastered
+            ? ["对", "good"]
+            : result.almost
+              ? ["错", "almost"]
+              : ["错", "bad"]
+          : ["未做", ""];
+        const active = !state.expanded && visible[state.currentIndex]?.id === item.id;
+        return `
+          <button class="question-mini-item ${active ? "active" : ""} ${status[1]}" type="button" data-jump="${escapeHtml(item.id)}" title="${escapeHtml(item.title)}">
+            <span class="question-mini-index">${index + 1}</span>
+            <span class="question-mini-title">${escapeHtml(item.title)}</span>
+            <span class="mini-status ${status[1]}">${status[0]}</span>
+          </button>
+        `;
+      });
+      els.questionMiniList.innerHTML = miniItems.length ? miniItems.join("") : `<div class="empty">当前筛选下没有题目。</div>`;
 
       const reviewItems = questions
         .filter((item) => state.results[item.id] && !state.results[item.id].mastered)
@@ -2187,6 +2287,36 @@
         state.currentIndex = 0;
         saveState();
         renderQuestions();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      const choiceTarget = event.target.closest("[data-choice-question]");
+      if (choiceTarget && event.key === "Enter" && !event.shiftKey && !event.isComposing) {
+        event.preventDefault();
+        checkOneAndNext(choiceTarget.dataset.choiceQuestion);
+        return;
+      }
+
+      const answerTarget = event.target.closest("[data-answer]");
+      if (answerTarget && event.key === "Enter" && !event.shiftKey && !event.isComposing) {
+        event.preventDefault();
+        state.answers[answerTarget.dataset.answer] = answerTarget.value;
+        checkOneAndNext(answerTarget.dataset.answer);
+        return;
+      }
+
+      const activeQuestion = getFilteredQuestions()[state.currentIndex];
+      if (
+        activeQuestion &&
+        isChoiceQuestion(activeQuestion) &&
+        event.key === "Enter" &&
+        !event.shiftKey &&
+        !event.isComposing &&
+        !event.target.closest("input, textarea, select, button, a")
+      ) {
+        event.preventDefault();
+        checkOneAndNext(activeQuestion.id);
       }
     });
 
