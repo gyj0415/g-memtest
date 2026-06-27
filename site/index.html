@@ -766,76 +766,46 @@
     }
 
     .question-mini-list {
-      display: grid;
-      gap: 7px;
+      display: flex;
+      align-items: center;
+      align-content: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
       max-height: 280px;
       overflow: auto;
     }
 
     .question-mini-item {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
+      width: 34px;
+      height: 34px;
+      min-height: 34px;
+      display: inline-flex;
       align-items: center;
-      gap: 7px;
-      width: 100%;
-      padding: 8px;
+      justify-content: center;
+      padding: 0;
       border: 1px solid var(--line);
-      border-radius: 7px;
+      border-radius: 50%;
       background: #fff;
       color: var(--ink);
-      text-align: left;
+      font-size: 12px;
+      font-weight: 900;
     }
 
     .question-mini-item.active,
     .question-mini-item:hover {
       border-color: var(--brand);
-      background: rgba(14, 124, 116, .07);
+      box-shadow: 0 0 0 3px rgba(14, 124, 116, .14);
     }
 
     .question-mini-item.good {
-      border-left: 4px solid #39845d;
+      border-color: #39845d;
+      background: rgba(57, 132, 93, .14);
+      color: #2f7a54;
     }
 
     .question-mini-item.bad,
     .question-mini-item.almost {
-      border-left: 4px solid var(--danger);
-    }
-
-    .question-mini-index {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .question-mini-title {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .mini-status {
-      min-width: 42px;
-      min-height: 24px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 7px;
-      border-radius: 999px;
-      background: #f1eadc;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 900;
-    }
-
-    .mini-status.good {
-      background: rgba(57, 132, 93, .13);
-      color: #2f7a54;
-    }
-
-    .mini-status.bad,
-    .mini-status.almost {
+      border-color: var(--danger);
       background: rgba(191, 63, 57, .13);
       color: var(--danger);
     }
@@ -989,6 +959,8 @@
 
     <section class="layout">
       <aside class="side-panel" id="bankPanel" aria-label="题库与练习概览">
+        <h3>当前题目</h3>
+        <div class="question-mini-list" id="questionMiniList"></div>
         <h3>题库</h3>
         <div class="bank-list" id="bankList"></div>
         <h3>本次概览</h3>
@@ -999,8 +971,6 @@
           <div class="mini-metric"><span>掌握</span><strong id="goodCount">0</strong></div>
           <div class="mini-metric"><span>待补</span><strong id="weakCount">0</strong></div>
         </div>
-        <h3>当前题目</h3>
-        <div class="question-mini-list" id="questionMiniList"></div>
         <h3>待回看</h3>
         <div class="review-list" id="reviewList"></div>
       </aside>
@@ -2181,11 +2151,7 @@
           : ["未做", ""];
         const active = !state.expanded && visible[state.currentIndex]?.id === item.id;
         return `
-          <button class="question-mini-item ${active ? "active" : ""} ${status[1]}" type="button" data-jump="${escapeHtml(item.id)}" title="${escapeHtml(item.title)}">
-            <span class="question-mini-index">${index + 1}</span>
-            <span class="question-mini-title">${escapeHtml(item.title)}</span>
-            <span class="mini-status ${status[1]}">${status[0]}</span>
-          </button>
+          <button class="question-mini-item ${active ? "active" : ""} ${status[1]}" type="button" data-jump="${escapeHtml(item.id)}" title="${index + 1}. ${escapeHtml(status[0])} - ${escapeHtml(item.title)}" aria-label="第 ${index + 1} 题，${escapeHtml(status[0])}">${index + 1}</button>
         `;
       });
       els.questionMiniList.innerHTML = miniItems.length ? miniItems.join("") : `<div class="empty">当前筛选下没有题目。</div>`;
