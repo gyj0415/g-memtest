@@ -3,11 +3,14 @@
   "title": "自定义自测题库",
   "schema": {
     "required": ["title", "answer"],
-    "optional": ["id", "category", "prompt", "keywords", "minRequired"]
+    "optional": ["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple"]
   },
+  "chapters": ["第一章", "第二章"],
+  "categories": ["custom", "choice"],
   "questions": [
     {
       "id": "q-001",
+      "chapter": "第一章",
       "category": "custom",
       "title": "管理的具体职能有哪些？",
       "prompt": "请写出全部职能。",
@@ -16,6 +19,7 @@
     },
     {
       "id": "q-002",
+      "chapter": "第二章",
       "category": "custom",
       "title": "公共关系的作用",
       "prompt": "请写出 4 条作用。",

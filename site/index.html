@@ -111,6 +111,22 @@
       flex-wrap: wrap;
     }
 
+    .filter-group {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      gap: 10px;
+    }
+
+    .filter-group > span {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
     .primary-btn,
     .secondary-btn,
     .ghost-btn,
@@ -810,6 +826,11 @@
         grid-template-columns: 1fr;
       }
 
+      .filter-group {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
       .hero-actions,
       .card-actions,
       .filter-row {
@@ -878,7 +899,14 @@
         <button class="secondary-btn" id="shuffleBtn" type="button" title="随机排列题目">随机顺序</button>
         <button class="secondary-btn" id="showAllBtn" type="button" title="显示全部题目">显示全部</button>
       </div>
-      <div class="filter-row" id="filterRow" aria-label="分类筛选"></div>
+      <div class="filter-group" aria-label="章节筛选">
+        <span>章节</span>
+        <div class="filter-row" id="chapterFilterRow"></div>
+      </div>
+      <div class="filter-group" aria-label="题型筛选">
+        <span>题型</span>
+        <div class="filter-row" id="filterRow"></div>
+      </div>
       <div class="progress-track" aria-label="练习进度">
         <div class="progress-fill" id="progressFill"></div>
       </div>
@@ -965,6 +993,7 @@
 
     const els = {
       list: document.querySelector("#questionList"),
+      chapterFilterRow: document.querySelector("#chapterFilterRow"),
       filterRow: document.querySelector("#filterRow"),
       search: document.querySelector("#searchInput"),
       bankList: document.querySelector("#bankList"),
@@ -1037,6 +1066,10 @@
       return categoryAliases[key] || key || fallback;
     }
 
+    function normalizeChapter(value, fallback = "未分章") {
+      return String(value || "").trim() || fallback;
+    }
+
     function normalizeQuestion(raw, index) {
       if (!raw || typeof raw !== "object") return null;
       const title = String(raw.title || raw.question || raw.name || "").trim();
@@ -1044,11 +1077,13 @@
       if (!title || !answer) return null;
       const options = normalizeChoiceOptions(raw.options || raw.choices);
       const category = normalizeCategory(raw.category || raw.type, options.length ? "choice" : "term");
+      const chapter = normalizeChapter(raw.chapter || raw.section || raw.unit || raw.part);
       const keywords = Array.isArray(raw.keywords)
         ? raw.keywords.map((item) => String(item).trim()).filter(Boolean)
         : deriveKeywords(answer);
       return {
         id: String(raw.id || `${category}-${String(index + 1).padStart(2, "0")}`),
+        chapter,
         category,
         title,
         prompt: String(raw.prompt || (options.length ? "请选择正确答案。" : "请作答。")),
@@ -1082,6 +1117,7 @@
 
     function createEmptyPracticeState(list = questions) {
       return {
+        activeChapter: "all",
         activeCategory: "all",
         query: "",
         missedOnly: false,
@@ -1104,7 +1140,9 @@
         visibleAnswers: saved.visibleAnswers || {},
         order: Array.isArray(saved.order) ? saved.order : base.order,
         currentIndex: Number.isInteger(saved.currentIndex) ? saved.currentIndex : 0,
-        expanded: Boolean(saved.expanded)
+        expanded: Boolean(saved.expanded),
+        activeChapter: typeof saved.activeChapter === "string" ? saved.activeChapter : base.activeChapter,
+        activeCategory: typeof saved.activeCategory === "string" ? saved.activeCategory : base.activeCategory
       };
     }
 
@@ -1191,7 +1229,9 @@
         visibleAnswers: state.visibleAnswers,
         order: state.order,
         currentIndex: state.currentIndex,
-        expanded: state.expanded
+        expanded: state.expanded,
+        activeChapter: state.activeChapter,
+        activeCategory: state.activeCategory
       };
     }
 
@@ -1210,8 +1250,9 @@
       state.order = next.order;
       state.currentIndex = next.currentIndex;
       state.expanded = next.expanded;
+      state.activeChapter = next.activeChapter;
+      state.activeCategory = next.activeCategory;
       state.missedOnly = false;
-      state.activeCategory = "all";
       state.query = "";
       els.search.value = "";
       document.querySelector("#focusMissed").textContent = "错题回看";
@@ -1358,8 +1399,9 @@
         title: bankTitle,
         schema: {
           required: ["title", "answer"],
-          optional: ["id", "category", "prompt", "keywords", "minRequired", "options", "multiple"]
+          optional: ["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple"]
         },
+        chapters: chapterOptions().filter((item) => item !== "all"),
         categories: categoryOptions().filter((item) => item !== "all"),
         questions
       };
@@ -1734,13 +1776,18 @@
 
     function getFilteredQuestions() {
       return getOrderedQuestions().filter((question) => {
+        const chapterMatch = state.activeChapter === "all" || getQuestionChapter(question) === state.activeChapter;
         const categoryMatch = state.activeCategory === "all" || question.category === state.activeCategory;
         const result = state.results[question.id];
         const missedMatch = !state.missedOnly || (result && !result.mastered);
-        const haystack = normalize(`${question.title}${question.prompt}${question.answer}${question.keywords.join("")}${getCategoryLabel(question.category)}`);
+        const haystack = normalize(`${question.title}${question.prompt}${question.answer}${question.keywords.join("")}${getQuestionChapter(question)}${getCategoryLabel(question.category)}`);
         const queryMatch = !state.query || haystack.includes(normalize(state.query));
-        return categoryMatch && missedMatch && queryMatch;
+        return chapterMatch && categoryMatch && missedMatch && queryMatch;
       });
+    }
+
+    function getQuestionChapter(question) {
+      return normalizeChapter(question.chapter);
     }
 
     function getCategoryLabel(category) {
@@ -1749,6 +1796,10 @@
 
     function categoryOptions() {
       return ["all", ...new Set(questions.map((item) => item.category || "term"))];
+    }
+
+    function chapterOptions() {
+      return ["all", ...new Set(questions.map((item) => getQuestionChapter(item)))];
     }
 
     function clampCurrentIndex(list = getFilteredQuestions()) {
@@ -1777,6 +1828,10 @@
     }
 
     function renderFilters() {
+      const chapters = chapterOptions();
+      els.chapterFilterRow.innerHTML = chapters.map((chapter) => (
+        `<button class="ghost-btn ${state.activeChapter === chapter ? "active" : ""}" type="button" data-chapter="${escapeHtml(chapter)}">${chapter === "all" ? "全部" : escapeHtml(chapter)}</button>`
+      )).join("");
       const categories = categoryOptions();
       els.filterRow.innerHTML = categories.map((category) => (
         `<button class="ghost-btn ${state.activeCategory === category ? "active" : ""}" type="button" data-category="${category}">${getCategoryLabel(category)}</button>`
@@ -1828,7 +1883,8 @@
         <article class="question-card" id="${question.id}">
           <div class="question-head">
             <div class="question-title">
-              <span class="chip">${getCategoryLabel(question.category)}</span>
+              <span class="chip">${escapeHtml(getQuestionChapter(question))}</span>
+              <span class="chip muted">${getCategoryLabel(question.category)}</span>
               <h2>${question.title}</h2>
             </div>
             <span class="status-pill ${tone}">${label}</span>
@@ -1876,12 +1932,14 @@
       const question = visible[state.currentIndex];
       const isFirst = state.currentIndex === 0;
       const isLast = state.currentIndex === visible.length - 1;
+      const chapterLabel = state.activeChapter === "all" ? "全部章节" : state.activeChapter;
+      const typeLabel = getCategoryLabel(state.activeCategory);
 
       els.list.innerHTML = `
         <div class="question-pager">
           <div class="pager-top">
             <span class="pager-count">第 ${state.currentIndex + 1} / ${visible.length} 题</span>
-            <span>${state.missedOnly ? "错题回看" : getCategoryLabel(state.activeCategory)} · 单题作答</span>
+            <span>${state.missedOnly ? "错题回看" : `${escapeHtml(chapterLabel)} · ${escapeHtml(typeLabel)}`} · 单题作答</span>
           </div>
           <div class="pager-controls">
             <button class="secondary-btn" type="button" data-prev ${isFirst ? "disabled" : ""}>上一题</button>
@@ -2106,6 +2164,7 @@
       state.results = {};
       state.visibleAnswers = {};
       state.missedOnly = false;
+      state.activeChapter = "all";
       state.activeCategory = "all";
       state.currentIndex = 0;
       state.expanded = false;
@@ -2136,6 +2195,7 @@
       const checkNextId = event.target.dataset.checkNext;
       const toggleId = event.target.dataset.answerToggle;
       const clearId = event.target.dataset.clear;
+      const chapter = event.target.dataset.chapter;
       const category = event.target.dataset.category;
       const jumpId = event.target.dataset.jump;
       const bankStartId = event.target.closest("[data-bank-start]")?.dataset.bankStart;
@@ -2190,6 +2250,13 @@
         renderQuestions();
         document.querySelector(`#${CSS.escape(clearId)}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
       }
+      if (chapter) {
+        state.activeChapter = chapter;
+        state.currentIndex = 0;
+        saveState();
+        renderFilters();
+        renderQuestions();
+      }
       if (category) {
         state.activeCategory = category;
         state.currentIndex = 0;
@@ -2242,6 +2309,7 @@
     });
     document.querySelector("#showAllBtn").addEventListener("click", () => {
       state.missedOnly = false;
+      state.activeChapter = "all";
       state.activeCategory = "all";
       state.currentIndex = 0;
       state.query = "";

@@ -214,14 +214,16 @@
       <textarea id="aiPrompt" readonly>请把我接下来提供的题目、答案、选择题选项或课件内容，整理成“自测题库格式转换器”可以识别的纯文本格式。
 
 要求：
-1. 每道题建议写“分类：”，可用：名词解释、简答题、选择题、选择判断、计算公式、案例题。
+1. 每道题建议写“章节：”和“分类：”。章节可写：第一章、第二章、第三章；分类可用：名词解释、简答题、选择题、选择判断、计算公式、案例题。
 
 2. 问答题固定使用：
+章节：第一章
 分类：简答题
 题目：这里写题目
 答案：这里写完整标准答案
 
 3. 选择题固定使用：
+章节：第一章
 分类：选择题
 题目：这里写选择题题干
 选项：
@@ -239,10 +241,12 @@ D. 这里写 D 选项
 9. 答案要适合背诵自测：简洁、准确、概念完整。
 
 输出示例：
+章节：第一章
 分类：选择判断
 题目：管理的具体职能有哪些？
 答案：计划、组织、领导、控制。
 
+章节：第一章
 分类：选择题
 题目：下列属于管理具体职能的是哪一项？
 选项：
@@ -252,6 +256,7 @@ C. 消耗
 D. 放任
 答案：A
 
+章节：第二章
 分类：选择题
 题目：下列属于产品线延伸策略的是哪些？
 选项：
@@ -261,6 +266,7 @@ C. 双向延伸
 D. 无差别延伸
 答案：A、B、C
 
+章节：第二章
 分类：简答题
 题目：公共关系的作用有哪些？
 答案：（1）公共关系是建立和维护企业良好信誉和形象的有利武器。
@@ -281,6 +287,11 @@ D. 无差别延伸
         </label>
         <p>这个名称会显示在主自测网站顶部，也会写进导出的 JSON。</p>
         <label>
+          默认章节
+          <input id="defaultChapter" type="text" value="未分章" placeholder="例如：第一章">
+        </label>
+        <p>默认章节会应用到没有写 <code>章节：</code> 的题目；单题里写了章节会优先生效。</p>
+        <label>
           默认题目分类
           <select id="defaultCategory">
             <option value="auto">自动识别</option>
@@ -294,10 +305,12 @@ D. 无差别延伸
           </select>
         </label>
         <p>默认分类会应用到没有写 <code>分类：</code> 的题目；单题里写了分类会优先生效。</p>
-        <textarea id="source" placeholder="分类：选择判断
+        <textarea id="source" placeholder="章节：第一章
+分类：选择判断
 题目：管理的具体职能有哪些？
 答案：计划、组织、领导、控制。
 
+章节：第一章
 分类：选择题
 题目：下列属于管理具体职能的是哪一项？
 选项：
@@ -333,6 +346,7 @@ D. 放任
     const statusEl = document.querySelector("#status");
     const aiPrompt = document.querySelector("#aiPrompt");
     const bankTitle = document.querySelector("#bankTitle");
+    const defaultChapter = document.querySelector("#defaultChapter");
     const defaultCategory = document.querySelector("#defaultCategory");
 
     const categoryLabels = {
@@ -409,12 +423,17 @@ D. 放任
       return categoryAliases[key] || fallback;
     }
 
+    function normalizeChapter(value, fallback = "未分章") {
+      return String(value || "").trim() || fallback;
+    }
+
     function categoryLabel(value) {
       return categoryLabels[normalizeCategory(value)] || "自定义";
     }
 
     function parseBlock(block, index) {
       const options = parseOptions(block);
+      const chapterMatch = block.match(/(?:章节|章|Chapter|Section)[:：]\s*([^\n]+)/i);
       const categoryMatch = block.match(/(?:分类|题型|类别|Category)[:：]\s*([^\n]+)/i);
       const titleMatch = block.match(/(?:题目|问题|Q|Question)[:：]\s*([\s\S]*?)(?=\n(?:选项|答案|参考答案|A[\.\、．:：\s]|Answer)[:：]?|$)/i);
       const answerMatch = block.match(/(?:答案|参考答案|Answer)[:：]\s*([\s\S]*)/i) || block.match(/\nA[:：]\s*([\s\S]*)/i);
@@ -425,6 +444,7 @@ D. 放任
         const lines = block.split("\n")
           .map((line) => line.trim())
           .filter(Boolean)
+          .filter((line) => !/^(?:章节|章|Chapter|Section)[:：]\s*/i.test(line))
           .filter((line) => !/^(?:分类|题型|类别|Category)[:：]\s*/i.test(line))
           .filter((line) => !/^选项[:：]?$/i.test(line))
           .filter((line) => !/^([A-Z])[\.\、．:：\s]+([\s\S]+)$/i.test(line));
@@ -439,8 +459,10 @@ D. 放任
       const selectedDefaultCategory = normalizeCategory(defaultCategory.value, "auto");
       const fallbackCategory = selectedDefaultCategory === "auto" ? (isChoice ? "choice" : "custom") : selectedDefaultCategory;
       const resolvedCategory = normalizeCategory(categoryMatch?.[1], fallbackCategory);
+      const resolvedChapter = normalizeChapter(chapterMatch?.[1], normalizeChapter(defaultChapter.value));
       return {
         id: `q-${String(index + 1).padStart(3, "0")}`,
+        chapter: resolvedChapter,
         category: resolvedCategory,
         title,
         prompt: isChoice
@@ -473,8 +495,10 @@ D. 放任
         title: bankTitle.value.trim() || "自定义自测题库",
         schema: {
           required: ["title", "answer"],
-          optional: ["id", "category", "prompt", "keywords", "minRequired", "options", "multiple"]
+          optional: ["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple"]
         },
+        chapters: [...new Set(questions.map((item) => item.chapter || "未分章"))],
+        categories: [...new Set(questions.map((item) => item.category || "custom"))],
         questions
       };
 
@@ -514,11 +538,14 @@ D. 放任
     });
     document.querySelector("#loadSample").addEventListener("click", () => {
       bankTitle.value = "企业管理与技术经济学练习题";
+      defaultChapter.value = "未分章";
       defaultCategory.value = "auto";
-      source.value = `分类：选择判断
+      source.value = `章节：第一章
+分类：选择判断
 题目：管理的具体职能有哪些？
 答案：计划、组织、领导、控制。
 
+章节：第一章
 分类：选择题
 题目：下列属于管理具体职能的是哪一项？
 选项：
@@ -528,6 +555,7 @@ C. 消耗
 D. 放任
 答案：A
 
+章节：第二章
 分类：选择题
 题目：下列属于产品线延伸策略的是哪些？
 选项：
@@ -537,10 +565,12 @@ C. 双向延伸
 D. 无差别延伸
 答案：A、B、C
 
+章节：第二章
 分类：选择判断
 题目：产品线延伸策略有哪些？
 答案：向上延伸、向下延伸、双向延伸。
 
+章节：第二章
 分类：简答题
 题目：公共关系的作用
 答案：（1）公共关系是建立和维护企业良好信誉和形象的有利武器。

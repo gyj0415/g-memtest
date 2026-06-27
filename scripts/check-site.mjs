@@ -64,6 +64,7 @@ function assertQuestionBankShape(bank, file) {
     ids.add(question.id);
     assert.ok(question.title, `${file} question ${question.id} should include title`);
     assert.ok(question.answer, `${file} question ${question.id} should include answer`);
+    assert.ok(question.chapter, `${file} question ${question.id} should include chapter`);
     assert.ok(question.category, `${file} question ${question.id} should include category`);
   });
 }
