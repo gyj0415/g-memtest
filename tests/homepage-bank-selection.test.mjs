@@ -107,3 +107,56 @@ test("home sidebar hides practice-only sections until a bank is active", async (
   assert.match(indexHtml, /dataset\.mode = "practice"/);
   assert.match(indexHtml, /dataset\.mode = "home"/);
 });
+
+test("question cards can display image media from imported banks", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+  const template = JSON.parse(await readFile(new URL("template.json", siteRoot), "utf8"));
+
+  assert.match(indexHtml, /function normalizeQuestionMedia/);
+  assert.match(indexHtml, /function renderQuestionMedia/);
+  assert.match(indexHtml, /media:\s*normalizeQuestionMedia\(raw\)/);
+  assert.match(indexHtml, /question-media/);
+  assert.ok(template.schema.optional.includes("media"));
+  assert.ok(
+    template.questions.some((question) => Array.isArray(question.media) && question.media.some((item) => item.type === "image" && item.src)),
+    "template should document image-based questions"
+  );
+});
+
+test("converter accepts image lines and exports question media", async () => {
+  const converterHtml = await readFile(new URL("converter.html", siteRoot), "utf8");
+
+  assert.match(converterHtml, /图片[:：]images\/chart\.png/);
+  assert.match(converterHtml, /图片说明[:：]管理流程图/);
+  assert.match(converterHtml, /function parseQuestionMedia/);
+  assert.match(converterHtml, /media:\s*parseQuestionMedia\(block\)/);
+  assert.match(converterHtml, /"multiple", "media", "material", "groupId"/);
+});
+
+test("question cards can display shared material passages for case groups", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+  const template = JSON.parse(await readFile(new URL("template.json", siteRoot), "utf8"));
+
+  assert.match(indexHtml, /function normalizeQuestionMaterial/);
+  assert.match(indexHtml, /function renderQuestionMaterial/);
+  assert.match(indexHtml, /material:\s*normalizeQuestionMaterial\(raw\)/);
+  assert.match(indexHtml, /groupId:\s*String\(raw\.groupId/);
+  assert.match(indexHtml, /question-material/);
+  assert.ok(template.schema.optional.includes("material"));
+  assert.ok(template.schema.optional.includes("groupId"));
+  const materialQuestions = template.questions.filter((question) => question.groupId === "case-001");
+  assert.ok(materialQuestions.length >= 2, "template should include multiple questions sharing one material group");
+  assert.ok(materialQuestions.every((question) => question.material?.content));
+});
+
+test("converter accepts material passages and group ids for case questions", async () => {
+  const converterHtml = await readFile(new URL("converter.html", siteRoot), "utf8");
+
+  assert.match(converterHtml, /资料组[:：]case-001/);
+  assert.match(converterHtml, /资料标题[:：]案例资料：制造企业转型/);
+  assert.match(converterHtml, /资料[:：]某制造企业近三年订单波动明显/);
+  assert.match(converterHtml, /function parseQuestionMaterial/);
+  assert.match(converterHtml, /material:\s*parseQuestionMaterial\(block\)/);
+  assert.match(converterHtml, /groupId:\s*parseQuestionGroupId\(block\)/);
+  assert.match(converterHtml, /optional:\s*\["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple", "media", "material", "groupId"\]/);
+});

@@ -3,7 +3,7 @@
   "title": "自定义自测题库",
   "schema": {
     "required": ["title", "answer"],
-    "optional": ["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple"]
+    "optional": ["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple", "media", "material", "groupId"]
   },
   "chapters": ["第一章", "第二章"],
   "categories": ["custom", "singleChoice", "multipleChoice"],
@@ -56,6 +56,58 @@
       ],
       "multiple": true,
       "answer": "A,B,C"
+    },
+    {
+      "id": "q-005",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "结合图片判断该流程体现的管理职能是哪一项？",
+      "prompt": "先观察图片，再选择正确答案。",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/management-process.png",
+          "alt": "管理流程示意图",
+          "caption": "示例图片路径可替换为你的本地相对路径或网络图片地址。"
+        }
+      ],
+      "options": [
+        { "label": "A", "text": "计划" },
+        { "label": "B", "text": "放任" },
+        { "label": "C", "text": "消耗" },
+        { "label": "D", "text": "随机" }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-006",
+      "groupId": "case-001",
+      "chapter": "第二章",
+      "category": "case",
+      "title": "案例中企业面临的主要管理问题是什么？",
+      "prompt": "阅读资料后作答。",
+      "material": {
+        "title": "案例资料：制造企业转型",
+        "content": "某制造企业近三年订单波动明显，生产部门强调效率，销售部门强调快速响应，两个部门之间沟通不足，导致库存积压和客户交付延迟。"
+      },
+      "keywords": ["订单波动", "沟通不足", "库存积压", "交付延迟"],
+      "answer": "主要问题是部门目标不一致、沟通协调不足，导致库存积压和客户交付延迟。"
+    },
+    {
+      "id": "q-007",
+      "groupId": "case-001",
+      "chapter": "第二章",
+      "category": "case",
+      "title": "针对该案例可以采取哪些改进措施？",
+      "prompt": "请至少写出 3 个要点。",
+      "minRequired": 3,
+      "material": {
+        "title": "案例资料：制造企业转型",
+        "content": "某制造企业近三年订单波动明显，生产部门强调效率，销售部门强调快速响应，两个部门之间沟通不足，导致库存积压和客户交付延迟。"
+      },
+      "keywords": ["跨部门沟通", "计划协调", "库存管理", "客户交付"],
+      "answer": "建立跨部门沟通机制，统一销售与生产计划；优化库存管理；设置交付指标并定期复盘。"
     }
   ]
 }

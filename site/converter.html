@@ -234,11 +234,13 @@ D. 这里写 D 选项
 答案：A
 
 4. 多选题固定使用“分类：多选题”，答案写成“答案：A、C”，不要写成一句解释。
-5. 每道题之间空一行。
-6. 不要输出 Markdown 表格，不要加编号标题，不要写解释说明。
-7. 如果问答题答案有多个要点，请用“（1）（2）（3）”或“、”整理清楚。
-8. 如果题目要求“写出几条/几个关键词”，请保留这个数量要求。
-9. 答案要适合背诵自测：简洁、准确、概念完整。
+5. 图片题可加“图片：images/chart.png”或网络图片地址；需要说明时加“图片说明：管理流程图”。
+6. 大资料题可给多道题写同一个“资料组：case-001”，并在每题里保留“资料标题：”和“资料：”。
+7. 每道题之间空一行。
+8. 不要输出 Markdown 表格，不要加编号标题，不要写解释说明。
+9. 如果问答题答案有多个要点，请用“（1）（2）（3）”或“、”整理清楚。
+10. 如果题目要求“写出几条/几个关键词”，请保留这个数量要求。
+11. 答案要适合背诵自测：简洁、准确、概念完整。
 
 输出示例：
 章节：第一章
@@ -265,6 +267,34 @@ B. 向下延伸
 C. 双向延伸
 D. 无差别延伸
 答案：A、B、C
+
+章节：第二章
+分类：单选题
+题目：根据图示判断该流程体现的管理职能是哪一项？
+图片：images/chart.png
+图片说明：管理流程图
+选项：
+A. 计划
+B. 随机
+C. 消耗
+D. 放任
+答案：A
+
+章节：第二章
+分类：案例题
+资料组：case-001
+资料标题：案例资料：制造企业转型
+资料：某制造企业近三年订单波动明显，生产部门强调效率，销售部门强调快速响应，两个部门之间沟通不足，导致库存积压和客户交付延迟。
+题目：案例中企业面临的主要管理问题是什么？
+答案：主要问题是部门目标不一致、沟通协调不足，导致库存积压和客户交付延迟。
+
+章节：第二章
+分类：案例题
+资料组：case-001
+资料标题：案例资料：制造企业转型
+资料：某制造企业近三年订单波动明显，生产部门强调效率，销售部门强调快速响应，两个部门之间沟通不足，导致库存积压和客户交付延迟。
+题目：针对该案例可以采取哪些改进措施？
+答案：建立跨部门沟通机制，统一销售与生产计划；优化库存管理；设置交付指标并定期复盘。
 
 章节：第二章
 分类：简答题
@@ -439,11 +469,40 @@ D. 放任
       return categoryLabels[normalizeCategory(value)] || "自定义";
     }
 
+    function parseQuestionMedia(block) {
+      const imageMatch = block.match(/(?:图片|图像|Image)[:：]\s*([^\n]+)/i);
+      if (!imageMatch) return [];
+      const captionMatch = block.match(/(?:图片说明|图注|Alt|Caption)[:：]\s*([^\n]+)/i);
+      const caption = captionMatch?.[1]?.trim() || "";
+      return [{
+        type: "image",
+        src: imageMatch[1].trim(),
+        alt: caption || "题目图片",
+        caption
+      }];
+    }
+
+    function parseQuestionMaterial(block) {
+      const materialMatch = block.match(/(?:资料|材料|案例资料|Material|Passage)[:：]\s*([\s\S]*?)(?=\n(?:题目|问题|Q|Question|选项|答案|参考答案|A[\.\、．:：\s]|Answer)[:：]?|$)/i);
+      const content = materialMatch?.[1]?.trim() || "";
+      if (!content) return null;
+      const titleMatch = block.match(/(?:资料标题|材料标题|案例标题|MaterialTitle|PassageTitle)[:：]\s*([^\n]+)/i);
+      return {
+        title: titleMatch?.[1]?.trim() || "题目资料",
+        content
+      };
+    }
+
+    function parseQuestionGroupId(block) {
+      const match = block.match(/(?:资料组|材料组|案例组|Group|GroupId|CaseId)[:：]\s*([^\n]+)/i);
+      return match?.[1]?.trim() || undefined;
+    }
+
     function parseBlock(block, index) {
       const options = parseOptions(block);
       const chapterMatch = block.match(/(?:章节|章|Chapter|Section)[:：]\s*([^\n]+)/i);
       const categoryMatch = block.match(/(?:分类|题型|类别|Category)[:：]\s*([^\n]+)/i);
-      const titleMatch = block.match(/(?:题目|问题|Q|Question)[:：]\s*([\s\S]*?)(?=\n(?:选项|答案|参考答案|A[\.\、．:：\s]|Answer)[:：]?|$)/i);
+      const titleMatch = block.match(/(?:题目|问题|Q|Question)[:：]\s*([\s\S]*?)(?=\n(?:图片|图像|Image|图片说明|图注|Alt|Caption|资料|材料|案例资料|Material|Passage|资料标题|材料标题|案例标题|MaterialTitle|PassageTitle|资料组|材料组|案例组|Group|GroupId|CaseId|选项|答案|参考答案|A[\.\、．:：\s]|Answer)[:：]?|$)/i);
       const answerMatch = block.match(/(?:答案|参考答案|Answer)[:：]\s*([\s\S]*)/i) || block.match(/\nA[:：]\s*([\s\S]*)/i);
       let title = titleMatch?.[1]?.replace(/^选项[:：]?[\s\S]*$/i, "").trim() || "";
       let answer = answerMatch?.[1]?.trim() || "";
@@ -454,6 +513,8 @@ D. 放任
           .filter(Boolean)
           .filter((line) => !/^(?:章节|章|Chapter|Section)[:：]\s*/i.test(line))
           .filter((line) => !/^(?:分类|题型|类别|Category)[:：]\s*/i.test(line))
+          .filter((line) => !/^(?:图片|图像|Image|图片说明|图注|Alt|Caption)[:：]\s*/i.test(line))
+          .filter((line) => !/^(?:资料|材料|案例资料|Material|Passage|资料标题|材料标题|案例标题|MaterialTitle|PassageTitle|资料组|材料组|案例组|Group|GroupId|CaseId)[:：]\s*/i.test(line))
           .filter((line) => !/^选项[:：]?$/i.test(line))
           .filter((line) => !/^([A-Z])[\.\、．:：\s]+([\s\S]+)$/i.test(line));
         title = title || lines[0] || "";
@@ -482,6 +543,9 @@ D. 放任
           : minRequired ? `请至少写出 ${minRequired} 个要点。` : "请作答。",
         minRequired: Number.isFinite(minRequired) ? minRequired : undefined,
         keywords: isChoice ? [] : deriveKeywords(answer),
+        media: parseQuestionMedia(block),
+        material: parseQuestionMaterial(block),
+        groupId: parseQuestionGroupId(block),
         options,
         multiple: isChoice ? choiceCount > 1 || normalizedCategory === "multipleChoice" : undefined,
         answer: isChoice ? choiceAnswer : answer
@@ -505,7 +569,7 @@ D. 放任
         title: bankTitle.value.trim() || "自定义自测题库",
         schema: {
           required: ["title", "answer"],
-          optional: ["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple"]
+          optional: ["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple", "media", "material", "groupId"]
         },
         chapters: [...new Set(questions.map((item) => item.chapter || "未分章"))],
         categories: [...new Set(questions.map((item) => item.category || "custom"))],
@@ -574,6 +638,34 @@ B. 向下延伸
 C. 双向延伸
 D. 无差别延伸
 答案：A、B、C
+
+章节：第二章
+分类：单选题
+题目：根据图示判断该流程体现的管理职能是哪一项？
+图片：images/chart.png
+图片说明：管理流程图
+选项：
+A. 计划
+B. 随机
+C. 消耗
+D. 放任
+答案：A
+
+章节：第二章
+分类：案例题
+资料组：case-001
+资料标题：案例资料：制造企业转型
+资料：某制造企业近三年订单波动明显，生产部门强调效率，销售部门强调快速响应，两个部门之间沟通不足，导致库存积压和客户交付延迟。
+题目：案例中企业面临的主要管理问题是什么？
+答案：主要问题是部门目标不一致、沟通协调不足，导致库存积压和客户交付延迟。
+
+章节：第二章
+分类：案例题
+资料组：case-001
+资料标题：案例资料：制造企业转型
+资料：某制造企业近三年订单波动明显，生产部门强调效率，销售部门强调快速响应，两个部门之间沟通不足，导致库存积压和客户交付延迟。
+题目：针对该案例可以采取哪些改进措施？
+答案：建立跨部门沟通机制，统一销售与生产计划；优化库存管理；设置交付指标并定期复盘。
 
 章节：第二章
 分类：选择判断
