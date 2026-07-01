@@ -1,15 +1,17 @@
 {
   "version": 1,
-  "title": "自定义自测题库",
+  "id": "template-all-question-types",
+  "title": "测试用模板题库：全题型格式",
+  "description": "用于测试导入、单选、多选、图片题、资料题、资料组多小题、简答题和关键词判分。图片路径可替换为你的本地相对路径或网络图片地址。",
   "schema": {
     "required": ["title", "answer"],
     "optional": ["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple", "media", "material", "groupId"]
   },
-  "chapters": ["第一章", "第二章"],
-  "categories": ["custom", "singleChoice", "multipleChoice"],
+  "chapters": ["第一章", "第二章", "第三章", "综合案例"],
+  "categories": ["custom", "term", "short", "singleChoice", "multipleChoice", "quick", "formula", "case"],
   "questions": [
     {
-      "id": "q-001",
+      "id": "tpl-001-custom-keywords",
       "chapter": "第一章",
       "category": "custom",
       "title": "管理的具体职能有哪些？",
@@ -18,17 +20,26 @@
       "answer": "计划、组织、领导、控制。"
     },
     {
-      "id": "q-002",
+      "id": "tpl-002-term",
+      "chapter": "第一章",
+      "category": "term",
+      "title": "什么是管理？",
+      "prompt": "请用完整概念作答。",
+      "keywords": ["组织", "协调", "资源", "目标"],
+      "answer": "管理是通过计划、组织、领导和控制等活动，对组织资源进行协调和配置，以实现组织目标的过程。"
+    },
+    {
+      "id": "tpl-003-short-min-required",
       "chapter": "第二章",
-      "category": "custom",
-      "title": "公共关系的作用",
-      "prompt": "请写出 4 条作用。",
+      "category": "short",
+      "title": "公共关系的作用有哪些？",
+      "prompt": "请至少写出 4 条作用。",
       "minRequired": 4,
       "keywords": ["良好信誉", "形象", "双向信息沟通", "公众误解", "正确信息", "凝聚力", "协调外界关系"],
       "answer": "（1）公共关系是建立和维护企业良好信誉和形象的有利武器。\n（2）公共关系有利于建立企业与消费者之间双向的信息沟通。\n（3）公共关系有利于企业改变公众误解，传播正确信息。\n（4）公共关系有利于增强企业内在的凝聚力，协调与外界的关系。"
     },
     {
-      "id": "q-003",
+      "id": "tpl-004-single-choice",
       "chapter": "第二章",
       "category": "singleChoice",
       "title": "下列属于管理具体职能的是哪一项？",
@@ -43,7 +54,7 @@
       "answer": "A"
     },
     {
-      "id": "q-004",
+      "id": "tpl-005-multiple-choice",
       "chapter": "第二章",
       "category": "multipleChoice",
       "title": "下列属于产品线延伸策略的是哪些？",
@@ -58,8 +69,26 @@
       "answer": "A,B,C"
     },
     {
-      "id": "q-005",
+      "id": "tpl-006-quick",
       "chapter": "第二章",
+      "category": "quick",
+      "title": "企业目标越多越好，这种说法是否正确？",
+      "prompt": "请先判断，再简要说明理由。",
+      "keywords": ["不正确", "协调", "重点", "资源约束"],
+      "answer": "不正确。企业目标需要围绕核心战略协调设置，过多目标会分散资源和管理注意力。"
+    },
+    {
+      "id": "tpl-007-formula",
+      "chapter": "第三章",
+      "category": "formula",
+      "title": "写出盈亏平衡点销售量公式。",
+      "prompt": "请写出公式，并说明各变量含义。",
+      "keywords": ["固定成本", "单价", "单位变动成本", "盈亏平衡点"],
+      "answer": "盈亏平衡点销售量 = 固定成本 /（单价 - 单位变动成本）。其中单价减单位变动成本为单位边际贡献。"
+    },
+    {
+      "id": "tpl-008-image-single-choice",
+      "chapter": "第三章",
       "category": "singleChoice",
       "title": "结合图片判断该流程体现的管理职能是哪一项？",
       "prompt": "先观察图片，再选择正确答案。",
@@ -68,7 +97,7 @@
           "type": "image",
           "src": "images/management-process.png",
           "alt": "管理流程示意图",
-          "caption": "示例图片路径可替换为你的本地相对路径或网络图片地址。"
+          "caption": "测试图片题：把 src 换成你的相对路径，例如 images/xxx.png，或换成 https:// 开头的网络图片。"
         }
       ],
       "options": [
@@ -81,33 +110,92 @@
       "answer": "A"
     },
     {
-      "id": "q-006",
+      "id": "tpl-009-image-short-answer",
+      "chapter": "第三章",
+      "category": "short",
+      "title": "根据图片说明 PDCA 循环的四个阶段。",
+      "prompt": "图片仅作测试展示，请写出四个阶段。",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://dummyimage.com/900x420/f8f3e8/0e7c74.png&text=PDCA+Cycle",
+          "alt": "PDCA 循环示意图",
+          "caption": "测试网络图片：用于确认导入题库后图片能正常显示。"
+        }
+      ],
+      "keywords": ["计划", "执行", "检查", "处理"],
+      "answer": "PDCA 循环包括计划 Plan、执行 Do、检查 Check、处理 Act 四个阶段。"
+    },
+    {
+      "id": "tpl-010-case-material-question-1",
       "groupId": "case-001",
-      "chapter": "第二章",
+      "chapter": "综合案例",
       "category": "case",
       "title": "案例中企业面临的主要管理问题是什么？",
       "prompt": "阅读资料后作答。",
       "material": {
         "title": "案例资料：制造企业转型",
-        "content": "某制造企业近三年订单波动明显，生产部门强调效率，销售部门强调快速响应，两个部门之间沟通不足，导致库存积压和客户交付延迟。"
+        "content": "某制造企业近三年订单波动明显，生产部门强调效率，销售部门强调快速响应，两个部门之间沟通不足，导致库存积压和客户交付延迟。管理层计划推动数字化排产，但员工担心流程变化会增加工作负担。"
       },
-      "keywords": ["订单波动", "沟通不足", "库存积压", "交付延迟"],
-      "answer": "主要问题是部门目标不一致、沟通协调不足，导致库存积压和客户交付延迟。"
+      "keywords": ["订单波动", "部门目标不一致", "沟通不足", "库存积压", "交付延迟", "员工阻力"],
+      "answer": "主要问题是订单波动下部门目标不一致、沟通协调不足，导致库存积压和客户交付延迟，同时数字化变革存在员工阻力。"
     },
     {
-      "id": "q-007",
+      "id": "tpl-011-case-material-question-2",
       "groupId": "case-001",
-      "chapter": "第二章",
+      "chapter": "综合案例",
       "category": "case",
       "title": "针对该案例可以采取哪些改进措施？",
       "prompt": "请至少写出 3 个要点。",
       "minRequired": 3,
       "material": {
         "title": "案例资料：制造企业转型",
-        "content": "某制造企业近三年订单波动明显，生产部门强调效率，销售部门强调快速响应，两个部门之间沟通不足，导致库存积压和客户交付延迟。"
+        "content": "某制造企业近三年订单波动明显，生产部门强调效率，销售部门强调快速响应，两个部门之间沟通不足，导致库存积压和客户交付延迟。管理层计划推动数字化排产，但员工担心流程变化会增加工作负担。"
       },
-      "keywords": ["跨部门沟通", "计划协调", "库存管理", "客户交付"],
-      "answer": "建立跨部门沟通机制，统一销售与生产计划；优化库存管理；设置交付指标并定期复盘。"
+      "keywords": ["跨部门沟通", "计划协调", "库存管理", "客户交付", "员工培训", "变革沟通"],
+      "answer": "建立跨部门沟通机制，统一销售与生产计划；优化库存管理和交付指标；开展员工培训与变革沟通，降低数字化转型阻力。"
+    },
+    {
+      "id": "tpl-012-case-material-choice",
+      "groupId": "case-001",
+      "chapter": "综合案例",
+      "category": "multipleChoice",
+      "title": "根据案例，下列哪些措施更适合解决当前问题？",
+      "prompt": "阅读同一份案例资料，选择所有正确答案。",
+      "material": {
+        "title": "案例资料：制造企业转型",
+        "content": "某制造企业近三年订单波动明显，生产部门强调效率，销售部门强调快速响应，两个部门之间沟通不足，导致库存积压和客户交付延迟。管理层计划推动数字化排产，但员工担心流程变化会增加工作负担。"
+      },
+      "options": [
+        { "label": "A", "text": "建立销售、生产、库存联动会议" },
+        { "label": "B", "text": "完全取消客户交付指标" },
+        { "label": "C", "text": "开展数字化排产培训" },
+        { "label": "D", "text": "优化库存预警机制" }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "tpl-013-material-with-image",
+      "groupId": "case-002",
+      "chapter": "综合案例",
+      "category": "case",
+      "title": "结合资料和图片，说明该流程的改进重点。",
+      "prompt": "资料和图片都会显示在题目上方。",
+      "material": {
+        "title": "案例资料：服务流程优化",
+        "content": "某服务团队客户等待时间较长，问题主要集中在需求登记、任务分派和结果反馈三个环节。团队希望通过流程可视化找出瓶颈。"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://dummyimage.com/900x420/fffdfa/bf3f39.png&text=Service+Flow",
+          "alt": "服务流程示意图",
+          "caption": "大资料 + 图片混合题测试。"
+        }
+      ],
+      "keywords": ["需求登记", "任务分派", "结果反馈", "等待时间", "流程可视化"],
+      "answer": "改进重点应放在需求登记标准化、任务分派效率提升和结果反馈闭环，同时利用流程可视化识别等待时间较长的瓶颈环节。"
     }
   ]
 }
