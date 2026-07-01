@@ -65,7 +65,8 @@ test("question bank catalog separates built-in local and shared banks", async ()
   assert.match(indexHtml, /data-bank-source-filter="local"/);
   assert.match(indexHtml, /data-bank-source-filter="shared"/);
   assert.match(indexHtml, /function renderBankSection/);
-  assert.match(indexHtml, /云端共享/);
+  assert.match(indexHtml, /云端候选/);
+  assert.match(indexHtml, /bank-section-grid/);
 });
 
 test("single question actions avoid forced page scrolling", async () => {
@@ -80,9 +81,12 @@ test("import flow lets users choose local or shared bank visibility", async () =
   const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
 
   assert.match(indexHtml, /id="importBankMode"/);
-  assert.match(indexHtml, /value="local"/);
-  assert.match(indexHtml, /value="shared"/);
+  assert.match(indexHtml, /<select id="importBankMode"/);
+  assert.match(indexHtml, /<option value="local"/);
+  assert.match(indexHtml, /<option value="shared"/);
   assert.match(indexHtml, /addQuestionBank\(importedQuestions,\s*importedTitle,\s*\{\s*source/);
+  assert.match(indexHtml, /纯静态网页不能直接上传云端/);
+  assert.doesNotMatch(indexHtml, /class="option-toggle"/);
 });
 
 test("converter emits explicit single and multiple choice categories", async () => {
@@ -93,4 +97,13 @@ test("converter emits explicit single and multiple choice categories", async () 
   assert.match(converterHtml, /normalizedCategory === "multipleChoice"/);
   assert.match(converterHtml, /分类：单选题/);
   assert.match(converterHtml, /分类：多选题/);
+});
+
+test("home sidebar hides practice-only sections until a bank is active", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+
+  assert.match(indexHtml, /id="bankPanel"[^>]*data-mode="home"/);
+  assert.match(indexHtml, /practice-side-block/);
+  assert.match(indexHtml, /dataset\.mode = "practice"/);
+  assert.match(indexHtml, /dataset\.mode = "home"/);
 });
