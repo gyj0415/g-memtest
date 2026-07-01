@@ -1,0 +1,1484 @@
+{
+  "version": 1,
+  "title": "2026春毛中特平时作业(二）",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "第四章",
+    "第五章",
+    "第六章"
+  ],
+  "categories": [
+    "singleChoice",
+    "multipleChoice",
+    "quick",
+    "short"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "中国特色社会主义理论体系是马克思主义中国化时代化的重要成果。下列理论中，属于该体系\"开篇之作\"的是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "毛泽东思想"
+        },
+        {
+          "label": "B",
+          "text": "邓小平理论"
+        },
+        {
+          "label": "C",
+          "text": "科学发展观"
+        },
+        {
+          "label": "D",
+          "text": "\"三个代表\"重要思想"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-002",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "20世纪70年代，邓小平对时代主题作出科学判断，认为当今世界的两大问题是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "和平问题、发展问题"
+        },
+        {
+          "label": "B",
+          "text": "多极化与全球化、机遇与挑战"
+        },
+        {
+          "label": "C",
+          "text": "战争与和平、革命与建设"
+        },
+        {
+          "label": "D",
+          "text": "竞争与合作、开放与封闭"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-003",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "党的十一届三中全会实现了新中国成立以来党的历史上具有深远意义的伟大转折。这次会议在思想路线上的核心贡献是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "重新确立实事求是的思想路线"
+        },
+        {
+          "label": "B",
+          "text": "确立\"以阶级斗争为纲\"的政治路线"
+        },
+        {
+          "label": "C",
+          "text": "首次提出\"中国特色社会主义\"命题"
+        },
+        {
+          "label": "D",
+          "text": "提出\"两个凡是\"方针"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-004",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "\"建设有中国特色的社会主义\"这一重大命题，首次明确提出于( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "1987年党的十三大"
+        },
+        {
+          "label": "B",
+          "text": "1982年党的十二大"
+        },
+        {
+          "label": "C",
+          "text": "1978年党的十一届三中全会"
+        },
+        {
+          "label": "D",
+          "text": "1992年邓小平南方谈话"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-005",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "科学发展观作为中国特色社会主义理论体系的重要组成部分，其被确立为党必须长期坚持的指导思想是在( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "2017年党的十九大"
+        },
+        {
+          "label": "B",
+          "text": "2007年党的十七大"
+        },
+        {
+          "label": "C",
+          "text": "2022年党的二十大"
+        },
+        {
+          "label": "D",
+          "text": "2012年党的十八大"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-006",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "习近平新时代中国特色社会主义思想作为马克思主义中国化时代化的最新成果，被确立为党的指导思想并写入党章的时间和会议是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "2021年 党的十九届六中全会"
+        },
+        {
+          "label": "B",
+          "text": "2015年 党的十八届三中全会"
+        },
+        {
+          "label": "C",
+          "text": "2017年 党的十九大"
+        },
+        {
+          "label": "D",
+          "text": "2012年 党的十八大"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-007",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "邓小平理论作为中国特色社会主义理论体系的开篇之作，其形成的历史起点是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "新中国成立"
+        },
+        {
+          "label": "B",
+          "text": "党的十一届三中全会实现伟大历史转折"
+        },
+        {
+          "label": "C",
+          "text": "社会主义改造基本完成"
+        },
+        {
+          "label": "D",
+          "text": "改革开放进入新时代"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-008",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "邓小平指出，搞清楚什么是社会主义、怎样建设社会主义，关键是在坚持社会主义基本制度的基础上进一步认清( )。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "社会主义初级阶段"
+        },
+        {
+          "label": "B",
+          "text": "社会主义本质"
+        },
+        {
+          "label": "C",
+          "text": "社会主义根本任务"
+        },
+        {
+          "label": "D",
+          "text": "社会主义发展战略"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-009",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "党在社会主义初级阶段基本路线概括为“一个中心、两个基本点”，其中，“两个基本点”是指( )。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "坚持四项基本原则，坚持改革开放"
+        },
+        {
+          "label": "B",
+          "text": "领导和团结全国各族人民"
+        },
+        {
+          "label": "C",
+          "text": "自力更生，艰苦创业"
+        },
+        {
+          "label": "D",
+          "text": "以经济建设为中心，艰苦创业"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-010",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "邓小平强调，以经济建设为中心是兴国之要。如果离开这个中心，就会丧失社会主义事业的( )。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "文化支撑"
+        },
+        {
+          "label": "B",
+          "text": "制度优势"
+        },
+        {
+          "label": "C",
+          "text": "物质基础"
+        },
+        {
+          "label": "D",
+          "text": "政治保证"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-011",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "把邓小平提出的“小康社会”思想和“三步走”的发展战略构想确定下来的会议是( )。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "党的十五大"
+        },
+        {
+          "label": "B",
+          "text": "党的十三大"
+        },
+        {
+          "label": "C",
+          "text": "党的十四大"
+        },
+        {
+          "label": "D",
+          "text": "党的十六大"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-012",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "党的十九大将( )纳入社会主义现代化强国目标，进一步拓展了党的基本路线。这一拓展主要体现的是( )。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "文明 文化建设的新方向"
+        },
+        {
+          "label": "B",
+          "text": "民主 政治建设的新高度"
+        },
+        {
+          "label": "C",
+          "text": "包容 经济建设的新要求"
+        },
+        {
+          "label": "D",
+          "text": "美丽 生态文明建设的新定位"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-013",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "在“三个有利于”标准中，作为首要的、最根本的标准是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "发展社会主义社会的生产力"
+        },
+        {
+          "label": "B",
+          "text": "维护国家主权和领土完整"
+        },
+        {
+          "label": "C",
+          "text": "增强社会主义国家综合国力"
+        },
+        {
+          "label": "D",
+          "text": "提高人民生活水平"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-014",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "下列选项中，不属于邓小平对社会主义本质科学概括内容的是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "实行生产资料完全公有制"
+        },
+        {
+          "label": "B",
+          "text": "解放生产力，发展生产力"
+        },
+        {
+          "label": "C",
+          "text": "最终达到共同富裕"
+        },
+        {
+          "label": "D",
+          "text": "消灭剥削，消除两极分化"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-015",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "( )提出的“一国两制”构想是对马克思主义国家学说的创造性发展。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "毛泽东"
+        },
+        {
+          "label": "B",
+          "text": "邓小平"
+        },
+        {
+          "label": "C",
+          "text": "胡锦涛"
+        },
+        {
+          "label": "D",
+          "text": "江泽民"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-016",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "邓小平理论的精髓是( )。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "与时俱进、求真务实"
+        },
+        {
+          "label": "B",
+          "text": "以人为本、执政为民"
+        },
+        {
+          "label": "C",
+          "text": "解放思想、实事求是"
+        },
+        {
+          "label": "D",
+          "text": "独立自主、自力更生"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-017",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "社会主义初级阶段的基本路线可以概括为（）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "一个中心，两个基本点"
+        },
+        {
+          "label": "B",
+          "text": "改革开放"
+        },
+        {
+          "label": "C",
+          "text": "两手抓，两手都要硬"
+        },
+        {
+          "label": "D",
+          "text": "四项基本原则"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-018",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "邓小平提出的\"两手抓，两手都要硬\"中的\"两手\"不包括（）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "改革开放和四项基本原则"
+        },
+        {
+          "label": "B",
+          "text": "物质文明和精神文明"
+        },
+        {
+          "label": "C",
+          "text": "经济建设和民主法制建设"
+        },
+        {
+          "label": "D",
+          "text": "建设和法制"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-019",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "中国特色社会主义理论体系的开篇之作是（）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "毛泽东思想"
+        },
+        {
+          "label": "B",
+          "text": "邓小平理论"
+        },
+        {
+          "label": "C",
+          "text": "\"三个代表\"重要思想"
+        },
+        {
+          "label": "D",
+          "text": "科学发展观"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-020",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "社会主义的本质要求决定了其根本任务。下列选项中，准确表述社会主义根本任务的是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "发展社会生产力"
+        },
+        {
+          "label": "B",
+          "text": "推进党的建设新的伟大工程"
+        },
+        {
+          "label": "C",
+          "text": "坚持实事求是的思想路线"
+        },
+        {
+          "label": "D",
+          "text": "贯彻群众路线的工作方法"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-021",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "在建设中国特色社会主义的总体布局中，发展先进文化、建设物质文明和精神文明的基础工程是( )。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "法治"
+        },
+        {
+          "label": "B",
+          "text": "科技"
+        },
+        {
+          "label": "C",
+          "text": "文化"
+        },
+        {
+          "label": "D",
+          "text": "教育"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-022",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "关于政治体制改革的性质，下列表述正确的是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "以多党制和议会制为目标的制度重构"
+        },
+        {
+          "label": "B",
+          "text": "社会主义政治制度的自我完善和发展"
+        },
+        {
+          "label": "C",
+          "text": "照搬西方政治文明成果的制度移植"
+        },
+        {
+          "label": "D",
+          "text": "对社会主义政治制度的根本否定"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-023",
+      "chapter": "第四章",
+      "category": "singleChoice",
+      "title": "我国经济体制改革目标模式的确立具有里程碑意义。正式把\"建立社会主义市场经济体制\"确立为改革目标的会议是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "党的十一届三中全会"
+        },
+        {
+          "label": "B",
+          "text": "党的十二大"
+        },
+        {
+          "label": "C",
+          "text": "党的十三大"
+        },
+        {
+          "label": "D",
+          "text": "党的十四大"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-024",
+      "chapter": "第五章",
+      "category": "singleChoice",
+      "title": "贯彻“三个代表”重要思想，关键在坚持与时俱进，核心在坚持党的先进性，本质在坚持( )。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "执政为民"
+        },
+        {
+          "label": "B",
+          "text": "推进中国式现代化"
+        },
+        {
+          "label": "C",
+          "text": "贯彻新发展理念"
+        },
+        {
+          "label": "D",
+          "text": "发展全过程人民民主"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-025",
+      "chapter": "第五章",
+      "category": "singleChoice",
+      "title": "发展先进文化是一项系统工程。其中，解决精神动力和价值导向问题、处于重要内容和中心环节的是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "思想道德建设"
+        },
+        {
+          "label": "B",
+          "text": "文化遗产保护传承"
+        },
+        {
+          "label": "C",
+          "text": "法治建设"
+        },
+        {
+          "label": "D",
+          "text": "政治体制机制创新"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-026",
+      "chapter": "第六章",
+      "category": "singleChoice",
+      "title": "加快转变经济发展方式，必须把推动发展的立足点转到提高质量和效益上来。实现这一转变的关键在于( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "促进城乡区域协调发展"
+        },
+        {
+          "label": "B",
+          "text": "全面深化经济体制改革"
+        },
+        {
+          "label": "C",
+          "text": "实施创新驱动发展战略"
+        },
+        {
+          "label": "D",
+          "text": "推进经济结构战略性调整"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-027",
+      "chapter": "第六章",
+      "category": "singleChoice",
+      "title": "社会主义核心价值观个人层面的价值准则是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "富强、民主、文明、和谐"
+        },
+        {
+          "label": "B",
+          "text": "自由、平等、公正、法治"
+        },
+        {
+          "label": "C",
+          "text": "团结、奋斗、奉献、担当"
+        },
+        {
+          "label": "D",
+          "text": "爱国、敬业、诚信、友善"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-028",
+      "chapter": "第六章",
+      "category": "singleChoice",
+      "title": "倡导( )、民主、文明、和谐，倡导自由、平等、公正、法治，倡导( )、敬业、诚信、友善，积极培育和践行社会主义核心价值观。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "爱国;富强"
+        },
+        {
+          "label": "B",
+          "text": "美丽;爱国"
+        },
+        {
+          "label": "C",
+          "text": "富强;爱国"
+        },
+        {
+          "label": "D",
+          "text": "爱国;美丽"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-029",
+      "chapter": "第六章",
+      "category": "singleChoice",
+      "title": "在我国政治制度体系中，体现人民当家作主的根本政治制度是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "基层群众自治制度"
+        },
+        {
+          "label": "B",
+          "text": "民族区域自治制度"
+        },
+        {
+          "label": "C",
+          "text": "人民代表大会制度"
+        },
+        {
+          "label": "D",
+          "text": "中国共产党领导的多党合作和政治协商制度"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-030",
+      "chapter": "第六章",
+      "category": "singleChoice",
+      "title": "构建社会主义和谐社会，需要统筹把握民主法治、公平正义、诚信友爱、充满活力、安定有序、人与自然和谐相处。这是( )。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "建设生态文明的实质"
+        },
+        {
+          "label": "B",
+          "text": "推动经济持续健康发展的主题"
+        },
+        {
+          "label": "C",
+          "text": "构建社会主义和谐社会的总要求"
+        },
+        {
+          "label": "D",
+          "text": "全面提高党的建设科学化水平的总要求"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-031",
+      "chapter": "第六章",
+      "category": "singleChoice",
+      "title": "关于坚持科学发展的基本要求，下列表述正确的是( )",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "忽视人才支撑作用，单纯依靠资源投入"
+        },
+        {
+          "label": "B",
+          "text": "坚持速度优先，兼顾质量效益"
+        },
+        {
+          "label": "C",
+          "text": "以牺牲环境为代价换取经济增长"
+        },
+        {
+          "label": "D",
+          "text": "推动经济又\"好\"又\"快\"发展，把质量和效益放在首位"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-032",
+      "chapter": "第六章",
+      "category": "singleChoice",
+      "title": "科学发展观的科学内涵主要包括( )。① 推动经济社会发展是科学发展观的第一要义。② 以人为本是科学发展观的核心立场。③ 全面协调可持续是科学发展观的基本要求。④ 统筹兼顾是科学发展观的根本方法。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "①③"
+        },
+        {
+          "label": "B",
+          "text": "②④"
+        },
+        {
+          "label": "C",
+          "text": "①②③"
+        },
+        {
+          "label": "D",
+          "text": "①②③④"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-033",
+      "chapter": "第四章",
+      "category": "multipleChoice",
+      "title": "下列属于中国特色社会主义理论体系组成部分的是( )",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "科学发展观"
+        },
+        {
+          "label": "B",
+          "text": "习近平新时代中国特色社会主义思想"
+        },
+        {
+          "label": "C",
+          "text": "邓小平理论"
+        },
+        {
+          "label": "D",
+          "text": "\"三个代表\"重要思想"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-034",
+      "chapter": "第四章",
+      "category": "multipleChoice",
+      "title": "20世纪70年代，整个世界发生着大变动大调整，这种变动调整的剧烈和深刻程度远远超出了人们的预料。最显著的变化，就是( )。",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "和平与发展成为时代主题"
+        },
+        {
+          "label": "B",
+          "text": "战争与革命仍然是时代主题"
+        },
+        {
+          "label": "C",
+          "text": "综合国力竞争日趋激烈"
+        },
+        {
+          "label": "D",
+          "text": "世界多极化和经济全球化深入发展"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-035",
+      "chapter": "第四章",
+      "category": "multipleChoice",
+      "title": "在中国改革开放和现代化的进程中，邓小平提出一系列“两手抓”思想，主要包括( )。",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "“一手抓建设，一手抓法制”"
+        },
+        {
+          "label": "B",
+          "text": "“一手抓社会主义工业化，一手抓社会主义"
+        },
+        {
+          "label": "C",
+          "text": "“一手抓改革开放，一手抓惩治腐败”"
+        },
+        {
+          "label": "D",
+          "text": "“一手抓物质文明，一手抓精神文明”"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-036",
+      "chapter": "第四章",
+      "category": "multipleChoice",
+      "title": "1979年3月，邓小平在党的理论工作务虚会上发表《坚持四项基本原则》的讲话。他指出的四项基本原则包括( )。",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "坚持无产阶级专政(后表述为人民民主专政)"
+        },
+        {
+          "label": "B",
+          "text": "坚持共产党的领导"
+        },
+        {
+          "label": "C",
+          "text": "坚持社会主义道路"
+        },
+        {
+          "label": "D",
+          "text": "坚持马列主义毛泽东思想"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-037",
+      "chapter": "第四章",
+      "category": "multipleChoice",
+      "title": "以下关于邓小平理论的表述正确的有（）",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "党的基本路线的核心内容是\"一个中心，两个基本点\""
+        },
+        {
+          "label": "B",
+          "text": "社会主义初级阶段理论是邓小平理论的重要组成部分"
+        },
+        {
+          "label": "C",
+          "text": "邓小平理论是中国特色社会主义理论体系的最新成果"
+        },
+        {
+          "label": "D",
+          "text": "解放思想、实事求是是邓小平理论的精髓"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-038",
+      "chapter": "第五章",
+      "category": "multipleChoice",
+      "title": "关于\"三个代表\"重要思想的历史地位，下列表述正确的有( )",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "是中国特色社会主义理论体系的开篇之作"
+        },
+        {
+          "label": "B",
+          "text": "是对中国特色社会主义理论体系的丰富发展"
+        },
+        {
+          "label": "C",
+          "text": "是马克思主义中国化时代化的第一个重大理论成果"
+        },
+        {
+          "label": "D",
+          "text": "是加强和改进党的建设、推进我国社会主义自我完善和发展的强大理论武器"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-039",
+      "chapter": "第五章",
+      "category": "multipleChoice",
+      "title": "“三个代表”重要思想的核心观点包括( )。",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "始终代表中国先进文化的前进方向"
+        },
+        {
+          "label": "B",
+          "text": "始终代表中国特殊集团的特殊利益"
+        },
+        {
+          "label": "C",
+          "text": "始终代表中国最广大人民的根本利益"
+        },
+        {
+          "label": "D",
+          "text": "始终代表中国先进生产力的发展要求"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-040",
+      "chapter": "第六章",
+      "category": "multipleChoice",
+      "title": "社会主义核心价值体系的基本内容有( )",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "马克思主义指导思想"
+        },
+        {
+          "label": "B",
+          "text": "社会主义荣辱观"
+        },
+        {
+          "label": "C",
+          "text": "中国特色社会主义共同理想"
+        },
+        {
+          "label": "D",
+          "text": "以爱国主义为核心的民族精神和以改革创新为核心的时代精神"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-041",
+      "chapter": "第六章",
+      "category": "multipleChoice",
+      "title": "科学发展观最鲜明的精神实质包括( )。",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "求真务实"
+        },
+        {
+          "label": "B",
+          "text": "与时俱进"
+        },
+        {
+          "label": "C",
+          "text": "实事求是"
+        },
+        {
+          "label": "D",
+          "text": "解放思想"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-042",
+      "chapter": "第四章",
+      "category": "quick",
+      "title": "毛泽东思想是中国特色社会主义理论体系的重要组成部分，与邓小平理论、\"三个代表\"重要思想等共同构成该理论体系。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-043",
+      "chapter": "第四章",
+      "category": "quick",
+      "title": "1997年召开的党的十五大，首次使用\"邓小平理论\"这一科学概念，并将其确立为党的指导思想。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-044",
+      "chapter": "第四章",
+      "category": "quick",
+      "title": "20世纪80年代末90年代初的东欧剧变、苏联解体，标志着社会主义制度的彻底失败，证明中国特色社会主义道路不可行。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-045",
+      "chapter": "第五章",
+      "category": "quick",
+      "title": "党的十六大将\"三个代表\"重要思想写入党章并确立为党的指导思想，实现了我们党指导思想的又一次与时俱进。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-046",
+      "chapter": "第五章",
+      "category": "quick",
+      "title": "“三个代表”重要思想加深了对什么是社会主义、怎样建设社会主义和建设什么样的党、怎样建设党的认识，积累了治党治国新的宝贵经验。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-047",
+      "chapter": "第六章",
+      "category": "quick",
+      "title": "党的十八大把科学发展观写入党章，科学发展观进一步走向成熟。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-048",
+      "chapter": "第四章",
+      "category": "quick",
+      "title": "在党的基本路线中，“坚持四项基本原则”回答的是社会主义的发展动力问题，“坚持改革开放”回答的是内部条件问题。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-049",
+      "chapter": "第四章",
+      "category": "quick",
+      "title": "中国解决所有问题的关键是要靠自己的发展。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-050",
+      "chapter": "第四章",
+      "category": "quick",
+      "title": "邓小平指出，计划多一点还是市场多一点，不是社会主义与资本主义的本质区别，计划和市场都是经济手段，不是划分社会制度的重要标志。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-051",
+      "chapter": "第四章",
+      "category": "quick",
+      "title": "科学技术是第一生产力，是先进生产力的集中体现和主要标志。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-052",
+      "chapter": "第五章",
+      "category": "quick",
+      "title": "发展先进文化，就是发展中国特色社会主义文化，就是建设社会主义精神文明。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-053",
+      "chapter": "第四章",
+      "category": "quick",
+      "title": "对外开放是一项长期的基本国策。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-054",
+      "chapter": "第六章",
+      "category": "quick",
+      "title": "以人为本，继承了中国古代的民本思想，二者没有实质上的区别。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-055",
+      "chapter": "第六章",
+      "category": "quick",
+      "title": "社会主义核心价值体系是兴国之魂，决定着中国特色社会主义发展方向。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-056",
+      "chapter": "第六章",
+      "category": "quick",
+      "title": "保持和发展党的先进性是马克思主义政党自身建设的根本任务和永恒课题。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-057",
+      "chapter": "第四章",
+      "category": "short",
+      "title": "简述社会主义初级阶段论断包括的两层含义。",
+      "prompt": "请作答。",
+      "keywords": [
+        "我国社会已经是社会主义社会",
+        "必须坚持而不能离开社会主义",
+        "我国的社会主义社会还处在初级阶段",
+        "必须从这个实际出发",
+        "不能超越这个阶段"
+      ],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "（1）我国社会已经是社会主义社会，必须坚持而不能离开社会主义。（2）我国的社会主义社会还处在初级阶段，必须从这个实际出发，不能超越这个阶段。"
+    },
+    {
+      "id": "q-058",
+      "chapter": "第四章",
+      "category": "short",
+      "title": "简述邓小平理论的历史地位。",
+      "prompt": "请作答。",
+      "keywords": [
+        "马克思列宁主义",
+        "毛泽东思想的继承",
+        "发展",
+        "中国特色社会主义理论体系的开篇之作",
+        "改革开放",
+        "社会主义现代化建设的科学指南"
+      ],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "（1）马克思列宁主义、毛泽东思想的继承和发展。（2）中国特色社会主义理论体系的开篇之作。（3）改革开放和社会主义现代化建设的科学指南。"
+    }
+  ],
+  "id": "bank-mao-zhongte-homework-2"
+}

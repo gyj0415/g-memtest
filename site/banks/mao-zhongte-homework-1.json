@@ -1,0 +1,3085 @@
+{
+  "version": 1,
+  "title": "2026春毛中特平时作业(一)",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "第一章",
+    "第二章",
+    "第三章"
+  ],
+  "categories": [
+    "singleChoice",
+    "multipleChoice",
+    "quick",
+    "short",
+    "custom"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "中国共产党之所以能够始终把握历史主动，根本原因在于拥有()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "马克思主义科学理论指导"
+        },
+        {
+          "label": "B",
+          "text": "广泛的群众基础"
+        },
+        {
+          "label": "C",
+          "text": "丰富的执政经验"
+        },
+        {
+          "label": "D",
+          "text": "严密的组织体系"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-002",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "1938年，毛泽东在()上作了《论新阶段》的报告，标志着 “马克思主义中国化”这一命题正式提出。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "党的六届六中全会"
+        },
+        {
+          "label": "B",
+          "text": "党的一大"
+        },
+        {
+          "label": "C",
+          "text": "党的七大"
+        },
+        {
+          "label": "D",
+          "text": "遵义会议"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-003",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "在毛泽东思想的指导下，中国共产党团结带领中国人民，浴血奋战、百折不挠，创造了新民主主义革命的伟大成就，为实现中华民族伟大复兴创造了()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "物质基础"
+        },
+        {
+          "label": "B",
+          "text": "制度基础"
+        },
+        {
+          "label": "C",
+          "text": "根本社会条件"
+        },
+        {
+          "label": "D",
+          "text": "群众基础"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-004",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "党的十三届四中全会以后，以江泽民同志为主要代表的中国共产党人形成的()，推动了中国特色社会主义理论体系的跨世纪发展。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "邓小平理论"
+        },
+        {
+          "label": "B",
+          "text": "“三个代表”重要思想"
+        },
+        {
+          "label": "C",
+          "text": "科学发展观"
+        },
+        {
+          "label": "D",
+          "text": "习近平新时代中国特色社会主义思想"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-005",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "中国特色社会主义理论体系的开篇之作是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "邓小平理论"
+        },
+        {
+          "label": "B",
+          "text": "毛泽东思想"
+        },
+        {
+          "label": "C",
+          "text": "“三个代表”重要思想"
+        },
+        {
+          "label": "D",
+          "text": "科学发展观"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-006",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "新中国成立后，中国共产党团结带领中国人民，自力更生、发愤图强，创造了社会主义革命和建设的伟大成就，实现了中华民族有史以来最为广泛而深刻的社会变革，实现了一穷二白、人口众多的东方大国大步迈进社会主义社会的伟大飞跃，为实现中华民族伟大复兴奠定了()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "根本政治前提和制度基础"
+        },
+        {
+          "label": "B",
+          "text": "根本军事前提和国防基础"
+        },
+        {
+          "label": "C",
+          "text": "根本经济前提和物质基础"
+        },
+        {
+          "label": "D",
+          "text": "根本思想前提和文化基础"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-007",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "党的十六大以后，以()同志为主要代表的中国共产党人形成的科学发展观，成功在新形势下坚持和发展了中国特色社会主义。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "胡锦涛"
+        },
+        {
+          "label": "B",
+          "text": "习近平"
+        },
+        {
+          "label": "C",
+          "text": "邓小平"
+        },
+        {
+          "label": "D",
+          "text": "江泽民"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-008",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "马克思主义中国化时代化的第一次历史性飞跃的理论成果是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "科学发展观"
+        },
+        {
+          "label": "B",
+          "text": "毛泽东思想"
+        },
+        {
+          "label": "C",
+          "text": "“三个代表”重要思想"
+        },
+        {
+          "label": "D",
+          "text": "邓小平理论"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-009",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "1945年召开的党的七大是一次胜利的大会，团结的大会，下列选项中符合七大历史性贡献的是()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "提出了工作重心由农村转向城市"
+        },
+        {
+          "label": "B",
+          "text": "概括了毛泽东思想活的灵魂"
+        },
+        {
+          "label": "C",
+          "text": "提出思想建党政治建军"
+        },
+        {
+          "label": "D",
+          "text": "将毛泽东思想写入党章，确立为党必须长期坚持的指导思想"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-010",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "毛泽东思想形成和发展的时代背景是()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "第一次世界大战的爆发"
+        },
+        {
+          "label": "B",
+          "text": "中国工人阶级的成长壮大"
+        },
+        {
+          "label": "C",
+          "text": "帝国主义战争和无产阶级革命"
+        },
+        {
+          "label": "D",
+          "text": "中国成为半殖民地半封建社会"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-011",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "毛泽东思想形成和发展的实践基础是()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "中国共产党领导的农民运动"
+        },
+        {
+          "label": "B",
+          "text": "中国共产党领导的学生运动"
+        },
+        {
+          "label": "C",
+          "text": "中国共产党领导人民进行革命和建设的成功实践"
+        },
+        {
+          "label": "D",
+          "text": "中国共产党领导的工人运动"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-012",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "()是中华民族的优良传统，是我们立党立国的重要原则，是我们党全部理论和实践的立足点，也是党和人民事业不断从胜利走向胜利的根本保证。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "党的建设"
+        },
+        {
+          "label": "B",
+          "text": "独立自主"
+        },
+        {
+          "label": "C",
+          "text": "实事求是"
+        },
+        {
+          "label": "D",
+          "text": "群众路线"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-013",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "首次将毛泽东思想确立为党的指导思想并写入党章的时间和会议是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "1938 党的六届七中全会"
+        },
+        {
+          "label": "B",
+          "text": "1949 党的七届二中全会"
+        },
+        {
+          "label": "C",
+          "text": "1945 党的七大"
+        },
+        {
+          "label": "D",
+          "text": "1935 遵义会议"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-014",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "马克思主义中国化第一次历史性飞跃的理论成果是？",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "“三个代表”重要思想"
+        },
+        {
+          "label": "B",
+          "text": "邓小平理论"
+        },
+        {
+          "label": "C",
+          "text": "科学发展观"
+        },
+        {
+          "label": "D",
+          "text": "毛泽东思想"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-015",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "毛泽东思想初步形成的时期和标志是（）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "新中国成立后 党的建设理论的形成"
+        },
+        {
+          "label": "B",
+          "text": "大革命时期 新民主主义革命理论的系统阐述"
+        },
+        {
+          "label": "C",
+          "text": "土地革命战争 农村包围城市、武装夺取政权理论的提出"
+        },
+        {
+          "label": "D",
+          "text": "解放战争时期 社会主义改造理论的提出"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-016",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "土地革命战争时期，毛泽东提出并深入阐述的农村包围城市、武装夺取政权的思想，标志者毛泽东思想的()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "继续发展"
+        },
+        {
+          "label": "B",
+          "text": "萌芽"
+        },
+        {
+          "label": "C",
+          "text": "初步形成"
+        },
+        {
+          "label": "D",
+          "text": "成熟"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-017",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "在中国共产党历史上，毛泽东最早提出要把()同中国革命和建设的具体实际进行“第二次结合”。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "马克思列宁主义的基本原理"
+        },
+        {
+          "label": "B",
+          "text": "中华优秀传统文化"
+        },
+        {
+          "label": "C",
+          "text": "中华传统文化"
+        },
+        {
+          "label": "D",
+          "text": "哲学基本原理"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-018",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "正确认识（）的问题关系到怎样看待党百年奋斗和前进的历史，关系到党的团结、国家的安定，也关系到党和国家未来的发展前途，不仅有重要的历史意义，而且有重要的现实意义。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "和平与发展的问题"
+        },
+        {
+          "label": "B",
+          "text": "建设和发展的问题"
+        },
+        {
+          "label": "C",
+          "text": "毛泽东和毛泽东思想的问题"
+        },
+        {
+          "label": "D",
+          "text": "战争与革命的问题"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-019",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "习近平总书记指出，实事求是是马克思主义的()，是党的基本思想方法、工作方法、领导方法。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "基本观点"
+        },
+        {
+          "label": "B",
+          "text": "核心观点"
+        },
+        {
+          "label": "C",
+          "text": "根本观点"
+        },
+        {
+          "label": "D",
+          "text": "重要观点"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-020",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "群众路线是党的()，是党永葆青春活力和战斗力的重要()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "生命线和根本工作路线 传家宝"
+        },
+        {
+          "label": "B",
+          "text": "组织路线 传家宝"
+        },
+        {
+          "label": "C",
+          "text": "基本路线 法器"
+        },
+        {
+          "label": "D",
+          "text": "思想路线 法器"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-021",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "全心全意为人民服务，是我们党一切行动的()出发点和落脚点，是我们党区别于其他一切政党的根本标志。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "唯一"
+        },
+        {
+          "label": "B",
+          "text": "根本"
+        },
+        {
+          "label": "C",
+          "text": "基本"
+        },
+        {
+          "label": "D",
+          "text": "重要"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-022",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "独立自主的探索和实践精神，坚持走自己的路的坚定信心和决心，是我们党()的立足点，也是党和人民事业不断从胜利走向胜利的根本保证。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "全部理论和实践"
+        },
+        {
+          "label": "B",
+          "text": "最新实践"
+        },
+        {
+          "label": "C",
+          "text": "创新理论"
+        },
+        {
+          "label": "D",
+          "text": "带领人民革命实践"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-023",
+      "chapter": "第一章",
+      "category": "singleChoice",
+      "title": "在马克思主义中国化时代化的进程中，()为中国特色社会主义理论体系的形成奠定理论基础。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "毛泽东思想"
+        },
+        {
+          "label": "B",
+          "text": "邓小平理论"
+        },
+        {
+          "label": "C",
+          "text": "习近平新时代中国特色社会主义思想"
+        },
+        {
+          "label": "D",
+          "text": "“三个代表”重要思想"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-024",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "在半殖民地半封建社会的近代中国，社会矛盾错综复杂，其中最主要的矛盾是()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "封建主义和人民大众的矛盾"
+        },
+        {
+          "label": "B",
+          "text": "反动统治阶级内部的矛盾"
+        },
+        {
+          "label": "C",
+          "text": "帝国主义和中华民族的矛盾"
+        },
+        {
+          "label": "D",
+          "text": "资产阶级和无产阶级的矛盾"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-025",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "近代中国最基本的国情是（）。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "完全殖民地"
+        },
+        {
+          "label": "B",
+          "text": "资本主义社会"
+        },
+        {
+          "label": "C",
+          "text": "半殖民地半封建社会"
+        },
+        {
+          "label": "D",
+          "text": "独立的封建社会"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-026",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "1939年，毛泽东在()中第一次提出了“新民主主义的革命”的科学概念。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "《新民主主义论》"
+        },
+        {
+          "label": "B",
+          "text": "《在晋绥干部会议上的讲话》"
+        },
+        {
+          "label": "C",
+          "text": "《〈共产党人〉发刊词》"
+        },
+        {
+          "label": "D",
+          "text": "《中国革命和中国共产党》"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-027",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "新民主主义革命的性质和前途分别()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "资产阶级民主主义革命 资本主义"
+        },
+        {
+          "label": "B",
+          "text": "资产阶级民主主义革命 社会主义"
+        },
+        {
+          "label": "C",
+          "text": "无产阶级社会主义革命 资本主义"
+        },
+        {
+          "label": "D",
+          "text": "无产阶级社会主义革命 社会主义"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-028",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "()是中国革命的首要对象。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "官僚主义"
+        },
+        {
+          "label": "B",
+          "text": "官僚资本主义"
+        },
+        {
+          "label": "C",
+          "text": "封建主义"
+        },
+        {
+          "label": "D",
+          "text": "帝国主义"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-029",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "近代中国的社会性质和主要矛盾，决定了中国革命仍然是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "资产阶级民主革命"
+        },
+        {
+          "label": "B",
+          "text": "旧民主主义革命"
+        },
+        {
+          "label": "C",
+          "text": "无产阶级社会主义革命"
+        },
+        {
+          "label": "D",
+          "text": "新民主主义革命"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-030",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "新民主主义革命的主力军是()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "无产阶级"
+        },
+        {
+          "label": "B",
+          "text": "农民"
+        },
+        {
+          "label": "C",
+          "text": "城市小资产阶级"
+        },
+        {
+          "label": "D",
+          "text": "民族资产阶级"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-031",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "毛泽东所说的中国民族资产阶级“从娘肚子里带出来的老毛病”是指()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "软弱性"
+        },
+        {
+          "label": "B",
+          "text": "两面性"
+        },
+        {
+          "label": "C",
+          "text": "彻底性"
+        },
+        {
+          "label": "D",
+          "text": "革命性"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-032",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "新民主主义的政体是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "多党合作的政治协商制度"
+        },
+        {
+          "label": "B",
+          "text": "无产阶级专政"
+        },
+        {
+          "label": "C",
+          "text": "民主集中制的人民代表大会制度"
+        },
+        {
+          "label": "D",
+          "text": "各革命阶级的联合专政"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-033",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "新民主主义文化，就是无产阶级领导的()文化。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "革命"
+        },
+        {
+          "label": "B",
+          "text": "科学"
+        },
+        {
+          "label": "C",
+          "text": "大众"
+        },
+        {
+          "label": "D",
+          "text": "民族的科学的大众的"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-034",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "毛泽东在()一文中，提出了统一战线、武装斗争、党的建设是党在中国革命中战胜敌人的三个重要的法宝。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "《新民主主义论》"
+        },
+        {
+          "label": "B",
+          "text": "《反对本本主义》"
+        },
+        {
+          "label": "C",
+          "text": "《中国革命和中国共产党》"
+        },
+        {
+          "label": "D",
+          "text": "《〈共产党人〉发刊词》"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-035",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "近代中国社会最大的压迫是()，这决定了无产阶级及其政党可以把一切爱国的、不愿受帝国主义奴役的人们团结在自己的周围。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "思想压迫"
+        },
+        {
+          "label": "B",
+          "text": "阶级压迫"
+        },
+        {
+          "label": "C",
+          "text": "文化侵略"
+        },
+        {
+          "label": "D",
+          "text": "民族压迫"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-036",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "建设新型人民军队的根本原则是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "官兵平等"
+        },
+        {
+          "label": "B",
+          "text": "全心全意为人民服务"
+        },
+        {
+          "label": "C",
+          "text": "坚持党对军队的绝对领导"
+        },
+        {
+          "label": "D",
+          "text": "广泛的思想政治工作"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-037",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "1949年，毛泽东在()一文中，对新民主主义革命的基本经验作了集中概括，丰富和发展了马克思主义关于无产阶级领导人民革命的理论。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "《论人民民主专政》"
+        },
+        {
+          "label": "B",
+          "text": "《中国革命和中国共产党》"
+        },
+        {
+          "label": "C",
+          "text": "《〈共产党人〉发刊词》"
+        },
+        {
+          "label": "D",
+          "text": "《改造我们的学习》"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-038",
+      "chapter": "第二章",
+      "category": "singleChoice",
+      "title": "新民主主义革命时期的统一战线包含着两个联盟。其中基本的、主要的联盟是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "工人阶级同城市小资产阶级的联盟"
+        },
+        {
+          "label": "B",
+          "text": "工人阶级同可以合作的非劳动人民的联盟"
+        },
+        {
+          "label": "C",
+          "text": "工人阶级同农民阶级、广大知识分子及其他劳动人民的联盟"
+        },
+        {
+          "label": "D",
+          "text": "工人阶级同农民、小资产阶级和民族资产阶级的联盟"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-039",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "关于新民主主义社会，下列理解错误的是()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "新民主主义社会不是一个独立的社会形态"
+        },
+        {
+          "label": "B",
+          "text": "新民主主义社会中，非社会主义因素无关紧要"
+        },
+        {
+          "label": "C",
+          "text": "从中华人民共和国成立到社会主义改造基本完成，是我国从新民主主义到社会主义的过渡时期"
+        },
+        {
+          "label": "D",
+          "text": "新民主主义社会是属于社会主义体系的"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-040",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "新民主主义社会中，具有完全社会主义性质的经济成分是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "国营经济"
+        },
+        {
+          "label": "B",
+          "text": "个体经济"
+        },
+        {
+          "label": "C",
+          "text": "合作社经济"
+        },
+        {
+          "label": "D",
+          "text": "私人资本主义经济"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-041",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "新民主主义社会中，具有半社会主义性质的经济成分是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "个体经济"
+        },
+        {
+          "label": "B",
+          "text": "合作社经济"
+        },
+        {
+          "label": "C",
+          "text": "国营经济"
+        },
+        {
+          "label": "D",
+          "text": "私人资本主义经济"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-042",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "资本主义工商业改造进入个别企业公私合营阶段后，对企业利润的分配实行()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "按劳分配"
+        },
+        {
+          "label": "B",
+          "text": "定股定息"
+        },
+        {
+          "label": "C",
+          "text": "平均分配"
+        },
+        {
+          "label": "D",
+          "text": "四马分肥"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-043",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "标志着我国社会主义基本制度确立的历史事件是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "1956年底三大改造基本完成"
+        },
+        {
+          "label": "B",
+          "text": "1949年中华人民共和国成立"
+        },
+        {
+          "label": "C",
+          "text": "1978年十一届三中全会召开"
+        },
+        {
+          "label": "D",
+          "text": "1954年第一部宪法颁布"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-044",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "()，为当代中国一切发展进步奠定了制度基础，也为中国特色社会主义制度的创新和发展提供了重要前提。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "社会主义基本制度的确立"
+        },
+        {
+          "label": "B",
+          "text": "改革开放"
+        },
+        {
+          "label": "C",
+          "text": "中华人民共和国的成立"
+        },
+        {
+          "label": "D",
+          "text": "新民主主义革命的胜利"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-045",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "对资本主义工商业改造中，国家对资方在职人员和资方代理人采取的政策原则是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "政治批判、经济剥夺"
+        },
+        {
+          "label": "B",
+          "text": "集中劳动、统一改造"
+        },
+        {
+          "label": "C",
+          "text": "量才使用、适当照顾"
+        },
+        {
+          "label": "D",
+          "text": "全部辞退、重新录用"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-046",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "土地改革完成后，我国农民的生产积极性主要表现在()①发展个体经济的积极性 ②走互助合作道路的积极性③立即实现集体化的积极性 ④消灭私有制的积极性",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "①④"
+        },
+        {
+          "label": "B",
+          "text": "③④"
+        },
+        {
+          "label": "C",
+          "text": "②③"
+        },
+        {
+          "label": "D",
+          "text": "①②"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-047",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "在新民主主义社会中，随着土地革命的基本完成，()的矛盾逐步成为国内的主要矛盾。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "工人阶级和资产阶级"
+        },
+        {
+          "label": "B",
+          "text": "封建主义和人民大众"
+        },
+        {
+          "label": "C",
+          "text": "人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾"
+        },
+        {
+          "label": "D",
+          "text": "帝国主义和中华民族"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-048",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "国家对私营工商业实行委托加工、计划订货、统购包销、经销代销等办法，是国家资本主义的()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "初级形式"
+        },
+        {
+          "label": "B",
+          "text": "最初形式"
+        },
+        {
+          "label": "C",
+          "text": "最终形式"
+        },
+        {
+          "label": "D",
+          "text": "高级形式"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-049",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "《论十大关系》中，“十大关系”的前五条主要讨论()，着眼于调动经济领域各个方面的积极因素。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "社会问题"
+        },
+        {
+          "label": "B",
+          "text": "思想文化问题"
+        },
+        {
+          "label": "C",
+          "text": "经济问题"
+        },
+        {
+          "label": "D",
+          "text": "政治问题"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-050",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "1956年4月，毛泽东在《论十大关系》的讲话中强调，最重要的是要独立思考，把马克思列宁主义的基本原理同中国革命和建设的具体实际相结合。这一“第二次结合”命题的提出，主要着眼于()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "确立毛泽东思想在全党的指导地位"
+        },
+        {
+          "label": "B",
+          "text": "探索适合中国国情的社会主义建设道路"
+        },
+        {
+          "label": "C",
+          "text": "完成对农业、手工业和资本主义工商业的社会主义改造"
+        },
+        {
+          "label": "D",
+          "text": "总结新民主主义革命的历史经验"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-051",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "毛泽东特别指出，在我国，由于民族资产阶级有两面性，工人阶级同民族资产阶级的矛盾属于()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "根本利益对立基础上的矛盾"
+        },
+        {
+          "label": "B",
+          "text": "对抗性矛盾"
+        },
+        {
+          "label": "C",
+          "text": "人民内部矛盾"
+        },
+        {
+          "label": "D",
+          "text": "敌我矛盾"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-052",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "毛泽东指出，在我国，由于民族资产阶级有两面性，工人阶级同民族资产阶级的矛盾属于人民内部矛盾，如果处理不当，会变成()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "非对抗性的敌我矛盾"
+        },
+        {
+          "label": "B",
+          "text": "对抗性的敌我矛盾"
+        },
+        {
+          "label": "C",
+          "text": "非对抗性的人民内部矛盾"
+        },
+        {
+          "label": "D",
+          "text": "对抗性的人民内部矛盾"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-053",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "1956年，毛泽东提出马克思主义同中国实际\"第二次结合\"命题时，中国正处于()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "社会主义改造基本完成、全面建设社会主义即将开始的历史转折期"
+        },
+        {
+          "label": "B",
+          "text": "改革开放初期"
+        },
+        {
+          "label": "C",
+          "text": "抗日战争胜利后"
+        },
+        {
+          "label": "D",
+          "text": "新民主主义革命胜利前夕"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-054",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "《论十大关系》围绕的基本方针是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "调动一切积极因素，为社会主义事业服务"
+        },
+        {
+          "label": "B",
+          "text": "以阶级斗争为纲"
+        },
+        {
+          "label": "C",
+          "text": "实行计划经济体制"
+        },
+        {
+          "label": "D",
+          "text": "优先发展重工业"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-055",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "毛泽东指出，解决人民内部矛盾的总方法是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "斗争的方法"
+        },
+        {
+          "label": "B",
+          "text": "专政的方法"
+        },
+        {
+          "label": "C",
+          "text": "妥协的方法"
+        },
+        {
+          "label": "D",
+          "text": "民主的方法"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-056",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "在正确处理人民内部矛盾的具体方针中，\"长期共存、互相监督\"适用于处理()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "中央与地方的关系"
+        },
+        {
+          "label": "B",
+          "text": "国家与企业的关系"
+        },
+        {
+          "label": "C",
+          "text": "工人阶级与农民阶级的关系"
+        },
+        {
+          "label": "D",
+          "text": "共产党与各民主党派的关系"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-057",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "毛泽东提出\"统筹兼顾、适当安排\"的方针，主要是为了解决()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "物质利益、分配方面的人民内部矛盾"
+        },
+        {
+          "label": "B",
+          "text": "人民群众与政府机关的矛盾"
+        },
+        {
+          "label": "C",
+          "text": "民族关系方面的矛盾"
+        },
+        {
+          "label": "D",
+          "text": "科学文化领域的矛盾"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-058",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "下列属于陈云提出的关于经济体制设想的是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "按农轻重次序安排国民经济"
+        },
+        {
+          "label": "B",
+          "text": "发展商品生产、利用价值规律"
+        },
+        {
+          "label": "C",
+          "text": "\"三个主体，三个补充\""
+        },
+        {
+          "label": "D",
+          "text": "\"两参一改三结合\""
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-059",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "毛泽东关于社会主义发展阶段的划分是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "计划经济阶段和市场经济阶段"
+        },
+        {
+          "label": "B",
+          "text": "过渡时期和建设时期"
+        },
+        {
+          "label": "C",
+          "text": "不发达的社会主义和比较发达的社会主义"
+        },
+        {
+          "label": "D",
+          "text": "社会主义初级阶段和高级阶段"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-060",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "在\"三个世界划分\"战略中，中国明确将自己定位为()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "不结盟国家"
+        },
+        {
+          "label": "B",
+          "text": "第三世界国家"
+        },
+        {
+          "label": "C",
+          "text": "第一世界国家"
+        },
+        {
+          "label": "D",
+          "text": "第二世界国家"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-061",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "毛泽东提出的\"两参一改三结合\"民主管理制度中，\"三结合\"是指()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "中央、地方、企业三结合"
+        },
+        {
+          "label": "B",
+          "text": "工人、干部、技术人员三结合"
+        },
+        {
+          "label": "C",
+          "text": "党委、行政、工会三结合"
+        },
+        {
+          "label": "D",
+          "text": "工人、农民、知识分子三结合"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-062",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "关于社会主义建设道路初步探索时期的民主法制建设，下列认识正确的是()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "1954年宪法颁布后，我国民主法制已完全健全"
+        },
+        {
+          "label": "B",
+          "text": "实践中仍存在民主和法制不健全的问题，这是重要历史教训"
+        },
+        {
+          "label": "C",
+          "text": "民主法制问题与社会主义建设无关"
+        },
+        {
+          "label": "D",
+          "text": "当时不需要加强法制建设"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-063",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "关于社会主义社会的两类矛盾，下列说法不正确的是()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "人民内部矛盾是在人民根本利益一致基础上的矛盾，因而是非对抗性的矛盾"
+        },
+        {
+          "label": "B",
+          "text": "在一定的条件下，两类不同性质的矛盾可以互相转化"
+        },
+        {
+          "label": "C",
+          "text": "敌我矛盾和人民内部矛盾，这是两类性质完全不同的矛盾"
+        },
+        {
+          "label": "D",
+          "text": "解决敌我矛盾采用民主的办法，解决人民内部矛盾采用专政的办法"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-064",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "毛泽东关于人民内部矛盾的主要理论观点不包括()。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "人民内部矛盾是非对抗性矛盾"
+        },
+        {
+          "label": "B",
+          "text": "人民内部矛盾是在人民利益根本一致基础上的矛盾"
+        },
+        {
+          "label": "C",
+          "text": "工人阶级同民族资产阶级的矛盾不属于人民内部矛盾"
+        },
+        {
+          "label": "D",
+          "text": "正确处理人民内部矛盾的问题是社会主义国家政治生活的主题"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-065",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "毛泽东提出正确处理人民内部矛盾是国家政治生活的主题，其根本着眼点在于:()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "调动一切积极因素，团结一切可以团结的力量，把全党注意力转到社会主义建设上来"
+        },
+        {
+          "label": "B",
+          "text": "分清敌我，对反动派实行专政"
+        },
+        {
+          "label": "C",
+          "text": "巩固无产阶级专政"
+        },
+        {
+          "label": "D",
+          "text": "防止资本主义复辟"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-066",
+      "chapter": "第三章",
+      "category": "singleChoice",
+      "title": "在探索适合中国国情的工业化道路过程中，党内领导人提出了一系列关于经济体制和运行机制的重要思想。下列选项中，属于陈云提出的思想是:()",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "企业要建立合理的规章制度和严格的责任制"
+        },
+        {
+          "label": "B",
+          "text": "实行“两参一改三结合”的民主管理制度"
+        },
+        {
+          "label": "C",
+          "text": "发展商品生产、利用价值规律"
+        },
+        {
+          "label": "D",
+          "text": "“三个主体，三个补充”的设想"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-067",
+      "chapter": "第一章",
+      "category": "multipleChoice",
+      "title": "推进马克思主义中国化时代化，是()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "解决国际争端问题的需要"
+        },
+        {
+          "label": "B",
+          "text": "解决中国问题的客观需要"
+        },
+        {
+          "label": "C",
+          "text": "脱离具体实践而抽象发展的内在要求"
+        },
+        {
+          "label": "D",
+          "text": "马克思主义理论本身发展的内在要求"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-068",
+      "chapter": "第一章",
+      "category": "multipleChoice",
+      "title": "以下属于马克思主义中国化时代化理论成果的有（）",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "毛泽东思想"
+        },
+        {
+          "label": "B",
+          "text": "科学发展观"
+        },
+        {
+          "label": "C",
+          "text": "“三个代表”重要思想"
+        },
+        {
+          "label": "D",
+          "text": "邓小平理论"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-069",
+      "chapter": "第一章",
+      "category": "multipleChoice",
+      "title": "中国共产党为什么能，中国特色社会主义为什么好，归根到底是因为()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "中国特色社会主义制度优势的作用"
+        },
+        {
+          "label": "B",
+          "text": "中国化时代化的马克思主义行"
+        },
+        {
+          "label": "C",
+          "text": "中国人民团结精神的发挥"
+        },
+        {
+          "label": "D",
+          "text": "马克思主义行"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-070",
+      "chapter": "第一章",
+      "category": "multipleChoice",
+      "title": "关于马克思主义中国化时代化的理论成果的关系，以下表述正确的是()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "中国特色社会主义理论体系在新的历史条件下进一步丰富和发展了毛泽东思想。"
+        },
+        {
+          "label": "B",
+          "text": "马克思主义中国化时代化的理论成果是一脉相承又与时俱进的关系。"
+        },
+        {
+          "label": "C",
+          "text": "毛泽东思想所蕴含的马克思主义的立场、观点和方法，为中国特色社会主义理论体系提供了基本遵循。"
+        },
+        {
+          "label": "D",
+          "text": "马克思主义中国化时代化的理论成果相互否定。"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-071",
+      "chapter": "第一章",
+      "category": "multipleChoice",
+      "title": "毛泽东思想的活的灵魂是()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "与时俱进"
+        },
+        {
+          "label": "B",
+          "text": "群众路线"
+        },
+        {
+          "label": "C",
+          "text": "独立自主"
+        },
+        {
+          "label": "D",
+          "text": "实事求是"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-072",
+      "chapter": "第一章",
+      "category": "multipleChoice",
+      "title": "下列关于毛泽东思想的历史地位，说法正确的是()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "马克思主义中国化时代化的第一个重大理论成果"
+        },
+        {
+          "label": "B",
+          "text": "毛泽东思想只能指导中国革命和建设，已经过时了"
+        },
+        {
+          "label": "C",
+          "text": "中国共产党和中国人民宝贵的精神财富"
+        },
+        {
+          "label": "D",
+          "text": "中国革命和建设的科学指南"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-073",
+      "chapter": "第一章",
+      "category": "multipleChoice",
+      "title": "科学评价毛泽东和毛泽东思想的重要意义在于？",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "关系到党的团结和国家的安定"
+        },
+        {
+          "label": "B",
+          "text": "关系到党和国家未来的发展方向"
+        },
+        {
+          "label": "C",
+          "text": "关系到怎样看待党和国家过去几十年奋斗的历史"
+        },
+        {
+          "label": "D",
+          "text": "仅仅是一个历史问题，与现实无关"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-074",
+      "chapter": "第一章",
+      "category": "multipleChoice",
+      "title": "土地革命战争时期，毛泽东指明了中国革命的发展规律的著作有哪些？（）",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "《反对本本主义》"
+        },
+        {
+          "label": "B",
+          "text": "《中国的红色政权为什么能够存在?》"
+        },
+        {
+          "label": "C",
+          "text": "《星星之火，可以燎原》"
+        },
+        {
+          "label": "D",
+          "text": "《井冈山的斗争》"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-075",
+      "chapter": "第一章",
+      "category": "multipleChoice",
+      "title": "毛泽东关于社会主义革命和社会主义建设的重要思想，集中体现于()等著作中。",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "《在中国共产党第七届中央委员会第二次全体会议上的报告》"
+        },
+        {
+          "label": "B",
+          "text": "《论十大关系》"
+        },
+        {
+          "label": "C",
+          "text": "《论人民民主专政》"
+        },
+        {
+          "label": "D",
+          "text": "《关于正确处理人民内部矛盾的问题》"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-076",
+      "chapter": "第二章",
+      "category": "multipleChoice",
+      "title": "中国革命必须走农村包围城市、武装夺取政权的道路，是由中国所处的时代特点和具体国情决定的，其具体表现有()。",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "必须充分地发动农民，否则就无法摧毁帝国主义和封建地主阶级反动统治的基础。"
+        },
+        {
+          "label": "B",
+          "text": "农民作为无产阶级可靠的同盟军，所以无产阶级及其政党不用深入农村，从解决农民的土地问题入手。"
+        },
+        {
+          "label": "C",
+          "text": "中国的无产阶级根本不可能像在资本主义国家那样，先在城市经过长期的、公开的合法斗争，然后再组织武装起义，夺取政权。"
+        },
+        {
+          "label": "D",
+          "text": "中国革命的主要斗争形式只能是武装斗争，以革命的武装消灭反革命的武装，相应的主要组织形式必然是军队。"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-077",
+      "chapter": "第二章",
+      "category": "multipleChoice",
+      "title": "近代中国社会的阶级结构是“两头小中间大”，“两头”是指（）",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "农民阶级"
+        },
+        {
+          "label": "B",
+          "text": "地主大资产阶级"
+        },
+        {
+          "label": "C",
+          "text": "无产阶级"
+        },
+        {
+          "label": "D",
+          "text": "城市小资产阶级"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    },
+    {
+      "id": "q-078",
+      "chapter": "第二章",
+      "category": "multipleChoice",
+      "title": "土地革命战争时期，毛泽东指出:“一国之内，在四周白色政权的包围中，有一小块或若干小块红色政权的区域长期地存在，这是世界各国从来没有的事。这种奇事的发生，有其独特的原因。”这些原因是（）",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "国民革命的政治影响及良好的群众基础"
+        },
+        {
+          "label": "B",
+          "text": "近代中国是多个帝国主义间接统治的经济落后的半殖民地国家"
+        },
+        {
+          "label": "C",
+          "text": "党的领导的有力量及其政策的不错误"
+        },
+        {
+          "label": "D",
+          "text": "全国革命形势的继续发展和相当力量的正式红军的存在"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-079",
+      "chapter": "第三章",
+      "category": "multipleChoice",
+      "title": "新民主主义社会的主要经济成分包括()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "农民个体经济"
+        },
+        {
+          "label": "B",
+          "text": "私人资本主义经济"
+        },
+        {
+          "label": "C",
+          "text": "半社会主义合作社经济"
+        },
+        {
+          "label": "D",
+          "text": "社会主义国营经济"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-080",
+      "chapter": "第三章",
+      "category": "multipleChoice",
+      "title": "农业社会主义改造经历的三个发展阶段是()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "初级农业生产合作社"
+        },
+        {
+          "label": "B",
+          "text": "中级农业生产合作社"
+        },
+        {
+          "label": "C",
+          "text": "互助组"
+        },
+        {
+          "label": "D",
+          "text": "高级农业生产合作社"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-081",
+      "chapter": "第三章",
+      "category": "multipleChoice",
+      "title": "国家资本主义的初级形式包括()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "个别企业公私合营"
+        },
+        {
+          "label": "B",
+          "text": "委托加工、计划订货"
+        },
+        {
+          "label": "C",
+          "text": "统购包销、经销代销"
+        },
+        {
+          "label": "D",
+          "text": "全行业公私合营"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    },
+    {
+      "id": "q-082",
+      "chapter": "第三章",
+      "category": "multipleChoice",
+      "title": "社会主义改造积累的历史经验有()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "追求单一公有制以体现社会主义纯洁性"
+        },
+        {
+          "label": "B",
+          "text": "坚持社会主义工业化建设与改造同时并举"
+        },
+        {
+          "label": "C",
+          "text": "采取积极引导、逐步过渡的方式"
+        },
+        {
+          "label": "D",
+          "text": "用和平方法进行改造"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-083",
+      "chapter": "第三章",
+      "category": "multipleChoice",
+      "title": "我国能够对资本主义工商业实行和平赎买，主要是因为()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "资产阶级主动放弃生产资料所有权"
+        },
+        {
+          "label": "B",
+          "text": "我国已经有了以工人阶级为领导、工农联盟为基础的人民民主专政的国家政权"
+        },
+        {
+          "label": "C",
+          "text": "民族资产阶级具有两面性"
+        },
+        {
+          "label": "D",
+          "text": "党与民族资产阶级长期保持统一战线关系"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-084",
+      "chapter": "第三章",
+      "category": "multipleChoice",
+      "title": "农业社会主义改造遵循的基本原则是()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "行政命令推动"
+        },
+        {
+          "label": "B",
+          "text": "国家帮助"
+        },
+        {
+          "label": "C",
+          "text": "自愿互利"
+        },
+        {
+          "label": "D",
+          "text": "典型示范"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-085",
+      "chapter": "第三章",
+      "category": "multipleChoice",
+      "title": "党的七届二中全会提出的“两个转变”战略任务包括()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "由新民主主义国家转变为过渡时期"
+        },
+        {
+          "label": "B",
+          "text": "立即消灭一切非公有制经济"
+        },
+        {
+          "label": "C",
+          "text": "由农业国稳步转变为工业国"
+        },
+        {
+          "label": "D",
+          "text": "由新民主主义国家转变为社会主义国家"
+        }
+      ],
+      "multiple": true,
+      "answer": "C,D"
+    },
+    {
+      "id": "q-086",
+      "chapter": "第三章",
+      "category": "multipleChoice",
+      "title": "下面选项属于手工业社会主义改造的步骤的是()。",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "手工业供销合作社"
+        },
+        {
+          "label": "B",
+          "text": "手工业生产合作社"
+        },
+        {
+          "label": "C",
+          "text": "手工业供销小组"
+        },
+        {
+          "label": "D",
+          "text": "手工业高级供销合作社"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-087",
+      "chapter": "第三章",
+      "category": "multipleChoice",
+      "title": "在探索适合中国国情的工业化道路过程中，党内领导人提出了一系列关于经济体制和运行机制的重要思想。下列选项中，属于毛泽东提出的思想是:()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "实行“两参一改三结合”的民主管理制度"
+        },
+        {
+          "label": "B",
+          "text": "企业要建立合理的规章制度和严格的责任制"
+        },
+        {
+          "label": "C",
+          "text": "发展商品生产、利用价值规律"
+        },
+        {
+          "label": "D",
+          "text": "“三个主体，三个补充”的设想"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-088",
+      "chapter": "第三章",
+      "category": "multipleChoice",
+      "title": "毛泽东在《关于正确处理人民内部矛盾的问题》中提出的具体方针，与适用领域对应正确的有()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "\"长期共存、互相监督\"——共产党与民主党派的关系"
+        },
+        {
+          "label": "B",
+          "text": "\"百花齐放、百家争鸣\"——科学文化领域的矛盾"
+        },
+        {
+          "label": "C",
+          "text": "\"民主集中制\"——解决人民群众和政府机关的矛盾"
+        },
+        {
+          "label": "D",
+          "text": "\"统筹兼顾、适当安排\"——物质利益、分配方面的矛盾"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-089",
+      "chapter": "第三章",
+      "category": "multipleChoice",
+      "title": "在探索中国工业化道路过程中，关于经济建设的正确方针包括()",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "在自力更生基础上积极争取外援，学习外国先进经验"
+        },
+        {
+          "label": "B",
+          "text": "统筹兼顾国家、集体、个人三方面利益"
+        },
+        {
+          "label": "C",
+          "text": "既反保守又反冒进，在综合平衡中稳步前进"
+        },
+        {
+          "label": "D",
+          "text": "集中全部资源优先发展重工业，其他领域暂缓发展"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-090",
+      "chapter": "第一章",
+      "category": "quick",
+      "title": "马克思主义中国化时代化要坚持把马克思主义基本原理同中国具体实际相结合、同中华优秀传统文化相结合。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-091",
+      "chapter": "第一章",
+      "category": "quick",
+      "title": "马克思主义只有正确运用于实践并在实践中不断发展才能体现其科学性，彰显其强大力量。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-092",
+      "chapter": "第一章",
+      "category": "quick",
+      "title": "\"没有调查，没有发言权\"是毛泽东在《矛盾论》中提出的重要论断。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-093",
+      "chapter": "第一章",
+      "category": "quick",
+      "title": "习近平指出，毛泽东同志总结革命斗争经验，把统一战线、武装斗争、党的建设概括为克敌制胜的“三大法宝”，为我们党取得新民主主义革命胜利发挥了重要作用，至今依然发挥着重要作用。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-094",
+      "chapter": "第二章",
+      "category": "quick",
+      "title": "毛泽东领导秋收起义的部队完成“三湾改编”，创造性地将支部建在连上，成立各级士兵委员会，实行民主制度，在政治上官兵平等。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-095",
+      "chapter": "第一章",
+      "category": "quick",
+      "title": "理论联系实际是毛泽东思想的基本点，是毛泽东思想的精髓。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-096",
+      "chapter": "第二章",
+      "category": "quick",
+      "title": "与资本主义国家相同，在半殖民地半封建的旧中国，无产阶级和广大人民群众有议会民主可以利用，有组织工人举行罢工的合法权利。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-097",
+      "chapter": "第二章",
+      "category": "quick",
+      "title": "毛泽东在《在晋绥干部会议上的讲话》中第一次提出了“新民主主义的革命”的科学概念。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-098",
+      "chapter": "第二章",
+      "category": "quick",
+      "title": "没收官僚资本归新民主主义国家所有，包含着新民主主义革命和社会主义革命的双重性质。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-099",
+      "chapter": "第二章",
+      "category": "quick",
+      "title": "土地革命是中国革命的基本内容。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-100",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "新民主主义社会不是一个独立的社会形态，而是由新民主主义向社会主义转变的过渡性社会形态。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-101",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "合作社经济是新民主主义社会五种经济成分中的主要经济成分之一。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-102",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "在新民主主义社会中，社会主义的因素不论在经济上还是在政治上都已经居于领导地位，所以非社会主义因素已无关紧要。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-103",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "初级农业生产合作社实行土地入股、统一经营，具有半社会主义性质。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-104",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "我国的社会主义改造取得了历史性的胜利，同时，也出现了一些失误和偏差。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-105",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "1953年6月，毛泽东在中央政治局会议上正式提出过渡时期总路线和总任务。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-106",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "手工业社会主义改造的最高组织形式是\"手工业高级供销合作社\"。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-107",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "国家资本主义的高级形式包括个别企业公私合营和全行业公私合营。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-108",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "1954年《中华人民共和国宪法》的颁布，为各族人民参与国家政治生活提供了必要条件和保证，为逐步健全和完善我国社会主义政治制度奠定了坚实的基础。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-109",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "中国不能在没有实现工业化的情况下进入社会主义。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-110",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "毛泽东认为，工人阶级同民族资产阶级的矛盾属于对抗性的敌我矛盾，必须用专政的方法解决。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-111",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "毛泽东提出，社会主义可以分为不发达的社会主义和比较发达的社会主义两个阶段，这一思想为后来社会主义初级阶段理论提供了重要启示。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "对"
+    },
+    {
+      "id": "q-112",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "在对外关系上，毛泽东主张只在社会主义国家范围内开展经济技术交流，反对与资本主义国家发展经贸关系。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-113",
+      "chapter": "第三章",
+      "category": "quick",
+      "title": "新中国成立后，我国制定了宪法，从根本上保证了人民当家作主的权利，因此不存在民主和法制不健全的问题。",
+      "prompt": "请作答。",
+      "keywords": [],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "错"
+    },
+    {
+      "id": "q-114",
+      "chapter": "第一章",
+      "category": "short",
+      "title": "简述马克思主义中国化时代化科学内涵的三层含义。",
+      "prompt": "请作答。",
+      "keywords": [
+        "运用马克思主义的立场",
+        "观点",
+        "方法",
+        "观察时代",
+        "把握时代",
+        "引领时代",
+        "解决中国革命",
+        "建设",
+        "改革中的实际问题",
+        "总结"
+      ],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "（1）运用马克思主义的立场、观点和方法，观察时代、把握时代、引领时代，解决中国革命、建设、改革中的实际问题。（2）总结和提炼中国革命、建设、改革的实践经验并将其上升为理论，不断丰富和发展马克思主义理论，赋予马克思主义新的时代内涵。（3）运用中国人民喜闻乐见的民族语言阐释马克思主义，使其植根中华优秀传统文化，具备中国特色、中国风格、中国气派。"
+    },
+    {
+      "id": "q-115",
+      "chapter": "第二章",
+      "category": "short",
+      "title": "简述统一战线、武装斗争、党的建设三者之间的关系。",
+      "prompt": "请作答。",
+      "keywords": [
+        "统一战线",
+        "武装斗争是中国革命两个基本特点",
+        "是战胜敌人的两大基本武器",
+        "统一战线是实行武装斗争的统一战线",
+        "武装斗争是统一战线的中心支柱",
+        "党的组织是掌握统一战线",
+        "武装斗争两大武器对敌冲锋陷阵的英勇战士"
+      ],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "（1）统一战线和武装斗争是中国革命两个基本特点，是战胜敌人的两大基本武器。（2）统一战线是实行武装斗争的统一战线，武装斗争是统一战线的中心支柱。（3）党的组织是掌握统一战线、武装斗争两大武器对敌冲锋陷阵的英勇战士。"
+    },
+    {
+      "id": "q-116",
+      "chapter": "第三章",
+      "category": "custom",
+      "title": "联系实际，谈谈社会主义改造完成后社会主义基本制度确立的重要意义。",
+      "prompt": "请作答。",
+      "keywords": [
+        "社会主义基本制度的确立是中国历史上最深刻最伟大的社会变革",
+        "为当代中国一切发展进步奠定制度基础",
+        "为中国特色社会主义制度创新发展提供重要前提",
+        "社会主义基本制度的确立",
+        "使广大劳动人民真正成为国家的主人",
+        "占世界人口四分之一的东方大国进入社会主义社会",
+        "是世界社会主义发展史上历史性伟大胜利",
+        "是马列主义社会主义革命理论在中国正确运用",
+        "创造性发展",
+        "系统回答落后东方大国如何开展社会主义革命的问题"
+      ],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "（1）社会主义基本制度的确立是中国历史上最深刻最伟大的社会变革，为当代中国一切发展进步奠定制度基础，为中国特色社会主义制度创新发展提供重要前提。（2）社会主义基本制度的确立，使广大劳动人民真正成为国家的主人。（3）占世界人口四分之一的东方大国进入社会主义社会，是世界社会主义发展史上历史性伟大胜利。（4）是马列主义社会主义革命理论在中国正确运用与创造性发展，系统回答落后东方大国如何开展社会主义革命的问题。（5）结合现实实际展开论述。"
+    },
+    {
+      "id": "q-117",
+      "chapter": "第三章",
+      "category": "custom",
+      "title": "联系实际，谈谈社会主义建设道路初步探索的经验教训。",
+      "prompt": "请作答。",
+      "keywords": [
+        "必须把马克思主义",
+        "中国实际相结合",
+        "探索符合中国国情的社会主义建设道路",
+        "正确认识社会主义社会主要矛盾",
+        "根本任务",
+        "集中力量发展生产力",
+        "立足国情开展建设",
+        "建设规模",
+        "速度",
+        "国力相匹配"
+      ],
+      "media": [],
+      "material": null,
+      "options": [],
+      "answer": "（1）必须把马克思主义与中国实际相结合，探索符合中国国情的社会主义建设道路。（2）正确认识社会主义社会主要矛盾与根本任务，集中力量发展生产力。（3）立足国情开展建设，建设规模、速度与国力相匹配，不可急于求成。（4）发展社会主义民主，健全社会主义法制。（5）坚持民主集中制与集体领导制度，加强执政党建设。（6）坚持对外开放，吸收借鉴人类文明成果，不能关起门搞建设。（7）结合现实实际展开论述。"
+    }
+  ],
+  "id": "bank-mao-zhongte-homework-1"
+}

@@ -12,6 +12,18 @@
       "title": "毛概26题库",
       "description": "毛概26题库，按章节和题型练习。",
       "file": "mao-gai-2026.json"
+    },
+    {
+      "id": "bank-mao-zhongte-homework-1",
+      "title": "2026春毛中特平时作业(一)",
+      "description": "2026春毛中特平时作业(一)，第一章至第三章练习。",
+      "file": "mao-zhongte-homework-1.json"
+    },
+    {
+      "id": "bank-mao-zhongte-homework-2",
+      "title": "2026春毛中特平时作业(二）",
+      "description": "2026春毛中特平时作业(二），第四章至第六章练习。",
+      "file": "mao-zhongte-homework-2.json"
     }
   ]
 }
