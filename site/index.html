@@ -130,7 +130,8 @@
     .primary-btn,
     .secondary-btn,
     .ghost-btn,
-    .icon-btn {
+    .icon-btn,
+    .option-toggle {
       min-height: 40px;
       border-radius: 7px;
       display: inline-flex;
@@ -181,6 +182,19 @@
       color: #fff;
       border-color: var(--brand);
       background: var(--brand);
+    }
+
+    .option-toggle {
+      min-height: 40px;
+      padding: 0 13px;
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .option-toggle input {
+      margin: 0;
+      accent-color: var(--brand);
     }
 
     .icon-btn {
@@ -383,8 +397,37 @@
 
     .bank-list {
       display: grid;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 18px;
+    }
+
+    .bank-source-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .bank-source-tabs .ghost-btn {
+      min-height: 34px;
+      padding: 0 10px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .bank-section {
+      display: grid;
+      gap: 8px;
+    }
+
+    .bank-section[hidden] {
+      display: none;
+    }
+
+    .bank-section-title {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
     }
 
     .home-bank-grid {
@@ -421,6 +464,19 @@
       color: var(--muted);
       font-size: 12px;
       line-height: 1.5;
+    }
+
+    .bank-card-source {
+      width: fit-content;
+      min-height: 22px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 8px;
+      border-radius: 999px;
+      background: rgba(14, 124, 116, .09);
+      color: var(--brand-dark);
+      font-size: 12px;
+      font-weight: 900;
     }
 
     .bank-card.large {
@@ -508,6 +564,23 @@
       color: var(--brand-dark);
       font-size: 12px;
       font-weight: 800;
+    }
+
+    .question-meta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .chip.muted {
+      background: #f2ecdf;
+      color: var(--muted);
+    }
+
+    .question-type-badge {
+      background: rgba(191, 63, 57, .1);
+      color: var(--accent);
     }
 
     .status-pill {
@@ -761,7 +834,7 @@
     .review-list {
       display: grid;
       gap: 8px;
-      max-height: 330px;
+      max-height: 220px;
       overflow: auto;
     }
 
@@ -771,7 +844,7 @@
       align-content: flex-start;
       gap: 8px;
       flex-wrap: wrap;
-      max-height: 280px;
+      max-height: 170px;
       overflow: auto;
     }
 
@@ -849,6 +922,17 @@
       .side-panel {
         position: static;
         order: -1;
+        gap: 10px;
+      }
+
+      .side-panel h3,
+      .side-summary,
+      .review-list {
+        display: none;
+      }
+
+      .bank-list {
+        margin-bottom: 0;
       }
 
       .toolbar {
@@ -885,6 +969,7 @@
       .primary-btn,
       .secondary-btn,
       .ghost-btn,
+      .option-toggle,
       .bank-switch {
         width: 100%;
       }
@@ -917,6 +1002,14 @@
           <button class="secondary-btn practice-action" id="expandToggle" type="button" title="切换单题/整体展开" hidden>整体展开</button>
           <button class="secondary-btn practice-action" id="exportBank" type="button" title="导出当前题库 JSON" hidden>导出题库</button>
           <button class="secondary-btn practice-action" id="backHome" type="button" title="返回题库首页" hidden>返回首页</button>
+          <label class="option-toggle" title="导入后只保存在本机浏览器">
+            <input id="importBankMode" name="importBankMode" type="radio" value="local" checked>
+            本地
+          </label>
+          <label class="option-toggle" title="标记为云端共享候选题库，便于和本地题库区分">
+            <input name="importBankMode" type="radio" value="shared">
+            云端
+          </label>
           <label class="secondary-btn" for="importBank" title="导入题库 JSON">导入题库</label>
           <input class="hidden" id="importBank" type="file" accept="application/json,.json">
           <a class="secondary-btn" href="./converter.html" title="把普通题目答案转换成可导入格式">题库转换器</a>
@@ -959,12 +1052,17 @@
 
     <section class="layout">
       <aside class="side-panel" id="bankPanel" aria-label="题库与练习概览">
-        <h3>当前题目</h3>
+        <h3>题目导航</h3>
         <div class="question-mini-list" id="questionMiniList"></div>
         <h3>题库</h3>
+        <div class="bank-source-tabs" id="bankSourceTabs">
+          <button class="ghost-btn active" type="button" data-bank-source-filter="built-in">内置</button>
+          <button class="ghost-btn" type="button" data-bank-source-filter="local">本地</button>
+          <button class="ghost-btn" type="button" data-bank-source-filter="shared">云端</button>
+        </div>
         <div class="bank-list" id="bankList"></div>
         <h3>本次概览</h3>
-        <div>
+        <div class="side-summary">
           <div class="mini-metric"><span>已填写</span><strong id="filledCount">0</strong></div>
           <div class="mini-metric"><span>已判分</span><strong id="checkedCount">0</strong></div>
           <div class="mini-metric"><span>总分</span><strong id="totalScore">0%</strong></div>
@@ -991,6 +1089,8 @@
       short: "简答题",
       quick: "选择判断",
       choice: "选择题",
+      singleChoice: "单选题",
+      multipleChoice: "多选题",
       formula: "计算公式",
       case: "案例题",
       custom: "自定义"
@@ -1004,8 +1104,10 @@
       "问答题": "short",
       choice: "choice",
       "选择题": "choice",
-      "单选题": "choice",
-      "多选题": "choice",
+      singleChoice: "singleChoice",
+      "单选题": "singleChoice",
+      multipleChoice: "multipleChoice",
+      "多选题": "multipleChoice",
       quick: "quick",
       "选择判断": "quick",
       "判断题": "quick",
@@ -1029,6 +1131,12 @@
 
     const defaultBankTitle = "自测题库";
     const defaultBankId = "bank-default";
+    const bankSourceLabels = {
+      "built-in": "内置题库",
+      local: "本地题库",
+      shared: "云端共享"
+    };
+    let activeBankSourceFilter = "built-in";
     let bankLibrary = loadBankLibrary();
     let activeBankId = "";
     let activeBank = getActiveBank();
@@ -1124,7 +1232,11 @@
       const answer = String(raw.answer || raw.reference || raw.solution || "").trim();
       if (!title || !answer) return null;
       const options = normalizeChoiceOptions(raw.options || raw.choices);
-      const category = normalizeCategory(raw.category || raw.type, options.length ? "choice" : "term");
+      const expectedChoiceCount = options.length ? normalizeChoiceAnswer(answer, { options }).length : 0;
+      const inferredChoiceCategory = expectedChoiceCount > 1 || raw.multiple ? "multipleChoice" : "singleChoice";
+      const rawCategory = normalizeCategory(raw.category || raw.type, options.length ? inferredChoiceCategory : "term");
+      const category = rawCategory === "choice" && options.length ? inferredChoiceCategory : rawCategory;
+      const isMultipleChoice = options.length && (expectedChoiceCount > 1 || Boolean(raw.multiple) || category === "multipleChoice");
       const chapter = normalizeChapter(raw.chapter || raw.section || raw.unit || raw.part);
       const keywords = Array.isArray(raw.keywords)
         ? raw.keywords.map((item) => String(item).trim()).filter(Boolean)
@@ -1134,11 +1246,11 @@
         chapter,
         category,
         title,
-        prompt: String(raw.prompt || (options.length ? "请选择正确答案。" : "请作答。")),
+        prompt: String(raw.prompt || (options.length ? (isMultipleChoice ? "请选择所有正确答案。" : "请选择正确答案。") : "请作答。")),
         minRequired: Number.isFinite(Number(raw.minRequired)) ? Number(raw.minRequired) : undefined,
         keywords,
         options,
-        multiple: Boolean(raw.multiple),
+        multiple: options.length ? isMultipleChoice : Boolean(raw.multiple),
         answer
       };
     }
@@ -1205,10 +1317,14 @@
         id,
         title: String(title || defaultBankTitle).trim() || defaultBankTitle,
         description: String(meta.description || "").trim(),
-        source: meta.source || "local",
+        source: normalizeBankSource(meta.source),
         questions: parsedQuestions,
         practice: normalizeSavedPracticeState(practice, parsedQuestions)
       };
+    }
+
+    function normalizeBankSource(source) {
+      return bankSourceLabels[source] ? source : "local";
     }
 
     function readLegacyQuestionBank() {
@@ -1357,21 +1473,62 @@
       persistBankLibrary();
     }
 
-    function renderBankCards(size = "compact") {
+    function bankCountsBySource() {
+      return bankLibrary.banks.reduce((counts, bank) => {
+        const source = normalizeBankSource(bank.source);
+        counts[source] = (counts[source] || 0) + 1;
+        return counts;
+      }, {});
+    }
+
+    function renderBankSection(source, size = "compact") {
+      const banks = bankLibrary.banks.filter((bank) => normalizeBankSource(bank.source) === source);
+      if (!banks.length) {
+        const emptyText = source === "built-in"
+          ? "还没有内置题库。"
+          : source === "shared"
+            ? "还没有云端共享题库。导入时选择“云端”可先归到这里。"
+            : "还没有本地题库。导入 JSON 后会出现在这里。";
+        return `<div class="bank-section" data-bank-source="${source}"><p class="bank-section-title">${bankSourceLabels[source]}</p><div class="empty">${emptyText}</div></div>`;
+      }
+      return `
+        <div class="bank-section" data-bank-source="${source}">
+          <p class="bank-section-title">${bankSourceLabels[source]}</p>
+          ${banks.map((bank) => (
+            `<button class="bank-card ${size === "large" ? "large" : ""} ${bank.id === activeBankId ? "active" : ""}" type="button" data-bank-start="${escapeHtml(bank.id)}">
+              <span class="bank-card-source">${bankSourceLabels[normalizeBankSource(bank.source)]}</span>
+              <strong>${escapeHtml(bank.title)}</strong>
+              <span>${bank.questions.length} 题</span>
+              ${bank.description ? `<span>${escapeHtml(bank.description)}</span>` : ""}
+            </button>`
+          )).join("")}
+        </div>
+      `;
+    }
+
+    function renderBankCards(size = "compact", source = activeBankSourceFilter) {
       if (!bankLibrary.banks.length) {
         return `<div class="empty">还没有可用题库。你可以导入 JSON 题库。</div>`;
       }
-      return bankLibrary.banks.map((bank) => (
-        `<button class="bank-card ${size === "large" ? "large" : ""} ${bank.id === activeBankId ? "active" : ""}" type="button" data-bank-start="${escapeHtml(bank.id)}">
-          <strong>${escapeHtml(bank.title)}</strong>
-          <span>${bank.questions.length} 题 · ${bank.source === "built-in" ? "内置题库" : "本地题库"}</span>
-          ${bank.description ? `<span>${escapeHtml(bank.description)}</span>` : ""}
-        </button>`
-      )).join("");
+      if (size === "large") {
+        return ["built-in", "local", "shared"].map((item) => renderBankSection(item, size)).join("");
+      }
+      return renderBankSection(source, size);
+    }
+
+    function renderBankSourceTabs() {
+      const tabs = document.querySelectorAll("[data-bank-source-filter]");
+      const counts = bankCountsBySource();
+      tabs.forEach((tab) => {
+        const source = tab.dataset.bankSourceFilter;
+        tab.classList.toggle("active", source === activeBankSourceFilter);
+        tab.textContent = `${bankSourceLabels[source].replace("题库", "")} ${counts[source] || 0}`;
+      });
     }
 
     function renderBankList() {
       els.bankList.innerHTML = renderBankCards();
+      renderBankSourceTabs();
       const homeBankGrid = document.querySelector("#homeBankGrid");
       if (homeBankGrid) {
         homeBankGrid.innerHTML = renderBankCards("large");
@@ -1391,8 +1548,8 @@
       els.list.innerHTML = `
         <article class="question-card home-panel" id="homePanel">
           <h2>选择一个题库开始</h2>
-          <p>默认题库已经拆到 <strong>site/banks/</strong>。以后新增科目时，把题库 JSON 放进去，再在 manifest 里登记即可。</p>
-          <p>左侧和下方都可以选择内置题库，也可以导入自己的 JSON 题库。</p>
+          <p>题库按内置、本地、云端共享分区显示。首页先看清来源，再进入练习。</p>
+          <p>导入自己的 JSON 题库时，可以选择只放本地，或先标记为云端共享候选。</p>
           <div class="home-bank-grid" id="homeBankGrid"></div>
         </article>
       `;
@@ -1400,10 +1557,11 @@
       renderSummary();
     }
 
-    function addQuestionBank(nextQuestions, nextTitle = bankTitle) {
+    function addQuestionBank(nextQuestions, nextTitle = bankTitle, meta = {}) {
       saveActiveBankPractice();
-      const newBank = createBankRecord(createBankId(nextTitle), nextTitle, nextQuestions);
+      const newBank = createBankRecord(createBankId(nextTitle), nextTitle, nextQuestions, {}, meta);
       bankLibrary.banks.push(newBank);
+      activeBankSourceFilter = normalizeBankSource(newBank.source);
       activeBankId = newBank.id;
       persistBankLibrary();
       refreshActiveBankFromLibrary();
@@ -1451,7 +1609,10 @@
         },
         chapters: chapterOptions().filter((item) => item !== "all"),
         categories: categoryOptions().filter((item) => item !== "all"),
-        questions
+        questions: questions.map((question) => ({
+          ...question,
+          category: getQuestionType(question)
+        }))
       };
     }
 
@@ -1825,10 +1986,10 @@
     function getFilteredQuestions() {
       return getOrderedQuestions().filter((question) => {
         const chapterMatch = state.activeChapter === "all" || getQuestionChapter(question) === state.activeChapter;
-        const categoryMatch = state.activeCategory === "all" || question.category === state.activeCategory;
+        const categoryMatch = state.activeCategory === "all" || getQuestionType(question) === state.activeCategory || question.category === state.activeCategory;
         const result = state.results[question.id];
         const missedMatch = !state.missedOnly || (result && !result.mastered);
-        const haystack = normalize(`${question.title}${question.prompt}${question.answer}${question.keywords.join("")}${getQuestionChapter(question)}${getCategoryLabel(question.category)}`);
+        const haystack = normalize(`${question.title}${question.prompt}${question.answer}${question.keywords.join("")}${getQuestionChapter(question)}${getCategoryLabel(getQuestionType(question))}`);
         const queryMatch = !state.query || haystack.includes(normalize(state.query));
         return chapterMatch && categoryMatch && missedMatch && queryMatch;
       });
@@ -1838,12 +1999,20 @@
       return normalizeChapter(question.chapter);
     }
 
+    function getQuestionType(question) {
+      if (isChoiceQuestion(question)) {
+        const expected = normalizeChoiceAnswer(question.answer, question);
+        return expected.length > 1 || question.multiple ? "multipleChoice" : "singleChoice";
+      }
+      return question.category || "term";
+    }
+
     function getCategoryLabel(category) {
       return categoryLabels[category] || category || "未分类";
     }
 
     function categoryOptions() {
-      return ["all", ...new Set(questions.map((item) => item.category || "term"))];
+      return ["all", ...new Set(questions.map((item) => getQuestionType(item)))];
     }
 
     function chapterOptions() {
@@ -1871,7 +2040,7 @@
       clampCurrentIndex(visible);
       state.currentIndex = Math.min(Math.max(state.currentIndex + step, 0), Math.max(visible.length - 1, 0));
       saveState();
-      renderQuestions();
+      preserveScroll(renderQuestions);
     }
 
     function renderFilters() {
@@ -1930,8 +2099,10 @@
         <article class="question-card" id="${question.id}">
           <div class="question-head">
             <div class="question-title">
-              <span class="chip">${escapeHtml(getQuestionChapter(question))}</span>
-              <span class="chip muted">${getCategoryLabel(question.category)}</span>
+              <div class="question-meta">
+                <span class="chip">${escapeHtml(getQuestionChapter(question))}</span>
+                <span class="chip muted question-type-badge">${getCategoryLabel(getQuestionType(question))}</span>
+              </div>
               <h2>${question.title}</h2>
             </div>
             <span class="status-pill ${tone}">${label}</span>
@@ -2173,31 +2344,36 @@
         .replace(/"/g, "&quot;");
     }
 
-    function checkOne(id) {
-      const question = questions.find((item) => item.id === id);
-      if (!question) return;
-      state.results[id] = evaluateQuestion(question);
-      saveState();
-      renderQuestions();
-      document.querySelector(`#${CSS.escape(id)}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    function preserveScroll(action) {
+      const left = window.scrollX;
+      const top = window.scrollY;
+      action();
+      window.requestAnimationFrame(() => window.scrollTo(left, top));
     }
 
-    function checkOneAndNext(id) {
+    function checkOne(id) {
+      checkOneAndNext(id, { advance: false });
+    }
+
+    function checkOneAndNext(id, options = {}) {
       const question = questions.find((item) => item.id === id);
       if (!question) return;
+      const advance = options.advance !== false;
       const previousIndex = state.currentIndex;
       state.results[id] = evaluateQuestion(question);
-      const visible = getFilteredQuestions();
-      if (visible.length) {
-        const stillVisibleIndex = visible.findIndex((item) => item.id === id);
-        state.currentIndex = stillVisibleIndex >= 0
-          ? Math.min(stillVisibleIndex + 1, visible.length - 1)
-          : Math.min(previousIndex, visible.length - 1);
-      } else {
-        state.currentIndex = 0;
+      if (advance) {
+        const visible = getFilteredQuestions();
+        if (visible.length) {
+          const stillVisibleIndex = visible.findIndex((item) => item.id === id);
+          state.currentIndex = stillVisibleIndex >= 0
+            ? Math.min(stillVisibleIndex + 1, visible.length - 1)
+            : Math.min(previousIndex, visible.length - 1);
+        } else {
+          state.currentIndex = 0;
+        }
       }
       saveState();
-      renderQuestions();
+      preserveScroll(renderQuestions);
     }
 
     function submitAll() {
@@ -2205,8 +2381,7 @@
         state.results[question.id] = evaluateQuestion(question);
       });
       saveState();
-      renderQuestions();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      preserveScroll(renderQuestions);
     }
 
     function shuffleQuestions() {
@@ -2292,12 +2467,18 @@
       const chapter = event.target.dataset.chapter;
       const category = event.target.dataset.category;
       const jumpId = event.target.dataset.jump;
+      const bankSourceFilter = event.target.dataset.bankSourceFilter;
       const bankStartId = event.target.closest("[data-bank-start]")?.dataset.bankStart;
       const choiceButton = event.target.closest("[data-choice-question]");
 
+      if (bankSourceFilter) {
+        activeBankSourceFilter = normalizeBankSource(bankSourceFilter);
+        renderBankList();
+        return;
+      }
+
       if (bankStartId) {
         switchQuestionBank(bankStartId);
-        els.list.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
 
@@ -2318,7 +2499,7 @@
           state.answers[question.id] = nextSelected.join(",");
           delete state.results[question.id];
           saveState();
-          renderQuestions();
+          preserveScroll(renderQuestions);
         }
       }
       if (event.target.dataset.prev !== undefined) moveQuestion(-1);
@@ -2327,21 +2508,18 @@
         state.expanded = false;
         saveState();
         renderQuestions();
-        els.list.scrollIntoView({ behavior: "smooth", block: "start" });
       }
       if (toggleId) {
         state.visibleAnswers[toggleId] = !state.visibleAnswers[toggleId];
         saveState();
-        renderQuestions();
-        document.querySelector(`#${CSS.escape(toggleId)}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+        preserveScroll(renderQuestions);
       }
       if (clearId) {
         delete state.answers[clearId];
         delete state.results[clearId];
         delete state.visibleAnswers[clearId];
         saveState();
-        renderQuestions();
-        document.querySelector(`#${CSS.escape(clearId)}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+        preserveScroll(renderQuestions);
       }
       if (chapter) {
         state.activeChapter = chapter;
@@ -2362,7 +2540,6 @@
         document.querySelector("#focusMissed").textContent = "错题回看";
         setCurrentById(jumpId);
         renderQuestions();
-        els.list.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
 
@@ -2372,7 +2549,6 @@
     document.querySelector("#backHome").addEventListener("click", () => {
       saveActiveBankPractice();
       renderHome();
-      window.scrollTo({ top: 0, behavior: "smooth" });
     });
     document.querySelector("#exportBank").addEventListener("click", () => {
       downloadText(`${safeDownloadName(bankTitle)}.json`, JSON.stringify(buildQuestionBankExport(), null, 2));
@@ -2385,8 +2561,10 @@
         const payload = JSON.parse(text);
         const importedQuestions = parseQuestionBankPayload(payload);
         const importedTitle = titleFromQuestionBankPayload(payload, "自定义自测题库");
-        addQuestionBank(importedQuestions, importedTitle);
-        window.alert(`已导入《${importedTitle}》${importedQuestions.length} 道题，并已加入题库切换列表。`);
+        const source = document.querySelector("input[name='importBankMode']:checked")?.value || "local";
+        addQuestionBank(importedQuestions, importedTitle, { source });
+        const sourceLabel = bankSourceLabels[normalizeBankSource(source)];
+        window.alert(`已导入《${importedTitle}》${importedQuestions.length} 道题，并已加入${sourceLabel}分区。`);
       } catch (error) {
         window.alert(`导入失败：${error.message}`);
       } finally {
@@ -2398,7 +2576,6 @@
       event.currentTarget.textContent = state.expanded ? "单题作答" : "整体展开";
       saveState();
       renderQuestions();
-      els.list.scrollIntoView({ behavior: "smooth", block: "start" });
     });
     document.querySelector("#showAllBtn").addEventListener("click", () => {
       state.missedOnly = false;

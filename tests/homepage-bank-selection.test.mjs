@@ -48,3 +48,49 @@ test("perfect copied answers can be scored as full marks", async () => {
   assert.match(indexHtml, /ratio:\s*1/);
   assert.match(indexHtml, /mastered:\s*true/);
 });
+
+test("choice questions are separated into single and multiple choice filters", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+
+  assert.match(indexHtml, /singleChoice:\s*"单选题"/);
+  assert.match(indexHtml, /multipleChoice:\s*"多选题"/);
+  assert.match(indexHtml, /function getQuestionType/);
+  assert.match(indexHtml, /question-type-badge/);
+});
+
+test("question bank catalog separates built-in local and shared banks", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+
+  assert.match(indexHtml, /data-bank-source-filter="built-in"/);
+  assert.match(indexHtml, /data-bank-source-filter="local"/);
+  assert.match(indexHtml, /data-bank-source-filter="shared"/);
+  assert.match(indexHtml, /function renderBankSection/);
+  assert.match(indexHtml, /云端共享/);
+});
+
+test("single question actions avoid forced page scrolling", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+
+  assert.doesNotMatch(indexHtml, /scrollIntoView\(\{\s*behavior:\s*"smooth"/);
+  assert.match(indexHtml, /function preserveScroll/);
+  assert.match(indexHtml, /checkOneAndNext\(id,\s*\{\s*advance:\s*false\s*\}\)/);
+});
+
+test("import flow lets users choose local or shared bank visibility", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+
+  assert.match(indexHtml, /id="importBankMode"/);
+  assert.match(indexHtml, /value="local"/);
+  assert.match(indexHtml, /value="shared"/);
+  assert.match(indexHtml, /addQuestionBank\(importedQuestions,\s*importedTitle,\s*\{\s*source/);
+});
+
+test("converter emits explicit single and multiple choice categories", async () => {
+  const converterHtml = await readFile(new URL("converter.html", siteRoot), "utf8");
+
+  assert.match(converterHtml, /value="singleChoice"/);
+  assert.match(converterHtml, /value="multipleChoice"/);
+  assert.match(converterHtml, /normalizedCategory === "multipleChoice"/);
+  assert.match(converterHtml, /分类：单选题/);
+  assert.match(converterHtml, /分类：多选题/);
+});

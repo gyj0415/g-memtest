@@ -222,9 +222,9 @@
 题目：这里写题目
 答案：这里写完整标准答案
 
-3. 选择题固定使用：
+3. 单选题固定使用：
 章节：第一章
-分类：选择题
+分类：单选题
 题目：这里写选择题题干
 选项：
 A. 这里写 A 选项
@@ -233,7 +233,7 @@ C. 这里写 C 选项
 D. 这里写 D 选项
 答案：A
 
-4. 多选题答案写成“答案：A、C”，不要写成一句解释。
+4. 多选题固定使用“分类：多选题”，答案写成“答案：A、C”，不要写成一句解释。
 5. 每道题之间空一行。
 6. 不要输出 Markdown 表格，不要加编号标题，不要写解释说明。
 7. 如果问答题答案有多个要点，请用“（1）（2）（3）”或“、”整理清楚。
@@ -247,7 +247,7 @@ D. 这里写 D 选项
 答案：计划、组织、领导、控制。
 
 章节：第一章
-分类：选择题
+分类：单选题
 题目：下列属于管理具体职能的是哪一项？
 选项：
 A. 计划
@@ -257,7 +257,7 @@ D. 放任
 答案：A
 
 章节：第二章
-分类：选择题
+分类：多选题
 题目：下列属于产品线延伸策略的是哪些？
 选项：
 A. 向上延伸
@@ -299,6 +299,8 @@ D. 无差别延伸
             <option value="term">名词解释</option>
             <option value="short">简答题</option>
             <option value="choice">选择题</option>
+            <option value="singleChoice">单选题</option>
+            <option value="multipleChoice">多选题</option>
             <option value="quick">选择判断</option>
             <option value="formula">计算公式</option>
             <option value="case">案例题</option>
@@ -311,7 +313,7 @@ D. 无差别延伸
 答案：计划、组织、领导、控制。
 
 章节：第一章
-分类：选择题
+分类：单选题
 题目：下列属于管理具体职能的是哪一项？
 选项：
 A. 计划
@@ -353,6 +355,8 @@ D. 放任
       term: "名词解释",
       short: "简答题",
       choice: "选择题",
+      singleChoice: "单选题",
+      multipleChoice: "多选题",
       quick: "选择判断",
       formula: "计算公式",
       case: "案例题",
@@ -366,6 +370,10 @@ D. 放任
       "简答题": "short",
       choice: "choice",
       "选择题": "choice",
+      singleChoice: "singleChoice",
+      "单选题": "singleChoice",
+      multipleChoice: "multipleChoice",
+      "多选题": "multipleChoice",
       quick: "quick",
       "选择判断": "quick",
       "判断题": "quick",
@@ -456,24 +464,26 @@ D. 放任
       const minRequired = Number(title.match(/至少写出\s*(\d+)|写出\s*(\d+)\s*条|(\d+)\s*个关键词/)?.slice(1).find(Boolean));
       const isChoice = options.length >= 2;
       const choiceAnswer = normalizeChoiceAnswer(answer);
+      const choiceCount = choiceAnswer.split(",").filter(Boolean).length;
       const selectedDefaultCategory = normalizeCategory(defaultCategory.value, "auto");
-      const fallbackCategory = selectedDefaultCategory === "auto" ? (isChoice ? "choice" : "custom") : selectedDefaultCategory;
+      const fallbackCategory = selectedDefaultCategory === "auto" ? (isChoice ? (choiceCount > 1 ? "multipleChoice" : "singleChoice") : "custom") : selectedDefaultCategory;
       const resolvedCategory = normalizeCategory(categoryMatch?.[1], fallbackCategory);
+      const normalizedCategory = resolvedCategory === "choice" && isChoice ? (choiceCount > 1 ? "multipleChoice" : "singleChoice") : resolvedCategory;
       const resolvedChapter = normalizeChapter(chapterMatch?.[1], normalizeChapter(defaultChapter.value));
       return {
         id: `q-${String(index + 1).padStart(3, "0")}`,
         chapter: resolvedChapter,
-        category: resolvedCategory,
+        category: normalizedCategory,
         title,
         prompt: isChoice
-          ? choiceAnswer.split(",").filter(Boolean).length > 1
+          ? choiceCount > 1
             ? "请选择所有正确答案。"
             : "请选择正确答案。"
           : minRequired ? `请至少写出 ${minRequired} 个要点。` : "请作答。",
         minRequired: Number.isFinite(minRequired) ? minRequired : undefined,
         keywords: isChoice ? [] : deriveKeywords(answer),
         options,
-        multiple: isChoice ? choiceAnswer.split(",").filter(Boolean).length > 1 : undefined,
+        multiple: isChoice ? choiceCount > 1 || normalizedCategory === "multipleChoice" : undefined,
         answer: isChoice ? choiceAnswer : answer
       };
     }
@@ -546,7 +556,7 @@ D. 放任
 答案：计划、组织、领导、控制。
 
 章节：第一章
-分类：选择题
+分类：单选题
 题目：下列属于管理具体职能的是哪一项？
 选项：
 A. 计划
@@ -556,7 +566,7 @@ D. 放任
 答案：A
 
 章节：第二章
-分类：选择题
+分类：多选题
 题目：下列属于产品线延伸策略的是哪些？
 选项：
 A. 向上延伸
