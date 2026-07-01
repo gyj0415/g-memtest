@@ -160,3 +160,13 @@ test("converter accepts material passages and group ids for case questions", asy
   assert.match(converterHtml, /groupId:\s*parseQuestionGroupId\(block\)/);
   assert.match(converterHtml, /optional:\s*\["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple", "media", "material", "groupId"\]/);
 });
+
+test("home bank cards keep equal box sizes in each source section", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+
+  assert.match(indexHtml, /\.bank-section-grid\s*{[\s\S]*grid-template-columns:\s*repeat\(auto-fill,\s*minmax\(220px,\s*1fr\)\)/);
+  assert.match(indexHtml, /\.bank-section-grid\s*{[\s\S]*grid-auto-rows:\s*1fr/);
+  assert.match(indexHtml, /\.bank-card\s*{[\s\S]*height:\s*100%/);
+  assert.match(indexHtml, /\.bank-card\.large\s*{[\s\S]*min-height:\s*150px/);
+  assert.match(indexHtml, /\.bank-card-description\s*{/);
+});

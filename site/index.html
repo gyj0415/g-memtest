@@ -500,7 +500,8 @@
 
     .bank-section-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-auto-rows: 1fr;
       gap: 12px;
       align-items: stretch;
     }
@@ -508,6 +509,8 @@
     .bank-card {
       display: grid;
       width: 100%;
+      height: 100%;
+      min-height: 104px;
       gap: 5px;
       padding: 12px;
       border: 1px solid var(--line);
@@ -515,6 +518,7 @@
       background: #fff;
       color: var(--ink);
       text-align: left;
+      align-content: start;
     }
 
     .bank-card:hover,
@@ -524,14 +528,26 @@
     }
 
     .bank-card strong {
+      display: -webkit-box;
+      overflow: hidden;
       font-size: 14px;
       line-height: 1.45;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
 
     .bank-card span {
       color: var(--muted);
       font-size: 12px;
       line-height: 1.5;
+    }
+
+    .bank-card-description {
+      display: -webkit-box;
+      overflow: hidden;
+      min-height: 3em;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
 
     .bank-card-source {
@@ -548,7 +564,7 @@
     }
 
     .bank-card.large {
-      min-height: 128px;
+      min-height: 150px;
       padding: 16px;
       align-content: start;
     }
@@ -1635,7 +1651,7 @@
                 <span class="bank-card-source">${bankSourceLabels[normalizeBankSource(bank.source)]}</span>
                 <strong>${escapeHtml(bank.title)}</strong>
                 <span>${bank.questions.length} 题</span>
-                ${bank.description ? `<span>${escapeHtml(bank.description)}</span>` : ""}
+                ${bank.description ? `<span class="bank-card-description">${escapeHtml(bank.description)}</span>` : ""}
               </button>`
             )).join("")}
           </div>
