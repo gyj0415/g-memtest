@@ -1,0 +1,1624 @@
+{
+  "version": 1,
+  "id": "bank-hcia-mrs",
+  "title": "HCIA-MRS",
+  "description": "HCIA-MRS，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIA-MRS"
+  ],
+  "categories": [
+    "singleChoice",
+    "quick",
+    "short",
+    "multipleChoice"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "某用户需要搭建一个350节点的单选FusioninsightHD集群，哪种规划方案最佳",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "管理节点、控制节点、数据节点合一部暑，二层组"
+        },
+        {
+          "label": "B",
+          "text": "管理节点、控制节点合部署、数据节点独立部署二层组网"
+        },
+        {
+          "label": "C",
+          "text": "管理节点、控制节点、数据节点都独立部暑，三层组网"
+        },
+        {
+          "label": "D",
+          "text": "管理节点、数据节点合一部署，控制节点独立部暑，二层组网"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "MRS服务100%兼容开源大数据生态，结合周边丰富的数据及应用迁移工具，能够帮助客户快速完成自建平台的平滑迁移，整个迁移过程可做到“代码0修改，业务0中断”",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "安装Fusioninsight HD安装流程正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "安装Manager->执行preinstall->LLD工具进行配置->安装集群->安装后检查->安装后配置"
+        },
+        {
+          "label": "B",
+          "text": "LLD工具进行配置->执行preinstall->安装Manager->安装集群->安装后检查->安装后配置"
+        },
+        {
+          "label": "C",
+          "text": "安装Manager->LLD工具进行配置->执行preinstall->安装集群->安装后检通->安装后配置"
+        },
+        {
+          "label": "D",
+          "text": "LLD工具进行配置->执行preinstall->安装集群->安装Manager->安装后检查->安装后配置"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIA-MRS",
+      "category": "short",
+      "title": "统一认证的过程中，Kerteros的所有数据，包含用户的密码。用户的附属信息均需要从______ 获取",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "Ldap"
+      ],
+      "answer": "Ldap"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "华为Fusioninsight HD是国内首家符合国单选家金融等级保护的大数据平台，其安全性现在以下哪些方面",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "系统安全"
+        },
+        {
+          "label": "B",
+          "text": "权限认证"
+        },
+        {
+          "label": "C",
+          "text": "数据安全"
+        },
+        {
+          "label": "D",
+          "text": "以上全部正确"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "Fusioninsight Hadoop集群中，在某节点单选上通过df-hT查询，看到的分区包含以下几个.var/log/srv/BigData/srv/BigData/hadoop/data5/sr这些分区所对应磁盘最佳Raid级别的规划组合是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Raid0 Raid1 Raid0 Non-Raid1"
+        },
+        {
+          "label": "B",
+          "text": "Raid1 Raid1 Non-Raid Non-Raid Raid1"
+        },
+        {
+          "label": "C",
+          "text": "Raid0 Raid0 Raid0 Raid0 Raid0"
+        },
+        {
+          "label": "D",
+          "text": "Non-Raid Non-Raid Non-Raid Non-Raid Raid1"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "Fusioninsight HD系统中，LDAP数据同步方式是哪个",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "单向同步"
+        },
+        {
+          "label": "B",
+          "text": "双向同步"
+        },
+        {
+          "label": "C",
+          "text": "隔离不同步"
+        },
+        {
+          "label": "D",
+          "text": "数据交叉同步"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "Kerberos只能对集群内的服务提供安全认证。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "FusionInsight Manager对服务的管理操作，下面说法错误的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "可对服务进行启停重启操作"
+        },
+        {
+          "label": "B",
+          "text": "可以添加和卸载服务"
+        },
+        {
+          "label": "C",
+          "text": "可设置不常用的服务隐藏或显示"
+        },
+        {
+          "label": "D",
+          "text": "可查看服务的当前状态"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "Fusioninsight HD产品在部署Kerberos和LDAP服务时，以下描述正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "部署Kerberos服务之 前必须先部署LDAP服务"
+        },
+        {
+          "label": "B",
+          "text": "LDAP服务必须和Kereros服务部署在同一个节点"
+        },
+        {
+          "label": "C",
+          "text": "Kerberos服务和LDAP服务部署同一个节点利于数据访问，有助于性能提升"
+        },
+        {
+          "label": "D",
+          "text": "LDAP服务可以多个集群共享"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "MRS支持与公有云安全服务集成,采取多种措施确保主机安全。以下选项中,哪一个选项不属于主机安全的措施?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "更新操作系统最新补丁"
+        },
+        {
+          "label": "B",
+          "text": "身份鉴别和认证"
+        },
+        {
+          "label": "C",
+          "text": "操作系统内核安全加固"
+        },
+        {
+          "label": "D",
+          "text": "操作系统端口管理"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "Fusioninsight Manager对服务的配置功单选能说法不正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "服务级别的配置可对所有实例生效"
+        },
+        {
+          "label": "B",
+          "text": "实例级别的配置只针对本实例生效"
+        },
+        {
+          "label": "C",
+          "text": "实例级别的配置对其他实例也生效"
+        },
+        {
+          "label": "D",
+          "text": "配置保存好需要重启服务才能生效"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "以下不属于KrbServer核心要素的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "KDC(Key Distribution Center)"
+        },
+        {
+          "label": "B",
+          "text": "Kerberos Client"
+        },
+        {
+          "label": "C",
+          "text": "Kerberos KDC Client"
+        },
+        {
+          "label": "D",
+          "text": "Kerberos KDC Server"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "大数据体量的不断增加对数据存储的物理安全性要求越来越高，对数据的多副本与容灾机制也提出更高的要求",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "Fusioninsight HD集群中，集群规模现多选有300个节点，如果采用推荐部署方案，控制节点上一定不会存在哪些分区?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "/"
+        },
+        {
+          "label": "B",
+          "text": "/srv/BigData/dbdata om"
+        },
+        {
+          "label": "C",
+          "text": "/sv/BigData"
+        },
+        {
+          "label": "D",
+          "text": "/srv/Bigdata/hadoop/data5"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "某电信公司计划开展大数据业务，目标业单选务有客户分群、用户历史账单分析、实时话费分析等业务。若要满足业务需求，功能和成本考虑，下列哪个选项最合适",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "部署MapReduce与Storm"
+        },
+        {
+          "label": "B",
+          "text": "部署Storm"
+        },
+        {
+          "label": "C",
+          "text": "部署MapReduce"
+        },
+        {
+          "label": "D",
+          "text": "单独部署Spark"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "某电商平台每天产生大量的交易订单数多选据,现在需要对这些数据中的交易金额做统计,可能会用到如下哪些组件?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "MapReduce"
+        },
+        {
+          "label": "B",
+          "text": "Flume"
+        },
+        {
+          "label": "C",
+          "text": "Kafka"
+        },
+        {
+          "label": "D",
+          "text": "MySQL"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "KrbServerl可为其他组件提供了kerberos功能用于防止窃听、防止replay攻击保护数据完整性等场合",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "下列对云搜索服务CSs描述正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "扩容节点、磁盘业务不中断,更新词库业务不中断"
+        },
+        {
+          "label": "B",
+          "text": "兼容Elasticsearch APls"
+        },
+        {
+          "label": "C",
+          "text": "不支持支持声音等富文本与文本的融合搜索"
+        },
+        {
+          "label": "D",
+          "text": "TB级别数据检索秒级返回,亿级百维向星检索秒级返回"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "Kerberos服务角色中KerberosServer主要是提供认证功能KerberosAdmin.主要提供用户管理功能",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "为了考虑性能最优化，建议将所有集群中LdapServer都与KrbServer部署在相同节点上",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "关于Kerberos部署，描述正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Kerberos仅有一个角色"
+        },
+        {
+          "label": "B",
+          "text": "Kerberos服务在同一个节点上有两个实例"
+        },
+        {
+          "label": "C",
+          "text": "Kerberos服务采用主备模式部署"
+        },
+        {
+          "label": "D",
+          "text": "Kerberos服务必须和LDAP服务部署在同一个节点"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "用户权限管理基于角色的访问控制(RBAC)提供可视化的多组统一的集群中用户权限管理",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "以下哪些选项属于Fusioninsight数据安全性?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "操作系统安全加固"
+        },
+        {
+          "label": "B",
+          "text": "组件数据加密"
+        },
+        {
+          "label": "C",
+          "text": "数据完整性校验"
+        },
+        {
+          "label": "D",
+          "text": "用户权限认证管理"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "Fusioninsight Manager用户权限管理不单选支持哪个配置",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "给用户配置角色"
+        },
+        {
+          "label": "B",
+          "text": "给角色配置权限"
+        },
+        {
+          "label": "C",
+          "text": "给用户组配置角色"
+        },
+        {
+          "label": "D",
+          "text": "给用户组配置权限"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "关于FusioninsightManager中的Controller和NodeAgent,说法正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Controller每隔3秒向NodeAgent发送心跳"
+        },
+        {
+          "label": "B",
+          "text": "Nodeagent接受Controller下发的命令执行具体的动作"
+        },
+        {
+          "label": "C",
+          "text": "每个节点都必须部署Controller"
+        },
+        {
+          "label": "D",
+          "text": "NodeAgent是开源增强的"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "Fusioninsight HD系统审计日志不可以记单选录下面哪些操作",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "删除服务实例"
+        },
+        {
+          "label": "B",
+          "text": "启停服务实例"
+        },
+        {
+          "label": "C",
+          "text": "手动消除警告"
+        },
+        {
+          "label": "D",
+          "text": "查询历史监控"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "LdapServer的Group(组)是对用户进行断一的组管理，如果用户添加到该组中，该组的member属性中就会添加成员的dn记录",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "MRS会保存用户设置的登录Master节点的初始密码。为避免被恶意攻击，建议设置复杂度高的密码。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "Kerberos作为认证服务器中心，能够向集群内所有服务以及客户的二次开发应用提供统一的认证服务",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-031",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "华为云MapReduce服务提供租户完全可控的一站式企业级大数据集群云服务，完全兼容开源接口，结合华为云计算、存储优势及大数据行业经验，为客户提供高性能、低成本、灵活易用的全栈大数据平台，轻松运行HadoopSpark、Hbase.Kafka、storm等大数据组件实现实时与离线的分析挖掘发现全新企业商机。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-032",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "目前主流商的统—认证管理系统可以由什么组成",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "统—身份认证服务器"
+        },
+        {
+          "label": "B",
+          "text": "统—认证管理模块"
+        },
+        {
+          "label": "C",
+          "text": "统一安全管理模块"
+        },
+        {
+          "label": "D",
+          "text": "身份信息存储服务器"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-033",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "下列选项哪些属于华为云MRS优势?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "扩展性"
+        },
+        {
+          "label": "B",
+          "text": "高可靠"
+        },
+        {
+          "label": "C",
+          "text": "高性能"
+        },
+        {
+          "label": "D",
+          "text": "易用性"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-034",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "FusioninsightHD支持哪些日志下载方",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "下载已安装组件的所有组件的日志"
+        },
+        {
+          "label": "B",
+          "text": "下载单个组件某个模块的日志"
+        },
+        {
+          "label": "C",
+          "text": "下载指定主机的日志"
+        },
+        {
+          "label": "D",
+          "text": "下载指定时间段的日志"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-035",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "Fusioninsight HD数据高可靠性体现在以下哪些方面?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "跨数据中心容灾"
+        },
+        {
+          "label": "B",
+          "text": "关键数据掉电保护"
+        },
+        {
+          "label": "C",
+          "text": "磁盘热插拔"
+        },
+        {
+          "label": "D",
+          "text": "第三方备份系统集成"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-036",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "Fusioninsight HD系统中使用Streaming多选客户端shell命令提交了拓扑之后，使用Strom UI查看发现该拓扑长时间没有处理数据，可能原因有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Supervisor是在topology中接收数据然后执行处理的组件"
+        },
+        {
+          "label": "B",
+          "text": "拓扑业务存在逻辑错误提交之后无法正常运行"
+        },
+        {
+          "label": "C",
+          "text": "拓扑过于复杂或者并发太大，导致worker启动时间太长超过Supervisor的等待时间"
+        },
+        {
+          "label": "D",
+          "text": "Supervisor的slots资源被耗尽，拓扑提交上去之后分不到slot去启动worker进程"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-037",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "以下属于Kerberos的优势的选项是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "防止重放攻击"
+        },
+        {
+          "label": "B",
+          "text": "拥有较高的性能"
+        },
+        {
+          "label": "C",
+          "text": "支持双向鉴别"
+        },
+        {
+          "label": "D",
+          "text": "能够防止暴力破解"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-038",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "在大数据平台中通过统一用户管理系统可以实现平台中的各种开源组件应用系统的用户、角色和组织机构统一化管理，实现各种应用系统间跨域的单点登录注销和统一的身份认证功能。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-039",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "MRS支持与公有云安全服务集成,采取多种措施确保主机安全。以下选项中,哪一个选项不属于主机安全的措施?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "操作系统内核安全加固"
+        },
+        {
+          "label": "B",
+          "text": "身份鉴别和认证"
+        },
+        {
+          "label": "C",
+          "text": "操作系统端管理"
+        },
+        {
+          "label": "D",
+          "text": "更新操作系统最新补丁"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-040",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "FusionInsight Hadoop集群中，集群规多选模有70个节点如果采用推荐部署方案，在管理节点可能存在哪些分区?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "A./srv/BigData/zookeeper"
+        },
+        {
+          "label": "B",
+          "text": "B./srv/BigData/dbdata-om"
+        },
+        {
+          "label": "C",
+          "text": "C./srv/BigData"
+        },
+        {
+          "label": "D",
+          "text": "D./srv/BigData/jumalnode"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-041",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "某银行规划的Fusioninsight HD集群有90单选个节点如果控制节点规划了3个，那集群中数据节点推荐规划()个",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "87"
+        },
+        {
+          "label": "B",
+          "text": "85"
+        },
+        {
+          "label": "C",
+          "text": "90"
+        },
+        {
+          "label": "D",
+          "text": "86"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-042",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "Fusioninsight HD集群规划中，管理节点,控制节点,数据节点合一部署方案适合什么样的场景",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "30节点以下"
+        },
+        {
+          "label": "B",
+          "text": "100节点以上"
+        },
+        {
+          "label": "C",
+          "text": "100-200节点"
+        },
+        {
+          "label": "D",
+          "text": "200节点以上"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-043",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "以下关于MRS使用限制的描述,错误的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "集群创建完成后,请勿随意删除或更改已使用的安全组。"
+        },
+        {
+          "label": "B",
+          "text": "MRS集群必须创建在VPC子网内。"
+        },
+        {
+          "label": "C",
+          "text": "创建MRS集群时,不支持自动创建安全组,需要手动创建安全组"
+        },
+        {
+          "label": "D",
+          "text": "MRS集群使用的安全组请勿随意放开权限,避免被恶意访问。"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-044",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "FusininsightHD平台中，那些组件支持对列表加密?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HDFS"
+        },
+        {
+          "label": "B",
+          "text": "Flink"
+        },
+        {
+          "label": "C",
+          "text": "HBase"
+        },
+        {
+          "label": "D",
+          "text": "Hive"
+        }
+      ],
+      "multiple": true,
+      "answer": "C,D"
+    },
+    {
+      "id": "q-045",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "在Fusioninsight集群规划部署时，建议管单选理节点最好部署()个，控制节点最少需要部署()个数据节点最少需要部署()个",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "1,2,2"
+        },
+        {
+          "label": "B",
+          "text": "1,3,2"
+        },
+        {
+          "label": "C",
+          "text": "2,3,1"
+        },
+        {
+          "label": "D",
+          "text": "2,3,3"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-046",
+      "chapter": "HCIA-MRS",
+      "category": "quick",
+      "title": "图形化的健康巡检工具Fusioninsight Tool判断由Fusion Care和SysChecker两部分组成",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-047",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "FusionInsight HD系统中如果修改了服务配置项，不进行服务重启，该服务的配置状态是什么状态",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "SYNCHRONIZEDO"
+        },
+        {
+          "label": "B",
+          "text": "EXPIREDO"
+        },
+        {
+          "label": "C",
+          "text": "CONFIGURINGO"
+        },
+        {
+          "label": "D",
+          "text": "UNKNOWN"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-048",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "Fusioninsight HD系统中使用Streaming多选客户端shell命令查看拓扑或者提交拓扑失败，以下哪些定位手段的正确的",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "查看Supervisor运行日志判断是否Supervisor异常"
+        },
+        {
+          "label": "B",
+          "text": "查看worker运行日志"
+        },
+        {
+          "label": "C",
+          "text": "查看客户端异常堆栈判断是否客户端使用问题"
+        },
+        {
+          "label": "D",
+          "text": "查看主nimbus的运行日志判断是否nimbus服务器异"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-049",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "以下关于华为云MRS海量数据离线分析多选场景描述正确的是哪几项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "通过可视化导入导出工具Loader,将数据导出到DwS,完成BI分析"
+        },
+        {
+          "label": "B",
+          "text": "利用Hive实现TB/PB级的数据分析"
+        },
+        {
+          "label": "C",
+          "text": "利用Flink实现数据采集"
+        },
+        {
+          "label": "D",
+          "text": "利用OBS实现低成本存储"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-050",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "安全模式下安装Fusionlnsight HD集群多选哪些组件是必须安装的?时，",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Zookeeper"
+        },
+        {
+          "label": "B",
+          "text": "LDAPServer"
+        },
+        {
+          "label": "C",
+          "text": "KrbServer"
+        },
+        {
+          "label": "D",
+          "text": "HDFS"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    },
+    {
+      "id": "q-051",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "哪个模块是负责FusioninsightManager用户数据存储的",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "CAS"
+        },
+        {
+          "label": "B",
+          "text": "OSB"
+        },
+        {
+          "label": "C",
+          "text": "Kerberos"
+        },
+        {
+          "label": "D",
+          "text": "LDAP"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-052",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "以下关于KrbServer及LdapServer开源增强特性的描述,错误的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "跨系统互信特性"
+        },
+        {
+          "label": "B",
+          "text": "账号身份认证"
+        },
+        {
+          "label": "C",
+          "text": "集群内服务认证"
+        },
+        {
+          "label": "D",
+          "text": "应用开发认证"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-053",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "Fusioninsight Manager会定时备份哪些数据?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "NameNode"
+        },
+        {
+          "label": "B",
+          "text": "LDAP"
+        },
+        {
+          "label": "C",
+          "text": "OMS"
+        },
+        {
+          "label": "D",
+          "text": "DBService"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-054",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "在MRS集群中,Spark主要与以下哪些组件进行交互?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Zookeeper"
+        },
+        {
+          "label": "B",
+          "text": "Yarin"
+        },
+        {
+          "label": "C",
+          "text": "Hive"
+        },
+        {
+          "label": "D",
+          "text": "HDFS"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-055",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "Fusioninsight HD集群中，根据磁盘规划单选建议，/srv/BigData分区应该部署在什么磁盘上",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Os盘"
+        },
+        {
+          "label": "B",
+          "text": "元数据盘"
+        },
+        {
+          "label": "C",
+          "text": "数据盘"
+        },
+        {
+          "label": "D",
+          "text": "管理盘"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-056",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "某网站举行活动，要求计算该网站每分钟单选的用户访问量，若要实现该需求，下列哪个选项最合适",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Hive"
+        },
+        {
+          "label": "B",
+          "text": "MapReduce"
+        },
+        {
+          "label": "C",
+          "text": "Storm"
+        },
+        {
+          "label": "D",
+          "text": "Spark"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-057",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "以下关于Fusioninsight网络安全可靠多选性，说法正确的有",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "避免业务平面的高负载阻塞集群管理通道"
+        },
+        {
+          "label": "B",
+          "text": "网络平面隔离，避免管理与业务宽带抢占、互相干扰"
+        },
+        {
+          "label": "C",
+          "text": "阻止外部攻击者通过管理通道入侵实际业务数据"
+        },
+        {
+          "label": "D",
+          "text": "Fusioninsight支持将网络划分为三级:集群业务平面、集群管理平面和集群夕维护网络，彼此，之间实施物理隔离"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-058",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "在规划FusioninsightHD集群时候如果客单选户用于功能测试，对性能没有要求，节约成本的情况下，可以采用管理节点、控制节点.数据节点合一部署，最少需要多少节点",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-059",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "Fusioninsight manager不能够管理哪个对象",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Spark"
+        },
+        {
+          "label": "B",
+          "text": "主机OS"
+        },
+        {
+          "label": "C",
+          "text": "Yarn"
+        },
+        {
+          "label": "D",
+          "text": "HDFS"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-060",
+      "chapter": "HCIA-MRS",
+      "category": "multipleChoice",
+      "title": "以下关于Fusioninsight中CarbonData说法正确的有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "carbon也是一种将数据源与spark集成的高性能分析引擎"
+        },
+        {
+          "label": "B",
+          "text": "carbon使用轻量级压缩和重量级压缩的组合压缩算法压缩数据，可以减少60%-80%数据存储空间，大大节省硬件存成本。"
+        },
+        {
+          "label": "C",
+          "text": "carbon是一种新型的Apache Hadoop本地文件格式使用先进的列式存储、索引、压缩和编码技术以提高计算效率有助于加速超过PB数量级的数据查询可用于更快的交互查询。"
+        },
+        {
+          "label": "D",
+          "text": "使用carbon的目的是对大数据即席查询提供超快速响应"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-061",
+      "chapter": "HCIA-MRS",
+      "category": "singleChoice",
+      "title": "以下关于MRS服务的安全认证的描述正确的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "不提供单点登录,统一了MRS系统用户和组件用户的管理及认证"
+        },
+        {
+          "label": "B",
+          "text": "支持安全协议Kerberos,MRS使用Kerberos作为帐户管理系统,并通过LDAP对帐户信息进行安全认证。"
+        },
+        {
+          "label": "C",
+          "text": "对登录Manager的用户进行审计。"
+        },
+        {
+          "label": "D",
+          "text": "基于用户和角色的认证统一体系,道从帐户/角色RBAC(Role-Based Access Control)模型,实现通过账户进行权限管理,对角色进行批量授权管理"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    }
+  ]
+}

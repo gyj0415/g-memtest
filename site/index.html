@@ -48,6 +48,10 @@
       cursor: pointer;
     }
 
+    .hidden {
+      display: none !important;
+    }
+
     .app-shell {
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
@@ -492,10 +496,86 @@
       font-weight: 900;
     }
 
+    .bank-group-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .bank-group {
+      display: grid;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .72);
+    }
+
+    .bank-group-toggle {
+      display: grid;
+      grid-template-columns: 14px minmax(0, 1fr);
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      min-height: 44px;
+      padding: 8px 10px;
+      border: 0;
+      border-radius: 7px;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+    }
+
+    .bank-group-toggle:hover {
+      background: rgba(14, 124, 116, .08);
+    }
+
+    .bank-group-chevron {
+      width: 8px;
+      height: 8px;
+      margin-top: -2px;
+      border-right: 2px solid var(--brand-dark);
+      border-bottom: 2px solid var(--brand-dark);
+      transform: rotate(-45deg);
+      transition: transform .16s ease;
+    }
+
+    .bank-group-toggle[aria-expanded="true"] .bank-group-chevron {
+      margin-top: 0;
+      transform: rotate(45deg);
+    }
+
+    .bank-group-copy {
+      display: grid;
+      gap: 2px;
+    }
+
+    .bank-group-copy strong {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .bank-group-copy span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .bank-group-body[hidden] {
+      display: none;
+    }
+
     .home-bank-grid {
       display: grid;
       gap: 16px;
       margin-top: 4px;
+    }
+
+    .home-bank-grid .bank-group {
+      padding: 12px;
+    }
+
+    .home-bank-grid .bank-group-toggle {
+      min-height: 52px;
     }
 
     .bank-section-grid {
@@ -504,6 +584,10 @@
       grid-auto-rows: 1fr;
       gap: 12px;
       align-items: stretch;
+    }
+
+    .bank-list .bank-section-grid {
+      grid-template-columns: 1fr;
     }
 
     .bank-card {
@@ -569,7 +653,14 @@
       align-content: start;
     }
 
-    [data-mode="home"] .practice-side-block {
+    .practice-side-stack,
+    .bank-picker {
+      display: grid;
+      gap: 14px;
+    }
+
+    [data-mode="home"] .practice-side-block,
+    [data-mode="home"] .practice-side-stack {
       display: none;
     }
 
@@ -892,9 +983,20 @@
     .side-panel {
       position: sticky;
       top: 104px;
-      padding: 16px;
+      max-height: calc(100vh - 120px);
+      padding: 0;
+      display: block;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .side-panel-scroll {
       display: grid;
       gap: 14px;
+      max-height: calc(100vh - 120px);
+      padding: 16px;
+      overflow: auto;
+      overscroll-behavior: contain;
     }
 
     .side-panel h3 {
@@ -994,10 +1096,6 @@
       line-height: 1.7;
     }
 
-    .hidden {
-      display: none !important;
-    }
-
     @media (max-width: 920px) {
       .hero,
       .layout {
@@ -1012,12 +1110,56 @@
         position: static;
         order: -1;
         gap: 10px;
+        max-height: none;
+        overflow: visible;
       }
 
-      .side-panel h3,
-      .side-summary,
-      .review-list {
-        display: none;
+      .side-panel-scroll {
+        max-height: none;
+        overflow: visible;
+        padding: 16px;
+      }
+
+      .app-shell[data-view="practice"] {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .app-shell[data-view="practice"] .layout,
+      .app-shell[data-view="practice"] .side-panel,
+      .app-shell[data-view="practice"] .side-panel-scroll {
+        display: contents;
+      }
+
+      .app-shell[data-view="practice"] .hero {
+        order: 1;
+      }
+
+      .app-shell[data-view="practice"] .toolbar {
+        order: 2;
+      }
+
+      .app-shell[data-view="practice"] .practice-side-stack {
+        order: 3;
+        padding: 16px;
+        border: 1px solid var(--line);
+        background: rgba(255, 253, 250, .92);
+        box-shadow: var(--shadow);
+        border-radius: 8px;
+      }
+
+      .app-shell[data-view="practice"] .question-list {
+        order: 4;
+        margin: 18px 0;
+      }
+
+      .app-shell[data-view="practice"] .bank-picker {
+        order: 5;
+        padding: 16px;
+        border: 1px solid var(--line);
+        background: rgba(255, 253, 250, .92);
+        box-shadow: var(--shadow);
+        border-radius: 8px;
       }
 
       .bank-list {
@@ -1088,13 +1230,13 @@
     }
   </style>
 </head>
-<body>
-  <main class="app-shell">
+<body data-view="home">
+  <main class="app-shell" id="appShell" data-view="home">
     <section class="hero" aria-labelledby="pageTitle">
       <div class="hero-main">
         <div class="eyebrow">闭卷默写自测</div>
         <h1 id="pageTitle">自测题库中心</h1>
-        <p>先从侧栏选择一个题库，再进入默写和判分。默认题库已经拆成独立文件，后续可以继续加入更多科目题库。</p>
+        <p>先按科目分类展开题库，再进入默写和判分。内置题库、本地导入和整套 JSON 都可以按分类收纳。</p>
         <div class="hero-actions">
           <button class="primary-btn practice-action" id="submitAll" type="button" title="判分全部题目" hidden>交卷判分</button>
           <button class="secondary-btn practice-action" id="focusMissed" type="button" title="只显示未掌握题目" hidden>错题回看</button>
@@ -1150,17 +1292,12 @@
 
     <section class="layout">
       <aside class="side-panel" id="bankPanel" data-mode="home" aria-label="题库与练习概览">
+        <div class="side-panel-scroll">
+        <div class="practice-side-stack">
         <div class="practice-side-block">
           <h3>题目导航</h3>
           <div class="question-mini-list" id="questionMiniList"></div>
         </div>
-        <h3>题库</h3>
-        <div class="bank-source-tabs" id="bankSourceTabs">
-          <button class="ghost-btn active" type="button" data-bank-source-filter="built-in">内置</button>
-          <button class="ghost-btn" type="button" data-bank-source-filter="local">本地</button>
-          <button class="ghost-btn" type="button" data-bank-source-filter="shared">云端</button>
-        </div>
-        <div class="bank-list" id="bankList"></div>
         <div class="practice-side-block">
           <h3>本次概览</h3>
           <div class="side-summary">
@@ -1173,11 +1310,22 @@
           <h3>待回看</h3>
           <div class="review-list" id="reviewList"></div>
         </div>
+        </div>
+        <div class="bank-picker">
+        <h3>题库</h3>
+        <div class="bank-source-tabs" id="bankSourceTabs">
+          <button class="ghost-btn active" type="button" data-bank-source-filter="built-in">内置</button>
+          <button class="ghost-btn" type="button" data-bank-source-filter="local">本地</button>
+          <button class="ghost-btn" type="button" data-bank-source-filter="shared">云端</button>
+        </div>
+        <div class="bank-list" id="bankList"></div>
+        </div>
+        </div>
       </aside>
       <div class="question-list" id="questionList" aria-live="polite">
         <article class="question-card home-panel" id="homePanel">
           <h2>选择一个题库开始</h2>
-          <p>题库会从独立文件加载。你也可以导入自己的 JSON 题库，导入后它会出现在左侧和下方题库列表里。</p>
+          <p>同类题库会收进可展开的分类里。你可以导入单套 JSON，也可以一次导入带 <code>banks</code> 数组的整套题库。</p>
           <div class="home-bank-grid" id="homeBankGrid"></div>
         </article>
       </div>
@@ -1229,7 +1377,9 @@
     const questionBankStorageKey = "enterprise-management-question-bank-v2";
     const storageKey = "enterprise-management-self-test-v1";
     const bankLibraryStorageKey = "enterprise-management-bank-library-v1";
+    const bankGroupUiStorageKey = "enterprise-management-bank-group-ui-v1";
     const builtInBankManifestUrl = "./banks/manifest.json";
+    const defaultBankGroup = "未分类";
 
     const defaultBankTitle = "自测题库";
     const defaultBankId = "bank-default";
@@ -1239,6 +1389,7 @@
       shared: "云端候选"
     };
     let activeBankSourceFilter = "built-in";
+    let expandedBankGroups = loadExpandedBankGroups();
     let bankLibrary = loadBankLibrary();
     let activeBankId = "";
     let activeBank = getActiveBank();
@@ -1267,6 +1418,7 @@
       goodCount: document.querySelector("#goodCount"),
       weakCount: document.querySelector("#weakCount"),
       questionMiniList: document.querySelector("#questionMiniList"),
+      appShell: document.querySelector("#appShell"),
       reviewList: document.querySelector("#reviewList"),
       practiceActions: document.querySelectorAll(".practice-action")
     };
@@ -1425,6 +1577,103 @@
       return title || fallback;
     }
 
+    function normalizeBankGroup(value, fallback = defaultBankGroup) {
+      return String(value || "").trim() || fallback;
+    }
+
+    function bankGroupFromPayload(payload = {}, fallback = defaultBankGroup) {
+      return normalizeBankGroup(
+        payload.group || payload.subject || payload.course || payload.collection || payload.题库分类 || payload.科目 || payload.课程 || payload.套装,
+        fallback
+      );
+    }
+
+    function loadExpandedBankGroups() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(bankGroupUiStorageKey) || "{}");
+        return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+      } catch {
+        return {};
+      }
+    }
+
+    function persistExpandedBankGroups() {
+      localStorage.setItem(bankGroupUiStorageKey, JSON.stringify(expandedBankGroups));
+    }
+
+    function bankGroupKey(source, group) {
+      return `${source}::${group}`;
+    }
+
+    function isBankGroupExpanded(source, group, groupCount) {
+      const key = bankGroupKey(source, group);
+      if (Object.prototype.hasOwnProperty.call(expandedBankGroups, key)) {
+        return Boolean(expandedBankGroups[key]);
+      }
+      if (activeBank && normalizeBankSource(activeBank.source) === source && normalizeBankGroup(activeBank.group) === group) {
+        return true;
+      }
+      return groupCount <= 1;
+    }
+
+    function toggleBankGroup(source, group) {
+      const key = bankGroupKey(source, group);
+      const banks = bankLibrary.banks.filter((bank) => normalizeBankSource(bank.source) === source);
+      const groupCount = groupBanks(banks).length;
+      expandedBankGroups[key] = !isBankGroupExpanded(source, group, groupCount);
+      persistExpandedBankGroups();
+      renderBankList();
+    }
+
+    function groupBanks(banks) {
+      const groups = [];
+      const indexByName = new Map();
+      banks.forEach((bank) => {
+        const name = normalizeBankGroup(bank.group);
+        if (!indexByName.has(name)) {
+          indexByName.set(name, groups.length);
+          groups.push({ name, banks: [] });
+        }
+        groups[indexByName.get(name)].banks.push(bank);
+      });
+      return groups;
+    }
+
+    function parseImportedBankPayloads(payload) {
+      const defaultGroup = bankGroupFromPayload(payload);
+      if (Array.isArray(payload)) {
+        const looksLikeBanks = payload.some((item) => item && typeof item === "object" && Array.isArray(item.questions));
+        if (looksLikeBanks) {
+          return payload.map((item, index) => ({
+            title: titleFromQuestionBankPayload(item, `自定义自测题库 ${index + 1}`),
+            group: bankGroupFromPayload(item, defaultGroup),
+            description: String(item?.description || "").trim(),
+            questions: parseQuestionBankPayload(item)
+          }));
+        }
+        return [{
+          title: "自定义自测题库",
+          group: defaultGroup,
+          description: "",
+          questions: parseQuestionBankPayload(payload)
+        }];
+      }
+      if (payload && Array.isArray(payload.banks) && payload.banks.length) {
+        return payload.banks.map((item, index) => ({
+          title: titleFromQuestionBankPayload(item, titleFromQuestionBankPayload(payload, `自定义自测题库 ${index + 1}`)),
+          group: bankGroupFromPayload(item, defaultGroup),
+          description: String(item?.description || payload.description || "").trim(),
+          questions: parseQuestionBankPayload(item)
+        }));
+      }
+      return [{
+        title: titleFromQuestionBankPayload(payload, "自定义自测题库"),
+        group: defaultGroup,
+        description: String(payload?.description || "").trim(),
+        questions: parseQuestionBankPayload(payload)
+      }];
+    }
+
     function createEmptyPracticeState(list = questions) {
       return {
         activeChapter: "all",
@@ -1467,6 +1716,7 @@
         id,
         title: String(title || defaultBankTitle).trim() || defaultBankTitle,
         description: String(meta.description || "").trim(),
+        group: bankGroupFromPayload(meta),
         source: normalizeBankSource(meta.source),
         questions: parsedQuestions,
         practice: normalizeSavedPracticeState(practice, parsedQuestions)
@@ -1582,6 +1832,7 @@
       bankTitle = activeBank.title;
       questions = activeBank.questions;
       currentView = "practice";
+      setAppView("practice");
       document.querySelector("#bankPanel").dataset.mode = "practice";
       applyPracticeState(activeBank.practice);
       updateBankTitle();
@@ -1608,6 +1859,7 @@
           existing?.practice || {},
           {
             description: payload.description || entry.description || "",
+            group: bankGroupFromPayload(payload, bankGroupFromPayload(entry)),
             source: "built-in"
           }
         );
@@ -1632,6 +1884,15 @@
       }, {});
     }
 
+    function renderBankCard(bank, size = "compact") {
+      return `<button class="bank-card ${size === "large" ? "large" : ""} ${bank.id === activeBankId ? "active" : ""}" type="button" data-bank-start="${escapeHtml(bank.id)}">
+                <span class="bank-card-source">${escapeHtml(normalizeBankGroup(bank.group))}</span>
+                <strong>${escapeHtml(bank.title)}</strong>
+                <span>${bank.questions.length} 题</span>
+                ${bank.description ? `<span class="bank-card-description">${escapeHtml(bank.description)}</span>` : ""}
+              </button>`;
+    }
+
     function renderBankSection(source, size = "compact") {
       const banks = bankLibrary.banks.filter((bank) => normalizeBankSource(bank.source) === source);
       if (!banks.length) {
@@ -1642,18 +1903,29 @@
             : "还没有本地题库。导入 JSON 后会出现在这里。";
         return `<div class="bank-section" data-bank-source="${source}"><p class="bank-section-title">${bankSourceLabels[source]}</p><div class="empty">${emptyText}</div></div>`;
       }
+      const groups = groupBanks(banks);
       return `
         <div class="bank-section" data-bank-source="${source}">
           <p class="bank-section-title">${bankSourceLabels[source]}</p>
-          <div class="bank-section-grid">
-            ${banks.map((bank) => (
-              `<button class="bank-card ${size === "large" ? "large" : ""} ${bank.id === activeBankId ? "active" : ""}" type="button" data-bank-start="${escapeHtml(bank.id)}">
-                <span class="bank-card-source">${bankSourceLabels[normalizeBankSource(bank.source)]}</span>
-                <strong>${escapeHtml(bank.title)}</strong>
-                <span>${bank.questions.length} 题</span>
-                ${bank.description ? `<span class="bank-card-description">${escapeHtml(bank.description)}</span>` : ""}
-              </button>`
-            )).join("")}
+          <div class="bank-group-list">
+            ${groups.map((group) => {
+              const expanded = isBankGroupExpanded(source, group.name, groups.length);
+              const questionCount = group.banks.reduce((sum, bank) => sum + bank.questions.length, 0);
+              return `<div class="bank-group ${expanded ? "open" : ""}" data-bank-group="${escapeHtml(group.name)}">
+                <button class="bank-group-toggle" type="button" data-bank-group-toggle="${escapeHtml(group.name)}" data-bank-group-source="${escapeHtml(source)}" aria-expanded="${expanded ? "true" : "false"}">
+                  <span class="bank-group-chevron" aria-hidden="true"></span>
+                  <span class="bank-group-copy">
+                    <strong>${escapeHtml(group.name)}</strong>
+                    <span>${group.banks.length} 套 · ${questionCount} 题</span>
+                  </span>
+                </button>
+                <div class="bank-group-body" ${expanded ? "" : "hidden"}>
+                  <div class="bank-section-grid">
+                    ${group.banks.map((bank) => renderBankCard(bank, size)).join("")}
+                  </div>
+                </div>
+              </div>`;
+            }).join("")}
           </div>
         </div>
       `;
@@ -1694,6 +1966,7 @@
       activeBank = null;
       bankTitle = "";
       questions = [];
+      setAppView("home");
       document.querySelector("#bankPanel").dataset.mode = "home";
       document.title = "自测题库中心";
       els.pageTitle.textContent = "自测题库中心";
@@ -1702,8 +1975,8 @@
       els.list.innerHTML = `
         <article class="question-card home-panel" id="homePanel">
           <h2>选择一个题库开始</h2>
-          <p>题库按内置、本地、云端候选分区显示。首页先看清来源，再进入练习。</p>
-          <p>导入题库会先保存在当前浏览器；要让其他设备看到，需要把题库加入内置题库并重新部署。</p>
+          <p>同类题库会收进可展开的分类里。先点分类，再选题库进入练习。</p>
+          <p>可以导入单套 JSON，也可以一次导入带 banks 数组的整套题库。导入会先保存在当前浏览器；要让其他设备看到，需要把题库加入内置题库并重新部署。</p>
           <div class="home-bank-grid" id="homeBankGrid"></div>
         </article>
       `;
@@ -1716,8 +1989,11 @@
       const newBank = createBankRecord(createBankId(nextTitle), nextTitle, nextQuestions, {}, meta);
       bankLibrary.banks.push(newBank);
       activeBankSourceFilter = normalizeBankSource(newBank.source);
-      activeBankId = newBank.id;
+      expandedBankGroups[bankGroupKey(newBank.source, newBank.group)] = true;
+      persistExpandedBankGroups();
       persistBankLibrary();
+      if (meta.activate === false) return newBank;
+      activeBankId = newBank.id;
       refreshActiveBankFromLibrary();
       return newBank;
     }
@@ -1756,7 +2032,10 @@
     function buildQuestionBankExport() {
       return {
         version: 1,
+        id: activeBank?.id,
         title: bankTitle,
+        group: activeBank?.group || defaultBankGroup,
+        description: activeBank?.description || "",
         schema: {
           required: ["title", "answer"],
           optional: ["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple", "media", "material", "groupId"]
@@ -2189,6 +2468,12 @@
       const index = visible.findIndex((item) => item.id === id);
       state.currentIndex = index >= 0 ? index : 0;
       saveState();
+    }
+
+    function setAppView(view) {
+      currentView = view;
+      if (els.appShell) els.appShell.dataset.view = view;
+      document.body.dataset.view = view;
     }
 
     function moveQuestion(step) {
@@ -2646,12 +2931,18 @@
       const category = event.target.dataset.category;
       const jumpId = event.target.dataset.jump;
       const bankSourceFilter = event.target.dataset.bankSourceFilter;
+      const bankGroupToggle = event.target.closest("[data-bank-group-toggle]");
       const bankStartId = event.target.closest("[data-bank-start]")?.dataset.bankStart;
       const choiceButton = event.target.closest("[data-choice-question]");
 
       if (bankSourceFilter) {
         activeBankSourceFilter = normalizeBankSource(bankSourceFilter);
         renderBankList();
+        return;
+      }
+
+      if (bankGroupToggle) {
+        toggleBankGroup(bankGroupToggle.dataset.bankGroupSource, bankGroupToggle.dataset.bankGroupToggle);
         return;
       }
 
@@ -2737,13 +3028,25 @@
       try {
         const text = await file.text();
         const payload = JSON.parse(text);
-        const importedQuestions = parseQuestionBankPayload(payload);
-        const importedTitle = titleFromQuestionBankPayload(payload, "自定义自测题库");
+        const importedBanks = parseImportedBankPayloads(payload);
         const source = document.querySelector("#importBankMode")?.value || "local";
-        addQuestionBank(importedQuestions, importedTitle, { source });
         const sourceLabel = bankSourceLabels[normalizeBankSource(source)];
         const cloudNote = normalizeBankSource(source) === "shared" ? " 注意：当前项目是纯静态网页，纯静态网页不能直接上传云端；其他设备要看到，需要把该 JSON 加入内置题库并重新部署。" : "";
-        window.alert(`已导入《${importedTitle}》${importedQuestions.length} 道题，并已加入${sourceLabel}分区。${cloudNote}`);
+        importedBanks.forEach((item, index) => {
+          addQuestionBank(item.questions, item.title, {
+            source,
+            group: item.group,
+            description: item.description,
+            activate: importedBanks.length === 1 && index === 0
+          });
+        });
+        if (importedBanks.length > 1) {
+          renderHome();
+          window.alert(`已导入 ${importedBanks.length} 套题库到${sourceLabel}分区。点击分类即可展开查看。${cloudNote}`);
+        } else {
+          const imported = importedBanks[0];
+          window.alert(`已导入《${imported.title}》${imported.questions.length} 道题，并已加入${sourceLabel}分区的「${imported.group}」。${cloudNote}`);
+        }
       } catch (error) {
         window.alert(`导入失败：${error.message}`);
       } finally {

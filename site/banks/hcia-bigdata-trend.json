@@ -1,0 +1,836 @@
+{
+  "version": 1,
+  "id": "bank-hcia-bigdata-trend",
+  "title": "HCIA-大数据发展趋势与鲲鹏大数据",
+  "description": "HCIA-大数据发展趋势与鲲鹏大数据，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIA-大数据发展趋势与鲲鹏大数据"
+  ],
+  "categories": [
+    "multipleChoice",
+    "quick",
+    "singleChoice"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "以下哪些选项属于华为鹏产业产品?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "智能管理芯片"
+        },
+        {
+          "label": "B",
+          "text": "智能网卡芯片"
+        },
+        {
+          "label": "C",
+          "text": "智能SSD控制器芯片"
+        },
+        {
+          "label": "D",
+          "text": "华为鳃鹏处理器"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "quick",
+      "title": "华为在金融、公安、铁路、政务等多行业拥有丰富的大数据解决方案经验",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "quick",
+      "title": "对高价值高度聚合的信息和知识的批次处理是大数据行业主要商业诉求",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "下列哪些措施是为了保障数据的完整性?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "重建失效数据盘的副本数据"
+        },
+        {
+          "label": "B",
+          "text": "元数据可靠性保证"
+        },
+        {
+          "label": "C",
+          "text": "安全模式"
+        },
+        {
+          "label": "D",
+          "text": "集群数据均衡"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "singleChoice",
+      "title": "大数据计算任务中，关于IO密集型任务的描述不正确的是哪项",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "IO密集型任务执行期间大部分时间都花在IO处里上"
+        },
+        {
+          "label": "B",
+          "text": "通过提升网络传输效率和读写效率可大幅度提升性能"
+        },
+        {
+          "label": "C",
+          "text": "CPU消耗高"
+        },
+        {
+          "label": "D",
+          "text": "任务越多，CPU效率越高"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "基于Hadoop开源大数据平台主要提供多选了针对数据分布式计算和存储能力,如下属于分布式存储组件的有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "MR"
+        },
+        {
+          "label": "B",
+          "text": "Spark"
+        },
+        {
+          "label": "C",
+          "text": "HDFS"
+        },
+        {
+          "label": "D",
+          "text": "HBase"
+        }
+      ],
+      "multiple": true,
+      "answer": "C,D"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "大数据分析相关技术主要特征有哪",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "机器学习，全量特征"
+        },
+        {
+          "label": "B",
+          "text": "数据背后事件关联性分析"
+        },
+        {
+          "label": "C",
+          "text": "以海量数据为基础"
+        },
+        {
+          "label": "D",
+          "text": "以精确样本为基础"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "以下哪个选项是元数据管理的目的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据价值挖掘"
+        },
+        {
+          "label": "B",
+          "text": "数据平台建设"
+        },
+        {
+          "label": "C",
+          "text": "业务系统建设"
+        },
+        {
+          "label": "D",
+          "text": "信息资源规划"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "关于大数据的主要特征的理解和描述正确的有哪些?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据来源多， 格式多"
+        },
+        {
+          "label": "B",
+          "text": "数据增长速度快， 处理速度快"
+        },
+        {
+          "label": "C",
+          "text": "数据量大，计算量大"
+        },
+        {
+          "label": "D",
+          "text": "数据价值密度低， 价值高"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "传统数据处理的性能瓶颈有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据存储成本高"
+        },
+        {
+          "label": "B",
+          "text": "流式数据处理性能不足"
+        },
+        {
+          "label": "C",
+          "text": "扩展能力有限"
+        },
+        {
+          "label": "D",
+          "text": "批量数据处理缺失"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "singleChoice",
+      "title": "以下哪类数据不属于半结构化数据",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HTML"
+        },
+        {
+          "label": "B",
+          "text": "XML"
+        },
+        {
+          "label": "C",
+          "text": "二维表"
+        },
+        {
+          "label": "D",
+          "text": "JSON"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "quick",
+      "title": "鲲鹏计算产业是基于kunpeng处理器构建的全栈IT基础设施、行业应用及服务，包括PC、服务器、存储、操作系统、中间件、虚拟化、数据库、云服务、行业应用以及咨询管理服务等",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "singleChoice",
+      "title": "传统数据处理的数据规模的单位是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "TB"
+        },
+        {
+          "label": "B",
+          "text": "EB"
+        },
+        {
+          "label": "C",
+          "text": "PB"
+        },
+        {
+          "label": "D",
+          "text": "GB"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "quick",
+      "title": "Fusioninsight是华为企业级大数据存储、查询、分析的统一平台，能够帮助企业快速构建海量数据信息处理系统，通过对海量信息数据实时与非实时的分析挖掘，发现全新价值点和企业商机。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "singleChoice",
+      "title": "以下那些是华为鲲鹏处理器的特点",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "高效能计算兼容ARM架构的高性能华为鼠鹏处理器和x86架构服务器和解决方案"
+        },
+        {
+          "label": "B",
+          "text": "安全可靠，铸就稳如泰山的高品质"
+        },
+        {
+          "label": "C",
+          "text": "开放生态支持业界主流软硬件，与开发者、伙伴和产业组织共同打造智能计算新底座"
+        },
+        {
+          "label": "D",
+          "text": "以上全部正确"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "在大数据时代企业所面临的挑战有以下哪些?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "企业各部门间数据分散，相同数据在各部门内部存储格式不一致。"
+        },
+        {
+          "label": "B",
+          "text": "数据结构多样化"
+        },
+        {
+          "label": "C",
+          "text": "竟争对手的技术进步"
+        },
+        {
+          "label": "D",
+          "text": "散据存在噪音、缺失、存储类型不规范等问题，需要进行大量的数据预处理工"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "大数据商业咨询服务方案在规划环节主要考虑以下哪些设计?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "大数据商业模式设计"
+        },
+        {
+          "label": "B",
+          "text": "商业场景全景规划"
+        },
+        {
+          "label": "C",
+          "text": "典型场层需求设计"
+        },
+        {
+          "label": "D",
+          "text": "场景分解和业务设计"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "从生命周期来看,数据主要经历哪几个阶段?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据采集"
+        },
+        {
+          "label": "B",
+          "text": "数据存储"
+        },
+        {
+          "label": "C",
+          "text": "数据管理"
+        },
+        {
+          "label": "D",
+          "text": "数据分析数据呈现"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "关于传统数据入湖面临的挑战的描述，正确的是哪些项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "开发难"
+        },
+        {
+          "label": "B",
+          "text": "时效差"
+        },
+        {
+          "label": "C",
+          "text": "成本高"
+        },
+        {
+          "label": "D",
+          "text": "资源利用率低"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "quick",
+      "title": "大数据需要传统行业思维的转变要把数据收集、分析中作为业务流程的重要组成，数据端驱动业务流程优化，实现智能化和自动化，并依托数据资产实现跨界拓展。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "singleChoice",
+      "title": "下列选项中无法通过大数据技术实现的",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "商业模式发现"
+        },
+        {
+          "label": "B",
+          "text": "信用评估"
+        },
+        {
+          "label": "C",
+          "text": "商品推荐"
+        },
+        {
+          "label": "D",
+          "text": "运营分析"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "singleChoice",
+      "title": "以下关于大数据和传统数据库数据的特点描述不正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "大数据是对“池塘中的鱼”进行数据处理，目标明确传统数据库的数据处理是通过某些“鱼”判断其他种类的”鱼”是否存在"
+        },
+        {
+          "label": "B",
+          "text": "大数据处理的数据类型很多，包括结构化、非结构化和半结构化的数据: 传统故据库的数据类型较为单一常以结构化数据为主"
+        },
+        {
+          "label": "C",
+          "text": "在大数据中，并没有统一的数据工具即\"No size fits all\",在传统数据库中在某种特定业务场景下，常常一个工具就能解决某个问题，即\"One size fitsall\""
+        },
+        {
+          "label": "D",
+          "text": "大数据的数据规模很大一般以TB、PB作为数据处理单位:传统数据库中数据规模一般较小常以MB作为数据处理单位"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "以下关于建设私有云数据平台的痛点的描述，正确的是哪些项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "安全性差，无储备能力"
+        },
+        {
+          "label": "B",
+          "text": "维护难度大"
+        },
+        {
+          "label": "C",
+          "text": "提前建设，建设成本高"
+        },
+        {
+          "label": "D",
+          "text": "业务上线速度慢"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "以下关于华为大数据解决方案说法正确多选的是",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Farmer是数据服务框架"
+        },
+        {
+          "label": "B",
+          "text": "GAUSSDB是一款开源数据库产品"
+        },
+        {
+          "label": "C",
+          "text": "Fusioninsight Manager是一个分布式系统管理框架管理员可以通过多接入点操控分布式集群"
+        },
+        {
+          "label": "D",
+          "text": "Fusioninsight HD是基于开源大数据软件Hadoop的增强版本"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "大数据平台可以应用在以以下哪些监管多选类的场景?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "卫星遥感分析"
+        },
+        {
+          "label": "B",
+          "text": "食品溯源"
+        },
+        {
+          "label": "C",
+          "text": "公安网监"
+        },
+        {
+          "label": "D",
+          "text": "舆情监控"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "企业级大数据处理，对数据库的技术和架构要求具备哪些能力?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据库必须是分布式架构"
+        },
+        {
+          "label": "B",
+          "text": "海量数据运维需要保证数据稳定，支持高并发的同时减少服务器负载"
+        },
+        {
+          "label": "C",
+          "text": "数据库规划需要考虑结构化数据、半结构化数据和非结构化数据的支持"
+        },
+        {
+          "label": "D",
+          "text": "数据库要求能处理PB级别的数据"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "以下哪些属于企业级大数据应用场景",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "内部运营管理"
+        },
+        {
+          "label": "B",
+          "text": "供应链管理"
+        },
+        {
+          "label": "C",
+          "text": "客户分析"
+        },
+        {
+          "label": "D",
+          "text": "营销分析"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "以下关于大数据组件在鲲鹏和x86服务器上的部署方式描述正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "性能无短板"
+        },
+        {
+          "label": "B",
+          "text": "单组件(比如: HDFS)支持鹏服务器和x86服务混台部署"
+        },
+        {
+          "label": "C",
+          "text": "支持单集群内鲲鹏服务器和普通x86服务混合部署"
+        },
+        {
+          "label": "D",
+          "text": "实现部分设备自主可控"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "singleChoice",
+      "title": "以下哪些因素助力了大数据时代的蓬勃发展",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "硬件成本的降低和网络带宽的提升"
+        },
+        {
+          "label": "B",
+          "text": "云计算的兴起"
+        },
+        {
+          "label": "C",
+          "text": "智能终端的普及和社交需求的提升"
+        },
+        {
+          "label": "D",
+          "text": "以上全都正确"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "category": "multipleChoice",
+      "title": "以下哪些选项不是企业的主数据?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "业务活动产生的合同、计划、单据等结果或规则数据"
+        },
+        {
+          "label": "B",
+          "text": "经过加工、 计算、汇总后的指标数据"
+        },
+        {
+          "label": "C",
+          "text": "生产线上由设备自动采集的感知、检测数据"
+        },
+        {
+          "label": "D",
+          "text": "描述产品、客户、人员、组织等业务实体的档案数据"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    }
+  ]
+}

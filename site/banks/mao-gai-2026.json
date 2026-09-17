@@ -3,6 +3,7 @@
   "id": "bank-mao-gai-2026",
   "title": "毛概26题库",
   "description": "毛概26题库，按章节和题型练习。",
+  "group": "毛概",
   "schema": {
     "required": [
       "title",

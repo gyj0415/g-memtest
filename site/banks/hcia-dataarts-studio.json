@@ -1,0 +1,856 @@
+{
+  "version": 1,
+  "id": "bank-hcia-dataarts-studio",
+  "title": "HCIA-DataArts Studio",
+  "description": "HCIA-DataArts Studio，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIA-DataArts Studio"
+  ],
+  "categories": [
+    "multipleChoice",
+    "quick",
+    "singleChoice"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "下列属于Dws的典型应用场景的是",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据集市"
+        },
+        {
+          "label": "B",
+          "text": "CRM/ERP"
+        },
+        {
+          "label": "C",
+          "text": "交易系统"
+        },
+        {
+          "label": "D",
+          "text": "企业级数据仓库"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "quick",
+      "title": "数据集市与数据湖最大的区别是，各个集市的数据无法互通，也可能存在重复，相比数据湖数据集市更像一个个数据烟囱",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "singleChoice",
+      "title": "在DGC平台架构下提供提供企业级的元数据管理。数据资产管理可视支持钻取、溯源等。通过数据地图，实现数据资产的数据血缘和数据全景可视提供数据智能搜和运营监控的模块是哪个",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据开发"
+        },
+        {
+          "label": "B",
+          "text": "数据管理"
+        },
+        {
+          "label": "C",
+          "text": "规范设计"
+        },
+        {
+          "label": "D",
+          "text": "数据集成"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "以下关于Fusioninsight中CarbonData说法正确的有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "carbon也是一种将数据源与spark集成的高性能分析引擎"
+        },
+        {
+          "label": "B",
+          "text": "carbon使用轻量级压缩和重量级压缩的组合压缩算法压缩数据,可以减少60%-80%数据存储空间,大大节省硬件存成本。"
+        },
+        {
+          "label": "C",
+          "text": "carbon是一种新型的Apache Hadoop本地文件格式使用先进的列式存储、索引、压缩和编码技术以提高计算效率有助于加速超过PB数量级的数据查询可用于更快的交互查询。"
+        },
+        {
+          "label": "D",
+          "text": "使用carbon的目的是对大数据即席查询提供超快速响应"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "在DataArtsStudio平台中，以下哪些选项不属于数据权限模块?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "用户管理和角色管理"
+        },
+        {
+          "label": "B",
+          "text": "数据目录权限"
+        },
+        {
+          "label": "C",
+          "text": "审批中心"
+        },
+        {
+          "label": "D",
+          "text": "数据表权限"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "以下选项哪些是华为数据中台解决方案?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Al开发平台"
+        },
+        {
+          "label": "B",
+          "text": "ModelArts"
+        },
+        {
+          "label": "C",
+          "text": "视频分析VAS"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "singleChoice",
+      "title": "在DataArts Studio平台中，数据开发可以帮助用户轻松完成整个数据的处理分析流程。以下哪个选项不属于数据开发模块支持的功能？",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "支持可视化和DDL方式管理数据库表"
+        },
+        {
+          "label": "B",
+          "text": "支持去隐私、字符串操作、日期操作等常用字段的数据转换功能"
+        },
+        {
+          "label": "C",
+          "text": "支持导入和导出作业"
+        },
+        {
+          "label": "D",
+          "text": "支持统一管理在脚本开发和作业开发使用到的file.jar、archive类型的资源"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "以下关于Fusioninsight多租户管理的描述正确的有",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "一站式管理租户资源计算资源(CPU/内存/O)、存储资源(HDFS)、服务资源(HBase)"
+        },
+        {
+          "label": "B",
+          "text": "可视化的多级租户管理,与企业组织结构相匹配,简化系统资源分配与管理"
+        },
+        {
+          "label": "C",
+          "text": "基于容器机制的租户资源隔离,为租户SLA保驾护航"
+        },
+        {
+          "label": "D",
+          "text": "与企业组织结构相匹配的多级的租户模型不同部]对应不同的租户、按需动态增删租户"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "SELECT a salary,b adress FROM employee a JoiN SELECT address FROMEmployee info whereprovine='zhejiang)bNOananme=b.name:\"包含哪些类型的操作?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "创建表"
+        },
+        {
+          "label": "B",
+          "text": "导入数据"
+        },
+        {
+          "label": "C",
+          "text": "子查询"
+        },
+        {
+          "label": "D",
+          "text": "JOIN查询"
+        }
+      ],
+      "multiple": true,
+      "answer": "C,D"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "Fusioninsight HD安装前准备,包括哪些步骤?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "完成硬件安装"
+        },
+        {
+          "label": "B",
+          "text": "完成节点主机操作系统安装"
+        },
+        {
+          "label": "C",
+          "text": "准备工具和软件。例Putty、LL"
+        },
+        {
+          "label": "D",
+          "text": "Fusioninsight HD软件安装包等准备规划数据。例如网络参数和角色部署位置"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "Fusioninsight Manager可以对哪些项目进行健康检查?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "主机"
+        },
+        {
+          "label": "B",
+          "text": "服务"
+        },
+        {
+          "label": "C",
+          "text": "角色"
+        },
+        {
+          "label": "D",
+          "text": "实例"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "Fusioninsight Manager的主要功能有以下哪些?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "安全管理"
+        },
+        {
+          "label": "B",
+          "text": "数据集成"
+        },
+        {
+          "label": "C",
+          "text": "系统管埋"
+        },
+        {
+          "label": "D",
+          "text": "服务治理"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "Fusioninsight家族包含下列哪些子产品?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HD"
+        },
+        {
+          "label": "B",
+          "text": "Libra"
+        },
+        {
+          "label": "C",
+          "text": "Manager"
+        },
+        {
+          "label": "D",
+          "text": "Miner"
+        },
+        {
+          "label": "E",
+          "text": "Farmer"
+        },
+        {
+          "label": "F",
+          "text": "Dws"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D,E,F"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "Fusionlnsight HD集群中包含了很多种服务,每种服务又由若干角色组成,下面哪些是服务的角色?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HDFS"
+        },
+        {
+          "label": "B",
+          "text": "NameNode"
+        },
+        {
+          "label": "C",
+          "text": "DataNode"
+        },
+        {
+          "label": "D",
+          "text": "HBase"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "华为FusioninSight HD行业成功案例都有哪些?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数字政府"
+        },
+        {
+          "label": "B",
+          "text": "智慧园区"
+        },
+        {
+          "label": "C",
+          "text": "智能交通"
+        },
+        {
+          "label": "D",
+          "text": "金融"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "quick",
+      "title": "大数据体量的不断增加，对数据存储的物理安全性要求越来越高，对数据的多副本与容灾机制也提出更高的要求。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "Hadoop集群规模很大时,数据的分布情况会非常关键,用户需要根据数据分布情况决定集群是否扩容,数据是否需要做均等。以下关于Fusioninsight资源分布监控说法正确的有",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "帮助用户迅速找到资源消耗最高的节点采用适当的措施"
+        },
+        {
+          "label": "B",
+          "text": "通过每个服务主页的资源分布查看界面直看到关键的资源分布情况"
+        },
+        {
+          "label": "C",
+          "text": "可以帮助用户快速聚集在最关键的资源消耗上"
+        },
+        {
+          "label": "D",
+          "text": "通过DashBoards界面,可以查看到主机资源分布情况。例如内存占有率在50-75%的主机列表并提供链接跳转"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "FusionInsight HD集群升级,以下描述正确的有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "升级过程中不可以手工操作主备OMS倒换"
+        },
+        {
+          "label": "B",
+          "text": "集群内所有主机的root账户密码保持"
+        },
+        {
+          "label": "C",
+          "text": "保持网络畅通,避免因网络问题导致升级异常"
+        },
+        {
+          "label": "D",
+          "text": "观察期不能做扩容"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "quick",
+      "title": "数据中台技术架构的目标之一是为了能够解决传统数据仓库容易成为数据孤岛、大数据平台容易成为数据沼泽的弊端",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "singleChoice",
+      "title": "在DataArtsStudio平台中,以下哪个选项不属于数据权限模块?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据表权限"
+        },
+        {
+          "label": "B",
+          "text": "用户管理和角色管理"
+        },
+        {
+          "label": "C",
+          "text": "审批中心"
+        },
+        {
+          "label": "D",
+          "text": "数据目录权限"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "Fusioninsight Manager与外部平合对接时,支持哪些接口?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "SNMP"
+        },
+        {
+          "label": "B",
+          "text": "VPN"
+        },
+        {
+          "label": "C",
+          "text": "BGP"
+        },
+        {
+          "label": "D",
+          "text": "Syslog"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,D"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "以下关于传统企业面临的数据管理和架构描述正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "海量数据运维需要保证数据稳定,支持高并发的同时增加服务器负裁"
+        },
+        {
+          "label": "B",
+          "text": "传统的数据库没有考虑数据的多样性,尤其对结构化数据、非结构化数据和半结构化数据兼容。"
+        },
+        {
+          "label": "C",
+          "text": "传统的数据库不适合处理PB级别的数据"
+        },
+        {
+          "label": "D",
+          "text": "传统的数据库对数据处理时间要求不高,而大数据需要实时处理数据"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "quick",
+      "title": "数据质量要求各业务部门对相应数据领域的数据质量全权负责，按业务需求设计数据质量标准，制定数据质量管控目标，并遵循企业数据治理要求进行数据质量度量，制定符合各自业务情况的数据质量政策及数据质量相关的改进计划，持续进行数据质量管控。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "Fusioninsight HDLLD配置规划工具可以生成哪些配置文件?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "监控告警阀值配置文件"
+        },
+        {
+          "label": "B",
+          "text": "集群的安装模板文件"
+        },
+        {
+          "label": "C",
+          "text": "HDFS和YARN的配置文件"
+        },
+        {
+          "label": "D",
+          "text": "执行Precheck所需要的配置文件CheckNodes.Config"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "Fusioninsight HDV100R002C60版本集群中,以下哪些组件需要规划元数据分区?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HDFS"
+        },
+        {
+          "label": "B",
+          "text": "Zookeeper"
+        },
+        {
+          "label": "C",
+          "text": "Streaming"
+        },
+        {
+          "label": "D",
+          "text": "Redis"
+        },
+        {
+          "label": "E",
+          "text": "HBase"
+        },
+        {
+          "label": "F",
+          "text": "Kafka"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "下列哪些OS版本被推荐可以用来搭建Fusioninsight V1R2C60集群?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "SUSE11"
+        },
+        {
+          "label": "B",
+          "text": "CentOS6.6"
+        },
+        {
+          "label": "C",
+          "text": "Redhat-6.4-x8664"
+        },
+        {
+          "label": "D",
+          "text": "Redhat-6.5-x8664"
+        },
+        {
+          "label": "E",
+          "text": "Redhat--6.7-x86"
+        },
+        {
+          "label": "F",
+          "text": "Ubuntu6.3"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D,E"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "在DataArts Studio平台中，以下哪些选项属于权限访问控制的功能特性?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "详细的授权、鉴权日志审计"
+        },
+        {
+          "label": "B",
+          "text": "实现对MRS服务中的资源进行精细访问控制"
+        },
+        {
+          "label": "C",
+          "text": "集中式访问控制"
+        },
+        {
+          "label": "D",
+          "text": "丰富的权限策略配置"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "quick",
+      "title": "在DataArtsStudio平台中，支持自定义业务元模型，批量导入业务元数据，关联业务和技术元数据、全路的血缘管理和应用",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "以下哪些选项属于DataArtsStudio数据架构?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "主题设计"
+        },
+        {
+          "label": "B",
+          "text": "数据建模"
+        },
+        {
+          "label": "C",
+          "text": "数据目录"
+        },
+        {
+          "label": "D",
+          "text": "数据标准"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIA-DataArts Studio",
+      "category": "multipleChoice",
+      "title": "Fusioninsight HD平台中哪些组件支持对表、列加密?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Flink"
+        },
+        {
+          "label": "B",
+          "text": "HBase"
+        },
+        {
+          "label": "C",
+          "text": "Hive"
+        },
+        {
+          "label": "D",
+          "text": "HDFS"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    }
+  ]
+}

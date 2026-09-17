@@ -1,0 +1,2376 @@
+{
+  "version": 1,
+  "id": "bank-hcia-spark-flink",
+  "title": "HCIA-Spark&Flink",
+  "description": "HCIA-Spark&Flink，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIA-Spark&Flink"
+  ],
+  "categories": [
+    "multipleChoice",
+    "short",
+    "quick",
+    "singleChoice"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "如图所示下列哪些选项属于宽依赖",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "group"
+        },
+        {
+          "label": "B",
+          "text": "map:C->D"
+        },
+        {
+          "label": "C",
+          "text": "union"
+        },
+        {
+          "label": "D",
+          "text": "join"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,D"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "short",
+      "title": "RDD有宽窄依赖，当宽依赖发生时产生______ 降低集群性能",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "Shuffle"
+      ],
+      "answer": "Shuffle"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark任务的每个stage可划分为job划分的标记是shuffle。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "某证券公司每10秒分析最近5秒的股票指数,若使用SparkStreaming实现,窗口时间和滑动时间如何设置?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "窗口时间5秒滑动时间10秒"
+        },
+        {
+          "label": "B",
+          "text": "窗口时间10秒滑动时间5秒"
+        },
+        {
+          "label": "C",
+          "text": "窗口时间5秒滑动时间5秒"
+        },
+        {
+          "label": "D",
+          "text": "窗口时间10秒滑动时间10秒"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "以下属于Streaming的特点的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据先存储再计算"
+        },
+        {
+          "label": "B",
+          "text": "属于事件驱动"
+        },
+        {
+          "label": "C",
+          "text": "延迟低"
+        },
+        {
+          "label": "D",
+          "text": "可做连续查询"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "short",
+      "title": "SparkStreaming是将实时输入数据流以______ 为单位进行拆分，然后经Spark引擎以类似批处理的方式处理每个时间片数据.",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "时间片(秒级)"
+      ],
+      "answer": "时间片(秒级)"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "Flink的数据转换操作在以下哪个环节中完成",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "source"
+        },
+        {
+          "label": "B",
+          "text": "transformation"
+        },
+        {
+          "label": "C",
+          "text": "sink"
+        },
+        {
+          "label": "D",
+          "text": "channel"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Flink适用于高并发处理数据、毫秒级时延的应用。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "SparkStreaming计算基于DStream，将流式计算分解成一系列短小的批外理作业",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "下列关于Flink barrier描述错误的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "barrier周期性的插入到数据流中并作为数据流的一部分随之流升"
+        },
+        {
+          "label": "B",
+          "text": "barrier是Flink快照的核心"
+        },
+        {
+          "label": "C",
+          "text": "一个barrier将本周期快照的数据与下一周期快照的数据分隔开来"
+        },
+        {
+          "label": "D",
+          "text": "在插入barrier的时候，会暂时阻断数据流"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Spark有哪些特点?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "快"
+        },
+        {
+          "label": "B",
+          "text": "巧"
+        },
+        {
+          "label": "C",
+          "text": "灵"
+        },
+        {
+          "label": "D",
+          "text": "轻"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "以下关于Flink与其他组件交互说法正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Flink的checkpoint的实现依赖于Zookeeper"
+        },
+        {
+          "label": "B",
+          "text": "Fink可以将接收的组件发送给Kafka"
+        },
+        {
+          "label": "C",
+          "text": "Flink任务的运行依赖YARN来进行资源的调度管理"
+        },
+        {
+          "label": "D",
+          "text": "Flink在HDFS文件系统中读写数据"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "在Flink技术架构中，哪个是流处理和批处理的计算引擎",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Standalone"
+        },
+        {
+          "label": "B",
+          "text": "Runtime"
+        },
+        {
+          "label": "C",
+          "text": "DataStream"
+        },
+        {
+          "label": "D",
+          "text": "Flinkcore"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark任务的Container可以运行多个task.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "某公司使用Spark做大数据分析,某次分析任务中某RDD会被重复利用,导致重复计算多次若要避免重复计算且能够重复利用该RDD,以下哪个选项更合适?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "增大任务资源,快速结束该任务"
+        },
+        {
+          "label": "B",
+          "text": "Spark计算很快,无需优化"
+        },
+        {
+          "label": "C",
+          "text": "写出该RDD,需要时再重新读取"
+        },
+        {
+          "label": "D",
+          "text": "RDD执行persist操作"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark on YARN-client适合用于生产环境是因为可以更快的看到APP的输出。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Spark与MapReduce进行比较，下列说法正确的是哪几项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Spark可以缓存中间结果在内存降低磁盘IO"
+        },
+        {
+          "label": "B",
+          "text": "Spark任务中shuffle是必须的过程"
+        },
+        {
+          "label": "C",
+          "text": "Spark任务的中间结果只能存储在内存"
+        },
+        {
+          "label": "D",
+          "text": "Spark任务中shuffle不是必须的过程"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,D"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark On YARN模式下的driver只能运行在客户端",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Flink的时间窗口根据实现原理的不同可分为以下哪三类窗口?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "滑动窗口(Sliding Window)"
+        },
+        {
+          "label": "B",
+          "text": "滚动窗口(Tumbling Window)"
+        },
+        {
+          "label": "C",
+          "text": "计数窗口(Count Window)"
+        },
+        {
+          "label": "D",
+          "text": "会话窗口(Session Window)"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "下列哪些选项是action算子?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "collect"
+        },
+        {
+          "label": "B",
+          "text": "map"
+        },
+        {
+          "label": "C",
+          "text": "reduce"
+        },
+        {
+          "label": "D",
+          "text": "filter"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "在数据流处理过程中,每个事件的时间可以分为以下哪三种?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "procossing time"
+        },
+        {
+          "label": "B",
+          "text": "event time"
+        },
+        {
+          "label": "C",
+          "text": "ingestion time"
+        },
+        {
+          "label": "D",
+          "text": "无"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "默认情况下Flink不开启检查点,用户需要在程序中通过调用以下那种方法配置和开启检查点?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "env.getCheckpointConfig().setCheckpointingTimeout(60000)"
+        },
+        {
+          "label": "B",
+          "text": "env.getCheckpointConfig().setMaxConcurrentCheckpoint"
+        },
+        {
+          "label": "C",
+          "text": "env.enableCheckpointing(100)"
+        },
+        {
+          "label": "D",
+          "text": "env.startSetCheckpointing(1000)"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Flink支持Local模式和Cluster模式部署，其他模式部署暂不支持",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark SQL表中，经常会存在很多小文件(大小远小于HDFS块大小)，在这种情况下，Spark会启动更多的Task来处理这些小文件，当SQL逻辑中存在Shuffle操作时，会大大增加hash分桶数从而严重影响性能",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "MapReduce、Spark和Flink都可以同时支持以下哪种数据处理方式?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "KV查询"
+        },
+        {
+          "label": "B",
+          "text": "流处理"
+        },
+        {
+          "label": "C",
+          "text": "批处理"
+        },
+        {
+          "label": "D",
+          "text": "实时检索"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "关于DataSet,下列说法不正确的是?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "DataSet与RDD高度类似,性能比RDD好"
+        },
+        {
+          "label": "B",
+          "text": "DataSet是一个由特定域的对象组成的强类型集合"
+        },
+        {
+          "label": "C",
+          "text": "DataSet执行sort、 filter、 shuffle等操作需要进行反序列化"
+        },
+        {
+          "label": "D",
+          "text": "DataSet不需要反序列化就可执行大部分操作"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "在Flink的运行流程中，负责申请资源的角色是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "ResourceManager"
+        },
+        {
+          "label": "B",
+          "text": "JobManager"
+        },
+        {
+          "label": "C",
+          "text": "Client"
+        },
+        {
+          "label": "D",
+          "text": "TaskManager"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "Spark的核心模块是?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Spark"
+        },
+        {
+          "label": "B",
+          "text": "Spark"
+        },
+        {
+          "label": "C",
+          "text": "Spark"
+        },
+        {
+          "label": "D",
+          "text": "MapReduce"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Flink中的checkpoint机制不断绘制流应用的快照，流应用的状态快照只能保存在HDFS文件系统中",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "Spark是以下哪种编程语言实现的",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "C"
+        },
+        {
+          "label": "B",
+          "text": "C++"
+        },
+        {
+          "label": "C",
+          "text": "JAVA"
+        },
+        {
+          "label": "D",
+          "text": "Scala"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-031",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Flink的兼容性体现在以下哪些方面?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "YARN能够作为Flink集群的资源调度管理器"
+        },
+        {
+          "label": "B",
+          "text": "能够从本地获取数据"
+        },
+        {
+          "label": "C",
+          "text": "能够使用Hadoop的格式化输入和输出"
+        },
+        {
+          "label": "D",
+          "text": "能够与Hadoop原有的Mappers和Reducers混合使用"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-032",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Spark适用于以下哪些场景?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图计算"
+        },
+        {
+          "label": "B",
+          "text": "交互式查询"
+        },
+        {
+          "label": "C",
+          "text": "批处理"
+        },
+        {
+          "label": "D",
+          "text": "实时流处理"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-033",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Flink流式数据处理接口DatastreamAPI支持的语言包括?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Python"
+        },
+        {
+          "label": "B",
+          "text": "Java"
+        },
+        {
+          "label": "C",
+          "text": "c语言"
+        },
+        {
+          "label": "D",
+          "text": "Scala"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-034",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "下列关于Flink中Transformation的说法正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "可以通过window设定时间窗口"
+        },
+        {
+          "label": "B",
+          "text": "Fliter操作是对每个元素执行Boolean函数"
+        },
+        {
+          "label": "C",
+          "text": "FlatMap可以对文本进行切分"
+        },
+        {
+          "label": "D",
+          "text": "KeyBy是将源头数据按照key进行分组,以保证同一个key的元数据分到同样的组中"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-035",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Spark框架包括哪些模块?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Spark SQL"
+        },
+        {
+          "label": "B",
+          "text": "Spark Streaming"
+        },
+        {
+          "label": "C",
+          "text": "Spark GraphX"
+        },
+        {
+          "label": "D",
+          "text": "Spark Milib"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-036",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "下图为Spark&Map Reduce的性能对比数据，可以得出结论，与MapReduce计算相比Spark用()的资源，获得()倍性能",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "1/8,3"
+        },
+        {
+          "label": "B",
+          "text": "1/10,3"
+        },
+        {
+          "label": "C",
+          "text": "1/10,4"
+        },
+        {
+          "label": "D",
+          "text": "1/8,4"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-037",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Spark发生shuffle时会延长任务执行时间，下列哪些选项能够减少shuffle次数?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "更换shuffle机制"
+        },
+        {
+          "label": "B",
+          "text": "多用transformation算子少用action算子"
+        },
+        {
+          "label": "C",
+          "text": "增强集群性能快速执行shuffle"
+        },
+        {
+          "label": "D",
+          "text": "避免使用groupBy、reduceByKey等产生宽依赖的算子"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,D"
+    },
+    {
+      "id": "q-038",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "short",
+      "title": "Flink状态保存主要依靠______ 机制，该机制会定时对程序中的状态进行备份",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "Checkpoint"
+      ],
+      "answer": "Checkpoint"
+    },
+    {
+      "id": "q-039",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "下面关于Flink窗口的描述错误的是",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "滚动窗口在时间上是重叠的"
+        },
+        {
+          "label": "B",
+          "text": "滚动窗口在时间上是不重的"
+        },
+        {
+          "label": "C",
+          "text": "滑动动窗口之间时间点不存在重叠"
+        },
+        {
+          "label": "D",
+          "text": "滑动窗口之间时间点存在重鲁"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-040",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "SparkStreaming容错机制是指RDD中任意的Partition出错，都可以根据其父RDD重新计算生成，如果父RDD丢失，则需要去磁盘中查找原始数",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-041",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "在很多小文件场景下，Spark会起很多Task,当SQL逻辑中存在Shuffle操作时，会大大增加hash分桶数严重影响性能。Fusioninsighter中，针对小文件的场景通常采用()算子，来对Table中的小文件生成的partition进行合并，减少partition数，从而避免在shufle的时候，生成过多的hash分桶，提升性能",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "groupby"
+        },
+        {
+          "label": "B",
+          "text": "coalese"
+        },
+        {
+          "label": "C",
+          "text": "connect"
+        },
+        {
+          "label": "D",
+          "text": "join"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-042",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Flink中Watermark机制用来解决乱序问题，Watermark可通过以下哪些方式产生?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "继承assignerWithPunctuatedWatermarks"
+        },
+        {
+          "label": "B",
+          "text": "继承assigner TimestampWithWatermark"
+        },
+        {
+          "label": "C",
+          "text": "继承getCurrentWatermark"
+        },
+        {
+          "label": "D",
+          "text": "继承assignerWithPeriodicWatermarks"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-043",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "下列关于Sparkstreaming和Streaming比较说法不正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Sparkstreaming是一个微批处理框架事件需要累到定量时才进行处理"
+        },
+        {
+          "label": "B",
+          "text": "Streaming的执行逻辑是即时启动运行完后再回收"
+        },
+        {
+          "label": "C",
+          "text": "Sparkstreaming的吞吐量大约是Streaming的2-5倍"
+        },
+        {
+          "label": "D",
+          "text": "Sparkstreaming事件处理时延比Streaming更高"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-044",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "在华为Fusioninsight HD中,下面哪些组件是Flink强依赖的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Kafka"
+        },
+        {
+          "label": "B",
+          "text": "HDFS"
+        },
+        {
+          "label": "C",
+          "text": "YARN"
+        },
+        {
+          "label": "D",
+          "text": "Zookeeper"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-045",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "Sparks应用在运行时Stage划分的依据是什么",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "task"
+        },
+        {
+          "label": "B",
+          "text": "taskset"
+        },
+        {
+          "label": "C",
+          "text": "action"
+        },
+        {
+          "label": "D",
+          "text": "shuffle"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-046",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "FLINK采用checkpoint机制保障应用程序运行中的容错性",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-047",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "short",
+      "title": "______ 场景不是Flink组件擅长的",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "数据存储"
+      ],
+      "answer": "数据存储"
+    },
+    {
+      "id": "q-048",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Flink运行模式有哪些?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Local模式"
+        },
+        {
+          "label": "B",
+          "text": "Standalone模式"
+        },
+        {
+          "label": "C",
+          "text": "YARN模式"
+        },
+        {
+          "label": "D",
+          "text": "Spark模式"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-049",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Watermark是Apache Flink为了处理EventTime窗口计算提出的一种机制，本质上是一种时戳。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-050",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark任务的一个Executor同时可以运行多个task。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-051",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "Spark自带的资源管理框架是?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "YARN"
+        },
+        {
+          "label": "B",
+          "text": "Standalone"
+        },
+        {
+          "label": "C",
+          "text": "Mesos"
+        },
+        {
+          "label": "D",
+          "text": "ocker"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-052",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "对于延迟事件出现时窗口已经关闭并产出了计算结果，以下处理方法不合理的是哪一项",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "将延迟事件收集起来另外处理"
+        },
+        {
+          "label": "B",
+          "text": "延迟事件一定不能忽略计算"
+        },
+        {
+          "label": "C",
+          "text": "将延迟事件视为错误消息并丢弃"
+        },
+        {
+          "label": "D",
+          "text": "重新激活已经关闭的窗口并重新计算以修正结果"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-053",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Flink是一个批处理和流处理结合的统一计算框架，其核心是一个数据分发以及并行化计算的流数据处理引擎",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-054",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Spark发生Shuffle时会延长任务执行时间，下列哪些选项不能减少shuffle次数?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "增强集群性能快速执行shufle"
+        },
+        {
+          "label": "B",
+          "text": "更换shufle机制"
+        },
+        {
+          "label": "C",
+          "text": "多用transformation算子少用action算子"
+        },
+        {
+          "label": "D",
+          "text": "避免使用groupBy、 reduceByKey等产 性宽依赖的算子"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-055",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "DataSet从Spark2.0正式启用，兼具DataFrame和RDD的特点，RDD也不再使用",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-056",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "以下关于Flink容错机制描述错误的有哪些?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Savepoint机制保证了程序在进行升级或者修改并发度等情况后，还能从保存的状态位继续启动恢复"
+        },
+        {
+          "label": "B",
+          "text": "Checkpoint机制保证了程序在进行升级或者修改并发度等情况后，还能从保存的状态位继续启动恢复"
+        },
+        {
+          "label": "C",
+          "text": "Savepoint机制保证了实时程序运行时，即使突然遇到异常也能的进行自我恢复"
+        },
+        {
+          "label": "D",
+          "text": "Checkpoint机制保证了实时程序运行时，即使突然遇到异常也能够进行自我恢复"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    },
+    {
+      "id": "q-057",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark根据RDD的依赖关系来划分Stage,调度器从DAG图末端出发，逆向遍历整个依赖关系链，遇到窄依赖就断开，遇到宽依赖就将其加入当前Stage。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-058",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "通过配置以下哪些参数可清理Kafka中产生的日志?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "log.retentionbytes"
+        },
+        {
+          "label": "B",
+          "text": "server.properties"
+        },
+        {
+          "label": "C",
+          "text": "log.cleanup.policy"
+        },
+        {
+          "label": "D",
+          "text": "log.retention.hours"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-059",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "下列关于Flink中Transformation的说法正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "flatMap可以对文本进行切分"
+        },
+        {
+          "label": "B",
+          "text": "filter操作是对每个元素执行boolean函数"
+        },
+        {
+          "label": "C",
+          "text": "keyBy是将源头数据按照key进行分组，以保证同一个key的源数据分到同样的组中"
+        },
+        {
+          "label": "D",
+          "text": "可以通过window设定时间窗口"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-060",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark的中间数据放在内存中，对于迭代运算、批处理计算的效率更高，延迟更高",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-061",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Flink的时间窗口根据实现原理的不同可分为以下哪些窗口?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "计数窗口(CountWindow)"
+        },
+        {
+          "label": "B",
+          "text": "会话窗口(Session Window)"
+        },
+        {
+          "label": "C",
+          "text": "滚动窗口(TumblingWindow)"
+        },
+        {
+          "label": "D",
+          "text": "滑动窗口(SlidingWindow)"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-062",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "在Flink中，checkpoint机制能够保证应用在运行过程中出现失败时，从某一个检查点恢复，在此过程中，流快照是根据数据流入顺序依次创建的",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-063",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "关于Spark SQL与Hive区别与联系下列说法正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Spark SQL兼容绝大部分Hive的语法和函数"
+        },
+        {
+          "label": "B",
+          "text": "Spark SQL不可以使用Hive的自定义函数"
+        },
+        {
+          "label": "C",
+          "text": "Spark SQL的执行引擎为Sparkcore,Hive默认执行引擎为MaReduce"
+        },
+        {
+          "label": "D",
+          "text": "Spark SQL依赖Hive的元数据"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-064",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "以下哪些选项属于FusioninsightSPARKSQL的优点",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "支持数据插入、更新和删除"
+        },
+        {
+          "label": "B",
+          "text": "长稳测试"
+        },
+        {
+          "label": "C",
+          "text": "稳定和高性能"
+        },
+        {
+          "label": "D",
+          "text": "SQL兼容性"
+        },
+        {
+          "label": "E",
+          "text": "以上全部正确"
+        }
+      ],
+      "multiple": false,
+      "answer": "E"
+    },
+    {
+      "id": "q-065",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Flink可以基于以下哪些窗口进行统计",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "时间窗口"
+        },
+        {
+          "label": "B",
+          "text": "滑动窗口"
+        },
+        {
+          "label": "C",
+          "text": "会话窗口"
+        },
+        {
+          "label": "D",
+          "text": "Count window"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-066",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "关于RDD下列说法错误的是?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "RDD具有血统机制(Lineage)"
+        },
+        {
+          "label": "B",
+          "text": "RDD是Spark对基础数据的抽象"
+        },
+        {
+          "label": "C",
+          "text": "RDD是一个只读的可分区的分布式数据集"
+        },
+        {
+          "label": "D",
+          "text": "RDD默认存储在磁盘"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-067",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "short",
+      "title": "Spark架构中______ 是核心模块",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "SparkCore"
+      ],
+      "answer": "SparkCore"
+    },
+    {
+      "id": "q-068",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "在FusionInsight集群中,Spark主要与以下哪些组件进行交互?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Hive"
+        },
+        {
+          "label": "B",
+          "text": "YARN"
+        },
+        {
+          "label": "C",
+          "text": "HDFS"
+        },
+        {
+          "label": "D",
+          "text": "Zookeeper"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-069",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Flink提供了内置的状态管理，可以把工作时状态存储在Flink内部，而不需要把它存储在外部系统。这样做的好处包含以下哪些选项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "确保了数据在处理过程中的一致性"
+        },
+        {
+          "label": "B",
+          "text": "实现了高吞吐、高性能特性,但无法做到低延迟保.障"
+        },
+        {
+          "label": "C",
+          "text": "对性能带来 了极大的提升"
+        },
+        {
+          "label": "D",
+          "text": "降低了计算引擎对外部系统的依赖，使得部署、运维更加简单"
+        }
+      ],
+      "multiple": true,
+      "answer": "C,D"
+    },
+    {
+      "id": "q-070",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "RDD有Transformation和Action算子,下列属于Action算子的是?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "saveAsTextFile"
+        },
+        {
+          "label": "B",
+          "text": "filter"
+        },
+        {
+          "label": "C",
+          "text": "map"
+        },
+        {
+          "label": "D",
+          "text": "reduceByKey"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-071",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "Flink程序由Source、Transformation和sink三部分组成,以下关于这部分描述错误的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Transformation主要负责对数据的转换操作"
+        },
+        {
+          "label": "B",
+          "text": "Source主要负责数据的读取,支持HDFS、KafkaHBase和文本等"
+        },
+        {
+          "label": "C",
+          "text": "在各部分之间流转的数据会被封装成一个个Event"
+        },
+        {
+          "label": "D",
+          "text": "Sink负责最终数据的输出,支持HDFS、Kafka和文本输出等"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-072",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "以下关于Flink关键特性描述不正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "SparkStreaming与Flink相比，时延更低"
+        },
+        {
+          "label": "B",
+          "text": "Flink流式处理引擎能够同时提供支持流处理和批处理应用的功能"
+        },
+        {
+          "label": "C",
+          "text": "与FusionInght HD中的Streaming相比Flink具有更高的吞吐量"
+        },
+        {
+          "label": "D",
+          "text": "checkpoint实现了Flink的容错"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-073",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "Flink根据数据集类型的不同将核心数据处理接口分为两大类,一类是支持批计算的接口,另外一类是支持流计算的接口,以下关于这两类接口描述正确的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "支持批计算的接口是DataSetAPI,支持流计算的接口是DataStreamAPI"
+        },
+        {
+          "label": "B",
+          "text": "仅支持批计算的接口是SQLAPI,仅支持流计算的接门是DataStreamAPI"
+        },
+        {
+          "label": "C",
+          "text": "仅支持批计算的接口是DataStream API,仅支持流计算的接口是SQLAPI"
+        },
+        {
+          "label": "D",
+          "text": "支持批计算的接是DataStreamAPI,支持流计算的接是DataSetAPI"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-074",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Flink与Spark Streaming类似属于事件驱动型实时流系统",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-075",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Flink不仅能提供同时支持高吞吐和exactly-once语义的实时计算，还能提供批量数据处理",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-076",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark和Hadoop都不适用于迭代计算的场景。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-077",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "下面哪些场景不是Flink组件擅长的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "批处理"
+        },
+        {
+          "label": "B",
+          "text": "流处理"
+        },
+        {
+          "label": "C",
+          "text": "数据存储"
+        },
+        {
+          "label": "D",
+          "text": "迭代计算"
+        }
+      ],
+      "multiple": true,
+      "answer": "C,D"
+    },
+    {
+      "id": "q-078",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark应用运行时，如果某个Task运行失败会导致整个app运行失败。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-079",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "下列选项中,哪些是Spark的重要角色",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "DataNode"
+        },
+        {
+          "label": "B",
+          "text": "Nodemanager"
+        },
+        {
+          "label": "C",
+          "text": "Driver"
+        },
+        {
+          "label": "D",
+          "text": "ResourceManager"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-080",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "在FusioninsighthHD中,Flink主要与以下哪些组件进行交互",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "zookeeper"
+        },
+        {
+          "label": "B",
+          "text": "HDFS"
+        },
+        {
+          "label": "C",
+          "text": "Kafka"
+        },
+        {
+          "label": "D",
+          "text": "Yarn"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-081",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Flink用DataStream来表示程序中的流式判断数据。用户可以认为它们是含有重复数据的可修改的集合(collection)，DataStream中元素的数量是无限的。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-082",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "在Streaming的处理节点Bolt中,可以完成以下哪些操作",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "连接运算"
+        },
+        {
+          "label": "B",
+          "text": "连接数据库"
+        },
+        {
+          "label": "C",
+          "text": "过滤(filter)"
+        },
+        {
+          "label": "D",
+          "text": "业务处理"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-083",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Flink中的TaskSlot主要用于资源隔离，其中包含内存资源和CPU资源",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-084",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Flink流式处理的数据源类型包括?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Socket streams"
+        },
+        {
+          "label": "B",
+          "text": "Files"
+        },
+        {
+          "label": "C",
+          "text": "JDBC"
+        },
+        {
+          "label": "D",
+          "text": "Collections"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-085",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Channel支持事务提供较弱的顺序保证可以连接任何数量的Source和Sink。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-086",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "singleChoice",
+      "title": "Flink中的()接口用于流数据处理，()接口用于批处理",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Datastream Apl,DataSet API"
+        },
+        {
+          "label": "B",
+          "text": "Data batch APLDataStream API"
+        },
+        {
+          "label": "C",
+          "text": "Stream APIBatch API"
+        },
+        {
+          "label": "D",
+          "text": "Batch APIStream API"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-087",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark和Hive同时部署时若SparkSQL要获取Hive元数据，SparkSQL需要在启动后执行同步操作。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-088",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark Streaming相比Storm具备更高的实时性。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-089",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark On YARN模式下没有部署NodeManager的节点不能启动executor执行Task",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-090",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "以下哪些是Spark可以提供的功能?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "分布式内存计算引擎"
+        },
+        {
+          "label": "B",
+          "text": "分布式文件系统"
+        },
+        {
+          "label": "C",
+          "text": "集群资源的统一调度"
+        },
+        {
+          "label": "D",
+          "text": "流改批处理功能"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,D"
+    },
+    {
+      "id": "q-091",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Flink没有重启策略",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-092",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "quick",
+      "title": "Spark是基于内存的计算引擎，所有Spark程序运行过程中的数据只能存储在内存中",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-093",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "华为Fusioninsight HD集群中Spark服务可以从以下哪些服务读取数据?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "YARN"
+        },
+        {
+          "label": "B",
+          "text": "HDFS"
+        },
+        {
+          "label": "C",
+          "text": "Hive"
+        },
+        {
+          "label": "D",
+          "text": "HBase"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-094",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "关于worker(工作进程)Executor(线多选程)、task(任务)说法正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "每个Executor(线程)可以运行参个task(任务)"
+        },
+        {
+          "label": "B",
+          "text": "每个Executor(线程)可以运行不同组件(spout或bolt)的task(任务)"
+        },
+        {
+          "label": "C",
+          "text": "每个worker可以运行多个Executor(线程)"
+        },
+        {
+          "label": "D",
+          "text": "每个worker只能为一个拓扑运行Executor(线程)"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-095",
+      "chapter": "HCIA-Spark&Flink",
+      "category": "multipleChoice",
+      "title": "Flink支持的时间操作类型包括以下哪些选项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "结束时间"
+        },
+        {
+          "label": "B",
+          "text": "处理时间"
+        },
+        {
+          "label": "C",
+          "text": "采集时间"
+        },
+        {
+          "label": "D",
+          "text": "事件时间"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    }
+  ]
+}

@@ -194,7 +194,7 @@
   <main>
     <section class="panel">
       <h1>自测题库格式转换器</h1>
-      <p>把普通题目和答案粘进来，转换成自测网站可导入的 JSON。推荐格式：每题用空行隔开，每题里写 <code>题目：</code> 和 <code>答案：</code>。</p>
+      <p>把普通题目和答案粘进来，转换成自测网站可导入的 JSON。推荐格式：每题用空行隔开，每题里写 <code>题目：</code> 和 <code>答案：</code>。一整套题库可以写 <code>题库分类：</code>，再用 <code>题库名称：</code> 拆成多套。</p>
       <p>示例：题目：管理的具体职能有哪些？答案：计划、组织、领导、控制。</p>
       <div class="actions">
         <a class="button secondary" href="./index.html">返回自测网站</a>
@@ -214,15 +214,18 @@
       <textarea id="aiPrompt" readonly>请把我接下来提供的题目、答案、选择题选项或课件内容，整理成“自测题库格式转换器”可以识别的纯文本格式。
 
 要求：
-1. 每道题建议写“章节：”和“分类：”。章节可写：第一章、第二章、第三章；分类可用：名词解释、简答题、选择题、选择判断、计算公式、案例题。
+1. 先写整套题库的“题库分类：”，再给每一套写“题库名称：”。同一科目的多套题库用同一个分类，例如“毛概2”“企业管理”。
+2. 每道题建议写“章节：”和“分类：”。章节可写：第一章、第二章、第三章；分类可用：名词解释、简答题、单选题、多选题、选择判断、计算公式、案例题。
 
-2. 问答题固定使用：
+3. 问答题固定使用：
+题库分类：企业管理
+题库名称：企业管理第一章自测
 章节：第一章
 分类：简答题
 题目：这里写题目
 答案：这里写完整标准答案
 
-3. 单选题固定使用：
+4. 单选题固定使用：
 章节：第一章
 分类：单选题
 题目：这里写选择题题干
@@ -233,16 +236,18 @@ C. 这里写 C 选项
 D. 这里写 D 选项
 答案：A
 
-4. 多选题固定使用“分类：多选题”，答案写成“答案：A、C”，不要写成一句解释。
-5. 图片题可加“图片：images/chart.png”或网络图片地址；需要说明时加“图片说明：管理流程图”。
-6. 大资料题可给多道题写同一个“资料组：case-001”，并在每题里保留“资料标题：”和“资料：”。
-7. 每道题之间空一行。
-8. 不要输出 Markdown 表格，不要加编号标题，不要写解释说明。
-9. 如果问答题答案有多个要点，请用“（1）（2）（3）”或“、”整理清楚。
-10. 如果题目要求“写出几条/几个关键词”，请保留这个数量要求。
-11. 答案要适合背诵自测：简洁、准确、概念完整。
+5. 多选题固定使用“分类：多选题”，答案写成“答案：A、C”，不要写成一句解释。
+6. 图片题可加“图片：images/chart.png”或网络图片地址；需要说明时加“图片说明：管理流程图”。
+7. 大资料题可给多道题写同一个“资料组：case-001”，并在每题里保留“资料标题：”和“资料：”。
+8. 每道题之间空一行。换一套题库时先写新的“题库名称：”，同一科目保持同一个“题库分类：”。
+9. 不要输出 Markdown 表格，不要加编号标题，不要写解释说明。
+10. 如果问答题答案有多个要点，请用“（1）（2）（3）”或“、”整理清楚。
+11. 如果题目要求“写出几条/几个关键词”，请保留这个数量要求。
+12. 答案要适合背诵自测：简洁、准确、概念完整。
 
 输出示例：
+题库分类：企业管理
+题库名称：企业管理练习题
 章节：第一章
 分类：选择判断
 题目：管理的具体职能有哪些？
@@ -315,7 +320,12 @@ D. 放任
           卷子名称 / 题库名称
           <input id="bankTitle" type="text" value="自定义自测题库" placeholder="例如：组织行为学第一章自测">
         </label>
-        <p>这个名称会显示在主自测网站顶部，也会写进导出的 JSON。</p>
+        <p>这个名称会显示在主自测网站顶部，也会写进导出的 JSON。正文里写 <code>题库名称：</code> 可以拆成多套题库。</p>
+        <label>
+          题库分类
+          <input id="bankGroup" type="text" value="未分类" placeholder="例如：毛概2、企业管理">
+        </label>
+        <p>同类题库会在首页收进同一个可展开分类。正文里写 <code>题库分类：</code>、<code>科目：</code> 或 <code>套装：</code> 会覆盖这里的默认值。</p>
         <label>
           默认章节
           <input id="defaultChapter" type="text" value="未分章" placeholder="例如：第一章">
@@ -337,7 +347,9 @@ D. 放任
           </select>
         </label>
         <p>默认分类会应用到没有写 <code>分类：</code> 的题目；单题里写了分类会优先生效。</p>
-        <textarea id="source" placeholder="章节：第一章
+        <textarea id="source" placeholder="题库分类：企业管理
+题库名称：企业管理练习题
+章节：第一章
 分类：选择判断
 题目：管理的具体职能有哪些？
 答案：计划、组织、领导、控制。
@@ -378,6 +390,7 @@ D. 放任
     const statusEl = document.querySelector("#status");
     const aiPrompt = document.querySelector("#aiPrompt");
     const bankTitle = document.querySelector("#bankTitle");
+    const bankGroup = document.querySelector("#bankGroup");
     const defaultChapter = document.querySelector("#defaultChapter");
     const defaultCategory = document.querySelector("#defaultCategory");
 
@@ -498,10 +511,23 @@ D. 放任
       return match?.[1]?.trim() || undefined;
     }
 
+    function parseBankMeta(block) {
+      const titleMatch = block.match(/(?:^|\n)(?:题库名称|卷子名称|BankTitle)[:：]\s*([^\n]+)/i);
+      const groupMatch = block.match(/(?:^|\n)(?:题库分类|科目|课程|套装|BankGroup|Subject|Course)[:：]\s*([^\n]+)/i);
+      return {
+        title: titleMatch?.[1]?.trim() || "",
+        group: groupMatch?.[1]?.trim() || ""
+      };
+    }
+
+    function isBankMetaLine(line) {
+      return /^(?:题库名称|卷子名称|BankTitle|题库分类|科目|课程|套装|BankGroup|Subject|Course)[:：]\s*/i.test(line);
+    }
+
     function parseBlock(block, index) {
       const options = parseOptions(block);
-      const chapterMatch = block.match(/(?:章节|章|Chapter|Section)[:：]\s*([^\n]+)/i);
-      const categoryMatch = block.match(/(?:分类|题型|类别|Category)[:：]\s*([^\n]+)/i);
+      const chapterMatch = block.match(/(?:^|\n)(?:章节|章|Chapter|Section)[:：]\s*([^\n]+)/i) || block.match(/^(?:章节|章|Chapter|Section)[:：]\s*([^\n]+)/i);
+      const categoryMatch = block.match(/(?:^|\n)(?:分类|题型|类别|Category)[:：]\s*([^\n]+)/i) || block.match(/^(?:分类|题型|类别|Category)[:：]\s*([^\n]+)/i);
       const titleMatch = block.match(/(?:题目|问题|Q|Question)[:：]\s*([\s\S]*?)(?=\n(?:图片|图像|Image|图片说明|图注|Alt|Caption|资料|材料|案例资料|Material|Passage|资料标题|材料标题|案例标题|MaterialTitle|PassageTitle|资料组|材料组|案例组|Group|GroupId|CaseId|选项|答案|参考答案|A[\.\、．:：\s]|Answer)[:：]?|$)/i);
       const answerMatch = block.match(/(?:答案|参考答案|Answer)[:：]\s*([\s\S]*)/i) || block.match(/\nA[:：]\s*([\s\S]*)/i);
       let title = titleMatch?.[1]?.replace(/^选项[:：]?[\s\S]*$/i, "").trim() || "";
@@ -513,6 +539,7 @@ D. 放任
           .filter(Boolean)
           .filter((line) => !/^(?:章节|章|Chapter|Section)[:：]\s*/i.test(line))
           .filter((line) => !/^(?:分类|题型|类别|Category)[:：]\s*/i.test(line))
+          .filter((line) => !isBankMetaLine(line))
           .filter((line) => !/^(?:图片|图像|Image|图片说明|图注|Alt|Caption)[:：]\s*/i.test(line))
           .filter((line) => !/^(?:资料|材料|案例资料|Material|Passage|资料标题|材料标题|案例标题|MaterialTitle|PassageTitle|资料组|材料组|案例组|Group|GroupId|CaseId)[:：]\s*/i.test(line))
           .filter((line) => !/^选项[:：]?$/i.test(line))
@@ -552,21 +579,11 @@ D. 放任
       };
     }
 
-    function convert() {
-      const questions = splitBlocks(source.value)
-        .map((block, index) => parseBlock(block, index))
-        .filter(Boolean);
-
-      if (!questions.length) {
-        statusEl.textContent = "没有识别到题目。请按“题目：/答案：”格式粘贴。";
-        statusEl.className = "status error";
-        output.value = "";
-        return;
-      }
-
-      const bank = {
+    function buildBankJson(title, group, questions) {
+      return {
         version: 1,
-        title: bankTitle.value.trim() || "自定义自测题库",
+        title,
+        group,
         schema: {
           required: ["title", "answer"],
           optional: ["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple", "media", "material", "groupId"]
@@ -575,9 +592,55 @@ D. 放任
         categories: [...new Set(questions.map((item) => item.category || "custom"))],
         questions
       };
+    }
 
-      output.value = JSON.stringify(bank, null, 2);
-      statusEl.textContent = `已转换《${bank.title}》${questions.length} 道题。把 JSON 下载后，在自测网站点“导入题库”。`;
+    function convert() {
+      const defaultTitle = bankTitle.value.trim() || "自定义自测题库";
+      const defaultGroup = bankGroup.value.trim() || "未分类";
+      const banks = [];
+      let current = { title: defaultTitle, group: defaultGroup, questions: [] };
+
+      function flushBank() {
+        if (!current.questions.length) return;
+        banks.push(current);
+        current = { title: current.title, group: current.group, questions: [] };
+      }
+
+      splitBlocks(source.value).forEach((block, index) => {
+        const meta = parseBankMeta(block);
+        if (meta.title && meta.title !== current.title && current.questions.length) {
+          flushBank();
+          current.title = meta.title;
+        } else if (meta.title) {
+          current.title = meta.title;
+        }
+        if (meta.group) current.group = meta.group;
+        const question = parseBlock(block, index);
+        if (question) current.questions.push(question);
+      });
+      flushBank();
+
+      if (!banks.length) {
+        statusEl.textContent = "没有识别到题目。请按“题目：/答案：”格式粘贴。";
+        statusEl.className = "status error";
+        output.value = "";
+        return;
+      }
+
+      const payload = banks.length === 1
+        ? buildBankJson(banks[0].title, banks[0].group, banks[0].questions)
+        : {
+            version: 1,
+            title: banks[0].group || defaultTitle,
+            group: banks[0].group || defaultGroup,
+            banks: banks.map((item) => buildBankJson(item.title, item.group, item.questions))
+          };
+
+      output.value = JSON.stringify(payload, null, 2);
+      const totalQuestions = banks.reduce((sum, item) => sum + item.questions.length, 0);
+      statusEl.textContent = banks.length === 1
+        ? `已转换《${banks[0].title}》${totalQuestions} 道题，分类为「${banks[0].group}」。把 JSON 下载后，在自测网站点“导入题库”。`
+        : `已转换 ${banks.length} 套题库，共 ${totalQuestions} 道题。导入后会按「${payload.group}」等分类展开。`;
       statusEl.className = "status";
     }
 
@@ -612,9 +675,12 @@ D. 放任
     });
     document.querySelector("#loadSample").addEventListener("click", () => {
       bankTitle.value = "企业管理与技术经济学练习题";
+      bankGroup.value = "企业管理";
       defaultChapter.value = "未分章";
       defaultCategory.value = "auto";
-      source.value = `章节：第一章
+      source.value = `题库分类：企业管理
+题库名称：企业管理与技术经济学练习题
+章节：第一章
 分类：选择判断
 题目：管理的具体职能有哪些？
 答案：计划、组织、领导、控制。

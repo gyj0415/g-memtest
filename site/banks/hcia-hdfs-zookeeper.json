@@ -1,0 +1,1645 @@
+{
+  "version": 1,
+  "id": "bank-hcia-hdfs-zookeeper",
+  "title": "HCIA-HDFS&Zookeeper",
+  "description": "HCIA-HDFS&Zookeeper，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIA-HDFS&Zookeeper"
+  ],
+  "categories": [
+    "singleChoice",
+    "multipleChoice",
+    "quick",
+    "short"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "FusioninsightHD系统中HDFS的Block默认保存几份",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "不确定"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "Hadoop的HDFS是一种分布式文件系多选统，适合以下哪种应用场景的数据存储和管理?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "大量小文件存储"
+        },
+        {
+          "label": "B",
+          "text": "高容量"
+        },
+        {
+          "label": "C",
+          "text": "高吞吐量、低延迟读取"
+        },
+        {
+          "label": "D",
+          "text": "流式数据访问"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "HDFS中，块(Block)的大小远远大于普通判断文件系统的最小单元，可以最小化寻址开销",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "现有3个机架，有一个文件需要存3份其中副本1和副本2存放在与client相同的机架且不同的服务器上。根据HDFS的副本放置策略一定要存放在其他机架",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "Zookeeper可以为Fusioninsight HD中哪些组件提供分布式管理支持?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HBase"
+        },
+        {
+          "label": "B",
+          "text": "Loader"
+        },
+        {
+          "label": "C",
+          "text": "Hive"
+        },
+        {
+          "label": "D",
+          "text": "Spark"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "当ZooKeeper集群的节点数为5节点时请问集群的容灾能力和多少节点是等价的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "7"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "HDFS存储数据时，关键数据根据实际业务需要保存在具有高度可靠性的节点中，通过修改DataNode的存储策略，系统可以将数据强制保存在指定的节点组中。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "HDFS的Client写入文件时，数据的第一副本写入位置由NameNode确定，其他副本的写入位置由Data Node确定",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "下列哪个命令是删除文件的",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "dfs-clear"
+        },
+        {
+          "label": "B",
+          "text": "dfs-del"
+        },
+        {
+          "label": "C",
+          "text": "dfs-rm"
+        },
+        {
+          "label": "D",
+          "text": "dfs-ls"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "short",
+      "title": "HDFS的副本放置策略中，同一机架不同的服务器之间的距离是______",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "2"
+      ],
+      "answer": "2"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "下列哪个命令是从HDFS下载目录文件到本地的",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "dfs-cat"
+        },
+        {
+          "label": "B",
+          "text": "dfs-mkdir"
+        },
+        {
+          "label": "C",
+          "text": "dfs-get"
+        },
+        {
+          "label": "D",
+          "text": "dfs-put"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "HDFS是一个部署在集群上的分布式文件单选系统,因此,很多数据需要通过网络进行传输,以下关于HDFS的通讯协议描述错误的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "客户端与数据节点的交互是通过RPC来实现的"
+        },
+        {
+          "label": "B",
+          "text": "名称节点不会主动发起RPC,而是响应来自客户端和数据节点的RPC请求"
+        },
+        {
+          "label": "C",
+          "text": "名称节点和数据节点之间则使用名称节点协议进行交互"
+        },
+        {
+          "label": "D",
+          "text": "所有的HDFS通信协议都是构建在TCP/IP协议基础之上"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "以下关于Zookeeper的关键特性,描述错误的是哪一项",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "一条消息被一个server接收即完成,其他server不需要再重复接收该信息"
+        },
+        {
+          "label": "B",
+          "text": "原子性:更新只能成功或查失败,没有中间状态"
+        },
+        {
+          "label": "C",
+          "text": "等待无关性:慢的或者失效的client不会干预快速的client的请求,使得每个client都能有效的等待"
+        },
+        {
+          "label": "D",
+          "text": "无论哪个server,对外展示的均是同一个视图"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "以下关于Zookeeper的Leader选举说法正确的是",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "当实例数n为奇数时，假定n=2X+1.则成为leader节点需要X+1票"
+        },
+        {
+          "label": "B",
+          "text": "Zookeeper选举leader时，需要半数以上的票数"
+        },
+        {
+          "label": "C",
+          "text": "当实例数为8时则成为leader节点需要5票，容灾能力为4"
+        },
+        {
+          "label": "D",
+          "text": "当实例数n为奇数时，假定n=2x+1,则成为leader节点需要x票"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "ZKFC进程部署在HDFS中的以下哪个节点上?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Active"
+        },
+        {
+          "label": "B",
+          "text": "Standby"
+        },
+        {
+          "label": "C",
+          "text": "DataNode"
+        },
+        {
+          "label": "D",
+          "text": "以上全部不对"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "Fusioninsight HD系统中HDFS默认Block Size是多少",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "32M"
+        },
+        {
+          "label": "B",
+          "text": "64M"
+        },
+        {
+          "label": "C",
+          "text": "128M"
+        },
+        {
+          "label": "D",
+          "text": "256M"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "客户端往任意Zookeeper节点写数据，Zookeeper需要将数据完全同步到其他节点，才可以返回给客户端写成功",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "HDFS命名空间管理，以下选项描述正确的是哪几项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "对文件系统命名空间或其属性的任何更改由NameNode和DataNode共同记录"
+        },
+        {
+          "label": "B",
+          "text": "NameNode维护文件系统命名空间"
+        },
+        {
+          "label": "C",
+          "text": "HDFS的命名空间包含目录文件和块"
+        },
+        {
+          "label": "D",
+          "text": "用户可以像使用普通文件系统-样,创建、删除、转移目录和文件"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "Hadoop的NameNode用于存储文件系统的元数据。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "下面关于Zookeeper特性的描述错误的",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Zookeeper节点数必须为奇数个"
+        },
+        {
+          "label": "B",
+          "text": "客户端所发送的更新会按照它们被发送的顺序进行应用"
+        },
+        {
+          "label": "C",
+          "text": "消息更新只能成功或者失败没有中间状态"
+        },
+        {
+          "label": "D",
+          "text": "一条消息要被超过半数的Server接收它将可以成功写入"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "ZooKeeper的增强特性包括在审计日志中添加ephemeralnode被删除的审计日志",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "在Zookeeper的服务模型中Leader节点以主备模式存在，其他节点都属于Follower节点",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "Hadoop系统中，如果HDFS文件系统的备份因子是3，那么Mapreduce每次运行Task都要从3个有副本的机器上传输需要处理的文件段",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "Hadoop系统中关于客户端向HDFS文件系统上传文件说法正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "客户端的文件数据经过NameNode传递给DataNode"
+        },
+        {
+          "label": "B",
+          "text": "客户端将文件划分为多个Block,根据DataNode的地址信息，按顺序写入到每一个DataNode中"
+        },
+        {
+          "label": "C",
+          "text": "客户端根据Datanode的地址信息按顺序将整个文件写入每一个DataNode中然后由DataNode将文件划分为多个Block"
+        },
+        {
+          "label": "D",
+          "text": "客户端只上传数据到一个DataNode,然后由NameNode负责block复制"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "下列哪条HDFS命令可用于检测数据块的完整性",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HDFS fsck"
+        },
+        {
+          "label": "B",
+          "text": "HDFS fsck-delete"
+        },
+        {
+          "label": "C",
+          "text": "HDFS dfsadmin-report"
+        },
+        {
+          "label": "D",
+          "text": "HDFS balancer-threshold"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "HDFS系统中对备用NameNode的作用的描述正确的有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "主NameNode的热备"
+        },
+        {
+          "label": "B",
+          "text": "备NameNode对内存没有要求"
+        },
+        {
+          "label": "C",
+          "text": "帮助主NameNode合并编辑日志，减少主NameNode的启动时间"
+        },
+        {
+          "label": "D",
+          "text": "备NameNode应与主NameNode部署到一个节点"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "关于HDFS数据完整性保障,以下哪个机制是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "快照机制实现了文件系统常见的快照机制,保证数据误操作时,能及时恢复"
+        },
+        {
+          "label": "B",
+          "text": "节点性能较高的DataNode会存放更多的数据"
+        },
+        {
+          "label": "C",
+          "text": "采用日志机制操作元数据,同时元数据存放在主备NameNode上"
+        },
+        {
+          "label": "D",
+          "text": "DataNoded向Namenocem周期上报失败任务Namenode发起副本重建动作以恢复丢失"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "ZooKeeper在分布式应用中的主要作用不包括以下哪个选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "保证各节点上数据的一致性"
+        },
+        {
+          "label": "B",
+          "text": "选举Master节点"
+        },
+        {
+          "label": "C",
+          "text": "存储集群中服务器信息"
+        },
+        {
+          "label": "D",
+          "text": "分配集群资源"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "客户端需要连接到Zookeeper的Leader节点获取视图，如果连接到其他Follower节点，则无法获取视图",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "若HDFS单名称节点部署，可能存在哪些局限性?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "整个分布式文件系统的吞叶量，受限于单个名称节点的吞吐量"
+        },
+        {
+          "label": "B",
+          "text": "会影响基于HDFS的上层组件的功能实现"
+        },
+        {
+          "label": "C",
+          "text": "名称节点能够容纳的对象(文件、块)的个数会受到内存空间大小的限制"
+        },
+        {
+          "label": "D",
+          "text": "一旦这个唯一的名称节点发生故障，导致整个集群不可用"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-031",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "HDFS支持通过以下哪些访问方式来访问数据?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HTTP"
+        },
+        {
+          "label": "B",
+          "text": "Shell"
+        },
+        {
+          "label": "C",
+          "text": "JAVAAPI"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-032",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "HDFS联邦环境下，NameSpace包含以下哪些内容",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "目录"
+        },
+        {
+          "label": "B",
+          "text": "文件"
+        },
+        {
+          "label": "C",
+          "text": "块"
+        },
+        {
+          "label": "D",
+          "text": "以上全不正确"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-033",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "下列哪些组件必须依赖于Zookeeper才能运行?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HDFS"
+        },
+        {
+          "label": "B",
+          "text": "HBase"
+        },
+        {
+          "label": "C",
+          "text": "Spark"
+        },
+        {
+          "label": "D",
+          "text": "YARN"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-034",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "数据节点是HDFS的工作节点以下描述哪些是其功能?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "负责数据的存储和读取"
+        },
+        {
+          "label": "B",
+          "text": "根据客户端或者是名称节点的调度来进行数据的存储和检索"
+        },
+        {
+          "label": "C",
+          "text": "记录了所有针对文件的创建、删除、重命名等操作"
+        },
+        {
+          "label": "D",
+          "text": "向名称节点定期发送自己所存储的块的列表"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-035",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "以下关于ZooKeeper的Leader节点在收到数据变更请求后的读写流程说法正确的是?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "仅写入内存"
+        },
+        {
+          "label": "B",
+          "text": "同时写入磁盘和内存"
+        },
+        {
+          "label": "C",
+          "text": "先写内存再写磁盘"
+        },
+        {
+          "label": "D",
+          "text": "先写磁盘再写内存"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-036",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "HDFS的NameNode节点主备状态管理及元数据文件合并分别由哪两个角色负责",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "ZKFC和备NameNode"
+        },
+        {
+          "label": "B",
+          "text": "主Namenode和备NameNode"
+        },
+        {
+          "label": "C",
+          "text": "ZKFC和主NameNode"
+        },
+        {
+          "label": "D",
+          "text": "主NameNode和JournalNode"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-037",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "HDFS从2.7.3版本开始，Block Size默认是多大",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "32MB"
+        },
+        {
+          "label": "B",
+          "text": "128MB"
+        },
+        {
+          "label": "C",
+          "text": "64MB"
+        },
+        {
+          "label": "D",
+          "text": "16MB"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-038",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "HDFS中的主备仲裁，是由哪个组件控制的",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "ZooKeeper Failover Controller"
+        },
+        {
+          "label": "B",
+          "text": "Nodemanager"
+        },
+        {
+          "label": "C",
+          "text": "Resourcemanager"
+        },
+        {
+          "label": "D",
+          "text": "HDFS Client"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-039",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "HDFS中抽象的块可以带来哪些好处?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "支持大规模文件存储"
+        },
+        {
+          "label": "B",
+          "text": "简化系统设计"
+        },
+        {
+          "label": "C",
+          "text": "满足IO密集型应用的性能要求"
+        },
+        {
+          "label": "D",
+          "text": "适合数据备份"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-040",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "以下选项中,属于HDFS架构关键特性的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "健壮机制"
+        },
+        {
+          "label": "B",
+          "text": "多方式访问机制"
+        },
+        {
+          "label": "C",
+          "text": "HA高可靠性"
+        },
+        {
+          "label": "D",
+          "text": "元数据持久化机制"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-041",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "HDFS联邦机制下，各NameNode间元数据是不共享的。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-042",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "HDFS的副本放置策略中，同一机架不同服务器之间的距离是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-043",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "HDFS不适用于以下哪些场景?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "流式数据访问"
+        },
+        {
+          "label": "B",
+          "text": "大量小文件存储"
+        },
+        {
+          "label": "C",
+          "text": "大文件存储与访问"
+        },
+        {
+          "label": "D",
+          "text": "随机写入"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-044",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "HDFS机制中NameNode负责管理元数据，Client端每次读请求都需要从NameNode的元数据磁盘中读取元数据信息，以此获取所读文件在DataNode中的位置",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-045",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "Zookeeper中的数据节点znode分为哪几种类型?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "semi-persistent"
+        },
+        {
+          "label": "B",
+          "text": "ephemeral"
+        },
+        {
+          "label": "C",
+          "text": "temporary"
+        },
+        {
+          "label": "D",
+          "text": "Persistent"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-046",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "Zookeeper的scheme认证方式不包含以下哪项",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "sasl"
+        },
+        {
+          "label": "B",
+          "text": "auth"
+        },
+        {
+          "label": "C",
+          "text": "digest"
+        },
+        {
+          "label": "D",
+          "text": "World"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-047",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "Zookeeper所有节点都可以处理读请求",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-048",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "以下关于ZooKeeper关键特性中的原子性说法正确的是?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "一条消息被一个server接收,将被所有server接收"
+        },
+        {
+          "label": "B",
+          "text": "客户端发送的更新会按照它们被发送的顺序进行应用"
+        },
+        {
+          "label": "C",
+          "text": "集群中无论哪台服务器,对外展示的均是同一视图"
+        },
+        {
+          "label": "D",
+          "text": "更新只能全部完成或失败,不会部分完成"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-049",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "下列选项中，关于Zookeeper可靠性含义说法正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "可靠性通过主备部署实现"
+        },
+        {
+          "label": "B",
+          "text": "可靠性是指更新只能成功或者失败没有中间状态"
+        },
+        {
+          "label": "C",
+          "text": "可靠性是指无论哪个Server对外展示的均是同一个视图"
+        },
+        {
+          "label": "D",
+          "text": "可靠性是指一条消息被一个Server接收，它将被所有Server接受"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-050",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "HDFS支持大文件存储同时支持多个用户判断对同一个文件的写操作，以及在文件任意位置进行修改。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-051",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "下面关于ZKFC的说法错误的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "ZKFC(ZKFailoverController)作为一个Zookeeper集群的客户端，用来监控NameNode的状态信息"
+        },
+        {
+          "label": "B",
+          "text": "ZKFC进程需要在NameNode的节点和Zookeeper的Leader节点中部署"
+        },
+        {
+          "label": "C",
+          "text": "Standby Namenode通过Zookeeper感知ActiveName Node的状态，一旦Active Namendes岩机StandbyNamenode就会执行升主操作"
+        },
+        {
+          "label": "D",
+          "text": "HDFS Namenode的ZKFC连接到Zookeeper,把主机名等信息保存到Zookeeper中"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-052",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "以下关于HDFS的描述,错误的是哪个？",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HDFS提供对应用程序数据的高吞吐量访问,并且适用于具有大数据集的应用程序"
+        },
+        {
+          "label": "B",
+          "text": "HDFS把文件分布存储到多个计算机节点上,成千上万的计算机节点构成计算机集群"
+        },
+        {
+          "label": "C",
+          "text": "HDFS是一种旨在通用硬件上运行的分布式文件系统"
+        },
+        {
+          "label": "D",
+          "text": "HDFS具有高度的容错能力,主要部署在高成本硬件上"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-053",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "short",
+      "title": "下图展示了HDFS的标签存储策略观察下图，HBase的数据会被存储到哪些数据节点上______ , ______",
+      "prompt": "请按顺序填写 2 个空。",
+      "keywords": [
+        "DataNodeA",
+        "DataNodeB"
+      ],
+      "minRequired": 2,
+      "answer": "DataNodeA、DataNodeB"
+    },
+    {
+      "id": "q-054",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "华为Fusioninsight HD系统中关于HDFS的DataNode的说法正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "不会检查数据的有效性"
+        },
+        {
+          "label": "B",
+          "text": "周期性地将本节点的Block相关信息发送给NameNode"
+        },
+        {
+          "label": "C",
+          "text": "不同的DataNode存储的Block一定是不同的"
+        },
+        {
+          "label": "D",
+          "text": "一个DataNode上的Block可以是相同的"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-055",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "HDFS的基本系统构架中包含下列哪些节点?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "ResourceManager"
+        },
+        {
+          "label": "B",
+          "text": "NameNode"
+        },
+        {
+          "label": "C",
+          "text": "NodeManager"
+        },
+        {
+          "label": "D",
+          "text": "DataNode"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-056",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "quick",
+      "title": "假设HDFS在写入数据时只存2份,那么在写入过程中，HDFS Client先将数据写入DataNode1再将数据写入DataNode2",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-057",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "Zookeeper的关键特性包括以下哪些选项",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "原子性"
+        },
+        {
+          "label": "B",
+          "text": "最终一致性"
+        },
+        {
+          "label": "C",
+          "text": "等待无关性"
+        },
+        {
+          "label": "D",
+          "text": "可靠性"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-058",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "Hadoop中哪个模块负责HDFS的数据存储",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "NameNode"
+        },
+        {
+          "label": "B",
+          "text": "DataNode"
+        },
+        {
+          "label": "C",
+          "text": "ZooKeeper"
+        },
+        {
+          "label": "D",
+          "text": "JobTracker"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-059",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "可以通过以下哪个命令创建节点数据?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "set"
+        },
+        {
+          "label": "B",
+          "text": "Is"
+        },
+        {
+          "label": "C",
+          "text": "create"
+        },
+        {
+          "label": "D",
+          "text": "get"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-060",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "Zookeeper客户端获取节点数据的命令以下哪个是正确的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "get"
+        },
+        {
+          "label": "B",
+          "text": "Is"
+        },
+        {
+          "label": "C",
+          "text": "set"
+        },
+        {
+          "label": "D",
+          "text": "show"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-061",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "关于HDFS的NameNode的功能，以下描述错误的是哪些项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "维护了 BlockID到DataNode本地文件的映射关系"
+        },
+        {
+          "label": "B",
+          "text": "保存文件块和DataNode之间的映射关系"
+        },
+        {
+          "label": "C",
+          "text": "用于存储元数据"
+        },
+        {
+          "label": "D",
+          "text": "存储文件内容"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,D"
+    },
+    {
+      "id": "q-062",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "multipleChoice",
+      "title": "调用Zookeeper客户端命令中包含哪些信息?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "端口号"
+        },
+        {
+          "label": "B",
+          "text": "IP地址"
+        },
+        {
+          "label": "C",
+          "text": "服务器名称"
+        },
+        {
+          "label": "D",
+          "text": "用户名"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-063",
+      "chapter": "HCIA-HDFS&Zookeeper",
+      "category": "singleChoice",
+      "title": "硬件故障被认为是常态，为了解决这个问题，HDFS设计了副本机制。默认请情况下，一份文件、HDPS会存()份",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    }
+  ]
+}

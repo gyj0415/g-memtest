@@ -11,7 +11,7 @@
 
 ## 本地使用
 
-用任意静态服务器打开 `site/`，例如 `npx serve site`。网站会从 `site/banks/manifest.json` 加载内置题库，并把题库和答题记录保存在当前浏览器的 `localStorage` 中。
+用任意静态服务器打开 `site/`，例如 `npx serve site`。网站会从 `site/banks/manifest.json` 加载内置题库，按分类折叠显示，并把题库和答题记录保存在当前浏览器的 `localStorage` 中。
 
 ## 发布说明
 

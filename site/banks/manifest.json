@@ -5,25 +5,113 @@
       "id": "bank-enterprise-management",
       "title": "企业管理与技术经济学",
       "description": "企业管理与技术经济学闭卷自测题库。",
+      "group": "企业管理",
       "file": "enterprise-management.json"
     },
     {
       "id": "bank-mao-gai-2026",
       "title": "毛概26题库",
       "description": "毛概26题库，按章节和题型练习。",
+      "group": "毛概",
       "file": "mao-gai-2026.json"
     },
     {
       "id": "bank-mao-zhongte-homework-1",
       "title": "2026春毛中特平时作业(一)",
       "description": "2026春毛中特平时作业(一)，第一章至第三章练习。",
+      "group": "毛概2",
       "file": "mao-zhongte-homework-1.json"
     },
     {
       "id": "bank-mao-zhongte-homework-2",
       "title": "2026春毛中特平时作业(二）",
       "description": "2026春毛中特平时作业(二），第四章至第六章练习。",
+      "group": "毛概2",
       "file": "mao-zhongte-homework-2.json"
+    },
+    {
+      "id": "bank-hcia-bigdata-trend",
+      "title": "HCIA-大数据发展趋势与鲲鹏大数据",
+      "description": "HCIA-大数据发展趋势与鲲鹏大数据，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcia-bigdata-trend.json"
+    },
+    {
+      "id": "bank-hcia-hdfs-zookeeper",
+      "title": "HCIA-HDFS&Zookeeper",
+      "description": "HCIA-HDFS&Zookeeper，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcia-hdfs-zookeeper.json"
+    },
+    {
+      "id": "bank-hcia-hbase-hive",
+      "title": "HCIA-HBase&Hive",
+      "description": "HCIA-HBase&Hive，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcia-hbase-hive.json"
+    },
+    {
+      "id": "bank-hcia-clickhouse",
+      "title": "HCIA-ClickHouse",
+      "description": "HCIA-ClickHouse，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcia-clickhouse.json"
+    },
+    {
+      "id": "bank-hcia-mapreduce-yarn",
+      "title": "HCIA-MapReduce&Yarn",
+      "description": "HCIA-MapReduce&Yarn，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcia-mapreduce-yarn.json"
+    },
+    {
+      "id": "bank-hcia-spark-flink",
+      "title": "HCIA-Spark&Flink",
+      "description": "HCIA-Spark&Flink，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcia-spark-flink.json"
+    },
+    {
+      "id": "bank-hcia-kafka-flume",
+      "title": "HCIA-Kafka&Flume",
+      "description": "HCIA-Kafka&Flume，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcia-kafka-flume.json"
+    },
+    {
+      "id": "bank-hcia-elasticsearch",
+      "title": "HCIA-ElasticSearch",
+      "description": "HCIA-ElasticSearch，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcia-elasticsearch.json"
+    },
+    {
+      "id": "bank-hcia-mrs",
+      "title": "HCIA-MRS",
+      "description": "HCIA-MRS，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcia-mrs.json"
+    },
+    {
+      "id": "bank-hcia-dataarts-studio",
+      "title": "HCIA-DataArts Studio",
+      "description": "HCIA-DataArts Studio，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcia-dataarts-studio.json"
+    },
+    {
+      "id": "bank-hcip-bigdata-app-dev",
+      "title": "HCIP-大数据应用开发总指导",
+      "description": "HCIP-大数据应用开发总指导，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcip-bigdata-app-dev.json"
+    },
+    {
+      "id": "bank-hcip-offline-batch",
+      "title": "HCIP-大数据离线批处理场景化解决方案",
+      "description": "HCIP-大数据离线批处理场景化解决方案，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcip-offline-batch.json"
     }
   ]
 }

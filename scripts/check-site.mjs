@@ -88,10 +88,12 @@ async function lint() {
     seen.add(entry.id);
     assert.ok(entry.title, `manifest entry ${entry.id} should include title`);
     assert.ok(entry.file, `manifest entry ${entry.id} should include file`);
+    assert.ok(entry.group, `manifest entry ${entry.id} should include group`);
 
     const bank = await readJson(`banks/${entry.file}`);
     assert.equal(bank.id, entry.id, `bank file ${entry.file} id should match manifest`);
     assert.equal(bank.title, entry.title, `bank file ${entry.file} title should match manifest`);
+    assert.equal(bank.group, entry.group, `bank file ${entry.file} group should match manifest`);
     assertQuestionBankShape(bank, `banks/${entry.file}`);
   }
 }

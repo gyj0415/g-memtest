@@ -39,6 +39,8 @@ test("question-bank navigation is left-first and can return to the home page", a
   assert.match(indexHtml, /id="homeBankGrid"/, "home page should show question banks below the intro");
   assert.match(indexHtml, /id="backHome"/, "practice view should expose a way back to the home page");
   assert.match(indexHtml, /id="totalScore"/, "submit results should expose an overall score");
+  assert.ok(layout.indexOf("本次概览") < layout.indexOf(">题库<"), "bank picker should come after the session overview");
+  assert.ok(layout.indexOf('id="totalScore"') < layout.indexOf('id="bankList"'), "session overview should be above the bank list");
 });
 
 test("perfect copied answers can be scored as full marks", async () => {
@@ -84,7 +86,8 @@ test("import flow lets users choose local or shared bank visibility", async () =
   assert.match(indexHtml, /<select id="importBankMode"/);
   assert.match(indexHtml, /<option value="local"/);
   assert.match(indexHtml, /<option value="shared"/);
-  assert.match(indexHtml, /addQuestionBank\(importedQuestions,\s*importedTitle,\s*\{\s*source/);
+  assert.match(indexHtml, /function parseImportedBankPayloads/);
+  assert.match(indexHtml, /addQuestionBank\(item\.questions,\s*item\.title,\s*\{/);
   assert.match(indexHtml, /纯静态网页不能直接上传云端/);
   assert.doesNotMatch(indexHtml, /class="option-toggle"/);
 });
@@ -169,4 +172,61 @@ test("home bank cards keep equal box sizes in each source section", async () => 
   assert.match(indexHtml, /\.bank-card\s*{[\s\S]*height:\s*100%/);
   assert.match(indexHtml, /\.bank-card\.large\s*{[\s\S]*min-height:\s*150px/);
   assert.match(indexHtml, /\.bank-card-description\s*{/);
+});
+
+test("sidebar navigation scrolls independently without changing item layout", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+
+  assert.match(indexHtml, /\.side-panel\s*{[\s\S]*max-height:\s*calc\(100vh - 120px\)/);
+  assert.match(indexHtml, /\.side-panel\s*{[\s\S]*overflow:\s*hidden/);
+  assert.match(indexHtml, /\.side-panel-scroll\s*{[\s\S]*overflow:\s*auto/);
+  assert.match(indexHtml, /\.question-mini-list\s*{[\s\S]*flex-wrap:\s*wrap/);
+  assert.match(indexHtml, /id="questionMiniList"/);
+  assert.match(indexHtml, /id="bankList"/);
+});
+
+test("mobile practice places the question above the built-in bank list", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+
+  assert.match(indexHtml, /id="appShell"[^>]*data-view="home"/);
+  assert.match(indexHtml, /function setAppView/);
+  assert.match(indexHtml, /class="practice-side-stack"/);
+  assert.match(indexHtml, /class="bank-picker"/);
+  assert.match(indexHtml, /\.app-shell\[data-view="practice"\] \.question-list\s*{[\s\S]*order:\s*4/);
+  assert.match(indexHtml, /\.app-shell\[data-view="practice"\] \.bank-picker\s*{[\s\S]*order:\s*5/);
+  assert.doesNotMatch(indexHtml, /id="mobilePracticeDock"/);
+  assert.doesNotMatch(indexHtml, /id="mobileJumpSheet"/);
+});
+
+test("built-in banks are grouped into expandable collections", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+  const manifest = JSON.parse(await readFile(new URL("banks/manifest.json", siteRoot), "utf8"));
+
+  assert.match(indexHtml, /data-bank-group-toggle/);
+  assert.match(indexHtml, /function groupBanks/);
+  assert.match(indexHtml, /function isBankGroupExpanded/);
+  assert.match(indexHtml, /function toggleBankGroup/);
+  assert.match(indexHtml, /bankGroupFromPayload/);
+  assert.ok(manifest.banks.every((bank) => bank.group), "every built-in bank should declare a group");
+  assert.ok(new Set(manifest.banks.map((bank) => bank.group)).size >= 2, "built-in banks should use more than one group");
+});
+
+test("import flow accepts a catalog of multiple grouped banks", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+
+  assert.match(indexHtml, /payload\.banks/);
+  assert.match(indexHtml, /importedBanks\.length > 1/);
+  assert.match(indexHtml, /activate:\s*importedBanks\.length === 1/);
+});
+
+test("converter emits bank groups and multi-bank catalogs", async () => {
+  const converterHtml = await readFile(new URL("converter.html", siteRoot), "utf8");
+
+  assert.match(converterHtml, /id="bankGroup"/);
+  assert.match(converterHtml, /题库分类[:：]/);
+  assert.match(converterHtml, /题库名称[:：]/);
+  assert.match(converterHtml, /function parseBankMeta/);
+  assert.match(converterHtml, /function buildBankJson/);
+  assert.match(converterHtml, /banks:\s*banks\.map/);
+  assert.match(converterHtml, /group,/);
 });

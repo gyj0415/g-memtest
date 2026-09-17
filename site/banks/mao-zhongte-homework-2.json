@@ -1,6 +1,7 @@
 {
   "version": 1,
   "title": "2026春毛中特平时作业(二）",
+  "group": "毛概2",
   "schema": {
     "required": [
       "title",

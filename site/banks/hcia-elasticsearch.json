@@ -1,0 +1,607 @@
+{
+  "version": 1,
+  "id": "bank-hcia-elasticsearch",
+  "title": "HCIA-ElasticSearch",
+  "description": "HCIA-ElasticSearch，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIA-ElasticSearch"
+  ],
+  "categories": [
+    "quick",
+    "short",
+    "multipleChoice",
+    "singleChoice"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "quick",
+      "title": "Elasticsearch索引HBase数据是将HBase数据写到HDFS之后，Elasticsearch再建立相应的HBase索引数据，实现HBase数据的全文检索",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "quick",
+      "title": "Elasticsearch默认是先把索引存放到内存，当内存满了时再持久化到本地硬盘",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "short",
+      "title": "在同一个节点上部署多个Elasticsearch实例，可根据不同的______ 和端号来区分不同的Elasticsearch实例。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "IP"
+      ],
+      "answer": "IP"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "quick",
+      "title": "ElasticSearch的索引数据只能保存在HDFS系统中",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "multipleChoice",
+      "title": "下面哪几种属于ElasticSearch的RESTfull请求方式?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Update"
+        },
+        {
+          "label": "B",
+          "text": "Delete"
+        },
+        {
+          "label": "C",
+          "text": "Get"
+        },
+        {
+          "label": "D",
+          "text": "Post"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "multipleChoice",
+      "title": "ElasticSearch扩容的场景包括哪些",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "ElasticSearch单实例的索引数据太大"
+        },
+        {
+          "label": "B",
+          "text": "物理资源消耗过大"
+        },
+        {
+          "label": "C",
+          "text": "无"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "short",
+      "title": "Elasticsearch采用______ 方式索引数据?",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "倒排索引"
+      ],
+      "answer": "倒排索引"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "multipleChoice",
+      "title": "下面哪些是ElasticSearch的特点?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "高展性"
+        },
+        {
+          "label": "B",
+          "text": "高容错性"
+        },
+        {
+          "label": "C",
+          "text": "高可靠性"
+        },
+        {
+          "label": "D",
+          "text": "高性能"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "quick",
+      "title": "ElasticSearch可以作为类似于MySQL的关系型数据库使用。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "singleChoice",
+      "title": "ElasticSearch的一个索引库默认有几个分片?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "multipleChoice",
+      "title": "ElasticSearch的平衡算法可应用于哪些场景?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "导入数据"
+        },
+        {
+          "label": "B",
+          "text": "导出数据"
+        },
+        {
+          "label": "C",
+          "text": "减容"
+        },
+        {
+          "label": "D",
+          "text": "扩容"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "quick",
+      "title": ".ElasticSearch对Zookeeper是强依赖的",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "quick",
+      "title": "ElasticSearch的倒排索引所采用的排序方式，是通过Value找Key。在全文搜索中Value就是要搜索的关键词，通过Value找到对应的文档",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "singleChoice",
+      "title": "下面哪一个是ElasticSearch的节点",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "EsNode"
+        },
+        {
+          "label": "B",
+          "text": "ESIndex"
+        },
+        {
+          "label": "C",
+          "text": "EsMaster"
+        },
+        {
+          "label": "D",
+          "text": "Cluster"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "singleChoice",
+      "title": "ElsticSearch的索引可以存储在多种存储类型,而以下哪种存储类型不支持?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "本地文件系统"
+        },
+        {
+          "label": "B",
+          "text": "共享文件系统"
+        },
+        {
+          "label": "C",
+          "text": "对象存储"
+        },
+        {
+          "label": "D",
+          "text": "HDFS"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "quick",
+      "title": "ElasticSearch集群中的节点有主从之分",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "multipleChoice",
+      "title": "下面哪些属于ElasticSearch的扩展插件?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "hadoop"
+        },
+        {
+          "label": "B",
+          "text": "head"
+        },
+        {
+          "label": "C",
+          "text": "bigdesk"
+        },
+        {
+          "label": "D",
+          "text": "lKAnalyzer"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "singleChoice",
+      "title": "Elasticsearch中的节点比如共20个,应该设置的最少投票数量是多少来避免脑裂问题?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "11"
+        },
+        {
+          "label": "B",
+          "text": "9"
+        },
+        {
+          "label": "C",
+          "text": "10"
+        },
+        {
+          "label": "D",
+          "text": "12"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "multipleChoice",
+      "title": "ElasticSearch扩容的场景包括哪些?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "ElasticSearch单实例的索数据太大"
+        },
+        {
+          "label": "B",
+          "text": "集群数据量减少"
+        },
+        {
+          "label": "C",
+          "text": "节点需要重新安装操作系统"
+        },
+        {
+          "label": "D",
+          "text": "物理资源消耗过大"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,D"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "singleChoice",
+      "title": "以下关于ElasticSearch的特点,描述不正确的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "能立即获得搜索结果,实现了用于全文检索的倒排"
+        },
+        {
+          "label": "B",
+          "text": "目前只支持结构化数据查询"
+        },
+        {
+          "label": "C",
+          "text": "自动检测故障并保障集群的安全性和可用性"
+        },
+        {
+          "label": "D",
+          "text": "支持水平扩展,可运行于成百上千台服务器上"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "singleChoice",
+      "title": "下图中ElasticSearch的索引名称是 \"_index\":\"logstash-2020.01.17\", \"_type\":\"doc\", \"_id\":\"3sDqsm8Bu-kTpMz0jqhL\", \"_score\":1.0, \"_score\":{ \"@version\":\"1\", \"message\":\"hadooplogstashhbasejava\", \"host\":\"ddcvc\", \"@timestamp\":\"2020-01-17T09:51:53596Z\"}",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "ddcvc"
+        },
+        {
+          "label": "B",
+          "text": "doc"
+        },
+        {
+          "label": "C",
+          "text": "logstash-2020.01.17"
+        },
+        {
+          "label": "D",
+          "text": "3sDqsm8Bu-kTplzOjqhl"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "quick",
+      "title": "ElasticSearch的shards索引分片可以把索引数据打散分布到不同的节点",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "multipleChoice",
+      "title": "ElasticSearch对有结构化、半结构化、非结构化类型的数据有什么处理能力?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "进行清洗、分词、建立倒排索引|等一系列操作"
+        },
+        {
+          "label": "B",
+          "text": "提供全文检索的能力，条件可以包括词或短语"
+        },
+        {
+          "label": "C",
+          "text": "写入的数据可以实时的进行检索"
+        },
+        {
+          "label": "D",
+          "text": "数据写入时可选重删和压缩功能"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIA-ElasticSearch",
+      "category": "multipleChoice",
+      "title": "ElasticSearch有哪些查询类型?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "基于全文检索"
+        },
+        {
+          "label": "B",
+          "text": "基于词条检索"
+        },
+        {
+          "label": "C",
+          "text": "基于分值数检索"
+        },
+        {
+          "label": "D",
+          "text": "基于元数据检索"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    }
+  ]
+}

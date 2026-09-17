@@ -1,0 +1,1294 @@
+{
+  "version": 1,
+  "id": "bank-hcia-mapreduce-yarn",
+  "title": "HCIA-MapReduce&Yarn",
+  "description": "HCIA-MapReduce&Yarn，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIA-MapReduce&Yarn"
+  ],
+  "categories": [
+    "short",
+    "multipleChoice",
+    "quick",
+    "singleChoice"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "short",
+      "title": "YARN中队列的默认资源调度器是______ ?",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "容量调度器"
+      ],
+      "answer": "容量调度器"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "multipleChoice",
+      "title": "YARN中，“从”节点负责以下哪些工作?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "集群中所有资源的统一管理和分配"
+        },
+        {
+          "label": "B",
+          "text": "监督Container的生命周期管理"
+        },
+        {
+          "label": "C",
+          "text": "管理日志和不同应用程序用到的附属服"
+        },
+        {
+          "label": "D",
+          "text": "监控每个Container的资源使用(内存、CPU等) 情况"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "short",
+      "title": "某公司使用Yarn的capacity调度器管理集群资源，现设置某一队列用户最低资源保障百分比为20%，该队列最多可允许______ 用户提交任务",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "5"
+      ],
+      "answer": "5"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "multipleChoice",
+      "title": "对于容量调度器的任务选择,以下说法正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "最大队列层级优先"
+        },
+        {
+          "label": "B",
+          "text": "最小队列层级优先"
+        },
+        {
+          "label": "C",
+          "text": "资源回收请求队列优先"
+        },
+        {
+          "label": "D",
+          "text": "资源利用量最低的队列优先"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "在YARN的任务调度中，一旦Application判断Master申请到资源后，便与对应的ResourceManager通信，要求它启动任务",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "默认情况下MapReduce程序中map任务数由下列哪个选项决定?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "根据资源自行生成任务数"
+        },
+        {
+          "label": "B",
+          "text": "用户指定"
+        },
+        {
+          "label": "C",
+          "text": "随机生成"
+        },
+        {
+          "label": "D",
+          "text": "该任务所计算的数据块数量"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "short",
+      "title": "Yarn支持哪些调度器______ ，______ ，______",
+      "prompt": "请按顺序填写 3 个空。",
+      "keywords": [
+        "Fair",
+        "FIFO",
+        "Capacity"
+      ],
+      "minRequired": 3,
+      "answer": "Fair、FIFO、Capacity"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "multipleChoice",
+      "title": "YARN容量调度器的主要特点有哪些",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "灵活性"
+        },
+        {
+          "label": "B",
+          "text": "多重租赁"
+        },
+        {
+          "label": "C",
+          "text": "动态更新配置文件"
+        },
+        {
+          "label": "D",
+          "text": "容量保证"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "short",
+      "title": "Yarn中______ 负责集群资源管理",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "ResourceManager"
+      ],
+      "answer": "ResourceManager"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "默认情况下MapReduce程序中reduce任务数由下列哪个选项决定",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "随机生成"
+        },
+        {
+          "label": "B",
+          "text": "用户指定"
+        },
+        {
+          "label": "C",
+          "text": "根据资源自行生成任务数"
+        },
+        {
+          "label": "D",
+          "text": "该任务所计算的数据块数量"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "假设每个用户最低资源保障设置为YARN.scheduler.capacity.root.QueueA minimum-User-limit-percent:=25,则以下说法错误的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "第4个用户提交任务时每个用户最多获得25%的资源"
+        },
+        {
+          "label": "B",
+          "text": "第2个用户提交任务时每个用户最多获得50%的资源"
+        },
+        {
+          "label": "C",
+          "text": "第3个用户提交任务时每个用户最多获得33.33%的资源"
+        },
+        {
+          "label": "D",
+          "text": "第5个用户提交任务时每个用户最多获得20%的资源"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "ApplicationMaster采用轮询的方式通过RPC协议向ResurceManager申请和领取资源",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "multipleChoice",
+      "title": "MapReduce过程中,以下属于shuffle机制的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "partition"
+        },
+        {
+          "label": "B",
+          "text": "sort/merge"
+        },
+        {
+          "label": "C",
+          "text": "copy"
+        },
+        {
+          "label": "D",
+          "text": "combine"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "multipleChoice",
+      "title": "某MapReduce程序运行时AppMaster发生故障。下列哪些选项对该任务描述正确?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "AppMaster再次启动"
+        },
+        {
+          "label": "B",
+          "text": "AppMaster不再启动"
+        },
+        {
+          "label": "C",
+          "text": "任务仍可运行"
+        },
+        {
+          "label": "D",
+          "text": "任务立即停止"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "short",
+      "title": "在YARN的任务调度流程中，______ 是Application Master负责的任务?",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "申请和领取资源"
+      ],
+      "answer": "申请和领取资源"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "容量调度器在进行资源分配，现有同级的2个队列Q1和Q2,他们的容量均为30.其中Q1已使用8，Q2已使用14，则会优先将资源分配Q1",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "ResourceManager采用高可用方案，当Active resource manager发现故障时，只能通过内置的zookeeper来启动standby的resource manager,将其状态切换为active。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "multipleChoice",
+      "title": "某MapReduce任务运行时，发现某一task其任务所需资源已经超出container设定的内存阈值。下列对该task的描述正确的有 哪些?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "若continer内存溢出且NodeManger内存也溢出则该task运行失败"
+        },
+        {
+          "label": "B",
+          "text": "若container内存溢出但NodeManger内存尚末溢出则该task运行成功"
+        },
+        {
+          "label": "C",
+          "text": "若NodeManager内存已溢出该task运行失败"
+        },
+        {
+          "label": "D",
+          "text": "若container内存已溢出该task运行失败"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "Yarn作为MapReduce的资源管理器，其运行依赖HDFS",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "YARN调度器分配资源的顺序，下面那一个描述是正确的",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "任意机器->同机架->本地资源"
+        },
+        {
+          "label": "B",
+          "text": "任意机器->本地资源->同机架"
+        },
+        {
+          "label": "C",
+          "text": "本地资源->同机架->任意机器"
+        },
+        {
+          "label": "D",
+          "text": "同机架->任意机器->本地资源"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "MapReduce程序由Map和Reduce两部分组成,现由一MapReduce程序,其有5个reduce任务,该程序最终输出多少个结果文件?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "生产环境中任何一个MapRedce任务Shuffle都是不可避免的",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "Hadoop平台中启用YARN组件的日志聚集功能需要配置哪个参数",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "YARN.nodemanager.local-dir"
+        },
+        {
+          "label": "B",
+          "text": "YARN.nodemanager.log-dirs"
+        },
+        {
+          "label": "C",
+          "text": "YARN.aclenable"
+        },
+        {
+          "label": "D",
+          "text": "YARN.log-aggregation-enable"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "如果某些Containers的物理内存利用率超判断过了配置的内存闻值，但所有Containers的总内存利用率并没有超过设置的Nodeanager内存闻值，那么内存使用过多的containers仍可以继续运行",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "MapReduce的核心理念是将一个大的计算任务分解到集群每个节点上充分运用集群资源缩短运行时间。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "Hadoop中，如果将yarn.scheduler.capacity.root.Queue.minimum-user-limitpercent设置为50,下面说法错误的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "一个用户提交任务，可以使用Queue的100%的资源"
+        },
+        {
+          "label": "B",
+          "text": "Queue中必须保障每个用户至少得到50%的资源"
+        },
+        {
+          "label": "C",
+          "text": "如果Queue中已经有2个用户的任务运行，这时第3个用户提交的任务需要等待释放资源"
+        },
+        {
+          "label": "D",
+          "text": "Queue中的每个用户最多只能获得50%的资源"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "Capacity调度器为每个队列分配资源,下列哪个选项是队列内的资源调度策略?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Capacity"
+        },
+        {
+          "label": "B",
+          "text": "Mesos"
+        },
+        {
+          "label": "C",
+          "text": "Fair"
+        },
+        {
+          "label": "D",
+          "text": "FIFO"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "为减少写入磁盘的数据量，mapreduce支持对MOF(mapoutfile)进行压缩后再写入",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "Hadoop中MapReduce组件擅长处理哪种场景的计算任务",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "迭代计算"
+        },
+        {
+          "label": "B",
+          "text": "离线计算"
+        },
+        {
+          "label": "C",
+          "text": "实时交互计算"
+        },
+        {
+          "label": "D",
+          "text": "流式计算"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "YARN中设置队列QueueA的最大使用资源量,需要配置哪个参数?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "yarn.scheduler.capaciy.root.QueueA.minmum-user-limittpercent"
+        },
+        {
+          "label": "B",
+          "text": "yarn.scheduler.capacity.root.QueueAmaximum-capacity"
+        },
+        {
+          "label": "C",
+          "text": "A.state"
+        },
+        {
+          "label": "D",
+          "text": "yarn.schedulercapacity.rootQueueA.user-limit-factor"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-031",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "YARN-client和YARN-cluster主要区别是Application Master进程的区别",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-032",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "multipleChoice",
+      "title": "下列选项中，哪些是Mapreduce一定会有的过程?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Combine"
+        },
+        {
+          "label": "B",
+          "text": "Map"
+        },
+        {
+          "label": "C",
+          "text": "Reduce"
+        },
+        {
+          "label": "D",
+          "text": "Partition"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-033",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "假设数据量有200GB左右，分片最大容量限制为30GB那么分片数量最多设计为多少比较合适",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "9或10"
+        },
+        {
+          "label": "B",
+          "text": "7或8"
+        },
+        {
+          "label": "C",
+          "text": "3或4"
+        },
+        {
+          "label": "D",
+          "text": "5或6"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-034",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "在YARN的任务调度流程中，下列哪个是ApplicationMaster负责的任务",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "申请和领取资源"
+        },
+        {
+          "label": "B",
+          "text": "为任务设置好运行环境"
+        },
+        {
+          "label": "C",
+          "text": "分配Container"
+        },
+        {
+          "label": "D",
+          "text": "启动Map或Reduce任务"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-035",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "在MapReduce编程中，代码不仅要描述做什么还要描述具体怎么做",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-036",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "某公司开展大数据业务,其不但要使用MapReduce做离线分析还要使用Spark做实时分析若使用Yarn做统一的资源管理,调度器如何选择?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "使用FIFO调度器"
+        },
+        {
+          "label": "B",
+          "text": "使用Capacity调度器"
+        },
+        {
+          "label": "C",
+          "text": "使用Fair调度器"
+        },
+        {
+          "label": "D",
+          "text": "使用Mesos调度器"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-037",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "MapReduce某任务失败时可通过重试机制重新计算该任务",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-038",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "某电商公司同时运行MapReduce离线分单选析任务和Spark实时分析任务,若使用Yarn的Capacity调度器、资源分配如何进行?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "离线分析任务和实时分析任务安排在同一队列且优先满足实时分析任务的资源需求"
+        },
+        {
+          "label": "B",
+          "text": "离线分析任务和实时分析任务安排在同一队列"
+        },
+        {
+          "label": "C",
+          "text": "离线分析分析任务和实时分析任务安排在不同队列且优先满足实时分析任务的资源需求"
+        },
+        {
+          "label": "D",
+          "text": "离线分析任务和实时分析任务安排在不同队列"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-039",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "YARN服务中，如果要给队列QuqueA设置容量为30%，应该配置哪个参数",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "yarn.scheduler.capacity.root.QueueA.user-limit-factor"
+        },
+        {
+          "label": "B",
+          "text": "yarn.scheduler.capacity.root.QueueA.minimum-user-limit-percent"
+        },
+        {
+          "label": "C",
+          "text": "yarn.scheduler.capacity.root.QueueA.capacity"
+        },
+        {
+          "label": "D",
+          "text": "yarn.scheduler.capacity.root.QueueA.state"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-040",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "MapReduce过程中，默认情况下，一个分片就是一个块，也是一个MapTask。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-041",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "MapReduce在Map阶段的combine是一个预分组过程是可选的",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-042",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "在ZooKeeper和YARN的协同工作中,当ActiveResourceManager产生故障时,StandbyResourceManager会从以下哪个目录中获取Application相关信息?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Statestore"
+        },
+        {
+          "label": "B",
+          "text": "Warehouse"
+        },
+        {
+          "label": "C",
+          "text": "Storage"
+        },
+        {
+          "label": "D",
+          "text": "Metastore"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-043",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "Hadoop平台中，要查看YARN服务中一个application的信息通常需要使用什么命令",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "container"
+        },
+        {
+          "label": "B",
+          "text": "jar"
+        },
+        {
+          "label": "C",
+          "text": "application-attempt"
+        },
+        {
+          "label": "D",
+          "text": "application"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-044",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "Hadoop系统中YARN分配给Container的内存大小，可以通过参数yarn.app.mapreduce.am.resource.mb来设置",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-045",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "quick",
+      "title": "如果YARN集群中只有Default.QueueA和QueueB子队列，那么允许将他们的容量分别设置为60%、25%、22%。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-046",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "multipleChoice",
+      "title": "Yarn要实现HA机制,不要依赖下列哪些选项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HDFS"
+        },
+        {
+          "label": "B",
+          "text": "Zookeeper"
+        },
+        {
+          "label": "C",
+          "text": "Spark"
+        },
+        {
+          "label": "D",
+          "text": "Kafka"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-047",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "以下哪个不属于Hadoop中MapReduce组件的特点?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "实时计算"
+        },
+        {
+          "label": "B",
+          "text": "易于编程"
+        },
+        {
+          "label": "C",
+          "text": "良好扩展性"
+        },
+        {
+          "label": "D",
+          "text": "高容错性"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-048",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "multipleChoice",
+      "title": "YARN通过ResourceManager对集群资源进行管理，它的主要功能有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "集群资源调度"
+        },
+        {
+          "label": "B",
+          "text": "应用程序管理"
+        },
+        {
+          "label": "C",
+          "text": "日志管理"
+        },
+        {
+          "label": "D",
+          "text": "以上说法都不对"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-049",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "以下哪个不属于Hadoop中MapReduce组件的特点",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "良好扩展性"
+        },
+        {
+          "label": "B",
+          "text": "高容错性"
+        },
+        {
+          "label": "C",
+          "text": "易于编程"
+        },
+        {
+          "label": "D",
+          "text": "实时计算"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-050",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "multipleChoice",
+      "title": "Yarn支持下列哪些调度器?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Mesos"
+        },
+        {
+          "label": "B",
+          "text": "Fair"
+        },
+        {
+          "label": "C",
+          "text": "Capacity"
+        },
+        {
+          "label": "D",
+          "text": "FIFO"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-051",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "YARN的基于标签调度,是对下列选项中单选的哪个进行标签化?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "NodeManager"
+        },
+        {
+          "label": "B",
+          "text": "ResourceManager"
+        },
+        {
+          "label": "C",
+          "text": "Container"
+        },
+        {
+          "label": "D",
+          "text": "AppMaster"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-052",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "short",
+      "title": "Yarn做资源调度时，maptask和reduceTask是运行在______ 中",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "Container"
+      ],
+      "answer": "Container"
+    },
+    {
+      "id": "q-053",
+      "chapter": "HCIA-MapReduce&Yarn",
+      "category": "singleChoice",
+      "title": "YARN中默认的资源调度器是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "FIFO调度器"
+        },
+        {
+          "label": "B",
+          "text": "容量调度器"
+        },
+        {
+          "label": "C",
+          "text": "Fair调度器"
+        },
+        {
+          "label": "D",
+          "text": "以上全不正确"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    }
+  ]
+}

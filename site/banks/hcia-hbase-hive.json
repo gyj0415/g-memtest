@@ -1,0 +1,2006 @@
+{
+  "version": 1,
+  "id": "bank-hcia-hbase-hive",
+  "title": "HCIA-HBase&Hive",
+  "description": "HCIA-HBase&Hive，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIA-HBase&Hive"
+  ],
+  "categories": [
+    "multipleChoice",
+    "quick",
+    "singleChoice",
+    "short"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "Fusioninsight HD的HBase服务包含哪些进程?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HMaster"
+        },
+        {
+          "label": "B",
+          "text": "Slave"
+        },
+        {
+          "label": "C",
+          "text": "HRegionServer"
+        },
+        {
+          "label": "D",
+          "text": "DataNode"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "HiveServer将用户提交的HQL语句进行编译解析成对应的Yarn任务、Spark任务或者HDPS操作，从而完成数据的提取、转换、分析。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "HBase元数据Meta Region路由信息保存在哪里",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Root表"
+        },
+        {
+          "label": "B",
+          "text": "Zookeeper"
+        },
+        {
+          "label": "C",
+          "text": "HMaster"
+        },
+        {
+          "label": "D",
+          "text": "Meta表"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "Hive中\"UNIONALL“操作符用于合并两个过多个SELECT语句的结果集，结果集中不允许有重复的值。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "以下描述中,哪个不是Hive的优点?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HiveServer支持集群模式"
+        },
+        {
+          "label": "B",
+          "text": "支持自定义存储格式和自定义函数"
+        },
+        {
+          "label": "C",
+          "text": "类似SQL语法,内置大量函数"
+        },
+        {
+          "label": "D",
+          "text": "依赖于高性能的商业服务器"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "Hive是建立在Hadoop上的数据仓库基础构架。它提供了一系列的工具，可以用来进行数据提取转化加载(ETL)这是一种可以存储查询和分析存储在Hadoop中的大规模数据的机制。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "HBase可用于下列哪些应用场景?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "消息/订单存储"
+        },
+        {
+          "label": "B",
+          "text": "用户画像"
+        },
+        {
+          "label": "C",
+          "text": "好友推荐"
+        },
+        {
+          "label": "D",
+          "text": "时序数据存储"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "HBase是一个高可靠性、高性能、面向判断列、可伸缩的分布式存储系统",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "HBase中OpenScanner的过程会创建两种不同的Scanner来读取HFile和MemStore的数据HFile对应的Scanner为StoreFileScanner,MemStore对应的Scanner为MemStoreScanner.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "Hive中的哪些操作可以做合并?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "UNION"
+        },
+        {
+          "label": "B",
+          "text": "GROUP"
+        },
+        {
+          "label": "C",
+          "text": "SELECT"
+        },
+        {
+          "label": "D",
+          "text": "JOIN"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "HBase的数据文件HFiler中一个KeyValue格式包含哪些信息?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Kev"
+        },
+        {
+          "label": "B",
+          "text": "Value"
+        },
+        {
+          "label": "C",
+          "text": "Timestamp"
+        },
+        {
+          "label": "D",
+          "text": "Keytype"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "以下关于HBase中HRegionServer的功能描述哪一项是不正确的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "管理所有的Region,Region可以在RegionServer之间迁移"
+        },
+        {
+          "label": "B",
+          "text": "RegionServer是HBase的数据服务进程,负责处理用户数据的读写请求"
+        },
+        {
+          "label": "C",
+          "text": "HBase的数据处理和计算单元"
+        },
+        {
+          "label": "D",
+          "text": "Regionserver一般与HDFs集群的 NameNode 部署在一起,实现数据的存储功能"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "HBase中包含的一些典型的Filter有哪些?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Single Column Value Filter"
+        },
+        {
+          "label": "B",
+          "text": "Filter List"
+        },
+        {
+          "label": "C",
+          "text": "Row Filter"
+        },
+        {
+          "label": "D",
+          "text": "Key Only Filter"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "Fusioninsight HD.Manager界面Hive日志收集，哪个选项不正确",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "可指定实例进行日志收集，比如指定单独收集Metastore的日志"
+        },
+        {
+          "label": "B",
+          "text": "可指定时间段进行日志收集，比如只收集2016-1-1到2016-1-10的日志"
+        },
+        {
+          "label": "C",
+          "text": "可指定节点IP进行日志收集，例如仅下载某个IP的日志"
+        },
+        {
+          "label": "D",
+          "text": "可指定特定用户进行日志收集，例如仅下载usrA用户产生的日志"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "RDB支持索引，HBase不支持索引。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "short",
+      "title": "Regionserver故障时，由______对已故障的Regionserver上的Region进行迁移",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "HMaster"
+      ],
+      "answer": "HMaster"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "执行HBase数据读取业务，需要读取哪几部分数据",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HLog"
+        },
+        {
+          "label": "B",
+          "text": "MemStore"
+        },
+        {
+          "label": "C",
+          "text": "HFile"
+        },
+        {
+          "label": "D",
+          "text": "Master"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "HBase中数据存储的文件格式是什么",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HFile"
+        },
+        {
+          "label": "B",
+          "text": "HLog"
+        },
+        {
+          "label": "C",
+          "text": "TextFile"
+        },
+        {
+          "label": "D",
+          "text": "SequenceFile"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "HBase的数据文件HFile中一个KeyValue格式包含Key,Value,Time Stamp,KeyType等内容。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "下列对HBase的RowKey描述，正确的是哪几项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "RowKey是无序的"
+        },
+        {
+          "label": "B",
+          "text": "RowKey是有序的"
+        },
+        {
+          "label": "C",
+          "text": "可以允许表没有RowKey"
+        },
+        {
+          "label": "D",
+          "text": "所有的表都必须要有RowKey"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "Fusioninsight Manager界面显示Hive服务状态为Bad时，可能原因有哪些?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Dbservice不可用"
+        },
+        {
+          "label": "B",
+          "text": "HDFS服务不可用"
+        },
+        {
+          "label": "C",
+          "text": "MetaStore实例不可用"
+        },
+        {
+          "label": "D",
+          "text": "HBase服务不可用"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "Hive组件能支持多接口,以下哪个接口是不支持的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Restful"
+        },
+        {
+          "label": "B",
+          "text": "ODBC"
+        },
+        {
+          "label": "C",
+          "text": "JDBC"
+        },
+        {
+          "label": "D",
+          "text": "Beeline"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "HBase的某张表的RowKey划分SplitKey为9，e,a,z请问该表有几个Region",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "HBase数据的存储在物理上是分列族存储",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "Hbase中MOB数据直接以HFile的格式存储在HDFS上，然后把这个文件的地址信息及大小信息作为value存储在管理HBase的store上通过工具集中管理这些文件。这样就可以大大降低HBase的compation和split频率提升性能",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "Fusioninsight HD.HBase默认使用什么作为其底层文件存储系统",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HDFS"
+        },
+        {
+          "label": "B",
+          "text": "Hadoop"
+        },
+        {
+          "label": "C",
+          "text": "Memory"
+        },
+        {
+          "label": "D",
+          "text": "MapReduce"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "HFS的出现解决了需要在HDFS中存储大判断量的小文件(10MB以下)。同时也要存储一些大文件(10MB以上)的混合的场景",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "HBase集群定时执行Compaction的目的是什么?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "减少同一个Region同一个ColumnFamily下的文件数"
+        },
+        {
+          "label": "B",
+          "text": "减少同一个Regiont的文件数目"
+        },
+        {
+          "label": "C",
+          "text": "提升数据读取性能"
+        },
+        {
+          "label": "D",
+          "text": "提升数据写入能力"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "short",
+      "title": "HBase通过______ 快速判断用户数据不存在。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "BloomFilter"
+      ],
+      "answer": "BloomFilter"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "Hadoop的HBase不适合哪些数据类型的应用场景",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "大文件应用场景"
+        },
+        {
+          "label": "B",
+          "text": "海量数据应用场景"
+        },
+        {
+          "label": "C",
+          "text": "高吞吐率应用场景"
+        },
+        {
+          "label": "D",
+          "text": "半结构化数据应用场景"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-031",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "HBase中以下哪种场景会触发Flush操作?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Region中MemStore的总大小， 达到了预设的FlushSize阈值"
+        },
+        {
+          "label": "B",
+          "text": "HBase定期刷新Memstore, 默认周期为1小时"
+        },
+        {
+          "label": "C",
+          "text": "MemStore占用内存的总量和RegionServer总内存比值超出了预设的阈值大小"
+        },
+        {
+          "label": "D",
+          "text": "当WALs中文件数量达到阈值时"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-032",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "HBase的最小处理单元是Region,UserRegion和RegionServer之间的路由信息是保存在Zookeeper中",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-033",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "分布式表的表结构尽量和本地表的结构一致。如果不一致，在建表时不会报错，但在查询或者插入时可能会抛出异常",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-034",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "Hive支持的存储格式包括?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Textfile"
+        },
+        {
+          "label": "B",
+          "text": "Rcfile"
+        },
+        {
+          "label": "C",
+          "text": "Parquet"
+        },
+        {
+          "label": "D",
+          "text": "Sequencefile"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-035",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "HBase的主要特点有哪些?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "高可靠性"
+        },
+        {
+          "label": "B",
+          "text": "高性能"
+        },
+        {
+          "label": "C",
+          "text": "面向列"
+        },
+        {
+          "label": "D",
+          "text": "可伸缩"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-036",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "Hive不支持超时重试机制。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-037",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "以下关于HBase的文件存储模块(HBase FileStream简称HFS)描述正确的有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "应用在Fusioninsight HD的上层应用"
+        },
+        {
+          "label": "B",
+          "text": "HFS封装了HBase与HDFS的接口"
+        },
+        {
+          "label": "C",
+          "text": "为上层应用提供文件的存储、读取、删除等功能"
+        },
+        {
+          "label": "D",
+          "text": "HFS是HBase的独立模块"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    },
+    {
+      "id": "q-038",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "short",
+      "title": "HBase中Scan查询结果的多行数据保存在______ 对象中，每行数据以Result对象形式存储。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "ResultScanner"
+      ],
+      "answer": "ResultScanner"
+    },
+    {
+      "id": "q-039",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "Hive支持普通视图和物化视图",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-040",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "以下关于HBase中HMaster的功能描述哪些是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Region负载均衡，Region分裂以及分裂后的Region分配"
+        },
+        {
+          "label": "B",
+          "text": "RegionServer失效后的Region迁移"
+        },
+        {
+          "label": "C",
+          "text": "负责建表/修改表/删除表"
+        },
+        {
+          "label": "D",
+          "text": "负责RegionServer的负载均衡"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-041",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "以下关于Hive的描述,正确的有哪些选项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "对数据的ETL过程自动化"
+        },
+        {
+          "label": "B",
+          "text": "以查询和管理PB级别的分布式数据"
+        },
+        {
+          "label": "C",
+          "text": "可直接访问HDFS文件以及HBase"
+        },
+        {
+          "label": "D",
+          "text": "支持Tez,Spark等多种计算引擎"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-042",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "某公司使用用户ID做HBase的RowKey同时在列中还存在phone列,该列存储了用户的手机号码。该公司要求能够通过phone快速查询到用户ID,下列哪个方法比较合适?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "使用Filter"
+        },
+        {
+          "label": "B",
+          "text": "创建二级索引"
+        },
+        {
+          "label": "C",
+          "text": "Get与valueFiler同时使用"
+        },
+        {
+          "label": "D",
+          "text": "Scan与valueFilter同时使用"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-043",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "概念视图里HBase表可以被看成是一个稀疏的行的集合",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-044",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "short",
+      "title": "当某HRegionSever故障后，HMaster若要恢复数据必须依赖______",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "HLog"
+      ],
+      "answer": "HLog"
+    },
+    {
+      "id": "q-045",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "HBase组件中，数据读写服务需要连接Master执行",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-046",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "在Fusioninsight HD中，以下哪一项不属于Hive的流控特性",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "支持对已建立的总连接数做阈值控制"
+        },
+        {
+          "label": "B",
+          "text": "支持对每个用户已经建立的连接数做阈值控制"
+        },
+        {
+          "label": "C",
+          "text": "支持对某个特定用户已建立的连接数做阈值控制"
+        },
+        {
+          "label": "D",
+          "text": "支持对单位时间内所建立的连接数做阈值控制"
+        }
+      ],
+      "multiple": true,
+      "answer": "C,D"
+    },
+    {
+      "id": "q-047",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "short",
+      "title": "Hive架构中，______ 组件负责对表，列再Partition等的元数据进行读写及更新操作",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "MetaStore"
+      ],
+      "answer": "MetaStore"
+    },
+    {
+      "id": "q-048",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "以下关于Hive特性的描述不正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "灵活方便的ETL"
+        },
+        {
+          "label": "B",
+          "text": "仅支持MapReduce计算引擎"
+        },
+        {
+          "label": "C",
+          "text": "可直接访问HDFS文件以及HBase"
+        },
+        {
+          "label": "D",
+          "text": "易用易编程"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-049",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "以下属于Hive SQL中DDL(数据定义语言)的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "修改表"
+        },
+        {
+          "label": "B",
+          "text": "删除表"
+        },
+        {
+          "label": "C",
+          "text": "建表"
+        },
+        {
+          "label": "D",
+          "text": "数据导入"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-050",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "在Hive中,以下关于分桶的描述正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据可以根据桶的方式将不同数据放入不同的桶中"
+        },
+        {
+          "label": "B",
+          "text": "桶内不可排序"
+        },
+        {
+          "label": "C",
+          "text": "分桶的好处是可以获得更高的查询处理效率,使抽样更高效"
+        },
+        {
+          "label": "D",
+          "text": "建表时可以指定桶个数"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-051",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "以下关于Hive SQL基本操作描述不正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "加载数据到Hive时源数据必须是HDFS的一个路径"
+        },
+        {
+          "label": "B",
+          "text": "创建外部表必须要指定location信息"
+        },
+        {
+          "label": "C",
+          "text": "创建表时可以指定列分隔符"
+        },
+        {
+          "label": "D",
+          "text": "创建外部表使用external关键字，创建普通表需要指定internal关键字"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-052",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "Tez是一个支持有向无环图的分布式计算框架，Hive使用Tez引擎进行数据分析时，会将用户提交的HQL语句解析成相应的Tez任务并提交Tez执行",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-053",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "在Hive数据存储模型中,分区和桶的关系描述错误的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "每个桶是一个目录"
+        },
+        {
+          "label": "B",
+          "text": "分区数量不固定"
+        },
+        {
+          "label": "C",
+          "text": "分区下可再有分区或者桶"
+        },
+        {
+          "label": "D",
+          "text": "建表时指定桶个数,桶内可排序"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-054",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "以下哪些选项属于Hive的数据存储模型",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "表"
+        },
+        {
+          "label": "B",
+          "text": "桶"
+        },
+        {
+          "label": "C",
+          "text": "数据库"
+        },
+        {
+          "label": "D",
+          "text": "分区"
+        },
+        {
+          "label": "E",
+          "text": "以上全都正确"
+        }
+      ],
+      "multiple": false,
+      "answer": "E"
+    },
+    {
+      "id": "q-055",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "加载数据到Hive表,哪种方式是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "直接将本地路径的文件Load到Hive表中"
+        },
+        {
+          "label": "B",
+          "text": "Hive支持insertinto.单条记录的方法所以可以直接在命令行插入单条记录"
+        },
+        {
+          "label": "C",
+          "text": "将其他表的结果集Insert into到Hive表"
+        },
+        {
+          "label": "D",
+          "text": "将HDFS上的文件load到Hive表中"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-056",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "关于HBase组件的描述正确的是",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "是面向列的"
+        },
+        {
+          "label": "B",
+          "text": "是一种NOSQL数据"
+        },
+        {
+          "label": "C",
+          "text": "是分布式的"
+        },
+        {
+          "label": "D",
+          "text": "存储数据是以K-V的形式"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-057",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "二级索为HBase提供了按照某些列的值进行索引的能力，二级索引先查索引表再定位到数据表中的位置，不用全表扫描",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-058",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "HBase的最小处理单元是Region,User Region和Region Server之间的路由信息是保存在哪里的",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Zookeeper"
+        },
+        {
+          "label": "B",
+          "text": "HDFS"
+        },
+        {
+          "label": "C",
+          "text": "Master"
+        },
+        {
+          "label": "D",
+          "text": "Meta表"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-059",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "HBase中当一个Region的size逐渐变大时，它可能会被修剪",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-060",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "Fusioninsight HD中如果需要查看当前登录，HBase的用户和权限组，可以在HBaseshell中执行什么命令",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "use permission"
+        },
+        {
+          "label": "B",
+          "text": "whoami"
+        },
+        {
+          "label": "C",
+          "text": "who"
+        },
+        {
+          "label": "D",
+          "text": "get_user"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-061",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "关于Hive中普通表和外部表的描述不正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "默认创建普通表"
+        },
+        {
+          "label": "B",
+          "text": "外部表实质是将已经存在HDFS上的文件路径跟表关联起来"
+        },
+        {
+          "label": "C",
+          "text": "删除普通表时，元数据和数据同时被删除"
+        },
+        {
+          "label": "D",
+          "text": "删除外部表时，只删除外部表数据而不删除元数据"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-062",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "HBase表设计中,列族和RowKey是表设计的重要内容。下列哪个选项不适合做RowKey?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "身份证号"
+        },
+        {
+          "label": "B",
+          "text": "用户ID"
+        },
+        {
+          "label": "C",
+          "text": "用户名"
+        },
+        {
+          "label": "D",
+          "text": "手机号"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-063",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "Hive在load时不检索数据是否符合判断判断schema的，Hive遵循的是schema on read(读时模式)只有在读时模式的时候才检查Hive的数据字段schema。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-064",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "下列关于HBase的BloomFilter特性理解不正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "用来过滤数据"
+        },
+        {
+          "label": "B",
+          "text": "用来优化随机读取的性能"
+        },
+        {
+          "label": "C",
+          "text": "会增加存储的消耗"
+        },
+        {
+          "label": "D",
+          "text": "可以准确判断某条数据不存在"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-065",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "short",
+      "title": "HBase会周期性的把MemStore的数据刷写到磁盘______ 文件中",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "StoreFile"
+      ],
+      "answer": "StoreFile"
+    },
+    {
+      "id": "q-066",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "以下关于HBase存储模型的描述正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "每一个Key Value都拥有一个Qualifiert标识"
+        },
+        {
+          "label": "B",
+          "text": "同一个key值key关联多个value"
+        },
+        {
+          "label": "C",
+          "text": "KeyValue中拥有时间戳类型等关键信息"
+        },
+        {
+          "label": "D",
+          "text": "即使是key值相同、Qualifier也相同的多个KeyValue，也可能有多个，此时使用时间戮来区分"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-067",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "Hive中的“Group by”指的是通过一定规则将一个数据集划分成若千个小的数据集，然后针对若千个小的数据集进行数据分组处理",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-068",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "short",
+      "title": "Hbase开启了预写日志之后，在写入数据时率先写入______ 再写入MemStore",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "HLog"
+      ],
+      "answer": "HLog"
+    },
+    {
+      "id": "q-069",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "下列哪个不是HBase读取数据流程中步及的角色或服务?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HDFS"
+        },
+        {
+          "label": "B",
+          "text": "HMaster"
+        },
+        {
+          "label": "C",
+          "text": "ZooKeeper"
+        },
+        {
+          "label": "D",
+          "text": "HRegionServe"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-070",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "Fusioninsight HD的HBase中保存张用户信息表meg table,Rowkey为用户id其中-列为用户昵称，现在按先后顺序往这列写入三个KeyValue.001.Lj，001.Mary,001.Lily请问scan&#39;megtable,(VERSION=>2)会返回哪几条数据?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "001.Lily"
+        },
+        {
+          "label": "B",
+          "text": "001.Lib"
+        },
+        {
+          "label": "C",
+          "text": "001.Mary,001.Lily"
+        },
+        {
+          "label": "D",
+          "text": "001.Li,001.Mary,001.Lily"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-071",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "Hive不适用于以下哪个场景",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "非实时分析。例如日志分析、统计分析"
+        },
+        {
+          "label": "B",
+          "text": "数据挖掘。例如用户行为分析、兴趣分析、区域展示"
+        },
+        {
+          "label": "C",
+          "text": "数据汇总。例如每天每用户点击数点击排行"
+        },
+        {
+          "label": "D",
+          "text": "实时在线数据分析"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-072",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "某公司使用HBase存储业务数据,由于数据规模较大,所以数据存储在HBase后会导致频繁的Region分裂,为了避免这种情况,下列哪个方法比较适用?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "提升RegionServer性能"
+        },
+        {
+          "label": "B",
+          "text": "增加Region大小"
+        },
+        {
+          "label": "C",
+          "text": "对该表预分区"
+        },
+        {
+          "label": "D",
+          "text": "增大MemStore大小"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-073",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "以下关于Fusioninsight Hbase可视化建模说法正确的有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "可视化建模帮助DBA进行建模设计降低Hbase的使用门槛"
+        },
+        {
+          "label": "B",
+          "text": "Qualifier HBase列每一列代表业务数据某一属性"
+        },
+        {
+          "label": "C",
+          "text": "实现人员分工:DBA关注数据表建模开发人员关注用户表名和用到的列"
+        },
+        {
+          "label": "D",
+          "text": "Column用户表列:每一列代表一个KeyValue"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-074",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "HBase的Bloom Filter是用来过滤数据的",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-075",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "以下关于HBase二级索引的描述哪一项是正确的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "二级索引把要查找的列与rowkey关联成一个索引表"
+        },
+        {
+          "label": "B",
+          "text": "此时列成新的rowkey,原rowkey成为value"
+        },
+        {
+          "label": "C",
+          "text": "二级索引查询了2次"
+        },
+        {
+          "label": "D",
+          "text": "以上全都正确"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-076",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "Hive的主要应用于以下哪些场景?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "大规模的数据挖掘"
+        },
+        {
+          "label": "B",
+          "text": "实现数据的流式处理"
+        },
+        {
+          "label": "C",
+          "text": "实现数据抽取、数据加载、数据转换"
+        },
+        {
+          "label": "D",
+          "text": "海量数据的离线分析"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-077",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "下列选项对列族描述正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "一个列族最多容纳3个列"
+        },
+        {
+          "label": "B",
+          "text": "是基本的访问控制单元"
+        },
+        {
+          "label": "C",
+          "text": "列族也有版本号"
+        },
+        {
+          "label": "D",
+          "text": "由若干列组成"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-078",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "multipleChoice",
+      "title": "Fusioninsight HD系统中Hive支持的存储格式包括?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HFile"
+        },
+        {
+          "label": "B",
+          "text": "TextFile"
+        },
+        {
+          "label": "C",
+          "text": "SequenceFile"
+        },
+        {
+          "label": "D",
+          "text": "RcFile"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-079",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "Hive在处理一些复杂的统计或者排序等复杂任务的时候,会调用以下哪个组件?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Hadoop"
+        },
+        {
+          "label": "B",
+          "text": "HDFS"
+        },
+        {
+          "label": "C",
+          "text": "MapReduce"
+        },
+        {
+          "label": "D",
+          "text": "HBase"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-080",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "quick",
+      "title": "Hive是一种数据仓库处理工具，使用类SQL的HiveQL语言实现数据查询功能，所有Hive的数据都存储在HDFS中",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-081",
+      "chapter": "HCIA-HBase&Hive",
+      "category": "singleChoice",
+      "title": "当某RegionServer故障后,HMaster若要恢复数据必须依赖下列哪个选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HLog"
+        },
+        {
+          "label": "B",
+          "text": "Region"
+        },
+        {
+          "label": "C",
+          "text": "RowKey"
+        },
+        {
+          "label": "D",
+          "text": "HDFS"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    }
+  ]
+}

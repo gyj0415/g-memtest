@@ -3,6 +3,7 @@
   "id": "template-all-question-types",
   "title": "测试用模板题库：全题型格式",
   "description": "用于测试导入、单选、多选、图片题、资料题、资料组多小题、简答题和关键词判分。图片路径可替换为你的本地相对路径或网络图片地址。",
+  "group": "模板示例",
   "schema": {
     "required": ["title", "answer"],
     "optional": ["id", "chapter", "category", "prompt", "keywords", "minRequired", "options", "multiple", "media", "material", "groupId"]

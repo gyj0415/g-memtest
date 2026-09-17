@@ -1,0 +1,1092 @@
+{
+  "version": 1,
+  "id": "bank-hcip-bigdata-app-dev",
+  "title": "HCIP-大数据应用开发总指导",
+  "description": "HCIP-大数据应用开发总指导，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIP-大数据应用开发总指导"
+  ],
+  "categories": [
+    "singleChoice",
+    "quick",
+    "multipleChoice",
+    "short"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "以下关于大数据的描述，正确的是哪一个选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "云计算就是大数据"
+        },
+        {
+          "label": "B",
+          "text": "大数据必须基于云平台"
+        },
+        {
+          "label": "C",
+          "text": "大数据与云平台融合是发展趋势"
+        },
+        {
+          "label": "D",
+          "text": "大数据可以解决所有事情"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "在大数据应用场景中，HDFS 主要是用于其 中的计算任务。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "关于华为云MRS 服务相比于线下 Fusionlnsight 产品的优势，以下哪一个选项是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "仅提供单租户管理，资源耦合程度高"
+        },
+        {
+          "label": "B",
+          "text": "易部署，所用即所得"
+        },
+        {
+          "label": "C",
+          "text": "多场景融合，高性能"
+        },
+        {
+          "label": "D",
+          "text": "高可用，同城异地"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "因为人力运维成本高，华为云KRS 无法提供 可视化管理界面。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "华为云MRS 服务支持统一元数据管理，以 便支撑数据开放共享。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "multipleChoice",
+      "title": "以下哪些选项为当前大数据产业发展的特点?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "规模较小"
+        },
+        {
+          "label": "B",
+          "text": "增速缓慢"
+        },
+        {
+          "label": "C",
+          "text": "规模较大"
+        },
+        {
+          "label": "D",
+          "text": "增速很快"
+        }
+      ],
+      "multiple": true,
+      "answer": "C,D"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "对于HDFS 而言，元数据优先保存在 NameNode 的内存中。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "multipleChoice",
+      "title": "以下哪些选项不属于HDFS 文件系统将文件 分块带来的好处?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据备份比较麻烦"
+        },
+        {
+          "label": "B",
+          "text": "简化系统设计"
+        },
+        {
+          "label": "C",
+          "text": "存储效率有所降低"
+        },
+        {
+          "label": "D",
+          "text": "支持大规模文件存储"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "short",
+      "title": "大数据指其大小超出典型数据软件的采集、 存储、管理和分析等能力的______，一般范围是从几个TB 到几个 PB.",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "数据集"
+      ],
+      "answer": "数据集"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "在MRS HDFS 中，将HDFS 根目录下的a.txt 重命名为b.txt，以下哪一个选项可以实现上述目的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "hdfs dfs -rm la. txt /b. txt"
+        },
+        {
+          "label": "B",
+          "text": "hdfs dfs -mv la. txt /b. txt"
+        },
+        {
+          "label": "C",
+          "text": "hdfs dfs -put la. txt /b. txt"
+        },
+        {
+          "label": "D",
+          "text": "hdfs dfs -1s la. txt /b. txt"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "越来越多的数据系统直接服务终端客户，这 对系统的并发和处理延时提出了新的交互性挑战。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "multipleChoice",
+      "title": "下列关于大数据的说法中，错误的是哪些选 项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "大数据具有体量大、结构单一、[时效性强的特征"
+        },
+        {
+          "label": "B",
+          "text": "处理大数据需采用新型计算架构和智能算法等新技术"
+        },
+        {
+          "label": "C",
+          "text": "大数据的应用注重因果分析而不是相关分析"
+        },
+        {
+          "label": "D",
+          "text": "大数据的应用注重相关分析而不是因果分析"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "multipleChoice",
+      "title": "HBase 无法直接应用于以下哪些场景?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "消息、订单数据存储"
+        },
+        {
+          "label": "B",
+          "text": "全年总销售额统计分析"
+        },
+        {
+          "label": "C",
+          "text": "用户画像数据存储"
+        },
+        {
+          "label": "D",
+          "text": "预测明天气温"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "华为云MRS 服务支持使用河图引擎构建融 合分析能力，支持企业架构演进到融合大数据平台。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "以下描述中，哪一个选项属于HDFS 的使用 场景?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "海量气象数据存储"
+        },
+        {
+          "label": "B",
+          "text": "集群资源调配管理"
+        },
+        {
+          "label": "C",
+          "text": "社交媒体数据流式分析"
+        },
+        {
+          "label": "D",
+          "text": "数据采集与分发"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "离线分析平台主要进行数据处理和加工，将 原始数据加工成明细数据。以及进行离线跑批作业产生结果数据，供上层应用调 用。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "在大数据行业的应用场景中，开发者常常需 要关注解决大数据的分布式存储问题，而不需要关注大数据业务处理问题。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "multipleChoice",
+      "title": "以下关于HDFS 数据完整性保障的说法中， 哪些选项是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "DataNode 向NameNode 周期上报失败时，需要由DataNode 发起副本重 建动作以恢复丢失副本"
+        },
+        {
+          "label": "B",
+          "text": "DFS 架构设计了数据均衡机制，此机制保证数据在各个DataNode 上分布是 平均的"
+        },
+        {
+          "label": "C",
+          "text": "HDFS 为了保证存储数据完整性，对于各组件的失效，做了可靠性处理"
+        },
+        {
+          "label": "D",
+          "text": "HDFS 提供独有安全模式机制，在数据节点故障硬盘故障时，能防止故障扩散"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "multipleChoice",
+      "title": "以下哪些选项是华为云MRS 使用HetuEngine 的根本原因?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "企业传统数仓，缺乏高效、统一的融合分析"
+        },
+        {
+          "label": "B",
+          "text": "企业传统数仓采用分系统构建模式，导致数据冗余严重，阻碍企业快速转型"
+        },
+        {
+          "label": "C",
+          "text": "随着数据量增长，业务对数据分析灵活性要求越来越高"
+        },
+        {
+          "label": "D",
+          "text": "HetuEngine 对浪涌式的数据进行整合分析，发挥最大价值"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "大数据的显著特征不包括以下哪一个选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据规模小"
+        },
+        {
+          "label": "B",
+          "text": "数据处理速度快"
+        },
+        {
+          "label": "C",
+          "text": "数据类型多样"
+        },
+        {
+          "label": "D",
+          "text": "数据价值密度低"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "short",
+      "title": "数据块需保存在DataNode 的磁盘上，而元 数据优先保存在NameNode 的______中。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "内存"
+      ],
+      "answer": "内存"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "short",
+      "title": "Fusionlnsight HD 大数据平台全面升级为混 合云______云服务。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "HCS"
+      ],
+      "answer": "HCS"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "数据可视化旨在借助于图形化手段，将数据 以视觉形式来呈现，清晰有效地传达与沟通信息，帮助人们理解数据中蕴藏的规 律和现象",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "在数字化转型以及多样数据、算力、业务敏 捷的驱动下，大数据焦点转向云服务方式创新，更加敏捷，成本更优。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "short",
+      "title": "一站式融合分析，助力客户从无序的单组件 应用走向______大数据平台。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "融合"
+      ],
+      "answer": "融合"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "以下关于大数据技术在银行金融业和运营商 行业的应用场景，哪一个选项是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "运营商行业有天然的数据优势，不仅包含管道上丰富的内容数据，也有海量的 线下轨迹数据，成为运营商独一无二的资产，是数据经济时代的“新石油”"
+        },
+        {
+          "label": "B",
+          "text": "银行需将基于Hadoop 的开放数据架构迁移至传的,Teradata,Oracle,SAS 的 单体数据平台，减少业务开发的难度"
+        },
+        {
+          "label": "C",
+          "text": "银行业整合传统数仓平台和大数据平台业务，改变以报表为主的数据分析方式， 将不同的数据转化为可靠的洞察力"
+        },
+        {
+          "label": "D",
+          "text": "运营商需以大数据为驱动、大IT 平台为支撑、流程优化和管理完善为保障、 改进客户体验和价值创造为目标，推进生产运营转型提升"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "multipleChoice",
+      "title": "关于实时数据处理系统的诉求，以下哪些选 项是错误的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "端到端处理需要达到小时级时延"
+        },
+        {
+          "label": "B",
+          "text": "需在短时内接收并处理大量数据记录，吞吐量需要达到数十兆/秒/节点"
+        },
+        {
+          "label": "C",
+          "text": "支持网络流、文件、数据库表等格式的数据源"
+        },
+        {
+          "label": "D",
+          "text": "当系统处理能力出现瓶颈后，需通过换用性能更好的硬件进行垂直拓展"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,D"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "DAYU 无缝连接华为云MRSDwS、DLI 等数 据底座的开发。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "以下哪一项不是传统数据处理系统面临的问 题?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "有限的扩展能力"
+        },
+        {
+          "label": "B",
+          "text": "海量数据的存储成本高"
+        },
+        {
+          "label": "C",
+          "text": "大数据处理能力不足"
+        },
+        {
+          "label": "D",
+          "text": "数据源多样"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "在进行HDFS 元数据持久化时NameNode 可以周期性触发EditLog 和Fslmage 的合并。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-031",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "以下哪一个选项不属于Hadoop 批处理及流 处理技术常见的应用场景?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "语音合成分析"
+        },
+        {
+          "label": "B",
+          "text": "海量日志数据分析"
+        },
+        {
+          "label": "C",
+          "text": "全国人民出行轨迹分析"
+        },
+        {
+          "label": "D",
+          "text": "海量流媒体数据分析"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-032",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "行健是按照字典序存储，因此，设计行键时， 要充分利用这个排序特点，将经常一起读取的数据存储到一块，将最近可能会被 访问的数据放在一块。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-033",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "企业级Hadoop 大数据平台正逐步呈现出 Hadoop On Cloud 的发展趋势，主要是基于云计算所提供的算力保证。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-034",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "quick",
+      "title": "大数据分析与处理都在向着云化和融合方向 演进",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-035",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "multipleChoice",
+      "title": "以下描述中，哪些选项不属于HDFS 的使用 场景?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "集群资源调配管理"
+        },
+        {
+          "label": "B",
+          "text": "数据采集与分发"
+        },
+        {
+          "label": "C",
+          "text": "网页日志数据存储"
+        },
+        {
+          "label": "D",
+          "text": "海量气象数据存储"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-036",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "以下关于大数据分析不同场景的描述，错误 的是哪一个选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "海量视频数据处理，需要AI 和大数据结合分析"
+        },
+        {
+          "label": "B",
+          "text": "loT 数据，业务时效性要求比较低，适合使用离线批处理技术"
+        },
+        {
+          "label": "C",
+          "text": "实时营销，流数据与历史数据结合，实现更全面的用户行为刻画"
+        },
+        {
+          "label": "D",
+          "text": "日志类的半结构化数据可以结合机器学习技术进行批处理"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-037",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "以下关于华为云MRS 提供的基于梯联网数 据进行数据低时延实时数据分析应用场景的描述中，错误的是哪一个选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "实时数据处理通常用于异常检测、欺诈识别、基于规则告警、业务流程监控等 场景，在数据输入系统的过程中，对数据进行处理"
+        },
+        {
+          "label": "B",
+          "text": "实时流处理需要依赖MapReduce 组件完成计算"
+        },
+        {
+          "label": "C",
+          "text": "可以利用Kafka 实现方级别的电梯数据的实时按入"
+        },
+        {
+          "label": "D",
+          "text": "可以利用Flume 实现实时数据采集，并提供丰富的采集和存储连接方式"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-038",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "关于HDFS 的回收站机制，以下描述正确的 是哪一个选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "可以在HDFS 的配置文件hdfs-conf.Xm1 中修改回收站时间阈值"
+        },
+        {
+          "label": "B",
+          "text": "回收站内的数据无法恢复"
+        },
+        {
+          "label": "C",
+          "text": "开源Hadoop:系统中，HDFS 的回收站默认是关闭的"
+        },
+        {
+          "label": "D",
+          "text": "在开源Hadoop 系统中，HDFS 数据在回收站内默认保留30 天"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-039",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "关于HDFS 元数据持久化，以下哪一个选项 是正确的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Fsimage 和EditLog 可以直接在本地保存，无需合并"
+        },
+        {
+          "label": "B",
+          "text": "Standby NameNode 合并成Fslmage 后回传给ActiveNameNode 替换掉 原有Fslmage，并将Editlog.new 命名为EditLog"
+        },
+        {
+          "label": "C",
+          "text": "将数据传到Standby NameNode 时，Fslmage 数据读写是可以同步进行的"
+        },
+        {
+          "label": "D",
+          "text": ".Fslmage 文件和Edi tLog 文件需要在ActiveNameNode 的内存中完成合并"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-040",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "multipleChoice",
+      "title": "HDFS 文件系统适用于哪些场景?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "频繁修改文件(基本就是写一次)"
+        },
+        {
+          "label": "B",
+          "text": "大规模数据(TB 及以上)"
+        },
+        {
+          "label": "C",
+          "text": "商用硬件(一般硬件)"
+        },
+        {
+          "label": "D",
+          "text": "流式数据访问(写一次，读多次)"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-041",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "multipleChoice",
+      "title": "大数据时代，数据来源多种多样。以下选项 中，哪些选项是大数据常见的数据来源?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "网页日志"
+        },
+        {
+          "label": "B",
+          "text": "工业传感器"
+        },
+        {
+          "label": "C",
+          "text": "气象卫星"
+        },
+        {
+          "label": "D",
+          "text": "社交媒体"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-042",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "以下华为云常见的云服务中，哪一个选项是 基于Hadoop 开源框架搭建的专门用于大数据业务的云服务?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "DES"
+        },
+        {
+          "label": "B",
+          "text": "MRS"
+        },
+        {
+          "label": "C",
+          "text": "ECS"
+        },
+        {
+          "label": "D",
+          "text": "OBS"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-043",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "企业级数据分析平台的资源弹性分配指的是 以下哪一特点?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "结构化数据在非结构化数据对比下越来越小，现代数据分析需要新的技术解 决方案"
+        },
+        {
+          "label": "B",
+          "text": "混合云以敏捷无缝的部署管理有助于应用将分析建议和预测嵌入到客户对话 中"
+        },
+        {
+          "label": "C",
+          "text": "混合具备的资源弹性伸缩和快速发放能力，使现代企业满足庞大复杂的云数 据分析能力的同时，保证效率"
+        },
+        {
+          "label": "D",
+          "text": "企业都有大量分散在不同部门的数据，将各个孤立系统的信息汇集在一起， 将会发现新的机会和潜力"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-044",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "short",
+      "title": "华为云MRS 具有一站式平台、永远在线、______和可持续演进这四大能力。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "易用低成本"
+      ],
+      "answer": "易用低成本"
+    },
+    {
+      "id": "q-045",
+      "chapter": "HCIP-大数据应用开发总指导",
+      "category": "singleChoice",
+      "title": "以下大数据精准广告发展方向不包括哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "平台化"
+        },
+        {
+          "label": "B",
+          "text": "自动化"
+        },
+        {
+          "label": "C",
+          "text": "精准化"
+        },
+        {
+          "label": "D",
+          "text": "价值化"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    }
+  ]
+}

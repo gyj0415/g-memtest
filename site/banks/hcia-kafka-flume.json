@@ -1,0 +1,2198 @@
+{
+  "version": 1,
+  "id": "bank-hcia-kafka-flume",
+  "title": "HCIA-Kafka&Flume",
+  "description": "HCIA-Kafka&Flume，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIA-Kafka&Flume"
+  ],
+  "categories": [
+    "singleChoice",
+    "quick",
+    "multipleChoice",
+    "short"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Flume支持监控并传输目录下新增的文件，可实现数据传输。以上描述的是哪一类source",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "spooling directory source"
+        },
+        {
+          "label": "B",
+          "text": "http source"
+        },
+        {
+          "label": "C",
+          "text": "exec source"
+        },
+        {
+          "label": "D",
+          "text": "syslog source"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "在点对点消息系统中，可由一个或多个消费者消费队列中的数据，但是一条消息只能被消费一次。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "Kafka中日志的清理方式包含以下哪些项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "update"
+        },
+        {
+          "label": "B",
+          "text": "remove"
+        },
+        {
+          "label": "C",
+          "text": "compact"
+        },
+        {
+          "label": "D",
+          "text": "delete"
+        }
+      ],
+      "multiple": true,
+      "answer": "C,D"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "short",
+      "title": "用于记录Kafka中消息读取位置的是______",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "offset"
+      ],
+      "answer": "offset"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "关于Kafka磁盘容量不足的告警，对于可单选能的原因以下分析不正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "用于存储Kafka数据的磁盘配置(如磁盘数目、大小等)，无法满足当前业务数据流量，导致磁盘使用率达到上限"
+        },
+        {
+          "label": "B",
+          "text": "数据保存时间配置过长数据累积达到磁盘使用率上限"
+        },
+        {
+          "label": "C",
+          "text": "业务规划不合理导致数据分配不均匀使部分磁盘达到使用率上限"
+        },
+        {
+          "label": "D",
+          "text": "Broker节点故障导致"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "下图为flume数据传输架构，图“?”号处的组件是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Interceptor"
+        },
+        {
+          "label": "B",
+          "text": "Channelprocessor"
+        },
+        {
+          "label": "C",
+          "text": "Channel selector"
+        },
+        {
+          "label": "D",
+          "text": "以上全不正确"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "若在消息处理过程中允许部分信息丢失关闭消息可靠性处理机制的方式有以下哪些",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "将参数Config.Topology_ACKKRS设置为0"
+        },
+        {
+          "label": "B",
+          "text": "将参故Config.Topology_ACKKRS设置为False"
+        },
+        {
+          "label": "C",
+          "text": "Spout发送消息时,使用不指定消息messagelD的接口进行发送"
+        },
+        {
+          "label": "D",
+          "text": "Bolt发送消息时使用Unanchor方式发送"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Kafka集群中，Kafka服务端的角色是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Producer"
+        },
+        {
+          "label": "B",
+          "text": "Consumer"
+        },
+        {
+          "label": "C",
+          "text": "ZooKeeper"
+        },
+        {
+          "label": "D",
+          "text": "Broker"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "FusioninsightHD产品中关于Kafka组件说法正确的有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "删除Topic时必须确保Kafka的服务配置delete.topic.enable配置为true"
+        },
+        {
+          "label": "B",
+          "text": "Kafka安装及运行日志保存路径为/srv/Bigdata/kafka"
+        },
+        {
+          "label": "C",
+          "text": "zookeeper服务不可用会导致Kafka服务不可用"
+        },
+        {
+          "label": "D",
+          "text": "必须使用admin用户或Kafka admin组用户进行创建Topic"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "以下关于Kafka Logs中segment file的说法正确的有?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "使index元数据全部映射到memory,可以避免sementfilef的indexs效据IO磁盘操作"
+        },
+        {
+          "label": "B",
+          "text": "索引文件稀疏存储,可以大幅减低index文件元数据占用空间大小"
+        },
+        {
+          "label": "C",
+          "text": "稀疏存储即将原来的完整数据,只间隔的选择多条进行存储"
+        },
+        {
+          "label": "D",
+          "text": "通过索引信息可以快速定位message"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "MRS平台中，Flume数据流在节点内不需要经过哪个组件",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Sink"
+        },
+        {
+          "label": "B",
+          "text": "Channel"
+        },
+        {
+          "label": "C",
+          "text": "Topic"
+        },
+        {
+          "label": "D",
+          "text": "Source"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Kafka作为一个分布式消息系统，支持在线和离线消息处理，并提供了JavaAPI以便其他组件对接使用，在Fusioninsight解决方案中，Kafka属于Fusioninsight HD模块",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "Kafka中Partition对应的Leader宕机时，需要从Follower中选举出新Leader。当所有Replica都不工作时，对数据及时间要求不高的情况下， 以下哪些方案可行?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "选择第一个活过来的Replica不一 定是(ISR成员)作为L eader"
+        },
+        {
+          "label": "B",
+          "text": "等待ISR中的任意一 个Replica活过来, 并选它作为Leader"
+        },
+        {
+          "label": "C",
+          "text": "重启Kafka集群"
+        },
+        {
+          "label": "D",
+          "text": "在配置中增加Replica副本数量"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Flume架构中，一个Sink可以连接多个Channel.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Kafka Producer数据总体流程是Producer连接任意存活的Broker请求指定topicpartition的leader元数据信息，然后直接与对应的Broker直接连接发布数据",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Kafka中，每个Consumer都属于一个ConsumerGroup，每条消息只能被ConsumerGroup中的一个Consumer消费，但可以被多个ConsumerGroup消费。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Flume-NG由一个个agent来组成，而每个agent由Source、Channel、sink三个模块组成，其中Source负责接收数据，channel负责数据的传输，sink则负责数据向下一端的发送。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "server.channels.ch1.transactioncapacity表示事务大小，即当前channel支持事务处理的事件个数，可和source的batchsize设置为同样大小，但不能小于batchsize。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "以下关于Kafka Partition说法正确的",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "引入Partition机制，保证了Kafka的高吞吐能力"
+        },
+        {
+          "label": "B",
+          "text": "每个Partition都是有序且不可变的消息队列"
+        },
+        {
+          "label": "C",
+          "text": "Partition数量决定了每个consumer group中并发消费者的最大数量"
+        },
+        {
+          "label": "D",
+          "text": "每个Partition在存储层面对应一个log文件"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Flume传输数据的过程中，Sink取走数据并写入目的地后，会将events从channel中删除。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Flume数据采集过程中，下列选项中能对数据进行过滤和修饰的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Channel"
+        },
+        {
+          "label": "B",
+          "text": "Channel Selector"
+        },
+        {
+          "label": "C",
+          "text": "Interceptor"
+        },
+        {
+          "label": "D",
+          "text": "Sink"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Flume用于收集数据器传输的数据基本单位是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Split"
+        },
+        {
+          "label": "B",
+          "text": "Block"
+        },
+        {
+          "label": "C",
+          "text": "Event"
+        },
+        {
+          "label": "D",
+          "text": "Packet"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "驱动型Source是flume周期性主动去获取数据",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "为了保障流应用的快照存储的可靠性快照主要存储在哪里",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "JobManager的内存中"
+        },
+        {
+          "label": "B",
+          "text": "可靠性高的单机数据库中"
+        },
+        {
+          "label": "C",
+          "text": "本地文件系统中"
+        },
+        {
+          "label": "D",
+          "text": "HDFS中"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "以下关于Kafka消息消费者Consumen读取消息的描述错误的有",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Kafka的一个topic,即可以理解为队列每个格子代表条消息"
+        },
+        {
+          "label": "B",
+          "text": "生产者产生的消息逐条放到topic的未尾"
+        },
+        {
+          "label": "C",
+          "text": "消费者从右至左顺序读取消息"
+        },
+        {
+          "label": "D",
+          "text": "Consumert使用offset来记录读取的位"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "short",
+      "title": "Flume在传输数据过程中:可以对数据进行简单过滤。主要通过设置______ 在Source和channel之间(写入channel之前)对不关心的数据进行过滤",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "Interceptor"
+      ],
+      "answer": "Interceptor"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Flume的数据流可以根据headers的信息发送到不同的channel中",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "在Kafka中，以下消息传输语义中不会导致消息丢失的是哪些选项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "最多一次(At Most Once)"
+        },
+        {
+          "label": "B",
+          "text": "最少一次(At Lease Once)"
+        },
+        {
+          "label": "C",
+          "text": "仅有一次(Exactly Once)"
+        },
+        {
+          "label": "D",
+          "text": "超过一次(More Than Once)"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "kafka logs segment文件命名规则是partion全局的第一个segment从0开始，后续每个segment文件名为上一个全局partion的最大offset(偏移message数)",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Fusioninsight HD产品中，关于Kafka的说法不正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Kafka强依赖于Zookeeper"
+        },
+        {
+          "label": "B",
+          "text": "Kafka部署的实例个数不得小于2"
+        },
+        {
+          "label": "C",
+          "text": "Kafka的服务端可以产生消息"
+        },
+        {
+          "label": "D",
+          "text": "Consumer作为Kafka的客户端角色进行消息的消费"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-031",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Flume支持将多个Flume级联起来，同时级联节点内部支持数据复制",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-032",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "Flume进程级联时，以下哪些sink类型用于接收上一跳Flume发送过来的消息?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Avro sink"
+        },
+        {
+          "label": "B",
+          "text": "Thrift sink"
+        },
+        {
+          "label": "C",
+          "text": "Hive sink"
+        },
+        {
+          "label": "D",
+          "text": "Null sink"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-033",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "Flume适用于以下哪些场景的数据收集",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Thrift,Avro,syslog,Kafka等数据源上收集数据"
+        },
+        {
+          "label": "B",
+          "text": "本地文件数据采集"
+        },
+        {
+          "label": "C",
+          "text": "应用系统产生的日志采集"
+        },
+        {
+          "label": "D",
+          "text": "大量数据的实时数据采集"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-034",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Kafka将Topic分成一个或者多个Partition，每个Partition在物理上对应一个文件夹该文件夹下存储这个Partition的所有消息",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-035",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "以下关于Flume中各个channel类型描述错误的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "JDBC Channel内置的derby数据库,对event进行了持久化,但不提供高可靠性"
+        },
+        {
+          "label": "B",
+          "text": "Memory Channel中消息存放在内存中,提供高吞吐,但可能丢失数据"
+        },
+        {
+          "label": "C",
+          "text": "File Channel支持对数据持久化,但需要配置数据目录和checkpoint目录"
+        },
+        {
+          "label": "D",
+          "text": "Channel支持事务机制,提供较弱的顺序保证"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-036",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Kafka中分布式消息传递基于可靠的消息队列，支持客户端应用和消息系统之间异步传递消息。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-037",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "kafka是一个高吞吐、分布式、基于发布订阅的消息系统，利用kafka技术可在廉价PCServer上搭建起大规模消息系统",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-038",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "Flume采集海量日志数据时，经常会遇到性能瓶颈，可以通过以下哪些方式提升Flume性能?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "优化FlumeGC参数"
+        },
+        {
+          "label": "B",
+          "text": "增加Flume级联节点"
+        },
+        {
+          "label": "C",
+          "text": "增加Source数量"
+        },
+        {
+          "label": "D",
+          "text": "修改batchSize和capacity"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-039",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Kafka日志的清理方式有两种delete和compact。默认值是delete。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-040",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Flume在传输数据过程中，如果下一跳的Flume节点故障或者数据接受异常时可以自动切换到另外一路上继续传输。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-041",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Flume包含Source、Channel和sink三大组件,以下关于这三大组件说法错误的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Channel支持事务,提供较弱的顺序保证,可以连接多个的Source和Sink"
+        },
+        {
+          "label": "B",
+          "text": "Source负责接收events或通过特殊机制产生events,并将events批量放到多个Channel中"
+        },
+        {
+          "label": "C",
+          "text": "sink必须作用于一个确切的Channel"
+        },
+        {
+          "label": "D",
+          "text": "当Sink成功地将events发送到下一跳的Channel或最终目的时,events会从Channel移除"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-042",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Kafka是一个分布式的消息发布订阅系统，它只是进行消息的转发，不会保存消息",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-043",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "在MRS服务中,关于Kafka的Topic,以下描述不正确的有?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "每个Topic只能被分成一个partition(区)"
+        },
+        {
+          "label": "B",
+          "text": "每个Partition在存储层面对应一个log文件,log文件中记录了所有的消息数据"
+        },
+        {
+          "label": "C",
+          "text": "Topic的Partition数量可以在创建时配置"
+        },
+        {
+          "label": "D",
+          "text": "每条发布到Kafka的消息都有一个类别,这个类别被称为Topic,也可以理解为一个存储消息的队列"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-044",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Kafka所有消息都会被持久化到硬盘中同时Kafka通过对Topic Partition设置Replicetion来保障数据可靠",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-045",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Kafka Cluster Mirroring工具可以实现以下哪些功能",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Kafka跨集群数据同步方案"
+        },
+        {
+          "label": "B",
+          "text": "Kafka单集群内数据备份"
+        },
+        {
+          "label": "C",
+          "text": "Kafka单集群内数据恢复"
+        },
+        {
+          "label": "D",
+          "text": "以上全不确"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-046",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "哪个不是Flume的channel类型",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Memory Channel"
+        },
+        {
+          "label": "B",
+          "text": "File Channel"
+        },
+        {
+          "label": "C",
+          "text": "JDBC Channel"
+        },
+        {
+          "label": "D",
+          "text": "HDFS Channel"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-047",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "在KafkaHA中，当Partition对应的Leader单选宕机时，需要从Follower中选举出新Leader，具体由以下哪个角色执行",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Controller"
+        },
+        {
+          "label": "B",
+          "text": "Follower"
+        },
+        {
+          "label": "C",
+          "text": "Leader"
+        },
+        {
+          "label": "D",
+          "text": "Broker"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-048",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "一个典型的Kafka集群包含若干Producer若干Broker;若干Consumer和一个Zookeeper集群",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-049",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "为了提高kafka的容错性kafka支持partition的复制策略以下关于Leader partition和Follower partition的描述错误的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "一个kafka集群各个节点间不可能互为leader和和flower"
+        },
+        {
+          "label": "B",
+          "text": "如果leader失效，那么将会有其他Follower来接管(成为新的leader)"
+        },
+        {
+          "label": "C",
+          "text": "由于leader Server承载了全部的请求压力，因此从集群的整体考虑，kafka会将leader均衡的分散在每个实例上来确保整体的性能稳定"
+        },
+        {
+          "label": "D",
+          "text": "Kafka针对partition的复制需要选出一个leader,由该leader负责partition的读写操作其他的副本节点只是负责数据的同步"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-050",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "下列属于flume数据监控的指标是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Source接收数据量"
+        },
+        {
+          "label": "B",
+          "text": "Sink写入数据量"
+        },
+        {
+          "label": "C",
+          "text": "DataNode数量"
+        },
+        {
+          "label": "D",
+          "text": "Channel缓存数据量"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-051",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "short",
+      "title": "Flume的Channel有多种类型，其中______ 在机器宕机时可能丢失数据",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "MemoryChannel"
+      ],
+      "answer": "MemoryChannel"
+    },
+    {
+      "id": "q-052",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "在数据流处理过程中,经常使用系统时间作为某个事件的时间,关于processingtime描述错误的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "实际应用过程中,processingtime要落后与eventtime"
+        },
+        {
+          "label": "B",
+          "text": "processing time和event time之间存在差异的主要原因是由于网络延迟、处理时间的长短等造成的"
+        },
+        {
+          "label": "C",
+          "text": "ProcessingTime结果是不可复现的,一旦流式计算版本升级其至系统崩渍,计算将会停止"
+        },
+        {
+          "label": "D",
+          "text": "Processing Time适用于处理问题复杂、对结果可溯要求较高的场景"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-053",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "kafka Consumer写数据总体流程是Consumer连接指定Topic Partition所在的LeadelBroker用于主动获取方式从kafka中获取消息",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-054",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "short",
+      "title": "Transformation算子的返回值是______",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "Sink"
+      ],
+      "answer": "Sink"
+    },
+    {
+      "id": "q-055",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Flume采集日志数据,若不考虑数据安全性,要达到最高采集速度,应该用什么类型的Channel?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HDFS"
+        },
+        {
+          "label": "B",
+          "text": "RJDBC"
+        },
+        {
+          "label": "C",
+          "text": "File"
+        },
+        {
+          "label": "D",
+          "text": "Memory"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-056",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Kafka的Producer和Customer数量必须相",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-057",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "short",
+      "title": "Flume用于收集数据，其传输的数据的基本单位是?______",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "event"
+      ],
+      "answer": "event"
+    },
+    {
+      "id": "q-058",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "查看Kafka的某Topic的partition详细信息时，使用如下哪个命令",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "bin/kafka-topic.sh -create"
+        },
+        {
+          "label": "B",
+          "text": "bin/kafka-topic.sh -list"
+        },
+        {
+          "label": "C",
+          "text": "bin/kafka-topic.sh -describe"
+        },
+        {
+          "label": "D",
+          "text": "bin/kafka-topicsh -delete"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-059",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "以下关于Kafka Partition副本的特性描述正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Follower通过拉取的方式从Leader中同步数据"
+        },
+        {
+          "label": "B",
+          "text": "主副本叫做Leader,从副本叫做Follower"
+        },
+        {
+          "label": "C",
+          "text": "消费者和生产者都是从Leader中读写数据也可直接与Follower交互"
+        },
+        {
+          "label": "D",
+          "text": "副本以分区为单位。每个分区都有各自的主副本的从副本"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-060",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "以下关于Kafka的描述错误的有",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "用作活动流和运营数据处理管道的基础"
+        },
+        {
+          "label": "B",
+          "text": "由Apache Hadoop开发并于2011年开源"
+        },
+        {
+          "label": "C",
+          "text": "具有信息持久化、高吞吐、实时等特性"
+        },
+        {
+          "label": "D",
+          "text": "使用Scala,Java语言实现"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-061",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "通过配置以下哪些参数可清理Kafka中产生的日志?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "logretention.hours"
+        },
+        {
+          "label": "B",
+          "text": "server.properties"
+        },
+        {
+          "label": "C",
+          "text": "log.retention.bytes"
+        },
+        {
+          "label": "D",
+          "text": "log.cleanup.policy"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-062",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "以下哪些是KafKa实际的应用场景",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "日志收集"
+        },
+        {
+          "label": "B",
+          "text": "网站活性跟踪"
+        },
+        {
+          "label": "C",
+          "text": "资源管理"
+        },
+        {
+          "label": "D",
+          "text": "聚合统计系统运营数据"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-063",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "flume传输数据的可靠性是指flume在传输数据过程中，当下一跳的fltume节点故障或者数据接收异常时，可以自动切换到另外一路上继续传输。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-064",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "flume架构中一个Source可以连接多个channel。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-065",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "在Fusioninsight产品中，关于创建Kafka的Topic以下哪些描述是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "在创建Kafka的Topic时，必须设置Partition个数"
+        },
+        {
+          "label": "B",
+          "text": "在创建Kafka的Topic时必须设置Partition副本个数"
+        },
+        {
+          "label": "C",
+          "text": "设置多副本可以增强Kafka服务的容灾能力"
+        },
+        {
+          "label": "D",
+          "text": "以上全都正确"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-066",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "short",
+      "title": "Flume中按照数据获取的方式，可将Sources分为驱动型Source和______ Source.",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "轮询"
+      ],
+      "answer": "轮询"
+    },
+    {
+      "id": "q-067",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Kafka中，Leadar主要负责监控Follower的运行状态，Follower主要负责数据的读写。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-068",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "采用Flume传输数据过程中，为了防止因Flume进程重启而丢失数据，可以使用以下哪种Channel类型",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Memory Channel"
+        },
+        {
+          "label": "B",
+          "text": "JDBC Channel"
+        },
+        {
+          "label": "C",
+          "text": "File Channel"
+        },
+        {
+          "label": "D",
+          "text": "HDFS Channel"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    },
+    {
+      "id": "q-069",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Flume的properties.properties配置文件中可以配置多个channel来传输数据",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-070",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "short",
+      "title": "Kafka集群包含一个或多个服务实例这个服务实例被称为______",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "Broker"
+      ],
+      "answer": "Broker"
+    },
+    {
+      "id": "q-071",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Flume需要实时采集点击流日志到Kafka，用于后续的实时分析处理，选择以下哪种Source类型进行数据采集最为合适",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "kafka Source"
+        },
+        {
+          "label": "B",
+          "text": "syslog Source"
+        },
+        {
+          "label": "C",
+          "text": "http Source"
+        },
+        {
+          "label": "D",
+          "text": "spooling directory Source"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-072",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Kafka集群在运行期间,直接依赖于下面哪个组件?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Zookeeper"
+        },
+        {
+          "label": "B",
+          "text": "HDFS"
+        },
+        {
+          "label": "C",
+          "text": "HBase"
+        },
+        {
+          "label": "D",
+          "text": "Flume"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-073",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "部署Fusioninsight HD时，同一集群内的FlumeServer节点建议至少部署几个",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-074",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Loader的作业执行失败，导入的数据不会被自动删除，必须手动删除。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-075",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "关于Flume,下列说法错误的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Flumes级联节点之间的数据传输支持加密"
+        },
+        {
+          "label": "B",
+          "text": "Flume支持多级联和多路复用"
+        },
+        {
+          "label": "C",
+          "text": "Source到Channel到Sink等进程内部有加密的必要"
+        },
+        {
+          "label": "D",
+          "text": "Flume级联节点之间的数据传输不支持压缩"
+        }
+      ],
+      "multiple": true,
+      "answer": "C,D"
+    },
+    {
+      "id": "q-076",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Producer需要Server接收到数据之后发出的确认接收的信号,当设置ACK信号的值为多少时表示至少要等待Leader已经成功将数据写入本地Log但不要求等待所有Follower都成功写入?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "acks=2"
+        },
+        {
+          "label": "B",
+          "text": "acks=1"
+        },
+        {
+          "label": "C",
+          "text": "acks=all"
+        },
+        {
+          "label": "D",
+          "text": "acks=0"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-077",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Kafka集群在运行期间，直接依赖于下面那些组件",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Zookeeper"
+        },
+        {
+          "label": "B",
+          "text": "HDFS"
+        },
+        {
+          "label": "C",
+          "text": "Spark"
+        },
+        {
+          "label": "D",
+          "text": "HBase"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-078",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "银行为了数据传输的可靠性,使用Flume采集数据,主要是利用Flume的哪个特性?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "支持级联"
+        },
+        {
+          "label": "B",
+          "text": "支持在定制各类数据发送方"
+        },
+        {
+          "label": "C",
+          "text": "事务机制"
+        },
+        {
+          "label": "D",
+          "text": "支持采集日志文件"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-079",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "MRS服务中，Zookeeper服务不可用会导致kafka服务不可用。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-080",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "以下关于Kafka消息传递方式描述不正确的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "分布式消息传递有两种主要的消息传递模式,点对点传递模式发布-订阅模式"
+        },
+        {
+          "label": "B",
+          "text": "在发布-订阅消息系统中同条数据可以被多个消费者消费,数据被消费后不会立马删除"
+        },
+        {
+          "label": "C",
+          "text": "在对点消息系统中可能会有多个消费者同时消费数据,因此不能保证数据处理的顺序。"
+        },
+        {
+          "label": "D",
+          "text": "在点对点消息系统中当一个消费者消费了队列中的某条数据之后,该条数据则从消息队列中删除"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-081",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "以下关于Kafka partition偏移量的描述不正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "消费者通过(offset、partition、topic)跟踪记录"
+        },
+        {
+          "label": "B",
+          "text": "唯一标记一条消息"
+        },
+        {
+          "label": "C",
+          "text": "offset是一个String型字符串"
+        },
+        {
+          "label": "D",
+          "text": "每条消息在文件中的位置称为offset(偏移量)"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-082",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "Flume中数据压缩特性主要是基于以下哪种目的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "降低磁盘IO"
+        },
+        {
+          "label": "B",
+          "text": "降低网络IO"
+        },
+        {
+          "label": "C",
+          "text": "提高可靠性"
+        },
+        {
+          "label": "D",
+          "text": "增强安全性"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-083",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "Kafka分布式消息传递基于可靠的消息队列,包含以下哪两种主要的消息传递模式?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "轮询传递模式"
+        },
+        {
+          "label": "B",
+          "text": "点对点传递模式"
+        },
+        {
+          "label": "C",
+          "text": "分布传递模式"
+        },
+        {
+          "label": "D",
+          "text": "发布订阅模式"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-084",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "在Kafka中，如下关于Producer发送数据的说法错误的是",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Proucer负责生产数据，Consumer负责消费数据Producer和Consumer,之间需要建立连接."
+        },
+        {
+          "label": "B",
+          "text": "Proucer既可以发送数据到Broker上又可以发送数据到Consumer"
+        },
+        {
+          "label": "C",
+          "text": "Proucer作为消息生产者，可以直接将数据写入Zookeeper"
+        },
+        {
+          "label": "D",
+          "text": "Proucer连接任意一个正常的Brokers实例就可以产生数据"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-085",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "在Fusioninsight产品中,关于Kafka组件说法正确的是?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "在创建Topic时,副本数不得大于当前存活的Broker实例个数否则创建Topic将会失败"
+        },
+        {
+          "label": "B",
+          "text": "Kafka的Producer发送消息时,可以指定该消息被哪个Consumer消费"
+        },
+        {
+          "label": "C",
+          "text": "Kafka会将元数据信息存放到Zookeeper上"
+        },
+        {
+          "label": "D",
+          "text": "Kafka安装完成后就不能再配置数据存放目录"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-086",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "现有server.channels=ch1,设置Channel类型为FileChannel,下列配置正确的是",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "server channels.ch1 type=file"
+        },
+        {
+          "label": "B",
+          "text": "server channels.ch1type=memory"
+        },
+        {
+          "label": "C",
+          "text": "server channels.type=memory"
+        },
+        {
+          "label": "D",
+          "text": "server channels.type=file"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-087",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "Kafka中partition replication之间同步数据，从partition的leader复制数据到followel需要线程(replication Fetcher Thread,Follower(一个follower相当于consumer)主动从leader批量拉取消息的，这极大提高了吞吐量",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-088",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "multipleChoice",
+      "title": "Kafka消息传输保障通常有以下哪几种?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "最多三次(At Most Three Times)"
+        },
+        {
+          "label": "B",
+          "text": "仅有一次(Exactly Once)"
+        },
+        {
+          "label": "C",
+          "text": "最少一次(At Lease once))"
+        },
+        {
+          "label": "D",
+          "text": "最多一次(At Most once)"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-089",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "singleChoice",
+      "title": "在Kafka HA中，当Partition对应的Leader宕机时需要从Follower中选举出新Leader具体由以下哪个角色执行",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Follower"
+        },
+        {
+          "label": "B",
+          "text": "Controller"
+        },
+        {
+          "label": "C",
+          "text": "Broker"
+        },
+        {
+          "label": "D",
+          "text": "Leader"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-090",
+      "chapter": "HCIA-Kafka&Flume",
+      "category": "quick",
+      "title": "channel的作用类似队列，用于临时缓存进来的数据，当Sink成功地将数据发送到下一跳的Channel或最终目的数据会从channel移除",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    }
+  ]
+}

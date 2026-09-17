@@ -6,13 +6,14 @@ This repository contains a static self-test website for enterprise management an
 
 ## Current Product
 
-The main product is a browser-based question-bank self-test site. It starts on a home page, loads built-in question banks from standalone JSON files, supports local question-bank import/export, switching between multiple banks from the sidebar, answer persistence per bank, scoring feedback, and a question-bank format converter.
+The main product is a browser-based question-bank self-test site. It starts on a home page, loads built-in question banks from standalone JSON files, groups banks into expandable collections, supports local question-bank import/export (including a whole catalog of banks), switching between multiple banks from the sidebar, answer persistence per bank, scoring feedback, and a question-bank format converter.
 
 ## Domain Vocabulary
 
 - **Question bank**: A JSON collection of questions imported into the self-test site.
 - **Bank switcher**: The UI control for switching between locally saved question banks.
-- **Built-in bank catalog**: The `site/banks/manifest.json` file that lists built-in question banks available on the home page.
+- **Bank group**: A named collection that folds several question banks together on the home page and sidebar. Users click a group to expand it. Stored as `group` on each bank JSON and in `site/banks/manifest.json`.
+- **Bank catalog import**: A JSON payload with a `banks` array, used to import a whole set of grouped question banks at once.
 - **Practice state**: A user's local answers, scoring results, answer visibility, order, and view mode for one question bank.
 - **Converter**: The standalone page that turns copied questions, answers, categories, and choices into importable JSON.
 - **Upload package**: The static files intended for deployment to a permanent hosting service.
@@ -30,7 +31,7 @@ The main product is a browser-based question-bank self-test site. It starts on a
 `site/index.html` is the main single-file application. It contains:
 
 - The hero and toolbar controls for bank switching, import/export, filters, full submission, missed-question review, and reset.
-- The home page and sidebar question-bank selection.
+- The home page and sidebar question-bank selection, grouped into expandable bank groups.
 - The built-in question-bank catalog loader.
 - Question-bank normalization and import parsing.
 - A multi-bank local storage library keyed by `enterprise-management-bank-library-v1`.

@@ -1,0 +1,1092 @@
+{
+  "version": 1,
+  "id": "bank-hcip-offline-batch",
+  "title": "HCIP-大数据离线批处理场景化解决方案",
+  "description": "HCIP-大数据离线批处理场景化解决方案，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIP-大数据离线批处理场景化解决方案"
+  ],
+  "categories": [
+    "quick",
+    "short",
+    "multipleChoice",
+    "singleChoice"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "Loader 是实现MRS 与关系型数据库、文件 系统之间交换数据和文件的数据加载工具。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "short",
+      "title": "在使用Hive 建表时，可以建内部表和外部表。 如果要用Hive 和其它工具来处理同一个数据集，建议使用这两种表中的______表(请 填写中文)",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "外部"
+      ],
+      "answer": "外部"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "short",
+      "title": "创建hive 的外部表时，必须指定______关键词。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "external"
+      ],
+      "answer": "external"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下关于大数据平台中云数据湖解决方案的 描述，哪些选项是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "传统数据仓库对于物理服务器、网络、存储等管理能力弱，采用云数据湖解决 方案可实现软硬统一管理"
+        },
+        {
+          "label": "B",
+          "text": "在数字化转型的驱动下，多样数据、算力、业务敏捷的驱动下，大数据焦点转 向云服务方式创新,更加敏捷"
+        },
+        {
+          "label": "C",
+          "text": "云数据湖的计算资源从传统的物理机转为云虚机、BMS、容器等云计算资源， 可实现资源快速发放"
+        },
+        {
+          "label": "D",
+          "text": "传统数据仓库容易形成系统孤岛，资源利用率不高;云数据湖方案可实现存算 分离，资源利用率大幅提高"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "离线批处理应用对于处理速度的要求比较低。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "关于Hive 的左外连接和右外连接的说法，以 下哪一个选项是正确的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "左外连接和右外连接无法通过on 参数指定匹配的条件"
+        },
+        {
+          "label": "B",
+          "text": "左外连接以左表为基准。如果右边表和on 条件匹配的数据则显示出来，否则 显示NULL"
+        },
+        {
+          "label": "C",
+          "text": "左外连接与内连接概念相同，但右外连接与内连接概念不同"
+        },
+        {
+          "label": "D",
+          "text": "Hive 仅支持右外连接，不支持左外连接"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "数据仓库主要提供以下哪项服务?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "面向分析"
+        },
+        {
+          "label": "B",
+          "text": "面向业务应用"
+        },
+        {
+          "label": "C",
+          "text": "数据管理和分析"
+        },
+        {
+          "label": "D",
+          "text": "面向事务"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "驱动型Source 是Flume 周期性主动去获取 数据。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "在大数据分析场景中，以下说法哪一项是不正 确的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "SparkSQL:新型SQL 处理引擎，速度比Hive 快，处理SQL 类的批处理任务"
+        },
+        {
+          "label": "B",
+          "text": "HDFS:基于大数据的数据仓库平台"
+        },
+        {
+          "label": "C",
+          "text": "FLink:流批一体式计算引擎"
+        },
+        {
+          "label": "D",
+          "text": "Hive:类SQL 查询，传统批处理引擎，速度较慢"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "在Hive 中创建内部表时，必须指定internal 关键词。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "Spark SQL 仅支持JDBC 接口。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "Hive 组件支持以下哪些运行框架?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "MapReduce"
+        },
+        {
+          "label": "B",
+          "text": "Tez"
+        },
+        {
+          "label": "C",
+          "text": "Kafka"
+        },
+        {
+          "label": "D",
+          "text": "Spark"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,D"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "Flume 架构中不包含以下哪一个选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Source"
+        },
+        {
+          "label": "B",
+          "text": "Sink"
+        },
+        {
+          "label": "C",
+          "text": "Channel"
+        },
+        {
+          "label": "D",
+          "text": "Transformation"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "关于Hive 的优点，以下哪些说法是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Hive 支持多种编程语言，包括Java 和Python 都可对接Hive 进行使用"
+        },
+        {
+          "label": "B",
+          "text": "Hive 速度非常快，可以支持毫秒级时延的分析应用"
+        },
+        {
+          "label": "C",
+          "text": "理论上Hive 依赖硬件程度较低，可适应一般的普通机器"
+        },
+        {
+          "label": "D",
+          "text": "Hive 支持双MetaStore 机制，提高容错性"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下哪几个选项属于Flume 中的Source 类 型?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Avro Source"
+        },
+        {
+          "label": "B",
+          "text": "Kafka Source"
+        },
+        {
+          "label": "C",
+          "text": "Jms Source"
+        },
+        {
+          "label": "D",
+          "text": "Thrift Source"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "Specify table programTableorders =tenv.Scan (\"orders\"):llschema(a, b,c,rowtime) Table counts = orders.Groupby(\"a&#039;) .Select (\"a,b.Count as cnt\")l/Conversionto datasetDataset<row> result=tenv.Todataset(counts, row.Class):Result.Print()关于上述代码的描述，以下哪些选项是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Dataset result = tenv.Todataset(counts,row.Class):将分析结果注 册成为一个Dataset 对象"
+        },
+        {
+          "label": "B",
+          "text": "Table orders = tenv.Scan(&#039;orders&#039;\")通过扫描orders 数据表来创建orders 对象"
+        },
+        {
+          "label": "C",
+          "text": "Table counts = orders.Groupby(\"a&#039;).Select(&#039;a, b.Count as cnt&#039;\"):通过对a 列进行分组计数完成每一个商品订单数量的分组统计"
+        },
+        {
+          "label": "D",
+          "text": "这段代码使用了Flink 的Table APl 进行结构化数据的处理"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "一个Spark 应用程序运行时，如果某个Task 运行失败，则整个App 运行失败。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "采用Flume 传输数据过程中，为了防止因Flume 进程重启而丢失数据，可以使用以下哪些Channel 类型?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "JDBC Channel"
+        },
+        {
+          "label": "B",
+          "text": "HBase Channel"
+        },
+        {
+          "label": "C",
+          "text": "File Channel"
+        },
+        {
+          "label": "D",
+          "text": "Memory Channel"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "关于Hive 与传统数据仓库的比较，以下哪些 说法是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Hive 在数据容量较小时非常快速，数据量较大时Hive 的速度急剧下降"
+        },
+        {
+          "label": "B",
+          "text": "传统数据仓库存在容量上限，对于超大规模数据无能为力"
+        },
+        {
+          "label": "C",
+          "text": "Hive 的元数据存储独立于数据存储之外，从而完成元数据和实际数据"
+        },
+        {
+          "label": "D",
+          "text": "Hive 内部集成一整套成熟的的报表解决方案，不支持自定义函数"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "在华为云MRS 服务中，以下哪一个组件可以 通过可视化操作界面对数据的导入与导出进行管理和使用?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Kafka"
+        },
+        {
+          "label": "B",
+          "text": "HDFS"
+        },
+        {
+          "label": "C",
+          "text": "Loader"
+        },
+        {
+          "label": "D",
+          "text": "Flume"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "Sqoop 是一款开源的工具，主要用于在Hadoop 与传统的数据库间进行数据的传递，例如可以将一个关系型数据库中的数据导入 到Hadoop 的HDFS 中，也可以将HDFS 的数据导入到关系型数据库中.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "Structured Streaming 是构建在Spark SQL 引擎上的流式数据处理引擎。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "关于华为云MRS 服务中Flume 的基本架构， 以下哪一个选项是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Flume 架构中，一个Source 可以连接多个Channel"
+        },
+        {
+          "label": "B",
+          "text": "Flume 架构中，个Channel 可以连接多个Sink"
+        },
+        {
+          "label": "C",
+          "text": "Flume 架构中，一个Sink 可以连接多个Channel"
+        },
+        {
+          "label": "D",
+          "text": "Flume 架构中，一个Channel 可以连接多个Source"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "Spark 在划分Stage 时，遇到窄依赖会断开 Stage 链，生成一个新的Stage。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "在使用云数据湖解决方案过程中，更多数据 通过实时、虚拟方式入湖，数据产生即可见、可用。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "离线批处理对数据处理的时延要求高，处理 的数据量较大，占用的计算存储资源较多，通常通过MR 作业、Spark 作业或者 HQL 作业实现。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "关于华为云MRS 中Loader 的描述，以下哪 些选项是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Loader 提供可视化向导式的作业配置管理界面"
+        },
+        {
+          "label": "B",
+          "text": "Loader 是实现MRS 与关系型数据库、文件系统之间交换数据和文件的数据加 载工具"
+        },
+        {
+          "label": "C",
+          "text": "Loader 在界面中可指定多种不同的数据源和配置集群存储系统，但无法配置 数据的清洗和转换步骤"
+        },
+        {
+          "label": "D",
+          "text": "Loader 需要借助Hive 完成任务周期性调度"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下关于数据仓库分层优点的描述中，哪一 个选项是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "分层可将复杂问题简单化"
+        },
+        {
+          "label": "B",
+          "text": "分层可减少重复开发"
+        },
+        {
+          "label": "C",
+          "text": "分层可以隔离原始数据"
+        },
+        {
+          "label": "D",
+          "text": "分层之后真实数据与统计数据耦合在一起,减少了存储空间消耗"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "MRS 平台中，Flume 数据流在节点内不需要 经过以下哪一个组件?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Channel"
+        },
+        {
+          "label": "B",
+          "text": "Topic"
+        },
+        {
+          "label": "C",
+          "text": "Source"
+        },
+        {
+          "label": "D",
+          "text": "Sink"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下哪一项是Flume 传输数据的基本单位?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "documert"
+        },
+        {
+          "label": "B",
+          "text": "record"
+        },
+        {
+          "label": "C",
+          "text": "event"
+        },
+        {
+          "label": "D",
+          "text": "block"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-031",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下有关Hive 的左外连接和右外连接的描述 中，错误的是哪一个选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "左外连接以左侧表为基准，如果右侧表和on 条件匹配的数据则显示出来，否 则显示NULL"
+        },
+        {
+          "label": "B",
+          "text": "左外连接与内连接概念相同，但右外连接与内连接概念不同"
+        },
+        {
+          "label": "C",
+          "text": "对于左外连接和右外连接，where 条件是在on 条件执行之后才会执行"
+        },
+        {
+          "label": "D",
+          "text": "右外连接以右侧表为基准，如果左侧表和on 条件匹配的数据则显示出现，不 匹配的数据显示NULL"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-032",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "Spark 中的JDBCServer 不是单点服务，因 此非常适合处理海量数据和高并发任务.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-033",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下关于Hive INNER JOIN 的描述中，哪些 选项是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "在不加任何限制条件，直接使用join 关键词进行关联时，Hive 默认使用 INNER JOIN"
+        },
+        {
+          "label": "B",
+          "text": "Hive 在做JOIN 时仅支持等值连接，不支持非等值连接"
+        },
+        {
+          "label": "C",
+          "text": "在做join 时，使用别名可以简化查询，提高执行效率"
+        },
+        {
+          "label": "D",
+          "text": "多张表进行INNERJOIN 操作时，只有表中与on 条件相匹配的数据才会显示"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-034",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "在删除表的时候，内部表的元数据和数据会 被一起删除，而外部表只删除元数据，不删除数据。这样外部表相对来说更加安 全些，数据组织也更加灵活，方便共享数据。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-035",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "Flume 在多路传输数据过程中，如果下一跳 的Flume 节点故障或者数据接受异常时，仅能手动切换道另外一路上继续传输。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-036",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下哪一项不属于Hive 的数学函数?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "rand ()"
+        },
+        {
+          "label": "B",
+          "text": "Abs ()"
+        },
+        {
+          "label": "C",
+          "text": "trim ()"
+        },
+        {
+          "label": "D",
+          "text": "round ()"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-037",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "quick",
+      "title": "Hive 中删除外部表时，元数据和数据会一起 被删除。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-038",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下哪一个选项不会出现在海量数据离线批 处理的应用场景中?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Spark"
+        },
+        {
+          "label": "B",
+          "text": "HDFS"
+        },
+        {
+          "label": "C",
+          "text": "MapReduce"
+        },
+        {
+          "label": "D",
+          "text": "Storm"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-039",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "short",
+      "title": "Flume 中的JDBC Channel 使用了内置的 derby 数据库，对______进行了持久化,提供高可靠性。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "event"
+      ],
+      "answer": "event"
+    },
+    {
+      "id": "q-040",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "关于Spark RDD 的说法中，以下哪些选项是 正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "RDD 基于Lineage 血统机制的高效容错(第n 个节点出错，可从第n-1 个节 点恢复)"
+        },
+        {
+          "label": "B",
+          "text": "RDD 默认存储于磁盘上，如果磁盘空间不够，会由磁盘刷写至内存中"
+        },
+        {
+          "label": "C",
+          "text": "计算流程中会划分Stage,stage 如果失败会进行特定次数的重试,重试时只计 算失败的数据分片"
+        },
+        {
+          "label": "D",
+          "text": "RDD 是只读和可分区的;要想对RDD 进行操作，只能重新生成一个新的RDD"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-041",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "有关Hive 的多表关联，以下哪一个选项是 正确的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "在Hive 进行多表关联时，建议某些筛选/过滤操作先局部进行"
+        },
+        {
+          "label": "B",
+          "text": "在Hive 中做JOIN 时无法使用别名"
+        },
+        {
+          "label": "C",
+          "text": "Hive 在进行多表关联时，从右往左进行关联操作"
+        },
+        {
+          "label": "D",
+          "text": "在Hive SQL 中，建议把小表写在右边，这样可以提高执行效率"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-042",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "Spark 宽依赖和窄依赖描述正确的是哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "窄依赖:每个父RDD 的分区对应多个子RDD 的分区"
+        },
+        {
+          "label": "B",
+          "text": "宽依赖:每个父RDD 分区只能对应所有子RDD"
+        },
+        {
+          "label": "C",
+          "text": "窄依赖:每个父RDD 的分区对应一个子RDD 的分区"
+        },
+        {
+          "label": "D",
+          "text": "宽依赖:多个父RDD 分区对应一个子RDD 的分区"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-043",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "short",
+      "title": "在利用Hive 进行电商大数据订单表分析时发 现，份订单数据表里男性顾客的数据占了10%,剩下90%的数据都是女性顾客数 据。这样的一份数据被称作______数据。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "倾斜"
+      ],
+      "answer": "倾斜"
+    },
+    {
+      "id": "q-044",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "Spark 中Clusterlianager 所负责的任务是以 下哪一选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "申请资资源"
+        },
+        {
+          "label": "B",
+          "text": "分配资源"
+        },
+        {
+          "label": "C",
+          "text": "准备Task 环境"
+        },
+        {
+          "label": "D",
+          "text": "执行Task"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-045",
+      "chapter": "HCIP-大数据离线批处理场景化解决方案",
+      "category": "short",
+      "title": "Spark 在划分Stage 时，遇到______依赖会断开 Stage 链，生成一个新的Stage。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "宽"
+      ],
+      "answer": "宽"
+    }
+  ]
+}
