@@ -68,7 +68,6 @@
 
     .hero-main,
     .toolbar,
-    .filter-sticky,
     .question-card,
     .side-panel {
       border: 1px solid var(--line);
@@ -332,7 +331,9 @@
     }
 
     .toolbar {
-      position: relative;
+      position: sticky;
+      top: 0;
+      z-index: 5;
       display: grid;
       gap: 14px;
       padding: 14px;
@@ -344,32 +345,6 @@
       grid-template-columns: minmax(0, 1fr) auto auto;
       gap: 10px;
       align-items: center;
-    }
-
-    .filter-sticky {
-      position: sticky;
-      top: 0;
-      z-index: 5;
-      display: grid;
-      gap: 10px;
-      padding: 12px 14px;
-      background: rgba(255, 253, 250, .96);
-      backdrop-filter: blur(8px);
-    }
-
-    .filter-sticky[hidden] {
-      display: none;
-    }
-
-    .practice-col {
-      display: grid;
-      gap: 18px;
-      min-width: 0;
-      align-content: start;
-    }
-
-    .practice-tools {
-      display: contents;
     }
 
     .search-input {
@@ -1180,8 +1155,7 @@
 
       .app-shell[data-view="practice"] .layout,
       .app-shell[data-view="practice"] .side-panel,
-      .app-shell[data-view="practice"] .side-panel-scroll,
-      .app-shell[data-view="practice"] .practice-col {
+      .app-shell[data-view="practice"] .side-panel-scroll {
         display: contents;
       }
 
@@ -1189,8 +1163,7 @@
         order: 1;
       }
 
-      .app-shell[data-view="practice"] .toolbar,
-      .app-shell[data-view="practice"] .filter-sticky {
+      .app-shell[data-view="practice"] .toolbar {
         order: 2;
       }
 
@@ -1223,10 +1196,6 @@
 
       .toolbar {
         position: static;
-      }
-
-      .filter-sticky {
-        top: 0;
       }
     }
 
@@ -1331,18 +1300,24 @@
       </div>
     </section>
 
-    <div class="practice-tools" id="practiceTools" hidden>
-    <section class="toolbar" aria-label="题目搜索">
+    <section class="toolbar practice-tools" id="practiceTools" aria-label="练习筛选" hidden>
       <div class="search-row">
         <input class="search-input" id="searchInput" type="search" placeholder="搜索题目、分类或答案关键词">
         <button class="secondary-btn" id="shuffleBtn" type="button" title="随机排列题目">随机顺序</button>
         <button class="secondary-btn" id="showAllBtn" type="button" title="显示全部题目">显示全部</button>
       </div>
+      <div class="filter-group" aria-label="章节筛选">
+        <span>章节</span>
+        <div class="filter-row" id="chapterFilterRow"></div>
+      </div>
+      <div class="filter-group" aria-label="题型筛选">
+        <span>题型</span>
+        <div class="filter-row" id="filterRow"></div>
+      </div>
       <div class="progress-track" aria-label="练习进度">
         <div class="progress-fill" id="progressFill"></div>
       </div>
     </section>
-    </div>
 
     <section class="layout">
       <aside class="side-panel" id="bankPanel" data-mode="home" aria-label="题库与练习概览">
@@ -1376,24 +1351,12 @@
         </div>
         </div>
       </aside>
-      <div class="practice-col">
-      <div class="filter-sticky" id="practiceFilterBar" aria-label="章节和题型" hidden>
-        <div class="filter-group" aria-label="章节筛选">
-          <span>章节</span>
-          <div class="filter-row" id="chapterFilterRow"></div>
-        </div>
-        <div class="filter-group" aria-label="题型筛选">
-          <span>题型</span>
-          <div class="filter-row" id="filterRow"></div>
-        </div>
-      </div>
       <div class="question-list" id="questionList" aria-live="polite">
         <article class="question-card home-panel" id="homePanel">
           <h2>选择一个题库开始</h2>
           <p>同类题库会收进可展开的分类里。你可以导入单套 JSON，也可以一次导入带 <code>banks</code> 数组的整套题库。</p>
           <div class="home-bank-grid" id="homeBankGrid"></div>
         </article>
-      </div>
       </div>
     </section>
   </main>
@@ -1477,7 +1440,6 @@
       bankList: document.querySelector("#bankList"),
       homeBankGrid: document.querySelector("#homeBankGrid"),
       practiceTools: document.querySelector("#practiceTools"),
-      practiceFilterBar: document.querySelector("#practiceFilterBar"),
       pageTitle: document.querySelector("#pageTitle"),
       progress: document.querySelector("#progressFill"),
       heroTotal: document.querySelector("#heroTotal"),
@@ -2082,7 +2044,6 @@
       document.title = "自测题库中心";
       els.pageTitle.textContent = "自测题库中心";
       els.practiceTools.hidden = true;
-      els.practiceFilterBar.hidden = true;
       els.practiceActions.forEach((item) => item.hidden = true);
       els.list.innerHTML = `
         <article class="question-card home-panel" id="homePanel">
@@ -2123,7 +2084,6 @@
       els.pageTitle.textContent = bankTitle;
       document.title = `${bankTitle}闭卷自测`;
       els.practiceTools.hidden = false;
-      els.practiceFilterBar.hidden = false;
       els.practiceActions.forEach((item) => item.hidden = false);
     }
 

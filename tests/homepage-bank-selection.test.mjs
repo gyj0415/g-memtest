@@ -132,11 +132,10 @@ test("question cards can display image media from imported banks", async () => {
   assert.match(indexHtml, /enterprise-management-media-size-v1/);
   assert.match(indexHtml, /\.media-size-slider\s*{[\s\S]*margin:\s*0 0 0 auto/);
   assert.match(indexHtml, /\.media-size-slider\s*{[\s\S]*height:\s*168px/);
-  assert.match(indexHtml, /id="practiceFilterBar"/);
-  assert.match(indexHtml, /\.filter-sticky\s*{[\s\S]*position:\s*sticky/);
-  assert.match(indexHtml, /\.toolbar\s*{[\s\S]*position:\s*relative/);
   assert.doesNotMatch(indexHtml, /data-media-size="/);
   assert.doesNotMatch(indexHtml, /id="mediaSizeRow"/);
+  assert.doesNotMatch(indexHtml, /id="practiceFilterBar"/);
+  assert.doesNotMatch(indexHtml, /filter-sticky/);
   assert.ok(template.schema.optional.includes("media"));
   assert.ok(
     template.questions.some((question) => Array.isArray(question.media) && question.media.some((item) => item.type === "image" && item.src)),
