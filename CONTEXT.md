@@ -6,7 +6,7 @@ This repository contains a static self-test website for enterprise management an
 
 ## Current Product
 
-The main product is a browser-based question-bank self-test site. It starts on a home page, loads built-in question banks from standalone JSON files, groups banks into expandable collections, supports local question-bank import/export (including a whole catalog of banks), switching between multiple banks from the sidebar, answer persistence per bank, scoring feedback, and a question-bank format converter.
+The main product is a browser-based question-bank self-test site. It starts on a home page, loads built-in question banks from `site/banks/`, groups banks into expandable collections, and keeps practice state in localStorage. Local `npm start` unlocks a studio page that can write, overwrite, and delete built-in banks (JSON under `site/banks/`, images under `site/images/<bankId>/`). The converter can download a ZIP (JSON + images) for the online site to import. GitHub Pages is not used; publish `site/` to Netlify.
 
 ## Domain Vocabulary
 
@@ -15,7 +15,9 @@ The main product is a browser-based question-bank self-test site. It starts on a
 - **Bank group**: A named collection that folds several question banks together on the home page and sidebar. Users click a group to expand it. Stored as `group` on each bank JSON and in `site/banks/manifest.json`.
 - **Bank catalog import**: A JSON payload with a `banks` array, used to import a whole set of grouped question banks at once.
 - **Practice state**: A user's local answers, scoring results, answer visibility, order, and view mode for one question bank.
-- **Converter**: The standalone page that turns copied questions, answers, categories, and choices into importable JSON.
+- **Studio**: Local operator page (`site/studio.html`) available after `npm start`. Writes, overwrites, and deletes built-in banks on disk.
+- **Converter**: Page that turns prompt-format markdown into banks, attaches images, downloads ZIP online, and can write built-in banks only when the local server is running.
+- **Bank package**: A ZIP with JSON plus image files. The homepage import accepts `.zip` as well as `.json`.
 - **Upload package**: The static files intended for deployment to a permanent hosting service.
 
 ## Layout Notes
@@ -38,17 +40,21 @@ The main product is a browser-based question-bank self-test site. It starts on a
 - Per-bank practice state, including answers, scores, visible answers, order, current index, and expanded mode.
 - Text-answer scoring, choice-question scoring, feedback rendering, and progress summaries.
 
-### Question-bank converter
+### Question-bank converter and studio
 
-`site/converter.html` is a standalone converter. It turns copied questions, answers, categories, and choice options into the importable JSON schema used by the main site.
+`site/converter.html` turns prompt-format markdown into importable banks and can attach images. Online it downloads ZIP. Locally (`npm start`) it can also write built-in banks.
+
+`site/studio.html` is the local operator: list/delete built-in banks, preview markdown with a circle image picker, write banks to disk, and pack `site/` as a zip.
 
 ### Upload package
 
-`site/` is the clean static publishing package. It currently contains:
+`site/` is the publish root. It currently contains:
 
 - `index.html`
-- `banks/`
 - `converter.html`
+- `studio.html` (write APIs only work with `npm start`)
+- `banks/`
+- `images/`
 - `template.json`
 - `README.md`
 

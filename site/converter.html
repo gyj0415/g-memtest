@@ -74,6 +74,80 @@
       gap: 16px;
     }
 
+    .muted {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    details {
+      margin-top: 14px;
+    }
+
+    details textarea {
+      min-height: 220px;
+      margin-top: 10px;
+    }
+
+    .pick-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+
+    .pick-filters button {
+      min-height: 32px;
+      padding: 0 12px;
+    }
+
+    .pick-filters button.active {
+      color: #fff;
+      background: var(--brand);
+      border-color: var(--brand);
+    }
+
+    .question-pick-list {
+      display: flex;
+      align-items: center;
+      align-content: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
+      max-height: 170px;
+      overflow: auto;
+    }
+
+    .question-pick-item {
+      width: 34px;
+      height: 34px;
+      min-width: 34px;
+      min-height: 34px;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: #fff;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .question-pick-item.active,
+    .question-pick-item:hover {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(14, 124, 116, .14);
+    }
+
+    .question-pick-item.ready {
+      border-color: #39845d;
+      background: rgba(57, 132, 93, .14);
+      color: #2f7a54;
+    }
+
+    .question-pick-item.pending {
+      border-color: #c4882a;
+      background: rgba(196, 136, 42, .14);
+      color: #8a5a12;
+    }
+
     .prompt-box {
       display: grid;
       gap: 12px;
@@ -172,10 +246,33 @@
       color: var(--bad);
     }
 
-    code {
-      background: #f2ecdf;
-      border-radius: 4px;
-      padding: 2px 5px;
+    .status.ok {
+      color: var(--brand);
+      font-weight: 800;
+    }
+
+    button:disabled {
+      opacity: .6;
+      cursor: wait;
+    }
+
+    .question-row {
+      display: grid;
+      gap: 8px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    img.preview {
+      display: block;
+      max-width: min(100%, 360px);
+      max-height: 180px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #f8f3e8;
     }
 
     @media (max-width: 760px) {
@@ -187,6 +284,11 @@
       a.button {
         width: 100%;
       }
+
+      .pick-filters button,
+      .question-pick-item {
+        width: auto;
+      }
     }
   </style>
 </head>
@@ -194,10 +296,11 @@
   <main>
     <section class="panel">
       <h1>自测题库格式转换器</h1>
-      <p>把普通题目和答案粘进来，转换成自测网站可导入的 JSON。推荐格式：每题用空行隔开，每题里写 <code>题目：</code> 和 <code>答案：</code>。一整套题库可以写 <code>题库分类：</code>，再用 <code>题库名称：</code> 拆成多套。</p>
+      <p>把普通题目和答案粘进来，或直接选择 md 文件。预览后用圆圈给题目配图，带图时请下载 ZIP（JSON + 图片）。</p>
       <p>示例：题目：管理的具体职能有哪些？答案：计划、组织、领导、控制。</p>
       <div class="actions">
         <a class="button secondary" href="./index.html">返回自测网站</a>
+        <a class="button secondary" id="studioLink" href="./studio.html" hidden>管理内置题库</a>
       </div>
     </section>
 
@@ -237,7 +340,7 @@ D. 这里写 D 选项
 答案：A
 
 5. 多选题固定使用“分类：多选题”，答案写成“答案：A、C”，不要写成一句解释。
-6. 图片题可加“图片：images/chart.png”或网络图片地址；需要说明时加“图片说明：管理流程图”。
+6. 图片题可加“图片：图1.png”或网络图片地址；需要说明时加“图片说明：管理流程图”。转换后也可以在本页给题目选择图片，然后下载 ZIP。
 7. 大资料题可给多道题写同一个“资料组：case-001”，并在每题里保留“资料标题：”和“资料：”。
 8. 每道题之间空一行。换一套题库时先写新的“题库名称：”，同一科目保持同一个“题库分类：”。
 9. 不要输出 Markdown 表格，不要加编号标题，不要写解释说明。
@@ -315,7 +418,7 @@ D. 放任
 
     <section class="grid">
       <div class="panel">
-        <h2>原始题目</h2>
+        <h2>放入题目</h2>
         <label>
           卷子名称 / 题库名称
           <input id="bankTitle" type="text" value="自定义自测题库" placeholder="例如：组织行为学第一章自测">
@@ -347,7 +450,8 @@ D. 放任
           </select>
         </label>
         <p>默认分类会应用到没有写 <code>分类：</code> 的题目；单题里写了分类会优先生效。</p>
-        <textarea id="source" placeholder="题库分类：企业管理
+        <label>提示词格式 md<input id="mdFile" type="file" accept=".md,.txt,text/markdown,text/plain"></label>
+        <label>或直接粘贴 md<textarea id="source" placeholder="题库分类：企业管理
 题库名称：企业管理练习题
 章节：第一章
 分类：选择判断
@@ -365,26 +469,49 @@ D. 放任
 答案：A
 
 题目：产品线延伸策略有哪些？
-答案：向上延伸、向下延伸、双向延伸。"></textarea>
+答案：向上延伸、向下延伸、双向延伸。"></textarea></label>
+        <label>附加图片（可多选，文件名对应 md 里的「图片：」）<input id="imageFiles" type="file" accept="image/*" multiple></label>
         <div class="actions">
-          <button id="convert" type="button">转换</button>
+          <button id="convert" type="button">预览题目</button>
           <button class="secondary" id="loadSample" type="button">填入示例</button>
         </div>
-        <p class="status" id="status">等待转换。</p>
+        <p class="status" id="status">等待预览。</p>
       </div>
-
       <div class="panel">
-        <h2>网站题库 JSON</h2>
-        <textarea id="output" readonly></textarea>
+        <h2>题目配图</h2>
+        <p>用圆圈选题。绿圈是已有图，橙圈是 md 写了图片但还没选到文件。默认先停在待配或有图的题。</p>
+        <div id="mediaList"></div>
         <div class="actions">
-          <button id="download" type="button">下载 JSON</button>
-          <button class="secondary" id="copy" type="button">复制</button>
+          <button id="download" type="button">下载 ZIP</button>
+          <button class="secondary" id="downloadJson" type="button">只下载 JSON</button>
+          <button class="secondary" id="copy" type="button">复制 JSON</button>
+          <button class="secondary" id="saveBuiltIn" type="button" hidden>写入内置题库</button>
         </div>
+        <p class="status" id="saveStatus"></p>
+        <details>
+          <summary>网站题库 JSON</summary>
+          <textarea id="output" readonly></textarea>
+        </details>
       </div>
     </section>
   </main>
 
-  <script>
+  <script type="module">
+    import {
+      flattenBankQuestions,
+      matchImageFiles,
+      pickDefaultFilter,
+      pickDefaultKey,
+      filterItems,
+      renderFilterBar,
+      renderCircles,
+      findItem,
+      previewSrc,
+      countStates,
+      escapeHtml,
+      questionImageState
+    } from "./question-picker.mjs";
+
     const source = document.querySelector("#source");
     const output = document.querySelector("#output");
     const statusEl = document.querySelector("#status");
@@ -393,6 +520,13 @@ D. 放任
     const bankGroup = document.querySelector("#bankGroup");
     const defaultChapter = document.querySelector("#defaultChapter");
     const defaultCategory = document.querySelector("#defaultCategory");
+    const mediaList = document.querySelector("#mediaList");
+    const questionImages = new Map();
+    let lastBanks = [];
+    let lastPayload = null;
+    let studioAvailable = false;
+    let pickerFilter = "all";
+    let pickerSelectedKey = "";
 
     const categoryLabels = {
       term: "名词解释",
@@ -594,7 +728,9 @@ D. 放任
       };
     }
 
-    function convert() {
+    async function convert() {
+      const file = document.querySelector("#mdFile")?.files?.[0];
+      if (file) source.value = await file.text();
       const defaultTitle = bankTitle.value.trim() || "自定义自测题库";
       const defaultGroup = bankGroup.value.trim() || "未分类";
       const banks = [];
@@ -621,13 +757,136 @@ D. 放任
       flushBank();
 
       if (!banks.length) {
+        lastBanks = [];
+        lastPayload = null;
+        questionImages.clear();
+        renderMediaEditors();
         statusEl.textContent = "没有识别到题目。请按“题目：/答案：”格式粘贴。";
         statusEl.className = "status error";
         output.value = "";
         return;
       }
 
-      const payload = banks.length === 1
+      const payload = buildPayloadFromBanks(banks);
+
+      lastBanks = banks;
+      lastPayload = payload;
+      questionImages.clear();
+      matchImageFiles(banks, document.querySelector("#imageFiles")?.files).forEach((item) => {
+        questionImages.set(item.key, {
+          file: item.file,
+          url: URL.createObjectURL(item.file),
+          caption: item.caption
+        });
+      });
+      const items = flattenBankQuestions(banks);
+      pickerFilter = pickDefaultFilter(items, (key) => questionImages.get(key));
+      pickerSelectedKey = pickDefaultKey(items, pickerFilter, (key) => questionImages.get(key));
+      renderMediaEditors();
+      output.value = JSON.stringify(payload, null, 2);
+      const totalQuestions = banks.reduce((sum, item) => sum + item.questions.length, 0);
+      statusEl.textContent = banks.length === 1
+        ? `已识别《${banks[0].title}》${totalQuestions} 道题，分类为「${banks[0].group}」。用圆圈配图后下载 ZIP。`
+        : `已识别 ${banks.length} 套题库，共 ${totalQuestions} 道题。配图后请下载 ZIP。`;
+      statusEl.className = "status";
+    }
+
+    function mediaKey(bankIndex, questionId) {
+      return `${bankIndex}:${questionId}`;
+    }
+
+    function getChosen(key) {
+      return questionImages.get(key);
+    }
+
+    function renderMediaEditors() {
+      const items = flattenBankQuestions(lastBanks);
+      if (!items.length) {
+        mediaList.innerHTML = `<p class="status">预览后会在这里用圆圈选题配图。</p>`;
+        return;
+      }
+      const visible = filterItems(items, pickerFilter, getChosen);
+      if (pickerSelectedKey && !visible.some((item) => item.key === pickerSelectedKey)) {
+        pickerSelectedKey = visible[0]?.key || "";
+      }
+      const current = findItem(items, pickerSelectedKey);
+      const chosen = current ? getChosen(current.key) : null;
+      const src = current ? previewSrc(current.question, chosen) : "";
+      const caption = chosen?.caption || current?.question.media?.[0]?.caption || "";
+      const pendingHint = current && questionImageState(current.question, chosen) === "pending"
+        ? "这题在 md 里写了图片，还没选到本地文件。"
+        : "这题还没有图。";
+      mediaList.innerHTML = `
+        ${renderFilterBar(pickerFilter, countStates(items, getChosen))}
+        ${renderCircles(visible, pickerSelectedKey, getChosen)}
+        ${current ? `
+          <div class="question-row">
+            <header>
+              <strong>${current.number}. ${escapeHtml(current.question.title)}</strong>
+              <span class="muted">${escapeHtml(current.question.category || "")}</span>
+            </header>
+            ${src ? `<img class="preview" src="${src}" alt="">` : `<p class="status">${pendingHint}</p>`}
+            <label>选择图片
+              <input data-image-key="${escapeHtml(current.key)}" type="file" accept="image/*">
+            </label>
+            <label>图片说明
+              <input data-caption-key="${escapeHtml(current.key)}" value="${escapeHtml(caption)}">
+            </label>
+          </div>
+        ` : ""}
+      `;
+    }
+
+    function imageExtension(name, type) {
+      const ext = String(name || "").split(".").pop()?.toLowerCase();
+      if (["png", "jpg", "jpeg", "webp", "gif"].includes(ext)) return ext === "jpeg" ? "jpg" : ext;
+      if (String(type || "").includes("jpeg")) return "jpg";
+      if (String(type || "").includes("webp")) return "webp";
+      if (String(type || "").includes("gif")) return "gif";
+      return "png";
+    }
+
+    function imageZipPath(bank, bankIndex, question, file) {
+      const folder = lastBanks.length > 1 ? `${safeDownloadName(bank.title)}/` : "";
+      return `images/${folder}${question.id}.${imageExtension(file.name, file.type)}`;
+    }
+
+    function cloneBanksWithImages() {
+      return lastBanks.map((bank, bankIndex) => ({
+        ...bank,
+        questions: bank.questions.map((question) => {
+          const chosen = questionImages.get(mediaKey(bankIndex, question.id));
+          if (!chosen?.file) {
+            if (chosen?.caption && question.media?.[0]) {
+              return {
+                ...question,
+                media: [{
+                  ...question.media[0],
+                  caption: chosen.caption,
+                  alt: chosen.caption || question.media[0].alt || "题目图片"
+                }]
+              };
+            }
+            return { ...question };
+          }
+          const filename = imageZipPath(bank, bankIndex, question, chosen.file);
+          return {
+            ...question,
+            media: [{
+              type: "image",
+              src: filename,
+              alt: chosen.caption || "题目图片",
+              caption: chosen.caption || ""
+            }]
+          };
+        })
+      }));
+    }
+
+    function buildPayloadFromBanks(banks) {
+      const defaultTitle = bankTitle.value.trim() || "自定义自测题库";
+      const defaultGroup = bankGroup.value.trim() || "未分类";
+      return banks.length === 1
         ? buildBankJson(banks[0].title, banks[0].group, banks[0].questions)
         : {
             version: 1,
@@ -635,13 +894,91 @@ D. 放任
             group: banks[0].group || defaultGroup,
             banks: banks.map((item) => buildBankJson(item.title, item.group, item.questions))
           };
+    }
 
+    function safeDownloadName(title) {
+      return String(title || "question-bank").replace(/[\\/:*?"<>|]/g, "_").slice(0, 60) || "question-bank";
+    }
+
+    async function fileToBase64(file) {
+      const buffer = new Uint8Array(await file.arrayBuffer());
+      let binary = "";
+      buffer.forEach((byte) => { binary += String.fromCharCode(byte); });
+      return btoa(binary);
+    }
+
+    function refreshOutputFromImages() {
+      if (!lastBanks.length) return;
+      lastPayload = buildPayloadFromBanks(cloneBanksWithImages());
+      output.value = JSON.stringify(lastPayload, null, 2);
+    }
+
+    mediaList.addEventListener("click", (event) => {
+      const filter = event.target.closest("[data-pick-filter]")?.dataset.pickFilter;
+      const key = event.target.closest("[data-pick-key]")?.dataset.pickKey;
+      if (filter) {
+        pickerFilter = filter;
+        const items = flattenBankQuestions(lastBanks);
+        if (!filterItems(items, pickerFilter, getChosen).some((item) => item.key === pickerSelectedKey)) {
+          pickerSelectedKey = pickDefaultKey(items, pickerFilter, getChosen);
+        }
+        renderMediaEditors();
+      }
+      if (key) {
+        pickerSelectedKey = key;
+        renderMediaEditors();
+      }
+    });
+
+    mediaList.addEventListener("change", (event) => {
+      const imageKey = event.target.dataset.imageKey;
+      const captionKey = event.target.dataset.captionKey;
+      if (imageKey && event.target.files?.[0]) {
+        const prev = questionImages.get(imageKey) || {};
+        questionImages.set(imageKey, {
+          ...prev,
+          file: event.target.files[0],
+          url: URL.createObjectURL(event.target.files[0])
+        });
+        renderMediaEditors();
+      }
+      if (captionKey) {
+        const prev = questionImages.get(captionKey) || {};
+        questionImages.set(captionKey, { ...prev, caption: event.target.value });
+      }
+      refreshOutputFromImages();
+    });
+
+    async function downloadZip() {
+      if (!lastBanks.length) await convert();
+      if (!lastBanks.length) return;
+      const banks = cloneBanksWithImages();
+      const payload = buildPayloadFromBanks(banks);
       output.value = JSON.stringify(payload, null, 2);
-      const totalQuestions = banks.reduce((sum, item) => sum + item.questions.length, 0);
-      statusEl.textContent = banks.length === 1
-        ? `已转换《${banks[0].title}》${totalQuestions} 道题，分类为「${banks[0].group}」。把 JSON 下载后，在自测网站点“导入题库”。`
-        : `已转换 ${banks.length} 套题库，共 ${totalQuestions} 道题。导入后会按「${payload.group}」等分类展开。`;
-      statusEl.className = "status";
+      const files = [{
+        name: `${safeDownloadName(payload.title || banks[0].title)}.json`,
+        data: new TextEncoder().encode(JSON.stringify(payload, null, 2))
+      }];
+      for (const [index, bank] of lastBanks.entries()) {
+        for (const question of bank.questions) {
+          const chosen = questionImages.get(mediaKey(index, question.id));
+          if (!chosen?.file) continue;
+          files.push({
+            name: imageZipPath(bank, index, question, chosen.file),
+            data: new Uint8Array(await chosen.file.arrayBuffer())
+          });
+        }
+      }
+      const { zipStoreFiles } = await import("./zip-store.mjs");
+      const zip = zipStoreFiles(files);
+      const blob = new Blob([zip], { type: "application/zip" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${safeDownloadName(payload.title || banks[0].title)}.zip`;
+      link.click();
+      URL.revokeObjectURL(url);
+      statusEl.textContent = "ZIP 已开始下载。回到自测网站导入这个压缩包即可。";
     }
 
     function downloadText(filename, text) {
@@ -656,13 +993,19 @@ D. 放任
       URL.revokeObjectURL(url);
     }
 
+    document.querySelector("#mdFile").addEventListener("change", async (event) => {
+      const file = event.target.files?.[0];
+      if (file) source.value = await file.text();
+    });
     document.querySelector("#convert").addEventListener("click", convert);
-    document.querySelector("#download").addEventListener("click", () => {
-      if (!output.value) convert();
-      if (output.value) downloadText("question-bank.json", output.value);
+    document.querySelector("#download").addEventListener("click", downloadZip);
+    document.querySelector("#downloadJson").addEventListener("click", async () => {
+      if (!lastBanks.length) await convert();
+      refreshOutputFromImages();
+      if (output.value) downloadText(`${safeDownloadName(lastBanks[0]?.title || "question-bank")}.json`, output.value);
     });
     document.querySelector("#copy").addEventListener("click", async () => {
-      if (!output.value) convert();
+      if (!output.value) await convert();
       if (!output.value) return;
       await navigator.clipboard.writeText(output.value);
       statusEl.textContent = "JSON 已复制。";
@@ -672,6 +1015,67 @@ D. 放任
       await navigator.clipboard.writeText(aiPrompt.value);
       statusEl.textContent = "AI 整理提示词已复制。";
       statusEl.className = "status";
+    });
+    document.querySelector("#saveBuiltIn").addEventListener("click", async () => {
+      const saveBtn = document.querySelector("#saveBuiltIn");
+      const saveStatus = document.querySelector("#saveStatus");
+      function showSaveResult(text, isError = false) {
+        statusEl.textContent = text;
+        statusEl.className = "status" + (isError ? " error" : "");
+        saveStatus.textContent = text;
+        saveStatus.className = "status" + (isError ? " error" : " ok");
+        saveStatus.scrollIntoView({ block: "nearest" });
+        window.alert(text);
+      }
+      if (!studioAvailable) {
+        showSaveResult("写入内置题库只在本地运行 npm start 后可用。线上请下载 ZIP，再回自测网站导入。", true);
+        return;
+      }
+      if (!lastBanks.length) await convert();
+      if (!lastBanks.length) {
+        showSaveResult("没有识别到题目，无法写入。", true);
+        return;
+      }
+      try {
+        saveBtn.disabled = true;
+        saveBtn.textContent = "正在写入…";
+        saveStatus.textContent = "正在写入内置题库…";
+        saveStatus.className = "status";
+        const banksToSave = cloneBanksWithImages();
+        const titles = [];
+        for (const [index, bank] of banksToSave.entries()) {
+          const images = [];
+          for (const question of bank.questions) {
+            const chosen = questionImages.get(mediaKey(index, question.id));
+            if (!chosen?.file) continue;
+            images.push({
+              questionId: question.id,
+              filename: chosen.file.name,
+              data: await fileToBase64(chosen.file),
+              caption: chosen.caption || ""
+            });
+          }
+          const response = await fetch("/api/banks", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              title: bank.title,
+              group: bank.group,
+              questions: bank.questions,
+              images
+            })
+          });
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok) throw new Error(data.error || "写入失败");
+          titles.push(`《${bank.title}》`);
+        }
+        showSaveResult(`已写入内置题库${titles.join("、")}。打开自测网站就能在内置列表里看到。`);
+      } catch (error) {
+        showSaveResult(error.message || "写入失败", true);
+      } finally {
+        saveBtn.disabled = false;
+        saveBtn.textContent = "写入内置题库";
+      }
     });
     document.querySelector("#loadSample").addEventListener("click", () => {
       bankTitle.value = "企业管理与技术经济学练习题";
@@ -747,6 +1151,20 @@ D. 放任
 （4）公共关系有利于增强企业内在的凝聚力，协调与外界的关系。`;
       convert();
     });
+
+    (async () => {
+      try {
+        const response = await fetch("/api/health", { cache: "no-store" });
+        if (!response.ok) return;
+        const data = await response.json();
+        if (!data?.ok) return;
+        studioAvailable = true;
+        document.querySelector("#studioLink").hidden = false;
+        document.querySelector("#saveBuiltIn").hidden = false;
+      } catch {
+        studioAvailable = false;
+      }
+    })();
   </script>
 </body>
 </html>

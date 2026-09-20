@@ -89,6 +89,9 @@ test("import flow lets users choose local or shared bank visibility", async () =
   assert.match(indexHtml, /function parseImportedBankPayloads/);
   assert.match(indexHtml, /addQuestionBank\(item\.questions,\s*item\.title,\s*\{/);
   assert.match(indexHtml, /纯静态网页不能直接上传云端/);
+  assert.match(indexHtml, /accept="[^"]*\.zip/);
+  assert.match(indexHtml, /parseBankPackage/);
+  assert.match(indexHtml, /id="studioLink"/);
   assert.doesNotMatch(indexHtml, /class="option-toggle"/);
 });
 
@@ -116,9 +119,24 @@ test("question cards can display image media from imported banks", async () => {
   const template = JSON.parse(await readFile(new URL("template.json", siteRoot), "utf8"));
 
   assert.match(indexHtml, /function normalizeQuestionMedia/);
+  assert.match(indexHtml, /function isDisplayableMediaSrc/);
   assert.match(indexHtml, /function renderQuestionMedia/);
-  assert.match(indexHtml, /media:\s*normalizeQuestionMedia\(raw\)/);
+  assert.match(indexHtml, /onerror=/);
+  assert.match(indexHtml, /cache:\s*"no-store"/);
+  assert.match(indexHtml, /normalizeBankSource\(bank\.source\) !== "built-in"/);
+  assert.match(indexHtml, /rawMedia = normalizeQuestionMedia\(raw\)/);
   assert.match(indexHtml, /question-media/);
+  assert.match(indexHtml, /--question-media-max:\s*150px/);
+  assert.match(indexHtml, /data-media-size-slider/);
+  assert.match(indexHtml, /function applyMediaSize/);
+  assert.match(indexHtml, /enterprise-management-media-size-v1/);
+  assert.match(indexHtml, /\.media-size-slider\s*{[\s\S]*margin:\s*0 0 0 auto/);
+  assert.match(indexHtml, /\.media-size-slider\s*{[\s\S]*height:\s*168px/);
+  assert.match(indexHtml, /id="practiceFilterBar"/);
+  assert.match(indexHtml, /\.filter-sticky\s*{[\s\S]*position:\s*sticky/);
+  assert.match(indexHtml, /\.toolbar\s*{[\s\S]*position:\s*relative/);
+  assert.doesNotMatch(indexHtml, /data-media-size="/);
+  assert.doesNotMatch(indexHtml, /id="mediaSizeRow"/);
   assert.ok(template.schema.optional.includes("media"));
   assert.ok(
     template.questions.some((question) => Array.isArray(question.media) && question.media.some((item) => item.type === "image" && item.src)),
@@ -134,6 +152,18 @@ test("converter accepts image lines and exports question media", async () => {
   assert.match(converterHtml, /function parseQuestionMedia/);
   assert.match(converterHtml, /media:\s*parseQuestionMedia\(block\)/);
   assert.match(converterHtml, /"multiple", "media", "material", "groupId"/);
+  assert.match(converterHtml, /下载 ZIP/);
+  assert.match(converterHtml, /async function downloadZip/);
+  assert.match(converterHtml, /zip-store\.mjs/);
+  assert.match(converterHtml, /id="saveBuiltIn"/);
+  assert.match(converterHtml, /id="studioLink"/);
+  assert.match(converterHtml, /id="saveStatus"/);
+  assert.match(converterHtml, /window\.alert\(text\)/);
+  assert.match(converterHtml, /id="mdFile"/);
+  assert.match(converterHtml, /id="imageFiles"/);
+  assert.match(converterHtml, /预览题目/);
+  assert.match(converterHtml, /question-pick-item/);
+  assert.match(converterHtml, /data-pick-filter/);
 });
 
 test("question cards can display shared material passages for case groups", async () => {
@@ -142,7 +172,7 @@ test("question cards can display shared material passages for case groups", asyn
 
   assert.match(indexHtml, /function normalizeQuestionMaterial/);
   assert.match(indexHtml, /function renderQuestionMaterial/);
-  assert.match(indexHtml, /material:\s*normalizeQuestionMaterial\(raw\)/);
+  assert.match(indexHtml, /let material = normalizeQuestionMaterial\(raw\)/);
   assert.match(indexHtml, /groupId:\s*String\(raw\.groupId/);
   assert.match(indexHtml, /question-material/);
   assert.ok(template.schema.optional.includes("material"));

@@ -112,6 +112,20 @@
       "description": "HCIP-大数据离线批处理场景化解决方案，技能训练（职业技能鉴定）自测题库。",
       "group": "技能训练",
       "file": "hcip-offline-batch.json"
+    },
+    {
+      "id": "bank-hcip-realtime-search",
+      "title": "HCIP-大数据实时检索场景化解决方案",
+      "description": "HCIP-大数据实时检索场景化解决方案，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcip-realtime-search.json"
+    },
+    {
+      "id": "bank-公务员考试第二节课练习题",
+      "title": "公务员考试第二节课练习题",
+      "description": "公务员考试第二节课练习题。",
+      "group": "公务员考试",
+      "file": "bank-公务员考试第二节课练习题.json"
     }
   ]
 }

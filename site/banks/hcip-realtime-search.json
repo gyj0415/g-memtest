@@ -1,0 +1,1092 @@
+{
+  "version": 1,
+  "id": "bank-hcip-realtime-search",
+  "title": "HCIP-大数据实时检索场景化解决方案",
+  "description": "HCIP-大数据实时检索场景化解决方案，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIP-大数据实时检索场景化解决方案"
+  ],
+  "categories": [
+    "short",
+    "quick",
+    "singleChoice",
+    "multipleChoice"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "short",
+      "title": "写入的数据可以实时的进行检索，这描述的 是E1asticseaxch ______的特点。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "近实时性"
+      ],
+      "answer": "近实时性"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "在寻找到RowKey 所对应的RegionServer 和Region 之后，需要打开一个查找器Scanner,由其具体执行查找数据。Region 中会包含内存数据MemStore 和文件数据HFiles，因此在open scanner 的时 候就需要分别读取这两份数据，打开不同的scanner 做查询操作.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "short",
+      "title": "RDB 持久化是通过______方式完成的。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "快照"
+      ],
+      "answer": "快照"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "关于HBase 集群架构组成各部分描述错误的 是哪一选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正常HBase 表只有一个Region，不支持分裂"
+        },
+        {
+          "label": "B",
+          "text": "Client 可用于缓存维护已经访问过的Region 的位置信息"
+        },
+        {
+          "label": "C",
+          "text": "HMaster 主要负责Region 的管理工作"
+        },
+        {
+          "label": "D",
+          "text": "HRegionServer 负责处理数据读写请求"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "关于Spark 中的DataSet，以下哪一个选项 是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Dataset 不需要反序列化就可执行大部分操作"
+        },
+        {
+          "label": "B",
+          "text": "DataSet 执行sort、filtex、shuff1e 等操作需要进行反序列化"
+        },
+        {
+          "label": "C",
+          "text": "Dataset 是一个由特定域的对象组成的强类型集合"
+        },
+        {
+          "label": "D",
+          "text": "DataSet 与RDD 高度类似，但在利用SparksQL 进行处理时性能比RDD 好"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "HBase 通过Table 实例的drop 方法来删除 一行数据。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下关于GES 四大特点的描述，哪一个选项 是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "查询分析一体:提供丰富的图分析算法，实现了查询分析一体化，可以为关系 分析、路径规划、营销推荐等业务提供多样的分析能力"
+        },
+        {
+          "label": "B",
+          "text": "高性能:对分布式图形计算引擎进行了深度优化能达到小时级响应速度的查询 能力"
+        },
+        {
+          "label": "C",
+          "text": "简单易用:支持Gremlin 查询语言，兼容不同用户的使用习惯"
+        },
+        {
+          "label": "D",
+          "text": "大规模:具有高效的数据组织能力，可以更有效地对百亿节点千亿边规模的数 据进行查询与分析"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下哪些场景适合使用实时检索技术辅助完 成?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "通过手机号查询某日某运营商的通话记录"
+        },
+        {
+          "label": "B",
+          "text": "根据过去一年的订单记录预测明年某商品的销售量"
+        },
+        {
+          "label": "C",
+          "text": "通过身份证号查询某天某酒店入住人信息"
+        },
+        {
+          "label": "D",
+          "text": "通过车牌号查询某天某高速收费站过路车辆信息"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "multipleChoice",
+      "title": "关于Hbase 二级索引的理解，以下哪些选项 是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Hindex 是华为公司开发的纯Java 编写的Hbase 二级索引"
+        },
+        {
+          "label": "B",
+          "text": "二级索引方便了基于列值来查找列值的应用场景"
+        },
+        {
+          "label": "C",
+          "text": "多表系引也是田Hbase 二级索引的特色之一"
+        },
+        {
+          "label": "D",
+          "text": "Apache HBase 只有一个针对行健的索引"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "short",
+      "title": "HBase 表在进行Region 分裂时是按______(请输 入英文，首字母大写)的连续区间进行分裂的。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "RowKey"
+      ],
+      "answer": "RowKey"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "ElasticSearch 可以把一个完整的索引分成多 个分片，这样的好处是可以把一个大的索引拆分成多个，分布到不同的节点上。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "multipleChoice",
+      "title": "关于实施检索项目的项目流程，以下描述中 正确的有哪些项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "实施检索项目绝非一蹴而就，\"需要不断调试通过应用运维进行项目选代，以 便更好地适应项目的实际要求"
+        },
+        {
+          "label": "B",
+          "text": "在应用开发阶段可以参考样例代码，根据实际需求和具体应用进行有针对性的 开发"
+        },
+        {
+          "label": "C",
+          "text": "环境准备阶段是整个流程的第一步，常见的工作包括创建Java 环境、搭建 HBase 和ElasticSearch 集群等"
+        },
+        {
+          "label": "D",
+          "text": "在实际业务中，安全认证准备工作目非常重要，通常可以选择Kerberos 和 LDAP 的组合完成这一工作"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "Redis 主要消耗什么物理资源?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "磁盘IO"
+        },
+        {
+          "label": "B",
+          "text": "硬盘空间"
+        },
+        {
+          "label": "C",
+          "text": "内存"
+        },
+        {
+          "label": "D",
+          "text": "带宽"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "multipleChoice",
+      "title": "在Hive 中，使用DESCRIBE 命令输出一张表 的基本信息中包含以下哪些选项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "字段值的类型"
+        },
+        {
+          "label": "B",
+          "text": "字段描述"
+        },
+        {
+          "label": "C",
+          "text": "字段名称"
+        },
+        {
+          "label": "D",
+          "text": "字段值"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "在HBase 中，实现不同HRegionServer 之间 的负载均衡是由以下哪一个组件负责管理的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Hfile"
+        },
+        {
+          "label": "B",
+          "text": "Hlog"
+        },
+        {
+          "label": "C",
+          "text": "HMaster"
+        },
+        {
+          "label": "D",
+          "text": "MemStore"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "HBase 中一张表通过指定Regionf 的Start Key 为10、20 和30 进行region 分裂，那么行键为222 的数据将属于以下哪一个 Region?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "[10,20]"
+        },
+        {
+          "label": "B",
+          "text": "[20,30]"
+        },
+        {
+          "label": "C",
+          "text": "[30，“+inf\"]"
+        },
+        {
+          "label": "D",
+          "text": "[0,10]"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "在HBase 中，每个HBase 表都由若干行组 成，每个行由列限定符来标识。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "关于GES 图搜索引擎服务的特点以下哪一个 选项是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "GES 提供易用的Rest 接口，方便数据的查询分析"
+        },
+        {
+          "label": "B",
+          "text": "GES 无法实现复杂的业务逻辑"
+        },
+        {
+          "label": "C",
+          "text": "GES 提供多实例部署，可横向扩展"
+        },
+        {
+          "label": "D",
+          "text": "GES 提供灵活的图元数据更新、修改"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "multipleChoice",
+      "title": "一个实时检索项目的开发流程需要经历以下 哪些步骤?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "应用开发"
+        },
+        {
+          "label": "B",
+          "text": "应用调试"
+        },
+        {
+          "label": "C",
+          "text": "项目运维"
+        },
+        {
+          "label": "D",
+          "text": "环境准备"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "BloomFilter 是一个列族(cf)级别的配置属性， 如果你在表中设置了BloomFilter，那么HBase 会在生成StoreFile 时包含一份 具有BloomFilter 结构的数据，称其为MetaBlock.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下哪一项属于图搜索引擎技术的典型应用场 景?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "根据过去一年的订单记录预测明年某商品的销售量"
+        },
+        {
+          "label": "B",
+          "text": "转账交易人脸识别"
+        },
+        {
+          "label": "C",
+          "text": "社交媒体好友推荐"
+        },
+        {
+          "label": "D",
+          "text": "诈骗电话声纹识别"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "Redis 中相对于RDB 持久化，以下对AOF 持 久化描述错误的是哪一选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "AOF 持久化是用快照的方式实现的"
+        },
+        {
+          "label": "B",
+          "text": "发生故障时恢复速度慢"
+        },
+        {
+          "label": "C",
+          "text": "内存占用过多，文件体积大"
+        },
+        {
+          "label": "D",
+          "text": "占用较多磁盘的IO 开销"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "HBase 的误判率在万分之一以下由哈希函数 个数k、传位数组大小m、数据量n 共同确定。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "multipleChoice",
+      "title": "关于GES 的应用场景，以下哪些选项是正确 的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "物流和网规:最优路径推荐"
+        },
+        {
+          "label": "B",
+          "text": "工业:基于知识图谱的设备故障诊断和预警"
+        },
+        {
+          "label": "C",
+          "text": "社交分析:寻找特定爱好的好友，或者通过好友的好友，找到用户可能认识的 好友"
+        },
+        {
+          "label": "D",
+          "text": "金融:实时推荐、实时反欺诈，基于知识图谱的风,控(信贷、保险)"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "HDFS 元数据只能保存在内存中无法进行持 久化。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下关于Redis 中键的生存时间的描述，哪 些选项是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "expire 用于取消键的生存时间"
+        },
+        {
+          "label": "B",
+          "text": "expire 命令可以设置一个键的生存时间,单位是秒"
+        },
+        {
+          "label": "C",
+          "text": "Redis 中无法设置键在某一个特定时间点失效"
+        },
+        {
+          "label": "D",
+          "text": "pttl 命令可以查看键的剩余生存时间，单位是毫秒"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,D"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "Spark RDD 默认存储于以下哪一个计算机组 件中?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "磁盘"
+        },
+        {
+          "label": "B",
+          "text": "内存"
+        },
+        {
+          "label": "C",
+          "text": "宽带"
+        },
+        {
+          "label": "D",
+          "text": "CPU 7"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下哪一个选项不属于实时检索项目构建的 基本流程?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "环境准备"
+        },
+        {
+          "label": "B",
+          "text": "应用调试、部署"
+        },
+        {
+          "label": "C",
+          "text": "代码工程"
+        },
+        {
+          "label": "D",
+          "text": "市场营销"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "关于Apache Phoenis 与HBase 的搭配，以 下哪一个选项是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Apache Phoenix 可以将SQL 查询编译为一系列HBase 扫描"
+        },
+        {
+          "label": "B",
+          "text": "Phoenix 在Hadoop 中为低延迟应用程序启用OLIP 和运营分析"
+        },
+        {
+          "label": "C",
+          "text": "Apache Phoenix 可以为小型查询提供毫秒级的性能，或者为数千万行提供数 秒的性能"
+        },
+        {
+          "label": "D",
+          "text": "Phoenix SQL 只有命令行一种使用模式，无法对接JDBC 进行使用"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "short",
+      "title": "华为云GES 服务是一个基于______和Elasticsearch 的分布式图数据库，将数据构建成属性图模型进行 存储，提供强大的图查询、分析、遍历能力。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "HBase"
+      ],
+      "answer": "HBase"
+    },
+    {
+      "id": "q-031",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "弹性伸缩可根据用户的预设策略。自动调整 计算资源，使节点数自动随业务负载变化而变化，保证业务峰值时集群平稳健康 运行，并降低整体使用成本。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-032",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下哪一项不属于ElasticSearch 生态圈的一 部分?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Excel"
+        },
+        {
+          "label": "B",
+          "text": "Logstash"
+        },
+        {
+          "label": "C",
+          "text": "Kibana"
+        },
+        {
+          "label": "D",
+          "text": "Beats"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-033",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "HBase 支持存储大表数据，表格规模可达数 十亿行数百万列。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-034",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "实时检索技术通常需要处理复杂的统计类分 析和查询，因此比较适合使用Hive 进行分析。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-035",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "Flink sQL 查询是使用sqlQuery(定的Table Environment。该方法返回SQL 查询的结果为Table.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-036",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "关于分布式图数据库和传统关系型数据库的 对比，以下哪一个选项是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "关系型数据库采用ER 实体关系进行存储，关系的操作最终转换为连接表的 JOIN 操作当数据量大时效率比较低"
+        },
+        {
+          "label": "B",
+          "text": "相比于关系型数据库，因图数据库的优点是快速解决复杂的关系问题"
+        },
+        {
+          "label": "C",
+          "text": "图数据库就是存放图片的数据库，无法支持传统的结构化数据的存储和查询， 因此无法取代关系型数据库"
+        },
+        {
+          "label": "D",
+          "text": "社交网络、互联网上关联数据的规模日益增大，导致需要处理的图数据规模可 以达到百亿节点千亿边，以关系型数据库的图分析平台无法满足其性能需求"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-037",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "在Hase 表中，通过行、列族和列限定符确 定一个单元格(cell)，且表中存储的数据需要严格定义好数据类型，比如Nane 列需定义为strine 类型，且定义之后就不能修改。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-038",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "在HBase 的Java AP 中，可以通过 org,apache.hadoop.hbase.client. Admin 实例的deleteTable 方法来删除表。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-039",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "short",
+      "title": "在HBase 中，每个HBase 表都由若干行组 成，每个行由______来标识。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "rowkey"
+      ],
+      "answer": "rowkey"
+    },
+    {
+      "id": "q-040",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "multipleChoice",
+      "title": "GES 底层数据可以存储在以下哪些组件中?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "HBase"
+        },
+        {
+          "label": "B",
+          "text": "Spark"
+        },
+        {
+          "label": "C",
+          "text": "ElasticSearch"
+        },
+        {
+          "label": "D",
+          "text": "Zookeeper"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C"
+    },
+    {
+      "id": "q-041",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "multipleChoice",
+      "title": "关于HBase 的缓存机制，以下哪些选项是正 确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "MemStore 是写缓存，BlockCache 是读缓存"
+        },
+        {
+          "label": "B",
+          "text": "HBase 会将一次文件查找的Block 块缓存到Cache 中，以便后续同一请求或 者相邻数据查找请求，可以直接从内存中获取，避免IO 操作"
+        },
+        {
+          "label": "C",
+          "text": "HBase 数据先写入HLog 之中，并同时写入MemStore，待满足一定条件后 将MemStore 中数据刷到磁盘"
+        },
+        {
+          "label": "D",
+          "text": "HBase 提供2 种类型的缓存结构:MemStore 和BlockCache"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-042",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "在GES 中，如果用户不显式指定Vertex Label 时，Vertex Label 值为null.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-043",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下哪一项不属干ElasticSearch 客户端可以 执行的curl 命令?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "curl-XPOST"
+        },
+        {
+          "label": "B",
+          "text": "curl -XSELECT"
+        },
+        {
+          "label": "C",
+          "text": "curl-XGET"
+        },
+        {
+          "label": "D",
+          "text": "curl-XPUT"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-044",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下哪些选项是常用的数据结构类型?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "结构化数据"
+        },
+        {
+          "label": "B",
+          "text": "非结构数据"
+        },
+        {
+          "label": "C",
+          "text": "无结构化数据"
+        },
+        {
+          "label": "D",
+          "text": "超结构化数据"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-045",
+      "chapter": "HCIP-大数据实时检索场景化解决方案",
+      "category": "quick",
+      "title": "Structured Streaming 的核心是将流式的数 据看成一张不断增加的数据库表，这种流式的数据处理模型类似于数据块处理模 型，可以把静态数据库表的一些查询操作应用在流式计算中，Spark 运行这些标 准的SQL 查询，从不断增加的无边界表中获取数据。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    }
+  ]
+}

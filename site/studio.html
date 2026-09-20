@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>内置题库操作</title>
+  <style>
+    :root {
+      --bg: #f6f2e8;
+      --panel: #fffdfa;
+      --ink: #1e2528;
+      --muted: #617071;
+      --line: #ddd5c5;
+      --brand: #0e7c74;
+      --brand-dark: #075f5a;
+      --bad: #b73737;
+      --shadow: 0 18px 48px rgba(49, 45, 36, .12);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; color: var(--ink); background: var(--bg); }
+    main { width: min(1080px, calc(100% - 28px)); margin: 0 auto; padding: 28px 0 52px; display: grid; gap: 16px; }
+    .panel { border: 1px solid var(--line); border-radius: 8px; background: var(--panel); box-shadow: var(--shadow); padding: 18px; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.15; }
+    h2 { font-size: 18px; margin-bottom: 10px; }
+    p { color: var(--muted); line-height: 1.8; margin-top: 10px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    button, a.button {
+      min-height: 40px; border: 0; border-radius: 7px; padding: 0 14px;
+      display: inline-flex; align-items: center; justify-content: center;
+      color: #fff; background: var(--brand); text-decoration: none; font: inherit; font-weight: 800; cursor: pointer;
+    }
+    button.secondary, a.secondary { color: var(--ink); background: #fff; border: 1px solid var(--line); }
+    button.danger { background: var(--bad); }
+    label { display: grid; gap: 8px; margin-bottom: 12px; color: var(--muted); font-weight: 800; }
+    input, textarea {
+      width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 0 12px;
+      font: inherit; color: var(--ink); background: #fff;
+    }
+    input { min-height: 42px; }
+    textarea { min-height: 160px; padding: 12px; resize: vertical; }
+    .status { color: var(--muted); line-height: 1.7; }
+    .status.error { color: var(--bad); }
+    .status.ok { color: var(--brand); font-weight: 800; }
+    button:disabled { opacity: .6; cursor: wait; }
+    .bank-row, .question-row {
+      display: grid; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--line);
+    }
+    .bank-row header, .question-row header { display: flex; justify-content: space-between; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .muted { color: var(--muted); font-weight: 400; }
+    .pick-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .pick-filters button { min-height: 32px; padding: 0 12px; }
+    .pick-filters button.active { color: #fff; background: var(--brand); border-color: var(--brand); }
+    .question-pick-list {
+      display: flex; align-items: center; align-content: flex-start;
+      gap: 8px; flex-wrap: wrap; max-height: 170px; overflow: auto;
+    }
+    .question-pick-item {
+      width: 34px; height: 34px; min-width: 34px; min-height: 34px; padding: 0;
+      border: 1px solid var(--line); border-radius: 50%;
+      background: #fff; color: var(--ink); font-size: 12px; font-weight: 900;
+    }
+    .question-pick-item.active, .question-pick-item:hover {
+      border-color: var(--brand); box-shadow: 0 0 0 3px rgba(14, 124, 116, .14);
+    }
+    .question-pick-item.ready {
+      border-color: #39845d; background: rgba(57, 132, 93, .14); color: #2f7a54;
+    }
+    .question-pick-item.pending {
+      border-color: #c4882a; background: rgba(196, 136, 42, .14); color: #8a5a12;
+    }
+    img.preview {
+      display: block;
+      max-width: min(100%, 360px);
+      max-height: 180px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #f8f3e8;
+    }
+    .offline { display: none; }
+    body:not(.studio-on) .online-only { display: none; }
+    body:not(.studio-on) .offline { display: block; }
+    @media (max-width: 760px) {
+      button, a.button { width: 100%; }
+      .pick-filters button, .question-pick-item { width: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="panel">
+      <h1>内置题库操作</h1>
+      <p>这是本地制作页：可以把提示词格式的 md 写入内置题库，给题目配图，也可以删掉一整套内置题库。线上正式站没有这个页面的写入能力。</p>
+      <div class="actions">
+        <a class="button secondary" href="./index.html">返回自测网站</a>
+        <a class="button secondary" href="./converter.html">打开转换器</a>
+      </div>
+      <p class="status offline">当前不是本地服务。请在项目目录运行 <code>npm start</code>，再打开这个页面。</p>
+      <p class="status" id="status">正在检查本地服务。</p>
+    </section>
+
+    <section class="panel online-only">
+      <h2>现有内置题库</h2>
+      <div id="bankList"></div>
+    </section>
+
+    <section class="panel online-only">
+      <h2>加入或覆盖一套题库</h2>
+      <label>题库分类（可空，默认用 md 里的「题库分类」）<input id="groupInput" placeholder="例如：公务员考试"></label>
+      <label>题库名称（可空，默认用 md 里的「题库名称」）<input id="titleInput" placeholder="例如：公务员考试第三节课练习题"></label>
+      <label>提示词格式 md<input id="mdFile" type="file" accept=".md,.txt,text/markdown,text/plain"></label>
+      <label>或直接粘贴 md<textarea id="mdText" placeholder="题库分类：公务员考试&#10;题库名称：……"></textarea></label>
+      <label>附加图片（可多选，文件名对应 md 里的「图片：」）<input id="imageFiles" type="file" accept="image/*" multiple></label>
+      <div class="actions">
+        <button id="previewBtn" type="button">预览题目</button>
+      </div>
+      <p>预览后用圆圈选题配图。绿圈已有图，橙圈是 md 写了图片但还没选到文件。</p>
+      <div id="previewList"></div>
+      <div class="actions">
+        <button id="saveBtn" type="button">写入内置题库</button>
+      </div>
+      <p class="status" id="saveStatus"></p>
+    </section>
+
+    <section class="panel online-only">
+      <h2>打包上线</h2>
+      <p>生成当前 <code>site/</code> 的 zip，可直接上传 Netlify。</p>
+      <div class="actions">
+        <button id="packBtn" type="button">下载网站 zip</button>
+      </div>
+    </section>
+  </main>
+  <script type="module">
+    import {
+      flattenBankQuestions,
+      matchImageFiles,
+      pickDefaultFilter,
+      pickDefaultKey,
+      filterItems,
+      renderFilterBar,
+      renderCircles,
+      findItem,
+      previewSrc,
+      countStates,
+      escapeHtml,
+      questionImageState
+    } from "./question-picker.mjs";
+
+    const statusEl = document.querySelector("#status");
+    const bankListEl = document.querySelector("#bankList");
+    const previewListEl = document.querySelector("#previewList");
+    let previewBanks = [];
+    const imageByQuestion = new Map();
+    let pickerFilter = "all";
+    let pickerSelectedKey = "";
+
+    function setStatus(text, isError = false) {
+      statusEl.textContent = text;
+      statusEl.className = "status" + (isError ? " error" : "");
+    }
+
+    function setSaveStatus(text, isError = false) {
+      const saveStatus = document.querySelector("#saveStatus");
+      saveStatus.textContent = text;
+      saveStatus.className = "status" + (isError ? " error" : " ok");
+      saveStatus.scrollIntoView({ block: "nearest" });
+    }
+
+    async function api(url, options = {}) {
+      const response = await fetch(url, options);
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({ error: response.statusText }));
+        throw new Error(data.error || "请求失败");
+      }
+      return response;
+    }
+
+    async function loadBanks() {
+      const data = await (await api("/api/banks")).json();
+      const groups = new Map();
+      data.banks.forEach((bank) => {
+        if (!groups.has(bank.group)) groups.set(bank.group, []);
+        groups.get(bank.group).push(bank);
+      });
+      bankListEl.innerHTML = [...groups.entries()].map(([group, banks]) => `
+        <h3>${group}</h3>
+        ${banks.map((bank) => `
+          <div class="bank-row">
+            <header>
+              <strong>${bank.title}</strong>
+              <button class="danger" type="button" data-delete="${bank.id}">删除</button>
+            </header>
+            <span class="muted">${bank.id} · ${bank.file}</span>
+          </div>
+        `).join("")}
+      `).join("") || `<p>还没有内置题库。</p>`;
+    }
+
+    function getChosen(key) {
+      return imageByQuestion.get(key);
+    }
+
+    function renderPreview() {
+      const items = flattenBankQuestions(previewBanks);
+      if (!items.length) {
+        previewListEl.innerHTML = "<p>还没有预览结果。</p>";
+        return;
+      }
+      const visible = filterItems(items, pickerFilter, getChosen);
+      if (pickerSelectedKey && !visible.some((item) => item.key === pickerSelectedKey)) {
+        pickerSelectedKey = visible[0]?.key || "";
+      }
+      const current = findItem(items, pickerSelectedKey);
+      const chosen = current ? getChosen(current.key) : null;
+      const src = current ? previewSrc(current.question, chosen) : "";
+      const caption = chosen?.caption || current?.question.media?.[0]?.caption || current?.question.material?.content || "";
+      const pendingHint = current && questionImageState(current.question, chosen) === "pending"
+        ? "这题在 md 里写了图片，还没选到本地文件。"
+        : "这题还没有图。";
+      previewListEl.innerHTML = `
+        ${renderFilterBar(pickerFilter, countStates(items, getChosen))}
+        ${renderCircles(visible, pickerSelectedKey, getChosen)}
+        ${current ? `
+          <div class="question-row">
+            <header>
+              <strong>${current.number}. ${escapeHtml(current.question.title)}</strong>
+              <span class="muted">${escapeHtml(current.question.category || "")} · ${escapeHtml(String(current.question.answer || "").slice(0, 24))}</span>
+            </header>
+            ${src ? `<img class="preview" src="${src}" alt="">` : `<p class="status">${pendingHint}</p>`}
+            <label>给这题选图
+              <input data-image-key="${escapeHtml(current.key)}" type="file" accept="image/*">
+            </label>
+            <label>图片说明
+              <input data-caption-key="${escapeHtml(current.key)}" value="${escapeHtml(caption)}">
+            </label>
+          </div>
+        ` : ""}
+      `;
+    }
+
+    async function fileToPayload(file) {
+      const buffer = new Uint8Array(await file.arrayBuffer());
+      let binary = "";
+      buffer.forEach((byte) => { binary += String.fromCharCode(byte); });
+      return {
+        filename: file.name,
+        data: btoa(binary)
+      };
+    }
+
+    document.querySelector("#mdFile").addEventListener("change", async (event) => {
+      const file = event.target.files?.[0];
+      if (file) document.querySelector("#mdText").value = await file.text();
+    });
+
+    document.querySelector("#previewBtn").addEventListener("click", async () => {
+      try {
+        let markdown = document.querySelector("#mdText").value.trim();
+        const file = document.querySelector("#mdFile").files[0];
+        if (file) markdown = await file.text();
+        if (!markdown) throw new Error("请选择 md 或粘贴文本");
+        const data = await (await api("/api/preview-md", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            markdown,
+            defaultTitle: document.querySelector("#titleInput").value.trim(),
+            defaultGroup: document.querySelector("#groupInput").value.trim()
+          })
+        })).json();
+        previewBanks = data.banks || [];
+        imageByQuestion.clear();
+        matchImageFiles(previewBanks, document.querySelector("#imageFiles").files).forEach((item) => {
+          imageByQuestion.set(item.key, {
+            file: item.file,
+            url: URL.createObjectURL(item.file),
+            caption: item.caption
+          });
+        });
+        const items = flattenBankQuestions(previewBanks);
+        pickerFilter = pickDefaultFilter(items, getChosen);
+        pickerSelectedKey = pickDefaultKey(items, pickerFilter, getChosen);
+        renderPreview();
+        setStatus(`识别到 ${previewBanks.length} 套，共 ${previewBanks.reduce((sum, item) => sum + item.questions.length, 0)} 题。确认后写入。`);
+      } catch (error) {
+        setStatus(error.message, true);
+      }
+    });
+
+    previewListEl.addEventListener("click", (event) => {
+      const filter = event.target.closest("[data-pick-filter]")?.dataset.pickFilter;
+      const key = event.target.closest("[data-pick-key]")?.dataset.pickKey;
+      if (filter) {
+        pickerFilter = filter;
+        const items = flattenBankQuestions(previewBanks);
+        if (!filterItems(items, pickerFilter, getChosen).some((item) => item.key === pickerSelectedKey)) {
+          pickerSelectedKey = pickDefaultKey(items, pickerFilter, getChosen);
+        }
+        renderPreview();
+      }
+      if (key) {
+        pickerSelectedKey = key;
+        renderPreview();
+      }
+    });
+
+    previewListEl.addEventListener("change", (event) => {
+      const imageKey = event.target.dataset.imageKey;
+      const captionKey = event.target.dataset.captionKey;
+      if (imageKey && event.target.files?.[0]) {
+        const prev = imageByQuestion.get(imageKey) || {};
+        imageByQuestion.set(imageKey, {
+          ...prev,
+          file: event.target.files[0],
+          url: URL.createObjectURL(event.target.files[0])
+        });
+        renderPreview();
+      }
+      if (captionKey) {
+        const prev = imageByQuestion.get(captionKey) || {};
+        imageByQuestion.set(captionKey, { ...prev, caption: event.target.value });
+      }
+    });
+
+    document.querySelector("#saveBtn").addEventListener("click", async () => {
+      const saveBtn = document.querySelector("#saveBtn");
+      try {
+        if (!previewBanks.length) throw new Error("请先预览题目");
+        saveBtn.disabled = true;
+        saveBtn.textContent = "正在写入…";
+        setSaveStatus("正在写入内置题库…");
+        const titles = [];
+        for (const [index, bank] of previewBanks.entries()) {
+          const images = [];
+          for (const question of bank.questions) {
+            const chosen = imageByQuestion.get(`${index}:${question.id}`);
+            if (chosen?.file) {
+              images.push({
+                questionId: question.id,
+                ...(await fileToPayload(chosen.file)),
+                caption: chosen.caption || ""
+              });
+            }
+          }
+          const title = document.querySelector("#titleInput").value.trim() || bank.title;
+          const group = document.querySelector("#groupInput").value.trim() || bank.group;
+          await api("/api/banks", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              title,
+              group,
+              questions: bank.questions,
+              images
+            })
+          });
+          titles.push(`《${title}》`);
+        }
+        imageByQuestion.clear();
+        await loadBanks();
+        const items = flattenBankQuestions(previewBanks);
+        pickerFilter = pickDefaultFilter(items, getChosen);
+        pickerSelectedKey = pickDefaultKey(items, pickerFilter, getChosen);
+        renderPreview();
+        const message = `已写入内置题库${titles.join("、")}。打开自测网站就能在内置列表里看到。`;
+        setStatus(message);
+        setSaveStatus(message);
+        window.alert(message);
+      } catch (error) {
+        const message = error.message || "写入失败";
+        setStatus(message, true);
+        setSaveStatus(message, true);
+        window.alert(message);
+      } finally {
+        saveBtn.disabled = false;
+        saveBtn.textContent = "写入内置题库";
+      }
+    });
+
+    bankListEl.addEventListener("click", async (event) => {
+      const id = event.target.dataset.delete;
+      if (!id) return;
+      if (!window.confirm("确定删除这套内置题库？练习记录还在浏览器里，但首页内置列表会去掉它。")) return;
+      try {
+        await api("/api/banks/" + encodeURIComponent(id), { method: "DELETE" });
+        await loadBanks();
+        setStatus("已删除。");
+      } catch (error) {
+        setStatus(error.message, true);
+      }
+    });
+
+    document.querySelector("#packBtn").addEventListener("click", async () => {
+      try {
+        const response = await api("/api/pack-site", { method: "POST" });
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "g-memtest-site.zip";
+        link.click();
+        URL.revokeObjectURL(url);
+        setStatus("网站 zip 已开始下载。");
+      } catch (error) {
+        setStatus(error.message, true);
+      }
+    });
+
+    (async () => {
+      try {
+        await api("/api/health");
+        document.body.classList.add("studio-on");
+        await loadBanks();
+        setStatus("本地服务已连接。");
+      } catch {
+        setStatus("没有连上本地服务。请先运行 npm start。", true);
+      }
+    })();
+  </script>
+</body>
+</html>

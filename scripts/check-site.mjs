@@ -24,8 +24,14 @@ async function listFiles(relativePath) {
 }
 
 function extractScripts(html) {
-  return [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/gi)]
-    .map((match) => match[1])
+  return [...html.matchAll(/<script(\s[^>]*)?>([\s\S]*?)<\/script>/gi)]
+    .filter((match) => {
+      const attrs = match[1] || "";
+      if (/\ssrc\s*=/i.test(attrs)) return false;
+      if (/type\s*=\s*["']module["']/i.test(attrs)) return false;
+      return true;
+    })
+    .map((match) => match[2])
     .filter((script) => script.trim());
 }
 
