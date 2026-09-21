@@ -80,8 +80,8 @@ D. 选项 D
 
 ## 上线
 
-发布用 Netlify，不要用 GitHub Pages。只上传 `site/` 这一层。
+线上地址：[https://g-memtest.netlify.app/](https://g-memtest.netlify.app/)
 
-本地 `npm start` 后，制作页可以点 **下载网站 zip**。也可以自己打包 `site/` 再拖到 [Netlify Drop](https://app.netlify.com/drop)。
+仓库已经接到 Netlify，发布目录是 `site/`。改完后推到 GitHub 的 `main`，站点会自动更新。不要用 GitHub Pages，也不用再打压缩包拖上去。
 
 线上能刷题、能用转换器下载 ZIP、能导入 JSON/ZIP。不能在线上直接改电脑里的内置题库。

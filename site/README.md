@@ -1,6 +1,6 @@
 # 自测题库站
 
-把整个 `site` 文件夹上传到 [Netlify Drop](https://app.netlify.com/drop) 即可上网。这是静态网页，不需要服务器程序。
+这是静态网页，不需要服务器程序。线上由 GitHub `main` 自动发布到 [https://g-memtest.netlify.app/](https://g-memtest.netlify.app/)。
 
 ## 怎么刷题
 

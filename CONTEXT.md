@@ -6,7 +6,7 @@ This repository contains a static self-test website for enterprise management an
 
 ## Current Product
 
-The main product is a browser-based question-bank self-test site. It starts on a home page, loads built-in question banks from `site/banks/`, groups banks into expandable collections, and keeps practice state in localStorage. Local `npm start` unlocks a studio page that can write, overwrite, and delete built-in banks (JSON under `site/banks/`, images under `site/images/<bankId>/`). The converter can download a ZIP (JSON + images) for the online site to import. GitHub Pages is not used; publish `site/` to Netlify.
+The main product is a browser-based question-bank self-test site. It starts on a home page, loads built-in question banks from `site/banks/`, groups banks into expandable collections, and keeps practice state in localStorage. Local `npm start` unlocks a studio page that can write, overwrite, and delete built-in banks (JSON under `site/banks/`, images under `site/images/<bankId>/`). The converter can download a ZIP (JSON + images) for the online site to import. GitHub Pages is not used. Netlify publishes `site/` from the GitHub `main` branch.
 
 ## Domain Vocabulary
 
@@ -65,7 +65,7 @@ For static hosting, this package is the safest publish root unless the workspace
 The parent workspace may contain unrelated or sensitive-adjacent materials, including personal documents, course documents, SolidWorks files, temporary files, and generated PDFs. This repository is intentionally kept in `g-memtest/` so only the website project is versioned.
 
 - **Git scope**: version the clean `g-memtest/` repository only.
-- **Netlify scope**: upload the zip generated at the parent workspace root from `g-memtest/site/`.
+- **Netlify scope**: publish `g-memtest/site/` from GitHub `main`. The live site is `https://g-memtest.netlify.app/`.
 
 Do not push the parent workspace publicly.
 
