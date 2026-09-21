@@ -121,6 +121,13 @@
       "file": "hcip-realtime-search.json"
     },
     {
+      "id": "bank-hcip-realtime-stream",
+      "title": "HCIP-大数据实时流处理场景化解决方案",
+      "description": "HCIP-大数据实时流处理场景化解决方案，技能训练（职业技能鉴定）自测题库。",
+      "group": "技能训练",
+      "file": "hcip-realtime-stream.json"
+    },
+    {
       "id": "bank-公务员考试第二节课练习题",
       "title": "公务员考试第二节课练习题",
       "description": "公务员考试第二节课练习题。",

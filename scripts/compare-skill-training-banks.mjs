@@ -17,7 +17,8 @@ const bankMeta = [
   { dir: "10_HCIA-DataArts Studio", file: "hcia-dataarts-studio.json" },
   { dir: "11_HCIP-大数据应用开发总指导", file: "hcip-bigdata-app-dev.json" },
   { dir: "12_HCIP-大数据离线批处理场景化解决方案", file: "hcip-offline-batch.json" },
-  { dir: "13_HCIP-大数据实时检索场景化解决方案", file: "hcip-realtime-search.json" }
+  { dir: "13_HCIP-大数据实时检索场景化解决方案", file: "hcip-realtime-search.json" },
+  { dir: "14_HCIP-大数据实时流处理场景化解决方案", file: "hcip-realtime-stream.json" }
 ];
 
 function compactText(value) {

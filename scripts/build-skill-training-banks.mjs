@@ -19,7 +19,8 @@ const bankMeta = [
   { dir: "10_HCIA-DataArts Studio", file: "hcia-dataarts-studio.json", id: "bank-hcia-dataarts-studio" },
   { dir: "11_HCIP-大数据应用开发总指导", file: "hcip-bigdata-app-dev.json", id: "bank-hcip-bigdata-app-dev" },
   { dir: "12_HCIP-大数据离线批处理场景化解决方案", file: "hcip-offline-batch.json", id: "bank-hcip-offline-batch" },
-  { dir: "13_HCIP-大数据实时检索场景化解决方案", file: "hcip-realtime-search.json", id: "bank-hcip-realtime-search" }
+  { dir: "13_HCIP-大数据实时检索场景化解决方案", file: "hcip-realtime-search.json", id: "bank-hcip-realtime-search" },
+  { dir: "14_HCIP-大数据实时流处理场景化解决方案", file: "hcip-realtime-stream.json", id: "bank-hcip-realtime-stream" }
 ];
 
 function compactText(value) {
@@ -163,7 +164,10 @@ function buildBank(id, title, questions) {
 }
 
 const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
-manifest.banks = manifest.banks.filter((entry) => entry.group !== group);
+const skillInsertAt = manifest.banks.findIndex((entry) => entry.group === group);
+const otherBanks = manifest.banks.filter((entry) => entry.group !== group);
+const insertAt = skillInsertAt === -1 ? otherBanks.length : Math.min(skillInsertAt, otherBanks.length);
+const skillEntries = [];
 
 const summaries = [];
 for (const item of bankMeta) {
@@ -187,7 +191,7 @@ for (const item of bankMeta) {
   }
   const bank = buildBank(item.id, title, questions);
   await writeFile(new URL(item.file, banksDir), `${JSON.stringify(bank, null, 2)}\n`, "utf8");
-  manifest.banks.push({
+  skillEntries.push({
     id: item.id,
     title,
     description: bank.description,
@@ -206,6 +210,11 @@ for (const item of bankMeta) {
   });
 }
 
+manifest.banks = [
+  ...otherBanks.slice(0, insertAt),
+  ...skillEntries,
+  ...otherBanks.slice(insertAt)
+];
 await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
 console.log(JSON.stringify({
   group,

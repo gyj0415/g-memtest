@@ -1,0 +1,1092 @@
+{
+  "version": 1,
+  "id": "bank-hcip-realtime-stream",
+  "title": "HCIP-大数据实时流处理场景化解决方案",
+  "description": "HCIP-大数据实时流处理场景化解决方案，技能训练（职业技能鉴定）自测题库。",
+  "group": "技能训练",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "HCIP-大数据实时流处理场景化解决方案"
+  ],
+  "categories": [
+    "multipleChoice",
+    "quick",
+    "singleChoice",
+    "short"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下哪些选项属于Flume 中的拦截器?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "UUlD Interceptor"
+        },
+        {
+          "label": "B",
+          "text": "Host Interceptor"
+        },
+        {
+          "label": "C",
+          "text": "Static Interceptor"
+        },
+        {
+          "label": "D",
+          "text": "Search and Replace lnterceptor"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-002",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "Flink 没有类似于Spark 中foreach 方法， 让用户进行迭代的操作，因此对外的输出操作都要利用Source 算子来完成。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-003",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "关于Structured Streaming 时间语义的描述， 以下哪一项是正确的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Structured Streaming 支持watermark 机制处理滞后数据参考"
+        },
+        {
+          "label": "B",
+          "text": "事件时间是指每台机器的系统时间，当流程序采用处理时间时，将使用各个实 例的机器时间"
+        },
+        {
+          "label": "C",
+          "text": "Structured Streaming 仅支持事件时间"
+        },
+        {
+          "label": "D",
+          "text": "Structured Streaming 仅支持处理时间"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-004",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下哪一个选项可以作为Kafka 的Consumer?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Data WareHouses(数据仓库)"
+        },
+        {
+          "label": "B",
+          "text": "Front nd(前端)"
+        },
+        {
+          "label": "C",
+          "text": "Crawler(爬虫)"
+        },
+        {
+          "label": "D",
+          "text": "Sensor(传感器)"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-005",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下关于事件时间的描述，正确的是哪些项?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "事件时间是指事件在其设备上发生的时间"
+        },
+        {
+          "label": "B",
+          "text": "基于事件时间的处理往往有一定的滞后性"
+        },
+        {
+          "label": "C",
+          "text": "事件时间在事件进入fink 之前已经嵌入事件，社fink 可以提取该时间"
+        },
+        {
+          "label": "D",
+          "text": "基于事件时间进行处理的流程序可以保证事件在处理的时候的顺序性"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C,D"
+    },
+    {
+      "id": "q-006",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "Flink 是一个批处理和流处理结合的统一计算 框架。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-007",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "Flink 处理数据是无状态的，处理一个事件与 之前的事件无关。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-008",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下关于实时流处理中数据权限和资源隔离 的描述，哪一个选项是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "消息处理、流处理需要有数据权限控制"
+        },
+        {
+          "label": "B",
+          "text": "不同的作业、用户可以访问、处理不同的消息和数据"
+        },
+        {
+          "label": "C",
+          "text": "多种流处理应用之间要进行资源控制和隔离，防止发生资源争抢"
+        },
+        {
+          "label": "D",
+          "text": "实时数据处理技术需要借助MapReduce 完成资源隔离"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-009",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "以下关于实时流处理技术架构的描述中，哪 一个选项是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Redis 是一款经典的关系型数据库，可用于前端网页数据的缓存，提高读写效 率"
+        },
+        {
+          "label": "B",
+          "text": "消息中间件可对实时数据进行缓存，支持高吞吐量的消息订阅和发布"
+        },
+        {
+          "label": "C",
+          "text": "可借助FLume 等实时采集工具，采集数据源产生的数据，并将其写入分布式 消息系统，采集的数据格式包括文件、数据库、网络数据流等"
+        },
+        {
+          "label": "D",
+          "text": "数据源主要包含业务数据库以及Socket 数据流和实时文件等"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-010",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "short",
+      "title": "______是每条事件在它产生的时候记 录的时间。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "事件时间"
+      ],
+      "answer": "事件时间"
+    },
+    {
+      "id": "q-011",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "关于Kalka 的Topic，以下哪一项描述是错 误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Topic 的Partition 数量可以在创建时配置。"
+        },
+        {
+          "label": "B",
+          "text": "Kafka 集群中Topic 可以设置多个"
+        },
+        {
+          "label": "C",
+          "text": "设置多副本可以增强Kafka 服务的容灾能力。"
+        },
+        {
+          "label": "D",
+          "text": "在创建Kafka 的Topic 时，必须设置Partition 个数"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-012",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下哪些选项是实时流处理技术的典型应用场 景?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "某网站全年海量日志数据分析挖掘"
+        },
+        {
+          "label": "B",
+          "text": "股票交易大厅交易信息实时展示"
+        },
+        {
+          "label": "C",
+          "text": "打车软件距离目的地剩余时间实时展示"
+        },
+        {
+          "label": "D",
+          "text": "电子商务实时交易订单量和订单总额汇总展示"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-013",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "short",
+      "title": "Kafka 日志的清理方式有两种:delete 和 compact，其中默认的清理方式是______。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "delete"
+      ],
+      "answer": "delete"
+    },
+    {
+      "id": "q-014",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "ExecutionEnvironment.createRemoteEnvironme(\"l jar\")以下哪一项是运 行上述Flink 代码的目的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "创建本地环境"
+        },
+        {
+          "label": "B",
+          "text": "自定义数据读取"
+        },
+        {
+          "label": "C",
+          "text": "创建远程环境"
+        },
+        {
+          "label": "D",
+          "text": "提交集群任务"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-015",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下哪些组件可用于实时流处理场景中的数据 采集流程?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "MapReduce"
+        },
+        {
+          "label": "B",
+          "text": "Kafka"
+        },
+        {
+          "label": "C",
+          "text": "Flume"
+        },
+        {
+          "label": "D",
+          "text": "Flink"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-016",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "short",
+      "title": "Flink 通过两套不同的API 分别提供流处理和 批处理，其中流处理需要用到______ API 来完成。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "DataStream"
+      ],
+      "answer": "DataStream"
+    },
+    {
+      "id": "q-017",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "随着时间推移，数据价值会越来越高，这是 采用实时流处理技术来处理这些数据的根本原因。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-018",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "StructuredStreaming 程序执行过程中，定 义流计算过程之后是哪一个步骤?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "创建输入数据源"
+        },
+        {
+          "label": "B",
+          "text": "导入相关依赖模块"
+        },
+        {
+          "label": "C",
+          "text": "启动流计算并计算输出结果"
+        },
+        {
+          "label": "D",
+          "text": "创建Spark Session 对象"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-019",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "实时检索指的是根据关键词对系统内的一些 信息进行快速搜索，实现即搜即得的效果，强调的是实时低延迟。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-020",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "Flink 可以通过Checkpoint 机制确保计算状 态正确，并且能够保证一致性级别为Exactly-once。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-021",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "short",
+      "title": "在银行业的实时风控业务场景中需依赖大数 据流处理技术，基于全量数据的完成秒级甚至______级时延的分析，业 务零中断，数据零丢失。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "毫秒"
+      ],
+      "answer": "毫秒"
+    },
+    {
+      "id": "q-022",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下关于Kafka Partition 偏移量的描述，哪 些选项是正确的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "每条消息在文件中的位置称为offset(偏移量)"
+        },
+        {
+          "label": "B",
+          "text": "offset 是-个String 型字符串"
+        },
+        {
+          "label": "C",
+          "text": "消费者通过(offset、partition、topic)跟踪记录"
+        },
+        {
+          "label": "D",
+          "text": "唯一标记一条消息!"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-023",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "Structured Streaming 中OutPut 的存储方 式包含以下哪几种?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Update Mode"
+        },
+        {
+          "label": "B",
+          "text": "Modify Mode"
+        },
+        {
+          "label": "C",
+          "text": "Complete Mode"
+        },
+        {
+          "label": "D",
+          "text": "Append Mode"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,C,D"
+    },
+    {
+      "id": "q-024",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "Kafka 中的Broker 具有消息接收和消息分发 的能力。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-025",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "Kafka Consumer 需连接指定Topic Partition 所在的Fo11ower Broker，用主动获取方式从Kafka 中获取消息。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-026",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下哪些选项不是Flink 资源调度的方式?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Flink On ZooKeeper"
+        },
+        {
+          "label": "B",
+          "text": "Flink On Docker"
+        },
+        {
+          "label": "C",
+          "text": "Flink Standalone"
+        },
+        {
+          "label": "D",
+          "text": "Flink On Mesos"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-027",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "Structured Streaming 持续处理模型可以实 现毫秒级延迟.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-028",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "kafka 是一个高吞吐、分布式、基于点对点 模式的消息系统。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-029",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "在华为MRS 服务中查看Kafka 某Topic 的 Partition 详细信息时，可以使用以下哪一个命令?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "bin/kafka-topics. sh --create"
+        },
+        {
+          "label": "B",
+          "text": "bin/kafka-topics. sh --describe"
+        },
+        {
+          "label": "C",
+          "text": "bin/kafka-topics.sh --delete"
+        },
+        {
+          "label": "D",
+          "text": "bin/kafka-topics. sh --list"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-030",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "大数据应用的主要计算模式仅包括离线批处 理和实时流处理。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-031",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "实时处理的步骤中，实时计算的前一步是以下 哪一项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "实时展示"
+        },
+        {
+          "label": "B",
+          "text": "实时落地"
+        },
+        {
+          "label": "C",
+          "text": "实时缓存存储"
+        },
+        {
+          "label": "D",
+          "text": "实时采集"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-032",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "为了提高Kafka 的容错性，Kafka 支持Partition 的复制策略，以下关于LeaderPartition 和Follower Partition 的描述，哪一项 是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "一个kafka 集群各个节点间不可能互为leader 和flower"
+        },
+        {
+          "label": "B",
+          "text": "如果leader 失效，那么将会有其他Follower 来接管(成为新的leader)"
+        },
+        {
+          "label": "C",
+          "text": "由于leaderServer 承载了全部的请求压力，因此从集群的整体考虑，kafka 会将leader 均衡的分散在每个实例上，来确保整体的性能稳定"
+        },
+        {
+          "label": "D",
+          "text": "Kafka 针对partition 的复制需要选出一个eader，由该leader 负责partition 的读写操作，其他的副本节点只是负责数据的同步"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-033",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "消费者在消费Kafka 中数据的时候需要指定 以下哪个选项的信息?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "Time"
+        },
+        {
+          "label": "B",
+          "text": "Object"
+        },
+        {
+          "label": "C",
+          "text": "Topic"
+        },
+        {
+          "label": "D",
+          "text": "Theme"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-034",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "Kafka 消息传输保障通常会选用哪种策略?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "At Most Once"
+        },
+        {
+          "label": "B",
+          "text": "Exactly Once"
+        },
+        {
+          "label": "C",
+          "text": "At Lease Once"
+        },
+        {
+          "label": "D",
+          "text": "Only Once"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B,C"
+    },
+    {
+      "id": "q-035",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "实时流的场景中,Kafka 的使用主要是为了解 决哪些问题?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "防止数据丢失"
+        },
+        {
+          "label": "B",
+          "text": "系统解耦"
+        },
+        {
+          "label": "C",
+          "text": "仅支持数据同步分发"
+        },
+        {
+          "label": "D",
+          "text": "消息的随机读取"
+        }
+      ],
+      "multiple": true,
+      "answer": "A,B"
+    },
+    {
+      "id": "q-036",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "Kafka 的特点不包括以下哪一个选项?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "随机读取"
+        },
+        {
+          "label": "B",
+          "text": "分布式"
+        },
+        {
+          "label": "C",
+          "text": "消息持久化"
+        },
+        {
+          "label": "D",
+          "text": "高吞吐"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-037",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "multipleChoice",
+      "title": "以下关于Kafka 的描述中，哪些选项是正确 的?",
+      "prompt": "请选择所有正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "一般作为消息队列使用，不能够保存数据"
+        },
+        {
+          "label": "B",
+          "text": "具有消息持久化、高吞吐、实时等特性"
+        },
+        {
+          "label": "C",
+          "text": "使用Scala、Java 语言实现"
+        },
+        {
+          "label": "D",
+          "text": "用作活动流和运营数据处理管道的基础"
+        }
+      ],
+      "multiple": true,
+      "answer": "B,C,D"
+    },
+    {
+      "id": "q-038",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "关于Kafka 磁盘容量不足的告警，以下哪一 个选项是错误的分析?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "数据保存时间配置过长，数据累积达到磁盘使用率上限"
+        },
+        {
+          "label": "B",
+          "text": "用于存储Kafka 数据的磁盘配置(如磁盘数目、磁盘大小等)，无法满足当前业 务数据流量，导致磁盘使用率达到上限"
+        },
+        {
+          "label": "C",
+          "text": "业务规划不合理，导致数据分配不均，使部分磁盘达到使用率上限"
+        },
+        {
+          "label": "D",
+          "text": "Broker 节点故障导致"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-039",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "Flink 可以通过Checkpoint 机制确保计算状 态正确，并且能够保证一致性级别为Exactly-once.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-040",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "幂等操作每-次请求的结果都是相同的。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-041",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "short",
+      "title": "在Kafka 集群中，一个Kafka 工作节点被称 为一台______。",
+      "prompt": "请填写正确答案。",
+      "keywords": [
+        "broker"
+      ],
+      "answer": "broker"
+    },
+    {
+      "id": "q-042",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "每个Kafka Topic 由一个或多个consumer group组成，属于同一个consumergroup的consumer都具有相同的groupID.",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-043",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "Flink 的Libraries 层对应的是Flink 不同的 API 对应的一些功能。以下哪一项不属于Flink Libraries 层提供的功能?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "CEP 复杂事件查询"
+        },
+        {
+          "label": "B",
+          "text": "GraphX 图计算"
+        },
+        {
+          "label": "C",
+          "text": "FlinkML 机器学习"
+        },
+        {
+          "label": "D",
+          "text": "Table & SQL 处理逻辑表查询"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-044",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "quick",
+      "title": "消费者和生产者可以从Leader 中读写数据， 也可以直接与Follower 交互。",
+      "prompt": "请判断对错。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-045",
+      "chapter": "HCIP-大数据实时流处理场景化解决方案",
+      "category": "singleChoice",
+      "title": "关于ElasticSearch 客户端curl 命令，以下 哪一个选项是错误的?",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "GET 命令通常是用于写入数据到特定的Index 里"
+        },
+        {
+          "label": "B",
+          "text": "HAED 命令可用于查看某个系引是否存在"
+        },
+        {
+          "label": "C",
+          "text": "PUT 命令可用于新建系引，同时可指定分片数和副本数"
+        },
+        {
+          "label": "D",
+          "text": "ElasticSearch 可在客户端通过cur 命令发起HTTP 请求来对数据进行操作"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    }
+  ]
+}
