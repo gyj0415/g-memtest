@@ -479,6 +479,17 @@
       background: #f8f3e8;
     }
 
+    .question-media.chart-media .chart-viewport {
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow-x: auto;
+    }
+
+    .question-media.chart-media img {
+      max-width: min(1000px, calc(var(--question-media-max) * 5));
+      max-height: none;
+    }
+
     .media-size-slider {
       flex: 0 0 22px;
       width: 22px;
@@ -2636,10 +2647,13 @@
       const size = loadMediaSize();
       return items.map((item) => {
         const caption = item.caption && item.caption !== materialContent ? item.caption : "";
+        const chart = caption.startsWith("资料分析图表");
         return `
-        <figure class="question-media">
+        <figure class="question-media${chart ? " chart-media" : ""}">
           <div class="question-media-row">
+            ${chart ? '<div class="chart-viewport">' : ""}
             <img src="${escapeHtml(item.src)}" alt="题目图片" loading="lazy" onerror="const fig=this.closest('figure'); this.remove(); if (fig && !fig.querySelector('img')) fig.remove();">
+            ${chart ? "</div>" : ""}
             <input class="media-size-slider" type="range" min="${mediaSizeMin}" max="${mediaSizeMaxPx}" step="10" value="${size}" data-media-size-slider aria-label="图片大小">
           </div>
           ${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ""}
