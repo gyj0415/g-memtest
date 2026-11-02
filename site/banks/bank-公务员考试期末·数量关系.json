@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "id": "bank-公务员考试期末·数量关系",
+  "title": "公务员考试期末·数量关系",
+  "description": "公务员考试期末·数量关系。",
+  "group": "公务员考试",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "容斥原理",
+    "年龄问题",
+    "最值问题",
+    "概率",
+    "整除与倍数",
+    "浓度问题"
+  ],
+  "categories": [
+    "singleChoice"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "容斥原理",
+      "category": "singleChoice",
+      "title": "7 第1题 · 某研发小组员工中，60%的人参与了A项目，45%的人参与了B项目，两个项目都参与的人比两个项目都不参与的人多2人，问该研发小组有多少人？（2025' · 容斥原理）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "100"
+        },
+        {
+          "label": "B",
+          "text": "50"
+        },
+        {
+          "label": "C",
+          "text": "40"
+        },
+        {
+          "label": "D",
+          "text": "20"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-002",
+      "chapter": "年龄问题",
+      "category": "singleChoice",
+      "title": "7 第2题 · 10年前，田壮的年龄是他儿子年龄的7倍，15年后田壮的年龄是儿子的2倍，问儿子现在的年龄是多少岁？（· 年龄问题）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "45"
+        },
+        {
+          "label": "B",
+          "text": "15"
+        },
+        {
+          "label": "C",
+          "text": "30"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-003",
+      "chapter": "最值问题",
+      "category": "singleChoice",
+      "title": "7 第3题 · 某地10户贫困农户共申请扶贫小额信贷25万元。已知每人申请金额都是1000元的整数倍，申请金额最高的农户申请金额不超过申请金额最低农户的2倍，且任意2户农户的申请金额都不相同。问申请金额最低的农户最少可能申请多少万元信贷？（2021国考副省级 · 和定最值 · 数列构造）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "1.5"
+        },
+        {
+          "label": "B",
+          "text": "1.6"
+        },
+        {
+          "label": "C",
+          "text": "1.7"
+        },
+        {
+          "label": "D",
+          "text": "1.8"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    },
+    {
+      "id": "q-004",
+      "chapter": "概率",
+      "category": "singleChoice",
+      "title": "7 第4题 · 小王计划在7天假期自学甲乙两门在线课程，每门课程需要连学两整天。如在所有可能的安排中随机选择一种，不用学习的3天均不相连的概率为？（2025' · 概率）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "1/7"
+        },
+        {
+          "label": "B",
+          "text": "1/8"
+        },
+        {
+          "label": "C",
+          "text": "1/9"
+        },
+        {
+          "label": "D",
+          "text": "1/10"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-005",
+      "chapter": "整除与倍数",
+      "category": "singleChoice",
+      "title": "7 第5题 · 幼儿园有糖115颗、饼干148块、桔子74个，平均分给大班小朋友，结果糖多出7颗，饼干多出4块，桔子多出2个。这个大班的小朋友最多有几个人？（· 最大公约数与最小公倍数）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "12"
+        },
+        {
+          "label": "B",
+          "text": "24"
+        },
+        {
+          "label": "C",
+          "text": "36"
+        },
+        {
+          "label": "D",
+          "text": "48"
+        }
+      ],
+      "multiple": false,
+      "answer": "C"
+    },
+    {
+      "id": "q-006",
+      "chapter": "年龄问题",
+      "category": "singleChoice",
+      "title": "7 第6题 · 2024年甲、乙、丙三人的年龄之和与2034年甲的年龄相同，且甲、乙的年龄之差大于乙、丙的年龄之差。已知乙的年龄小于甲但大于丙，问2024年甲的年龄最小可能为多少岁？（2025' · 年龄最值）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "13"
+        },
+        {
+          "label": "B",
+          "text": "11"
+        },
+        {
+          "label": "C",
+          "text": "10"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "multiple": false,
+      "answer": "D"
+    },
+    {
+      "id": "q-007",
+      "chapter": "浓度问题",
+      "category": "singleChoice",
+      "title": "7 第7题 · 在100克水中加25克盐，盐占盐水的（ ）%（· 浓度问题例1）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "20"
+        },
+        {
+          "label": "B",
+          "text": "25"
+        },
+        {
+          "label": "C",
+          "text": "30"
+        },
+        {
+          "label": "D",
+          "text": "50"
+        }
+      ],
+      "multiple": false,
+      "answer": "A"
+    },
+    {
+      "id": "q-008",
+      "chapter": "浓度问题",
+      "category": "singleChoice",
+      "title": "7 第9题 · 甲杯中有浓度为17%的溶液400克，乙杯中有浓度为23%的溶液600克。现在从甲、乙两杯中取出相同总量的溶液，把从甲杯中取出的倒入乙杯中，把从乙杯中取出的倒入甲杯中，使甲、乙两杯溶液的浓度相同。问现在两杯溶液的浓度是多少？（· 浓度问题例2）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "20%"
+        },
+        {
+          "label": "B",
+          "text": "20.6%"
+        },
+        {
+          "label": "C",
+          "text": "21.2%"
+        },
+        {
+          "label": "D",
+          "text": "21.4%"
+        }
+      ],
+      "multiple": false,
+      "answer": "B"
+    }
+  ]
+}

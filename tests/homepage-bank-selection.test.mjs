@@ -181,6 +181,23 @@ test("question cards can display shared material passages for case groups", asyn
   assert.ok(materialQuestions.every((question) => question.material?.content));
 });
 
+test("material tables render as readable HTML with or without markdown separators", async () => {
+  const indexHtml = await readFile(new URL("index.html", siteRoot), "utf8");
+  const source = indexHtml.match(/    function materialTableCells\(line\) \{[\s\S]*?(?=    function renderQuestionCard\()/)?.[0];
+  assert.ok(source, "material renderer should be present");
+  const escapeHtml = (value) => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const render = new Function("escapeHtml", `${source}\nreturn renderMaterialContent;`)(escapeHtml);
+
+  for (const separator of ["|------|------|\n", ""]) {
+    const html = render(`年度数据\n| 年份 | 增量 |\n${separator}| 2020 | <42> |\n说明：单位为万户。`);
+    assert.match(html, /<table class="question-material-table">/);
+    assert.match(html, /<th scope="col">年份<\/th>/);
+    assert.match(html, /<td>&lt;42&gt;<\/td>/);
+    assert.match(html, /说明：单位为万户。/);
+    assert.doesNotMatch(html, /\|------\|/);
+  }
+});
+
 test("converter accepts material passages and group ids for case questions", async () => {
   const converterHtml = await readFile(new URL("converter.html", siteRoot), "utf8");
 

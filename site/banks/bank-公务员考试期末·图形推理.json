@@ -1,0 +1,2434 @@
+{
+  "version": 1,
+  "id": "bank-公务员考试期末·图形推理",
+  "title": "公务员考试期末·图形推理",
+  "description": "公务员考试期末·图形推理。",
+  "group": "公务员考试",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "数量规律",
+    "图形分类",
+    "位置规律",
+    "样式规律",
+    "对称规律",
+    "空间图形"
+  ],
+  "categories": [
+    "singleChoice",
+    "short"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第10题 · 图形推理 · 数量类：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q10_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-002",
+      "chapter": "数量规律",
+      "category": "short",
+      "title": "课3-1 第11题 · 观察配图中的两组图形，记录对应的数量特征。（图形推理 · 数量类）",
+      "prompt": "请作答。",
+      "keywords": [],
+      "options": [],
+      "answer": "2123，253",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q11_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-003",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第12题 · 图形推理 · 数量类：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q12_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-004",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-1 第13题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）（第76题 · 图形分类）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①②④，③⑤⑥"
+        },
+        {
+          "label": "B",
+          "text": "①②⑤，③④⑥"
+        },
+        {
+          "label": "C",
+          "text": "①③④，②⑤⑥"
+        },
+        {
+          "label": "D",
+          "text": "①③⑥，②④⑤"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q13_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-005",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第14题 · 图形推理 · 数量类：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q14_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-006",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第15题 · 图形推理 · 线数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q15_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-007",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第16题 · 图形推理 · 线数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q16_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-008",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第17题 · 图形推理 · 线数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q17_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-009",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第18题 · 图形推理 · 线数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q18_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-010",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第19题 · 图形推理 · 线数量 · 阴影：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q19_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-011",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-1 第20题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）（图形分类 · 一笔画）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①④⑥，②③⑤"
+        },
+        {
+          "label": "B",
+          "text": "①②⑤，③④⑥"
+        },
+        {
+          "label": "C",
+          "text": "①②④，③⑤⑥"
+        },
+        {
+          "label": "D",
+          "text": "①②⑤，③④⑥"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q20_fig.png",
+          "alt": "题目图片",
+          "caption": "一笔画分类"
+        }
+      ]
+    },
+    {
+      "id": "q-012",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第21题 · 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：（2020 · 国家 · 图形推理）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q03_figure.png",
+          "alt": "题目图片",
+          "caption": "图形推理题"
+        }
+      ]
+    },
+    {
+      "id": "q-013",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第22题 · 图形推理 · 线数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q22_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-014",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第23题 · 图形推理 · 线数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q23_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-015",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第24题 · 图形推理 · 面数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q24_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-016",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第25题 · 图形推理 · 面数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q25_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-017",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第26题 · 图形推理 · 面数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q26_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-018",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第27题 · 图形推理 · 元素数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q27_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-019",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第28题 · 图形推理 · 分元素数量增加：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q28_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-020",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第29题 · 图形推理 · 素数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q29_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-021",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第30题 · 图形推理 · 数量类：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q30_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-022",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-1 第31题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）（第81题 · 图形分类）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①④⑥，②③⑤"
+        },
+        {
+          "label": "B",
+          "text": "①④⑤，②③⑥"
+        },
+        {
+          "label": "C",
+          "text": "①②⑤，③④⑥"
+        },
+        {
+          "label": "D",
+          "text": "①③⑥，②④⑤"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q31_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-023",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第32题 · 从所给四个选项中，选择最合适的一个填入问号处，使之呈现一定规律性（ ）（第71题 · 图形推理 · 元素种类）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q32_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-024",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第33题 · 图形推理 · 素数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q33_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-025",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-1 第34题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）（第79题 · 图形分类）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①②④，③⑤⑥"
+        },
+        {
+          "label": "B",
+          "text": "①③⑥，②④⑤"
+        },
+        {
+          "label": "C",
+          "text": "①③⑤，②④⑥"
+        },
+        {
+          "label": "D",
+          "text": "①⑤⑥，②③④"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q34_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-026",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第35题 · 图形推理 · 素数量：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q35_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-027",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-1 第36题 · 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：（图形推理 · 曲线/直线数）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-1-q36_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-028",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-2 第1题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：（图形分类 · 20'）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q01_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-029",
+      "chapter": "位置规律",
+      "category": "singleChoice",
+      "title": "课3-2 第2题 · 图形推理 · 位置类：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q02_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-030",
+      "chapter": "位置规律",
+      "category": "singleChoice",
+      "title": "课3-2 第3题 · 图形推理 · 位置类九宫格：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q03_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-031",
+      "chapter": "位置规律",
+      "category": "singleChoice",
+      "title": "课3-2 第4题 · 图形推理 · 位置类黑块平移：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q04_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-032",
+      "chapter": "位置规律",
+      "category": "singleChoice",
+      "title": "课3-2 第5题 · 图形推理 · 位置类：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q05_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-033",
+      "chapter": "位置规律",
+      "category": "singleChoice",
+      "title": "课3-2 第6题 · 图形推理 · O型路线位置旋转：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q06_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-034",
+      "chapter": "位置规律",
+      "category": "singleChoice",
+      "title": "课3-2 第7题 · 图形推理 · 位置类：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q07_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-035",
+      "chapter": "位置规律",
+      "category": "singleChoice",
+      "title": "课3-2 第8题 · 图形推理 · 位置类笑脸九宫格：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q08_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-036",
+      "chapter": "位置规律",
+      "category": "singleChoice",
+      "title": "课3-2 第9题 · 图形推理 · 位置类六边形：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q09_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-037",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-2 第10题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：（图形分类 · 阴影点位置）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①③⑥，②④⑤"
+        },
+        {
+          "label": "B",
+          "text": "①③⑤，②④⑥"
+        },
+        {
+          "label": "C",
+          "text": "①③④，②⑤⑥"
+        },
+        {
+          "label": "D",
+          "text": "①⑤⑥，②③④"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q10_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-038",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-2 第11题 · 【13'】83. 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）（第83题 · 图形分类 · 点位置）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①⑤⑥，②③④"
+        },
+        {
+          "label": "B",
+          "text": "①③④，②⑤⑥"
+        },
+        {
+          "label": "C",
+          "text": "①②④，③⑤⑥"
+        },
+        {
+          "label": "D",
+          "text": "①②⑤，③④⑥"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q11_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-039",
+      "chapter": "样式规律",
+      "category": "singleChoice",
+      "title": "课3-2 第12题 · 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：（2020国考 · 图形推理 · 黑白块）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q12_fig.jpg",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-040",
+      "chapter": "样式规律",
+      "category": "singleChoice",
+      "title": "课3-2 第13题 · 图形推理 · 样式类 · 求同：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q13_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-041",
+      "chapter": "样式规律",
+      "category": "singleChoice",
+      "title": "课3-2 第14题 · 图形推理 · 样式类：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q14_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-042",
+      "chapter": "样式规律",
+      "category": "singleChoice",
+      "title": "课3-2 第15题 · 图形推理 · 样式类 · 去同：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q15_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-043",
+      "chapter": "样式规律",
+      "category": "singleChoice",
+      "title": "课3-2 第16题 · 图形推理 · 样式类阴影：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q16_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-044",
+      "chapter": "样式规律",
+      "category": "singleChoice",
+      "title": "课3-2 第17题 · 图形推理 · 样式类 · 去同：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q17_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-045",
+      "chapter": "样式规律",
+      "category": "singleChoice",
+      "title": "课3-2 第18题 · 图形推理 · 样式类数字变形：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q18_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-046",
+      "chapter": "样式规律",
+      "category": "singleChoice",
+      "title": "课3-2 第19题 · 图形推理 · 样式类汉字：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q19_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-047",
+      "chapter": "样式规律",
+      "category": "singleChoice",
+      "title": "课3-2 第20题 · 图形推理 · 样式类 · 求异：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q20_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-048",
+      "chapter": "样式规律",
+      "category": "singleChoice",
+      "title": "课3-2 第21题 · 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：（2020国考 · 图形推理 · 黑白点九宫格）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q21_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-049",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-2 第22题 · 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：（第84题 · 图形推理 · 九宫格）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q22_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-050",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-2 第23题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：（图形分类 · 点位置）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①③⑥，②④⑤"
+        },
+        {
+          "label": "B",
+          "text": "①②⑤，③④⑥"
+        },
+        {
+          "label": "C",
+          "text": "①③④，②⑤⑥"
+        },
+        {
+          "label": "D",
+          "text": "①④⑤，②③⑥"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q23_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-051",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-2 第24题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）（第77题 · 16' · 图形分类）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①④⑥，②③⑤"
+        },
+        {
+          "label": "B",
+          "text": "①③⑤，②④⑥"
+        },
+        {
+          "label": "C",
+          "text": "①②④，③⑤⑥"
+        },
+        {
+          "label": "D",
+          "text": "①②③，④⑤⑥"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q24_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-052",
+      "chapter": "对称规律",
+      "category": "singleChoice",
+      "title": "课3-2 第25题 · 图形推理 · 对称：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q25_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-053",
+      "chapter": "对称规律",
+      "category": "singleChoice",
+      "title": "课3-2 第26题 · 图形推理 · 对称：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q26_fig.jpg",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-054",
+      "chapter": "对称规律",
+      "category": "singleChoice",
+      "title": "课3-2 第27题 · 图形推理 · 对称：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q27_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-055",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-2 第28题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）（图形分类 · 11'）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①②⑤，③④⑥"
+        },
+        {
+          "label": "B",
+          "text": "①④⑥，②③⑤"
+        },
+        {
+          "label": "C",
+          "text": "①③④，②⑤⑥"
+        },
+        {
+          "label": "D",
+          "text": "①③⑤，②④⑥"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q28_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-056",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-2 第29题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）\n① %　② C　③ 互　④ ↑　⑤ Y　⑥ §（图形分类 · 对称/中心对称）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①②④，③⑤⑥"
+        },
+        {
+          "label": "B",
+          "text": "①③⑥，②④⑤"
+        },
+        {
+          "label": "C",
+          "text": "①③⑤，②④⑥"
+        },
+        {
+          "label": "D",
+          "text": "①②③，④⑤⑥"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q29_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-057",
+      "chapter": "数量规律",
+      "category": "singleChoice",
+      "title": "课3-2 第30题 · 从所给四个选项中，选择最合适的一个填入问号处，使之呈现一定规律性（ ）（第72题 · 16' · 图形推理九宫格）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q30_fig.png",
+          "alt": "题目图片",
+          "caption": "图形推理"
+        }
+      ]
+    },
+    {
+      "id": "q-058",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-2 第31题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）（第78题 · 16' · 图形分类 · 黑白块对称轴）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①③④，②⑤⑥"
+        },
+        {
+          "label": "B",
+          "text": "①④②，⑥③⑤"
+        },
+        {
+          "label": "C",
+          "text": "①②④，③⑤⑥"
+        },
+        {
+          "label": "D",
+          "text": "①③⑥，②④⑤"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q31_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-059",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-2 第32题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）（图形分类 · 多边形分割）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①③⑥，②④⑤"
+        },
+        {
+          "label": "B",
+          "text": "①②⑤，③④⑥"
+        },
+        {
+          "label": "C",
+          "text": "①②⑥，③④⑤"
+        },
+        {
+          "label": "D",
+          "text": "①④⑤，②③⑥"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q32_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-060",
+      "chapter": "图形分类",
+      "category": "singleChoice",
+      "title": "课3-2 第33题 · 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：（2020国家 · 图形分类）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "①③④，②⑤⑥"
+        },
+        {
+          "label": "B",
+          "text": "①②⑥，③④⑤"
+        },
+        {
+          "label": "C",
+          "text": "①④⑤，②③⑥"
+        },
+        {
+          "label": "D",
+          "text": "①④⑥，②③⑤"
+        }
+      ],
+      "multiple": false,
+      "answer": "C",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q33_fig.png",
+          "alt": "题目图片",
+          "caption": "图形分类"
+        }
+      ]
+    },
+    {
+      "id": "q-061",
+      "chapter": "空间图形",
+      "category": "singleChoice",
+      "title": "课3-2 第34题 · 折叠图形 · 相对面：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q34_fig.png",
+          "alt": "题目图片",
+          "caption": "折叠图形"
+        }
+      ]
+    },
+    {
+      "id": "q-062",
+      "chapter": "空间图形",
+      "category": "singleChoice",
+      "title": "课3-2 第35题 · 折叠图形 · 相对面：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q35_fig.png",
+          "alt": "题目图片",
+          "caption": "折叠图形"
+        }
+      ]
+    },
+    {
+      "id": "q-063",
+      "chapter": "空间图形",
+      "category": "singleChoice",
+      "title": "课3-2 第36题 · 折叠图形 · 相对面：请选择符合规律的一项。",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q36_fig.png",
+          "alt": "题目图片",
+          "caption": "折叠图形"
+        }
+      ]
+    },
+    {
+      "id": "q-064",
+      "chapter": "空间图形",
+      "category": "singleChoice",
+      "title": "课3-2 第37题 · 一立方体如图所示从中挖掉一个圆锥体，然后从任意面剖开，下面哪一项不可能是该立方体的截面（ ）（第79题 · 13' · 截面题）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "A",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q37_fig.png",
+          "alt": "题目图片",
+          "caption": "截面题"
+        }
+      ]
+    },
+    {
+      "id": "q-065",
+      "chapter": "空间图形",
+      "category": "singleChoice",
+      "title": "课3-2 第38题 · ①、②、③、④为四个多面体零件，问A、B、C、D四个多面体零件中的哪一个与①、②、③、④中的任一个都不能组合成长方体（ ）（第73题 · 16' · 多面体拼合）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "D",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q38_fig.png",
+          "alt": "题目图片",
+          "caption": "多面体拼合"
+        }
+      ]
+    },
+    {
+      "id": "q-066",
+      "chapter": "空间图形",
+      "category": "singleChoice",
+      "title": "课3-2 第39题 · 左图给定的是由相同正方体堆叠而成多面体的正视图和后视图。该多面体可以由①、②和③三个多面体组合而成，问以下哪一项能填入问号处？（2020国家 · 多面体组合）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q39_fig.png",
+          "alt": "题目图片",
+          "caption": "多面体组合"
+        }
+      ]
+    },
+    {
+      "id": "q-067",
+      "chapter": "空间图形",
+      "category": "singleChoice",
+      "title": "课3-2 第40题 · 左图为给定的立体图形，将其从任一面剖开，以下哪个不可能是该立体图形的截面？（第82题 · 截面题）",
+      "prompt": "请选择正确答案。",
+      "keywords": [],
+      "options": [
+        {
+          "label": "A",
+          "text": "图中选项 A"
+        },
+        {
+          "label": "B",
+          "text": "图中选项 B"
+        },
+        {
+          "label": "C",
+          "text": "图中选项 C"
+        },
+        {
+          "label": "D",
+          "text": "图中选项 D"
+        }
+      ],
+      "multiple": false,
+      "answer": "B",
+      "media": [
+        {
+          "type": "image",
+          "src": "images/bank-公务员考试期末·图形推理/课3-2-q40_fig.png",
+          "alt": "题目图片",
+          "caption": "截面题"
+        }
+      ]
+    }
+  ]
+}

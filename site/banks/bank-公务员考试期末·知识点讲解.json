@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "id": "bank-公务员考试期末·知识点讲解",
+  "title": "公务员考试期末·知识点讲解",
+  "description": "公务员考试期末·知识点讲解。",
+  "group": "公务员考试",
+  "schema": {
+    "required": [
+      "title",
+      "answer"
+    ],
+    "optional": [
+      "id",
+      "chapter",
+      "category",
+      "prompt",
+      "keywords",
+      "minRequired",
+      "options",
+      "multiple",
+      "media",
+      "material",
+      "groupId"
+    ]
+  },
+  "chapters": [
+    "形式逻辑",
+    "论证推理",
+    "数量关系"
+  ],
+  "categories": [
+    "custom"
+  ],
+  "questions": [
+    {
+      "id": "q-001",
+      "chapter": "形式逻辑",
+      "category": "custom",
+      "title": "阅读笔记：同一律",
+      "prompt": "请作答。",
+      "keywords": [],
+      "options": [],
+      "answer": "已阅读",
+      "material": {
+        "title": "同一律",
+        "content": "序：逻辑判断的准备知识——逻辑的基本规律\n1、同一律\n\"概念同一\"与\"论题统一\"\n- 内容：同一个思维过程中，每一个思想与其自身是同一的，即\"A就是A\"\n- 要求：同一个思维过程中，概念都要确定，并保持自身的同一，不得随意变更。\n- 逻辑错误：混淆概念或偷换概念，转移论题或偷换论题"
+      }
+    },
+    {
+      "id": "q-002",
+      "chapter": "论证推理",
+      "category": "custom",
+      "title": "阅读笔记：削弱与加强题选项判断",
+      "prompt": "请作答。",
+      "keywords": [],
+      "options": [],
+      "answer": "已阅读",
+      "material": {
+        "title": "削弱与加强题选项判断",
+        "content": "支持、削弱题目的选项要求：\n- 选项倾向于一个事实；\n- 不倾向一个观点；\n- 不能是一个似是而非的可能；\n- 选项必须要跟文章结论关联；\n- 不能在时间空间范围上面与文章的讨论不一致；\n- 不能与文章的结论无关。"
+      }
+    },
+    {
+      "id": "q-003",
+      "chapter": "数量关系",
+      "category": "custom",
+      "title": "阅读笔记：和差倍比问题",
+      "prompt": "请作答。",
+      "keywords": [],
+      "options": [],
+      "answer": "已阅读",
+      "material": {
+        "title": "和差倍比问题",
+        "content": "基础4大原型：\n1. 和：已知几个量之和+相互关系，求各个量\n2. 差：已知两个量之差+相互关系，求量\n3. 倍：A是B的n倍；A比B多n倍（多n倍 = 是n+1倍，国考坑点）\n4. 比：A:B、占比、百分数、分数"
+      }
+    },
+    {
+      "id": "q-004",
+      "chapter": "数量关系",
+      "category": "custom",
+      "title": "阅读笔记：数量关系考点分布",
+      "prompt": "请作答。",
+      "keywords": [],
+      "options": [],
+      "answer": "已阅读",
+      "material": {
+        "title": "数量关系考点分布",
+        "content": "- 最高频：和差倍比（基础应用题）| 33题——方程法、代入排除\n- 必考：几何问题 | 21题——平面几何为主\n- 高频四大金刚：排列组合（14题）、概率（12题）、工程（12题）、行程（12题）\n- 稳定每年1题：经济利润 | 10题\n- 中频：极值、年龄、容斥、星期日期\n- 低频：数列、浓度、植树、方阵（时间紧张可战略放弃）"
+      }
+    }
+  ]
+}
