@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { basename, extname } from "node:path";
 import { zipStoreFiles } from "./zip-store.mjs";
@@ -19,7 +20,7 @@ function safeId(value) {
 }
 
 function safeFileName(value, fallback = "image.png") {
-  const name = basename(String(value || fallback)).replace(/[\\/:*?"<>|]/g, "-");
+  const name = basename(String(value || fallback)).replace(/[\\/:*?"<>|%#]/g, "-");
   return name || fallback;
 }
 
@@ -85,8 +86,17 @@ export async function saveBuiltInBank({
   const manifest = await readManifest();
   const cleanTitle = String(title || "").trim() || "自定义自测题库";
   const cleanGroup = String(group || "").trim() || "未分类";
-  const existing = manifest.banks.find((entry) => entry.id === id || entry.title === cleanTitle);
-  const bankId = existing?.id || (String(id || "").trim() ? safeId(id) : `bank-${safeId(cleanTitle)}`);
+  const requestedId = String(id || "").trim();
+  const normalizedId = requestedId ? safeId(requestedId) : "";
+  const existing = normalizedId
+    ? manifest.banks.find((entry) => entry.id === normalizedId)
+    : manifest.banks.find((entry) => entry.title === cleanTitle && (entry.group || "未分类") === cleanGroup);
+  const baseId = `bank-${safeId(cleanTitle)}`;
+  let bankId = existing?.id || normalizedId || baseId;
+  if (!existing && !normalizedId) {
+    let suffix = 2;
+    while (manifest.banks.some((entry) => entry.id === bankId)) bankId = `${baseId}-${suffix++}`;
+  }
   const jsonFile = existing?.file || `${bankId}.json`;
   const nextQuestions = (questions || []).map((question) => ({ ...question }));
 
@@ -97,7 +107,8 @@ export async function saveBuiltInBank({
   for (const image of images) {
     const question = nextQuestions.find((item) => item.id === image.questionId);
     if (!question) continue;
-    const filename = safeFileName(image.filename || `${image.questionId}${extname(image.filename || ".png") || ".png"}`);
+    const questionKey = createHash("sha256").update(String(question.id)).digest("hex").slice(0, 12);
+    const filename = `${questionKey}-${safeFileName(image.filename || `${image.questionId}${extname(image.filename || ".png") || ".png"}`)}`;
     const bytes = image.bytes instanceof Uint8Array ? image.bytes : decodeBase64(image.data || image.base64 || "");
     if (!bytes.length) continue;
     await writeFile(new URL(filename, imageFolderSafe), Buffer.from(bytes));

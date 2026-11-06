@@ -805,6 +805,10 @@
       letter-spacing: 0;
     }
 
+    .question-title h2 {
+      white-space: pre-wrap;
+    }
+
     .chip {
       width: fit-content;
       display: inline-flex;
@@ -1806,17 +1810,38 @@
     function normalizeSavedPracticeState(saved, list = questions) {
       const base = createEmptyPracticeState(list);
       if (!saved || typeof saved !== "object") return base;
+      const validIds = new Set(base.order);
+      const keepCurrent = (entries) => Object.fromEntries(
+        Object.entries(entries && typeof entries === "object" ? entries : {})
+          .filter(([id]) => validIds.has(id))
+      );
+      const savedOrder = Array.isArray(saved.order) ? saved.order.filter((id) => validIds.has(id)) : [];
+      const order = [...new Set([...savedOrder, ...base.order])];
+      const chapters = new Set(list.map((item) => getQuestionChapter(item)));
+      const categories = new Set(list.map((item) => getQuestionType(item)));
       return {
         ...base,
-        answers: saved.answers || {},
-        results: saved.results || {},
-        visibleAnswers: saved.visibleAnswers || {},
-        order: Array.isArray(saved.order) ? saved.order : base.order,
-        currentIndex: Number.isInteger(saved.currentIndex) ? saved.currentIndex : 0,
+        answers: keepCurrent(saved.answers),
+        results: keepCurrent(saved.results),
+        visibleAnswers: keepCurrent(saved.visibleAnswers),
+        order,
+        currentIndex: Number.isInteger(saved.currentIndex) ? Math.max(0, Math.min(saved.currentIndex, order.length - 1)) : 0,
         expanded: Boolean(saved.expanded),
-        activeChapter: typeof saved.activeChapter === "string" ? saved.activeChapter : base.activeChapter,
-        activeCategory: typeof saved.activeCategory === "string" ? saved.activeCategory : base.activeCategory
+        activeChapter: chapters.has(saved.activeChapter) ? saved.activeChapter : base.activeChapter,
+        activeCategory: categories.has(saved.activeCategory) ? saved.activeCategory : base.activeCategory
       };
+    }
+
+    function scoringSignature(question) {
+      return JSON.stringify({
+        category: question.category,
+        prompt: question.prompt,
+        answer: question.answer,
+        keywords: question.keywords,
+        minRequired: question.minRequired,
+        options: question.options,
+        multiple: question.multiple
+      });
     }
 
     function createBankId(title) {
@@ -1966,7 +1991,7 @@
         const payload = await bankResponse.json();
         const id = payload.id || entry.id || createBankId(payload.title || entry.title);
         const existing = bankLibrary.banks.find((bank) => bank.id === id);
-        return createBankRecord(
+        const record = createBankRecord(
           id,
           payload.title || entry.title,
           payload.questions,
@@ -1977,6 +2002,16 @@
             source: "built-in"
           }
         );
+        if (existing) {
+          const previous = new Map(existing.questions.map((question) => [question.id, scoringSignature(question)]));
+          record.practice.results = Object.fromEntries(
+            Object.entries(record.practice.results).filter(([questionId]) => {
+              const current = record.questions.find((question) => question.id === questionId);
+              return current && previous.get(questionId) === scoringSignature(current);
+            })
+          );
+        }
+        return record;
       }));
       const builtInIds = new Set(records.map((record) => record.id));
       bankLibrary.banks = [
@@ -2240,7 +2275,7 @@
       return String(text || "")
         .toUpperCase()
         .replace(/[，。、“”‘’：；（）【】《》]/g, "")
-        .replace(/[,\."':;()[\]{}<>]/g, "")
+        .replace(/[,\."':;()[\]{}]/g, "")
         .replace(/\s+/g, "")
         .replace(/×/g, "*")
         .replace(/＋/g, "+")
@@ -2399,6 +2434,22 @@
       return { score, notes: hits };
     }
 
+    function reversesFormulaComparison(question, answer) {
+      const comparisons = (text) => String(text || "").split(/[；;。\n]/).flatMap((clause) => {
+        const value = normalize(clause);
+        const match = /[A-Z][A-Z0-9]*[<>]-?\d+(?:\.\d+)?/.exec(value);
+        return match
+          ? [{ condition: match[0], conclusion: value.slice(match.index + match[0].length) }]
+          : [];
+      });
+      const expected = comparisons(question.answer);
+      const actual = comparisons(answer);
+      return expected.some(({ condition, conclusion }) => {
+        const opposite = condition.replace(/[<>]/, (operator) => operator === ">" ? "<" : ">");
+        return conclusion && actual.some((item) => item.condition === opposite && item.conclusion === conclusion);
+      });
+    }
+
     function evaluateChoiceQuestion(question) {
       const selected = normalizeChoiceAnswer(state.answers[question.id], question);
       const expected = normalizeChoiceAnswer(question.answer, question);
@@ -2492,7 +2543,7 @@
         structure.score * categoryWeights.structure +
         formula.score * categoryWeights.formula
       ) * lengthRatio * emptyPenalty;
-      const ratio = Math.max(0, Math.min(1, weightedScore));
+      const ratio = Math.max(0, Math.min(question.category === "formula" && reversesFormulaComparison(question, answer) ? .59 : 1, weightedScore));
       const mastered = ratio >= .82 && keywordCoverage >= (question.minRequired ? .62 : .66) && unitEvaluation.coverage >= .58;
       const almost = !mastered && ratio >= .60;
       return {
@@ -2608,7 +2659,7 @@
       )).join("");
       const categories = categoryOptions();
       els.filterRow.innerHTML = categories.map((category) => (
-        `<button class="ghost-btn ${state.activeCategory === category ? "active" : ""}" type="button" data-category="${category}">${getCategoryLabel(category)}</button>`
+        `<button class="ghost-btn ${state.activeCategory === category ? "active" : ""}" type="button" data-category="${escapeHtml(category)}">${escapeHtml(getCategoryLabel(category))}</button>`
       )).join("");
     }
 
@@ -2629,9 +2680,9 @@
     function renderChoiceInput(question) {
       const selected = normalizeChoiceAnswer(state.answers[question.id], question);
       return `
-        <div class="choice-list" data-choice-list="${question.id}">
+        <div class="choice-list" data-choice-list="${escapeHtml(question.id)}">
           ${question.options.map((option) => `
-            <button class="choice-option ${selected.includes(option.label) ? "selected" : ""}" type="button" data-choice-question="${question.id}" data-choice="${option.label}" aria-pressed="${selected.includes(option.label)}">
+            <button class="choice-option ${selected.includes(option.label) ? "selected" : ""}" type="button" data-choice-question="${escapeHtml(question.id)}" data-choice="${escapeHtml(option.label)}" aria-pressed="${selected.includes(option.label)}">
               <span class="choice-label">${escapeHtml(option.label)}</span>
               <span class="choice-text">${escapeHtml(option.text)}</span>
             </button>
@@ -2719,33 +2770,33 @@
       const resultHtml = result ? renderFeedback(question, result) : renderUnscoredAnswer(question);
       const answerInput = isChoiceQuestion(question)
         ? renderChoiceInput(question)
-        : `<textarea data-answer="${question.id}" placeholder="在这里默写答案，写完点判分。">${escapeHtml(answer)}</textarea>`;
+        : `<textarea data-answer="${escapeHtml(question.id)}" placeholder="在这里默写答案，写完点判分。">${escapeHtml(answer)}</textarea>`;
       const showNext = options.showNext !== false;
       const nextDisabled = options.isLast ? "disabled" : "";
       const nextButton = showNext
-        ? `<button class="primary-btn" type="button" data-check-next="${question.id}" ${nextDisabled}>判分并下一题</button>`
+        ? `<button class="primary-btn" type="button" data-check-next="${escapeHtml(question.id)}" ${nextDisabled}>判分并下一题</button>`
         : "";
       return `
-        <article class="question-card" id="${question.id}">
+        <article class="question-card" id="${escapeHtml(question.id)}">
           <div class="question-head">
             <div class="question-title">
               <div class="question-meta">
                 <span class="chip">${escapeHtml(getQuestionChapter(question))}</span>
-                <span class="chip muted question-type-badge">${getCategoryLabel(getQuestionType(question))}</span>
+                <span class="chip muted question-type-badge">${escapeHtml(getCategoryLabel(getQuestionType(question)))}</span>
               </div>
-              <h2>${question.title}</h2>
+              <h2>${escapeHtml(question.title)}</h2>
             </div>
             <span class="status-pill ${tone}">${label}</span>
           </div>
           ${renderQuestionMaterial(question)}
           ${renderQuestionMedia(question)}
-          <p class="prompt">${question.prompt}</p>
+          <p class="prompt">${escapeHtml(question.prompt)}</p>
           ${answerInput}
           <div class="card-actions">
-            <button class="primary-btn" type="button" data-check="${question.id}">判分</button>
+            <button class="primary-btn" type="button" data-check="${escapeHtml(question.id)}">判分</button>
             ${nextButton}
-            <button class="secondary-btn" type="button" data-answer-toggle="${question.id}">${state.visibleAnswers[question.id] ? "收起答案" : "看答案"}</button>
-            <button class="icon-btn" type="button" data-clear="${question.id}" title="清空本题">×</button>
+            <button class="secondary-btn" type="button" data-answer-toggle="${escapeHtml(question.id)}">${state.visibleAnswers[question.id] ? "收起答案" : "看答案"}</button>
+            <button class="icon-btn" type="button" data-clear="${escapeHtml(question.id)}" title="清空本题">×</button>
           </div>
           <div class="feedback ${result || state.visibleAnswers[question.id] ? "visible" : ""}">
             ${resultHtml}
@@ -2963,7 +3014,7 @@
         .map((item) => {
           const result = state.results[item.id];
           const missed = result.hits.filter((hit) => !hit.hit).map((hit) => hit.keyword).slice(0, 3).join("、");
-          return `<button class="review-item" type="button" data-jump="${item.id}"><strong>${escapeHtml(item.title)}</strong><span>待补：${escapeHtml(missed || "继续完善")}</span></button>`;
+          return `<button class="review-item" type="button" data-jump="${escapeHtml(item.id)}"><strong>${escapeHtml(item.title)}</strong><span>待补：${escapeHtml(missed || "继续完善")}</span></button>`;
         });
       els.reviewList.innerHTML = reviewItems.length ? reviewItems.join("") : `<div class="empty">还没有错题。先判几题，薄弱点会出现在这里。</div>`;
     }
@@ -3049,7 +3100,23 @@
     document.addEventListener("input", (event) => {
       const target = event.target;
       if (target.matches("[data-answer]")) {
-        state.answers[target.dataset.answer] = target.value;
+        const id = target.dataset.answer;
+        state.answers[id] = target.value;
+        if (Object.hasOwn(state.results, id)) {
+          delete state.results[id];
+          const card = target.closest(".question-card");
+          const status = card?.querySelector(".status-pill");
+          if (status) {
+            status.className = "status-pill";
+            status.textContent = "未判";
+          }
+          const feedback = card?.querySelector(".feedback");
+          const question = questions.find((item) => item.id === id);
+          if (feedback && question) {
+            feedback.innerHTML = renderUnscoredAnswer(question);
+            feedback.classList.toggle("visible", Boolean(state.visibleAnswers[id]));
+          }
+        }
         saveState();
         renderSummary();
       }
@@ -3101,7 +3168,7 @@
       const clearId = event.target.dataset.clear;
       const chapter = event.target.dataset.chapter;
       const category = event.target.dataset.category;
-      const jumpId = event.target.dataset.jump;
+      const jumpId = event.target.closest("[data-jump]")?.dataset.jump;
       const bankSourceFilter = event.target.dataset.bankSourceFilter;
       const bankGroupToggle = event.target.closest("[data-bank-group-toggle]");
       const bankStartId = event.target.closest("[data-bank-start]")?.dataset.bankStart;
@@ -3179,6 +3246,13 @@
       if (jumpId) {
         state.missedOnly = false;
         document.querySelector("#focusMissed").textContent = "错题回看";
+        if (questions.some((item) => item.id === jumpId) && !getFilteredQuestions().some((item) => item.id === jumpId)) {
+          state.activeChapter = "all";
+          state.activeCategory = "all";
+          state.query = "";
+          els.search.value = "";
+          renderFilters();
+        }
         setCurrentById(jumpId);
         renderQuestions();
       }

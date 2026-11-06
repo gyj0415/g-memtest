@@ -138,5 +138,5 @@ server.listen(port, host, () => {
   const studio = `http://${host}:${port}/studio.html`;
   console.log(`本地自测站：${home}`);
   console.log(`内置题库操作页：${studio}`);
-  if (process.platform === "win32") exec(`start ${studio}`);
+  if (process.platform === "win32" && !process.env.NO_AUTO_OPEN) exec(`start ${studio}`);
 });

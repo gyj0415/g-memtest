@@ -1,6 +1,6 @@
 # g-memtest 自测题库
 
-把课程题库做成网页来刷：选题库、答题、判分。进度存在当前浏览器里。
+把课程题库做成网页来刷：选题库、答题、判分。当前练习状态存在当前浏览器里，尚不按练习次数归档历史。
 
 ## 快速使用
 
@@ -71,6 +71,14 @@ D. 选项 D
 - 题目：`site/banks/`
 - 图片：`site/images/<题库id>/`
 
+需要从整理稿重新生成「公务员考试·补充题目」时，运行：
+
+```powershell
+node scripts/build-supplement-bank.mjs "整理稿.md 的完整路径"
+```
+
+脚本会更新该题库 JSON 和 `site/banks/manifest.json`。整理稿由使用者提供，仓库不包含它。
+
 ### 用转换器（本地或线上都能用）
 
 打开 **题库转换器**，同样放入 md / 粘贴 / 配图。
@@ -85,3 +93,16 @@ D. 选项 D
 仓库已经接到 Netlify，发布目录是 `site/`。改完后推到 GitHub 的 `main`，站点会自动更新。不要用 GitHub Pages，也不用再打压缩包拖上去。
 
 线上能刷题、能用转换器下载 ZIP、能导入 JSON/ZIP。不能在线上直接改电脑里的内置题库。
+
+## 本地验证
+
+```powershell
+npm ci
+npx playwright install chromium
+npm test
+npm run typecheck
+npm run lint
+npm run test:e2e
+```
+
+浏览器行为测试会临时启动本地服务，并使用独立的浏览器上下文；不写入 `site/banks/` 的真实题库。

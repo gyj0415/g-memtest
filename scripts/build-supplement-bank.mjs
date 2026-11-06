@@ -1,7 +1,13 @@
 import { readFile, writeFile } from "node:fs/promises";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { buildBankJson } from "./lib/parse-converter-md.mjs";
 
-const sourcePath = "E:\\Cherry Studio\\agent13\\补充题目\\补充题目整理.md";
+const sourcePath = process.argv[2];
+if (!sourcePath) {
+  throw new Error("用法：node scripts/build-supplement-bank.mjs <整理稿.md> [题库目录]");
+}
+const bankDirectory = process.argv[3] || fileURLToPath(new URL("../site/banks/", import.meta.url));
 const bankId = "bank-公务员考试·补充题目";
 const bankFile = `${bankId}.json`;
 const source = (await readFile(sourcePath, "utf8")).replace(/\r/g, "");
@@ -65,8 +71,8 @@ const bank = buildBankJson("补充题目", "公务员考试", questions, {
   id: bankId,
   description: "公务员考试补充题目：逻辑推理与言语理解，共20题。"
 });
-const bankPath = new URL(`../site/banks/${bankFile}`, import.meta.url);
-const manifestPath = new URL("../site/banks/manifest.json", import.meta.url);
+const bankPath = join(bankDirectory, bankFile);
+const manifestPath = join(bankDirectory, "manifest.json");
 const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
 const entry = {
   id: bankId,

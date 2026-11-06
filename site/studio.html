@@ -116,7 +116,7 @@
     <section class="panel online-only">
       <h2>加入或覆盖一套题库</h2>
       <label>题库分类（可空，默认用 md 里的「题库分类」）<input id="groupInput" placeholder="例如：公务员考试"></label>
-      <label>题库名称（可空，默认用 md 里的「题库名称」）<input id="titleInput" placeholder="例如：公务员考试第三节课练习题"></label>
+      <label>题库名称（单套可覆盖；多套沿用 md 中各自名称）<input id="titleInput" placeholder="例如：公务员考试第三节课练习题"></label>
       <label>提示词格式 md<input id="mdFile" type="file" accept=".md,.txt,text/markdown,text/plain"></label>
       <label>或直接粘贴 md<textarea id="mdText" placeholder="题库分类：公务员考试&#10;题库名称：……"></textarea></label>
       <label>附加图片（可多选，文件名对应 md 里的「图片：」）<input id="imageFiles" type="file" accept="image/*" multiple></label>
@@ -192,14 +192,14 @@
         groups.get(bank.group).push(bank);
       });
       bankListEl.innerHTML = [...groups.entries()].map(([group, banks]) => `
-        <h3>${group}</h3>
+        <h3>${escapeHtml(group)}</h3>
         ${banks.map((bank) => `
           <div class="bank-row">
             <header>
-              <strong>${bank.title}</strong>
-              <button class="danger" type="button" data-delete="${bank.id}">删除</button>
+              <strong>${escapeHtml(bank.title)}</strong>
+              <button class="danger" type="button" data-delete="${escapeHtml(bank.id)}">删除</button>
             </header>
-            <span class="muted">${bank.id} · ${bank.file}</span>
+            <span class="muted">${escapeHtml(bank.id)} · ${escapeHtml(bank.file)}</span>
           </div>
         `).join("")}
       `).join("") || `<p>还没有内置题库。</p>`;
@@ -235,7 +235,7 @@
               <strong>${current.number}. ${escapeHtml(current.question.title)}</strong>
               <span class="muted">${escapeHtml(current.question.category || "")} · ${escapeHtml(String(current.question.answer || "").slice(0, 24))}</span>
             </header>
-            ${src ? `<img class="preview" src="${src}" alt="">` : `<p class="status">${pendingHint}</p>`}
+            ${src ? `<img class="preview" src="${escapeHtml(src)}" alt="">` : `<p class="status">${pendingHint}</p>`}
             <label>给这题选图
               <input data-image-key="${escapeHtml(current.key)}" type="file" accept="image/*">
             </label>
@@ -351,7 +351,7 @@
               });
             }
           }
-          const title = document.querySelector("#titleInput").value.trim() || bank.title;
+          const title = (previewBanks.length === 1 && document.querySelector("#titleInput").value.trim()) || bank.title;
           const group = document.querySelector("#groupInput").value.trim() || bank.group;
           await api("/api/banks", {
             method: "POST",

@@ -12,10 +12,14 @@
 !CONTEXT.md
 !netlify.toml
 !package.json
+!package-lock.json
+!playwright.config.mjs
 !scripts/
 !scripts/**
 !tests/
 !tests/**
+!e2e/
+!e2e/**
 !docs/
 !docs/**
 
@@ -31,3 +35,6 @@
 **/*.zip
 **/.DS_Store
 **/Thumbs.db
+**/node_modules/
+**/test-results/
+**/playwright-report/

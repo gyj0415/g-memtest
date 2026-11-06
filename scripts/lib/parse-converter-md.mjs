@@ -104,7 +104,7 @@ function parseBlock(block, index, defaults = {}) {
   const chapterMatch = block.match(/(?:^|\n)(?:章节|章|Chapter|Section)[:：]\s*([^\n]+)/i);
   const categoryMatch = block.match(/(?:^|\n)(?:分类|题型|类别|Category)[:：]\s*([^\n]+)/i);
   const titleMatch = block.match(/(?:题目|问题|Q|Question)[:：]\s*([\s\S]*?)(?=\n(?:图片|图像|Image|图片说明|图注|Alt|Caption|资料|材料|案例资料|Material|Passage|资料标题|材料标题|案例标题|MaterialTitle|PassageTitle|资料组|材料组|案例组|Group|GroupId|CaseId|选项|答案|参考答案|A[\.\、．:：\s]|Answer)[:：]?|$)/i);
-  const answerMatch = block.match(/(?:答案|参考答案|Answer)[:：]\s*([\s\S]*)/i);
+  const answerMatch = block.match(/(?:答案|参考答案|Answer)[:：]\s*([\s\S]*?)(?=\n(?:图片|图像|Image|图片说明|图注|Alt|Caption|资料|材料|案例资料|Material|Passage|资料标题|材料标题|案例标题|MaterialTitle|PassageTitle|资料组|材料组|案例组|Group|GroupId|CaseId)[:：]|$)/i) || block.match(/\nA[:：]\s*([\s\S]*?)(?=\n(?:图片|图像|Image|图片说明|图注|Alt|Caption|资料|材料|案例资料|Material|Passage|资料标题|材料标题|案例标题|MaterialTitle|PassageTitle|资料组|材料组|案例组|Group|GroupId|CaseId)[:：]|$)/i);
   let title = titleMatch?.[1]?.replace(/^选项[:：]?[\s\S]*$/i, "").trim() || "";
   let answer = answerMatch?.[1]?.trim() || "";
 
