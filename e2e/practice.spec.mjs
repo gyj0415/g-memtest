@@ -206,3 +206,25 @@ test("failed multi-bank import leaves no partial banks after reload", async ({ p
   await page.reload();
   await expect(page.locator("#homeBankGrid .bank-card").filter({ hasText: /批量卷甲|批量卷乙/ })).toHaveCount(0);
 });
+
+test("successful multi-bank import keeps both groups after reload", async ({ page }) => {
+  await importQuestionBank(page, {
+    banks: [
+      { title: "导入卷甲", group: "第一课程", questions: [{ title: "甲题", answer: "甲答案" }] },
+      { title: "导入卷乙", group: "第二课程", questions: [{ title: "乙题", answer: "乙答案" }] }
+    ]
+  });
+  await expect(page.locator("#homeBankGrid .bank-card").filter({ hasText: /导入卷甲|导入卷乙/ })).toHaveCount(2);
+  await page.reload();
+  const home = page.locator("#homeBankGrid");
+  const first = home.locator('.bank-group[data-bank-group="第一课程"]');
+  const second = home.locator('.bank-group[data-bank-group="第二课程"]');
+  if (!(await first.getByRole("button", { name: /导入卷甲/ }).isVisible())) {
+    await first.locator(".bank-group-toggle").click();
+  }
+  if (!(await second.getByRole("button", { name: /导入卷乙/ }).isVisible())) {
+    await second.locator(".bank-group-toggle").click();
+  }
+  await expect(first.getByRole("button", { name: /导入卷甲/ })).toBeVisible();
+  await expect(second.getByRole("button", { name: /导入卷乙/ })).toBeVisible();
+});

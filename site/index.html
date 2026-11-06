@@ -2136,18 +2136,44 @@
       renderSummary();
     }
 
-    function addQuestionBank(nextQuestions, nextTitle = bankTitle, meta = {}) {
+    function addQuestionBanks(importedBanks, source) {
       saveActiveBankPractice();
-      const newBank = createBankRecord(createBankId(nextTitle), nextTitle, nextQuestions, {}, meta);
-      bankLibrary.banks.push(newBank);
-      activeBankSourceFilter = normalizeBankSource(newBank.source);
-      expandedBankGroups[bankGroupKey(newBank.source, newBank.group)] = true;
-      persistExpandedBankGroups();
-      persistBankLibrary();
-      if (meta.activate === false) return newBank;
-      activeBankId = newBank.id;
-      refreshActiveBankFromLibrary();
-      return newBank;
+      const ids = new Set(bankLibrary.banks.map((bank) => bank.id));
+      const additions = importedBanks.map((item) => {
+        const baseId = createBankId(item.title);
+        let id = baseId;
+        let suffix = 2;
+        while (ids.has(id)) id = `${baseId}-${suffix++}`;
+        ids.add(id);
+        return createBankRecord(id, item.title, item.questions, {}, {
+          source,
+          group: item.group,
+          description: item.description
+        });
+      });
+      const previousBanks = bankLibrary.banks;
+      bankLibrary.banks = [...previousBanks, ...additions];
+      try {
+        persistBankLibrary();
+      } catch (error) {
+        bankLibrary.banks = previousBanks;
+        throw error;
+      }
+      activeBankSourceFilter = normalizeBankSource(source);
+      additions.forEach((bank) => {
+        expandedBankGroups[bankGroupKey(bank.source, bank.group)] = true;
+      });
+      try {
+        persistExpandedBankGroups();
+      } catch {
+        // Group expansion is optional; the committed bank import remains usable.
+      }
+      if (additions.length === 1) {
+        activeBankId = additions[0].id;
+        refreshActiveBankFromLibrary();
+      } else {
+        renderHome();
+      }
     }
 
     function switchQuestionBank(nextBankId) {
@@ -3278,16 +3304,8 @@
         const source = document.querySelector("#importBankMode")?.value || "local";
         const sourceLabel = bankSourceLabels[normalizeBankSource(source)];
         const cloudNote = normalizeBankSource(source) === "shared" ? " 注意：当前项目是纯静态网页，纯静态网页不能直接上传云端；其他设备要看到，需要把该 JSON 加入内置题库并重新部署。" : "";
-        importedBanks.forEach((item, index) => {
-          addQuestionBank(item.questions, item.title, {
-            source,
-            group: item.group,
-            description: item.description,
-            activate: importedBanks.length === 1 && index === 0
-          });
-        });
+        addQuestionBanks(importedBanks, source);
         if (importedBanks.length > 1) {
-          renderHome();
           window.alert(`已导入 ${importedBanks.length} 套题库到${sourceLabel}分区。点击分类即可展开查看。${cloudNote}`);
         } else {
           const imported = importedBanks[0];

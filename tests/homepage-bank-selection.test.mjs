@@ -87,7 +87,6 @@ test("import flow lets users choose local or shared bank visibility", async () =
   assert.match(indexHtml, /<option value="local"/);
   assert.match(indexHtml, /<option value="shared"/);
   assert.match(indexHtml, /function parseImportedBankPayloads/);
-  assert.match(indexHtml, /addQuestionBank\(item\.questions,\s*item\.title,\s*\{/);
   assert.match(indexHtml, /纯静态网页不能直接上传云端/);
   assert.match(indexHtml, /accept="[^"]*\.zip/);
   assert.match(indexHtml, /parseBankPackage/);
@@ -262,7 +261,6 @@ test("import flow accepts a catalog of multiple grouped banks", async () => {
 
   assert.match(indexHtml, /payload\.banks/);
   assert.match(indexHtml, /importedBanks\.length > 1/);
-  assert.match(indexHtml, /activate:\s*importedBanks\.length === 1/);
 });
 
 test("converter emits bank groups and multi-bank catalogs", async () => {
