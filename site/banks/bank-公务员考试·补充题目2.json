@@ -2,7 +2,7 @@
   "version": 1,
   "id": "bank-公务员考试·补充题目2",
   "title": "补充题目（二）",
-  "description": "公务员素养课上题目补充练习，共42题。",
+  "description": "公务员素养课上题目补充练习，共40题。",
   "group": "公务员考试",
   "schema": {
     "required": [
@@ -36,7 +36,8 @@
     "常识判断"
   ],
   "categories": [
-    "singleChoice"
+    "singleChoice",
+    "custom"
   ],
   "questions": [
     {
@@ -551,88 +552,13 @@
       "answer": "C"
     },
     {
-      "id": "q-018-1",
+      "id": "q-018",
       "chapter": "类比推理",
-      "category": "singleChoice",
-      "title": "芙蕖：荷花。与题干关系相同的是：",
-      "prompt": "请选择正确答案。",
+      "category": "custom",
+      "title": "同一/全同关系：选择与每组题干关系相同的一项。\n\n例1. 芙蕖：荷花\nA. 兔子：月亮\nB. 住宅：府第\nC. 伽蓝：寺庙\nD. 映山红：杜蘅\n\n例2. 等边三角形：等角三角形\nA. 西红柿：辣椒\nB. 土豆：红薯\nC. 郑州市：河南省省会\nD. 医生：护士\n\n例3. 家父：父亲\nA. 老奴：老伴\nB. 鼻祖：祖宗\nC. 作者：笔者\nD. 鄙人：自己",
+      "prompt": "按例1、例2、例3的顺序输入三个选项字母（如 ABC）。",
       "keywords": [],
-      "options": [
-        {
-          "label": "A",
-          "text": "兔子：月亮"
-        },
-        {
-          "label": "B",
-          "text": "住宅：府第"
-        },
-        {
-          "label": "C",
-          "text": "伽蓝：寺庙"
-        },
-        {
-          "label": "D",
-          "text": "映山红：杜蘅"
-        }
-      ],
-      "multiple": false,
-      "answer": "C"
-    },
-    {
-      "id": "q-018-2",
-      "chapter": "类比推理",
-      "category": "singleChoice",
-      "title": "等边三角形：等角三角形。与题干关系相同的是：",
-      "prompt": "请选择正确答案。",
-      "keywords": [],
-      "options": [
-        {
-          "label": "A",
-          "text": "西红柿：辣椒"
-        },
-        {
-          "label": "B",
-          "text": "土豆：红薯"
-        },
-        {
-          "label": "C",
-          "text": "郑州市：河南省省会"
-        },
-        {
-          "label": "D",
-          "text": "医生：护士"
-        }
-      ],
-      "multiple": false,
-      "answer": "C"
-    },
-    {
-      "id": "q-018-3",
-      "chapter": "类比推理",
-      "category": "singleChoice",
-      "title": "家父：父亲。与题干关系相同的是：",
-      "prompt": "请选择正确答案。",
-      "keywords": [],
-      "options": [
-        {
-          "label": "A",
-          "text": "老奴：老伴"
-        },
-        {
-          "label": "B",
-          "text": "鼻祖：祖宗"
-        },
-        {
-          "label": "C",
-          "text": "作者：笔者"
-        },
-        {
-          "label": "D",
-          "text": "鄙人：自己"
-        }
-      ],
-      "multiple": false,
-      "answer": "D"
+      "answer": "C C D"
     },
     {
       "id": "q-019",

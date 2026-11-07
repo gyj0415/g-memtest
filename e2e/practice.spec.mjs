@@ -179,10 +179,15 @@ test("the new twenty-question bank opens without horizontal overflow", async ({ 
 test("the second supplement bank opens and loads its question images", async ({ page }) => {
   await page.goto("/");
   const group = page.locator('#homeBankGrid .bank-group[data-bank-group="公务员考试"]');
-  const bank = group.getByRole("button", { name: /补充题目（二） 42 题/ });
+  const bank = group.getByRole("button", { name: /补充题目（二） 40 题/ });
   if (!(await bank.isVisible())) await group.locator(".bank-group-toggle").click();
   await bank.click();
-  await expect(page.locator("#heroTotal")).toHaveText("42");
+  await expect(page.locator("#heroTotal")).toHaveText("40");
+  await page.locator("#chapterFilterRow").getByRole("button", { name: "类比推理" }).click();
+  await expect(page.locator(".question-card h2")).toContainText("例3. 家父：父亲");
+  await page.locator(".question-card textarea").fill("CCD");
+  await page.locator(".question-card").getByRole("button", { name: "判分", exact: true }).click();
+  await expect(page.locator(".question-card .status-pill")).toHaveText("掌握");
   await page.locator("#chapterFilterRow").getByRole("button", { name: "图形推理" }).click();
   const image = page.locator(".question-media img").first();
   await expect(image).toBeVisible();
