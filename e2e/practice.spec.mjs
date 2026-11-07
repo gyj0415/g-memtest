@@ -176,6 +176,21 @@ test("the new twenty-question bank opens without horizontal overflow", async ({ 
   await expect(page.locator(".question-card h2")).toBeVisible();
 });
 
+test("the second supplement bank opens and loads its question images", async ({ page }) => {
+  await page.goto("/");
+  const group = page.locator('#homeBankGrid .bank-group[data-bank-group="公务员考试"]');
+  const bank = group.getByRole("button", { name: /补充题目（二） 42 题/ });
+  if (!(await bank.isVisible())) await group.locator(".bank-group-toggle").click();
+  await bank.click();
+  await expect(page.locator("#heroTotal")).toHaveText("42");
+  await page.locator("#chapterFilterRow").getByRole("button", { name: "图形推理" }).click();
+  const image = page.locator(".question-media img").first();
+  await expect(image).toBeVisible();
+  await expect.poll(() => image.evaluate((node) => node.complete && node.naturalWidth > 0)).toBe(true);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
+});
+
 test("failed multi-bank import leaves no partial banks after reload", async ({ page }) => {
   const alerts = [];
   await page.goto("/");
